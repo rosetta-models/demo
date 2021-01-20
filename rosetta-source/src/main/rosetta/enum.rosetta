@@ -1,2 +1,28 @@
 namespace "demo"
 version "${project.version}"
+
+enum Colour:
+    Red
+    Orange
+    Yellow
+    Green
+    Blue
+    Indigo
+    Violet
+
+enum CarType:
+    Hatchback
+	Saloon
+	Estate
+	MPV
+	SUV
+	Coupe
+	Sports car
+	Convertible
+
+enum EngineType:
+    Diesel
+    Petrol
+    Electric
+    Hybrid
+
