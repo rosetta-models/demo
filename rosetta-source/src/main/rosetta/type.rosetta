@@ -1,2 +1,37 @@
 namespace "demo"
 version "${project.version}"
+
+type CarOwnership:
+    [rootType]
+    owner Person (1..1)
+    car Car (1..1)
+    dateOfPurchase date (1..1)
+
+type Vehicle:
+    colour Colour (1..1)
+
+type Car extends Vehicle:
+    specification Specification (1..1)
+    registrationNumber string (1..1)
+
+type Specification:
+    make string (1..1)
+    model string (1..1)
+    carType CarType (1..1)
+    zeroTo60 number (1..1)
+    engine Engine (1..1)
+    yearOfManufacture int (1..1)
+
+type Engine:
+    engineType EngineType (1..1) <"Type of engine">
+    power number (1..1) <"Break horse power">
+    mpg number (1..1) <"Miles per gallon">
+
+type Person: <"A class to represent the attributes that are specific to a person.">
+	honorific string (0..1) <"An honorific title, such as Mr., Ms., Dr. etc.">
+	firstName string (1..1) <"The natural person's first name.">
+	middleName string (0..*)
+	initial string (0..*)
+	surname string (1..1) <"The natural person's surname.">
+	suffix string (0..1) <"Name suffix, such as Jr., III, etc.">
+	dateOfBirth date (0..1) <"The person's date of birth.">
