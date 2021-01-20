@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>demo</artifactId>
+        <groupId>com.regnosys.model</groupId>
+        <version>0.0.0.master</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.regnosys.model.demo</groupId>
+    <artifactId>demo-tests</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.regnosys</groupId>
+            <artifactId>rosetta-translate</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.regnosys.model.demo</groupId>
+            <artifactId>rosetta-source</artifactId>
+            <version>${version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.regnosys</groupId>
+            <artifactId>rosetta-ingest-cdm</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.regnosys</groupId>
+            <artifactId>rosetta-ingest-cdm</artifactId>
+            <classifier>tests</classifier>
+            <type>test-jar</type>
+            <scope>test</scope>
+            <version>${isda.cdm.version}</version>
+        </dependency>
+
+
+        <!--
+	    	The osgi dependency from rosetta.lib can take precedence on the classpath causing
+	    	Java security exceptions when matchers form the same package are subsequently loaded from Hamcrest
+	    -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>java-hamcrest</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
