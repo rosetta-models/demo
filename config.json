@@ -9,6 +9,9 @@
     ],
     "lowestVersion":"0.0.1",
     "parentReadOnly":false,
+    "documents": {
+        "terms-of-service": "0.1.0"
+    },
     "dependencyArtifact":{
         "groupId":"com.regnosys",
         "artifactId":"core-cdm-dependencies",
