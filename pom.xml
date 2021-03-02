@@ -21,8 +21,8 @@
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
 
-        <isda.cdm.version>2.94.0</isda.cdm.version>
-        <rosetta.dsl.version>4.5.3</rosetta.dsl.version>
+        <isda.cdm.version>2.97.5</isda.cdm.version>
+        <rosetta.dsl.version>4.7.0</rosetta.dsl.version>
         <guava.version>26.0-jre</guava.version>
 
         <!-- Testing -->
