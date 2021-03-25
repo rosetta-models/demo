@@ -8,7 +8,7 @@
         ""
     ],
     "lowestVersion":"0.0.1",
-    "parentReadOnly":false
+    "parentReadOnly":false,
     "dependencyArtifact":{
         "groupId":"com.regnosys",
         "artifactId":"core-cdm-dependencies",
