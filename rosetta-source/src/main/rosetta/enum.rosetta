@@ -1,7 +1,7 @@
 namespace "demo"
 version "${project.version}"
 
-enum Colour:
+enum ColourEnum:
     Red
     Orange
     Yellow
@@ -10,7 +10,7 @@ enum Colour:
     Indigo
     Violet
 
-enum CarType:
+enum CarTypeEnum:
     Hatchback
 	Saloon
 	Estate
@@ -20,9 +20,36 @@ enum CarType:
 	Sports car
 	Convertible
 
-enum EngineType:
+enum EngineTypeEnum:
     Diesel
     Petrol
     Electric
     Hybrid
+    Gaz
+
+enum CarEntitlementEnum:
+    AM
+    P
+    Q
+    A1
+    A2
+    A
+    B1
+    B
+    BE
+    C1E
+    C
+    CE
+    D1
+    D1E
+    D
+    DE
+    f
+    G
+    H
+    k
+    l
+    M
+    n
+    
 
