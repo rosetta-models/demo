@@ -25,31 +25,42 @@ enum EngineTypeEnum:
     Petrol
     Electric
     Hybrid
-    Gaz
+    LPG
 
-enum CarEntitlementEnum:
-    AM
-    P
-    Q
-    A1
-    A2
-    A
-    B1
-    B
-    BE
-    C1E
-    C
-    CE
-    D1
-    D1E
-    D
-    DE
-    f
-    G
-    H
-    k
-    l
-    M
-    n
-    
+enum VehicleClassificationEnum: <"Vehicle classification as per 2002/24/EC of 18 March 2002 and 2007/46/EC of 5 September 2007">
+    l1e_Moped
+    l2e_Moped
+    l3e_Motorcycle
+    l4e_Motorcycle
+    l5e_Motortricycle
+    l6e_Quadricycle
+    l7e_Quadricycle
+    M1_Passengers
+    M2_Passengers 
+    M3_Passengers
+    N1I_Commercial 
+    N1II_Commercial 
+    N1III_Commercial 
+    N2_Commercial
+    N3_Commercial
+    O1_Trailers
+    O2_Trailers
+    O3_Trailers 
+    O4_Trailers 
+        
+enum VehicleTaxBandEnum:
+    ABand  
+    BBand  
+    CBand  
+    DBand  
+    EBand  
+    FBand  
+    GBand  
+    HBand  
+    IBand  
+    JBand  
+    KBand
+    LBand  
+    MBand 
+
 

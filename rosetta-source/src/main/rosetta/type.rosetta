@@ -4,16 +4,17 @@ version "${project.version}"
 type CarOwnership:
     [rootType]
     drivingLicence DrivingLicence (0..*)
-    car Car (1..1)
+    vehicle Vehicle (1..1)
     dateOfPurchase date (1..1)
     isFirstHand boolean (1..1)
 
-type Vehicle:
+type VehicleFeature:
     colour ColourEnum (1..1)
 
-type Car extends Vehicle:
+type Vehicle extends VehicleFeature:
     specification Specification (1..1)
     registrationNumber string (1..1)
+    vehicleTaxBand VehicleTaxBandEnum (1..1)
 
 type Specification:
     make string (1..1)
@@ -22,12 +23,24 @@ type Specification:
     zeroTo60 number (1..1)
     engine Engine (1..1)
     yearOfManufacture int (1..1)
+    chassisNumber int (1..1)
+    dateOfFirstRegistration date (1..1)
 
 type Engine:
     engineType EngineTypeEnum (1..1) <"Type of engine">
     power number (1..1) <"Break horse power">
     mpg number (1..1) <"Miles per gallon">
-    co2 number (1..1) <"co2 emission in grams per km">
+    emissionMetrics EmissionMetrics (1..1) <"List of emission metrics in grams per km">
+
+type EmissionMetrics: <"Emission metrics used for EU emission standards">
+    carbonMonoxideCO int (1..1)
+    totalHydrocarbonTHC int (1..1)
+    volatileOrganicCompoundVOC int (1..1)
+    nitrogenOxydeNOX int (1..1)
+    combineHCNOX int (1..1)
+    particulateMatterPM int (1..1)
+    particuleNumberPN int (1..1)
+
 
 type Person: <"A class to represent the attributes that are specific to a person.">
 	honorific string (0..1) <"An honorific title, such as Mr., Ms., Dr. etc.">
@@ -44,6 +57,8 @@ type DrivingLicence extends Person: <"Driving licence authorisation granted by a
     licenceNumber string (1..1)
     dateofIssuance date (1..1)
     dateofRenewal date (0..1)
-    carEntitlement CarEntitlementEnum (0..*)
+    carEntitlement VehicleClassificationEnum (0..*)
+
+ 
 
  

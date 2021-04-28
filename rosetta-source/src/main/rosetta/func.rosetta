@@ -4,7 +4,7 @@ version "${project.version}"
 func Create_CarOwnership: <"Creation of a car ownership record file">
     inputs: 
         drivingLicence DrivingLicence (0..*)
-        car Car (1..1)
+        vehicle Vehicle (1..1)
         dateOfPurchase date (1..1)
     output: 
         carOwnership CarOwnership (1..1)
@@ -15,8 +15,8 @@ func Create_CarOwnership: <"Creation of a car ownership record file">
     assign-output carOwnership -> drivingLicence: 
         drivingLicence
 
-    assign-output carOwnership -> car: 
-        car
+    assign-output carOwnership -> vehicle: 
+        vehicle
 
     assign-output carOwnership -> dateOfPurchase: 
         dateOfPurchase
