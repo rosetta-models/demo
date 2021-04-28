@@ -1,2 +1,53 @@
 namespace "demo"
 version "${project.version}"
+
+func Create_CarOwnership: <"Creation of a car ownership record file">
+    inputs: 
+        drivingLicence DrivingLicence (0..*)
+        car Car (1..1)
+        dateOfPurchase date (1..1)
+    output: 
+        carOwnership CarOwnership (1..1)
+
+    condition: <"Driving licence must not be expired">
+        drivingLicence->dateofRenewal > dateOfPurchase
+
+    assign-output carOwnership -> drivingLicence: 
+        drivingLicence
+
+    assign-output carOwnership -> car: 
+        car
+
+    assign-output carOwnership -> dateOfPurchase: 
+        dateOfPurchase
+ 
+func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving licence is expired or not">
+    inputs: 
+        drivingLicence DrivingLicence (1..1)
+        todayDate date (1..1)
+    output:
+        isExpired boolean (1..1)
+
+    assign-output isExpired: 
+        if drivingLicence->dateofRenewal < todayDate then True
+        else False
+
+ func Check_Car: <"Function to check whether the car is of diesel type">
+    inputs: 
+        engine Engine (1..1)
+    output:
+        isEngineTypeDiesel boolean (1..1)
+
+    assign-output isEngineTypeDiesel: 
+        if engine-> engineType = EngineTypeEnum -> Diesel then True 
+        else False
+
+func Check_YearOfManufacture: <"Function to check whether the car is of diesel type">
+    inputs: 
+        specification Specification (1..1)
+        yearCut int (1..1)
+    output:
+        isOlderThanYearCut boolean (1..1)
+    assign-output isOlderThanYearCut: 
+        if specification-> yearOfManufacture < yearCut then True 
+        else False
