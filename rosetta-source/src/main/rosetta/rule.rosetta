@@ -9,56 +9,66 @@ segment table
 
 body Authority EuropeanCommission <"European Commission (ec.europa.eu).">
 
-corpus Directive "93/59/EC" StandardEmissionsEuro1  
+corpus Directive "93/59/EC" StandardEmissionsEuro1
     <"COUNCIL DIRECTIVE 93 /59/EEC of 28 June 1993 amending Directive 70/220/EEC on the approximation of the laws of the Member States
     relating to measures to be taken against air pollution by emissions from motor vehicles https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A31993L0059">
 
-corpus Directive "96/69/EC" StandardEmissionsEuro2  
+corpus Directive "96/69/EC" StandardEmissionsEuro2
     <"DIRECTIVE 96/69/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 8 October 1996 amending Directive 70/220/EEC on the approximation of the laws of the Member States relating to
     measures to be taken against air pollution by emissions from motor vehicles https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CONSLEG:1996L0069:19961121:EN:PDF">
 
-corpus Directive "98/69/EC" StandardEmissionsEuro3  
+corpus Directive "98/69/EC" StandardEmissionsEuro3
     <"Directive 98/69/EC of the European Parliament and of the Council of 13 October 1998 relating to measures to be taken against air pollution by emissions from motor vehicles and amending Council Directive 70/220/EEC https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A31998L0069">
 
-corpus Directive "2002/80/EC" StandardEmissionsEuro4   
+corpus Directive "2002/80/EC" StandardEmissionsEuro4
     <"COMMISSION DIRECTIVE 2002/80/EC of 3 October 2002 adapting to technical progress Council Directive 70/220/EEC relating to measures to be taken
     against air pollution by emissions from motor vehicles https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32002L0080">
 
-corpus Regulation "EC 715/2007" StandardEmissionsEuro5  
+corpus Regulation "EC 715/2007" StandardEmissionsEuro5
     <"REGULATION (EC) No 715/2007 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 20 June 2007 on type approval of motor vehicles with respect to emissions from light passenger and commercial
     vehicles (Euro 5 and Euro 6) and on access to vehicle repair and maintenance information https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32007R0715">
 
-corpus Regulation "EC 459/2012" StandardEmissionsEuro6  
+corpus Regulation "EC 459/2012" StandardEmissionsEuro6
     <"COMMISSION REGULATION (EU) No 459/2012 of 29 May 2012 amending Regulation (EC) No 715/2007 of the European Parliament and of the Council and Commission Regulation (EC) No 692/2008 as regards emissions from light passenger and commercial vehicles (Euro 6) https://eur-lex.europa.eu/eli/reg/2012/459/oj">
 
-// report EuropeanCommission CommissionRegulation_2012_Euro6_Emission_Standards in real-time
-//     when Euro6StandardsCoverage
-//     with fields
+report EuropeanCommission  StandardEmissionsEuro1  in real-time
+    when Euro6StandardsCoverage
+    with fields
+        VehicleRegistrationID
+        FirstRegistrationDate
+        VehicleClassificationType
+        EngineType
+
     
-//eligibility rule Euro6StandardsCoverage
-    //filter when VehicleClassificationEnum -> M1_Passengers exists
+eligibility rule Euro6StandardsCoverage
+    filter when VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> M1_Passengers
     
-// reporting rule VehicleRegistrationID <"Unique ID for the vehicle registration">
-//     extract VehicleOwnership -> vehicle -> registrationID
-//     as "Vehicle Registration ID"
+reporting rule VehicleRegistrationID <"Unique ID for the vehicle registration">
+    extract VehicleOwnership -> vehicle -> registrationID
+    as "Vehicle Registration ID"
 
-//reporting rule FirstRegistrationDate <"Date of first registration of the vehicle">
-  //  extract VehicleOwnership -> vehicle -> specification -> dateOfFirstRegistration
-    //as "First Registration Date"
+reporting rule FirstRegistrationDate <"Date of first registration of the vehicle">
+   extract VehicleOwnership -> vehicle -> specification -> dateOfFirstRegistration
+    as "First Registration Date"
 
-// reporting rule VehicleClassificationType <"Classification type of the vehicle">
-//     extract VehicleOwnership -> vehicle -> vehicleClassification
-//     as "Vehicle Classification Type"
+reporting rule VehicleClassificationType <"Classification type of the vehicle">
+    extract VehicleOwnership -> vehicle -> vehicleClassification
+    as "Vehicle Classification Type"
 
-// reporting rule EngineType <"Engine type of the vehicle">
-//     extract VehicleOwnership -> vehicle -> specification -> engine -> engineType
-//     as "Engine Type"
+reporting rule EngineType <"Engine type of the vehicle">
+    extract VehicleOwnership -> vehicle -> specification -> engine -> engineType
+    as "Engine Type"
 
 //Utility Rules - Euro standards 
 
-//reporting rule Euro6Standard
-  //  [regulatoryReference EuropeanCommission StandardEmissionsEuro6 annex "1" table "2" 
-    //provision "Annex  I  to  Regulation  (EC)  No  715/2007  is  amended  as  follows:(1)   the  text  in  the  second  row  of  the  last  column of  Table  1  (Euro  5  emission  limits)  is  replaced  by  the  following:Number  of  particles  (PN);(2)  Table  2  is  replaced  by  the following  table:"]
-    //extract
-   // if VehicleOwnership -> vehicle -> vehicleClassificiation = VehicleClassificationEnum -> A or B or C
-          
+reporting rule Euro6Standard
+   [regulatoryReference EuropeanCommission StandardEmissionsEuro6 annex "1" table "2" 
+    provision "Annex  I  to  Regulation  (EC)  No  715/2007  is  amended  as  follows:(1)   the  text  in  the  second  row  of  the  last  column of  Table  1  (Euro  5  emission  limits)  is  replaced  by  the  following:Number  of  particles  (PN);(2)  Table  2  is  replaced  by  the following  table:"]
+    extract VehicleOwnership -> vehicle then
+    filter when 
+        (
+            Vehicle -> vehicleClassification = VehicleClassificationEnum -> M1_Passengers
+            or
+            Vehicle -> vehicleClassification = VehicleClassificationEnum -> M2_Passengers
+        )
+        
