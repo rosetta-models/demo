@@ -1,4 +1,4 @@
-namespace "demo"
+namespace demo.enumeration
 version "${project.version}"
 
 enum ColourEnum:

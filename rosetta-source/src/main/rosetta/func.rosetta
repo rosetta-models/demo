@@ -1,26 +1,36 @@
-namespace "demo"
+namespace demo.functions
 version "${project.version}"
 
-func Create_CarOwnership: <"Creation of a car ownership record file">
+import demo.types.*
+import demo.enumeration.*
+
+func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
     inputs: 
         drivingLicence DrivingLicence (0..*)
         vehicle Vehicle (1..1)
         dateOfPurchase date (1..1)
+        isFirstHand boolean (1..1)
     output: 
-        carOwnership CarOwnership (1..1)
+        vehicleOwnership VehicleOwnership (1..1)
 
     condition: <"Driving licence must not be expired">
         drivingLicence->dateofRenewal > dateOfPurchase
 
-    assign-output carOwnership -> drivingLicence: 
+    condition: <"Vehicle classification allowed by the driving licence needs to encompass the vehicle classification of the considered vehicle">
+        drivingLicence->vehicleEntitlement contains vehicle-> vehicleClassification
+
+    assign-output vehicleOwnership -> drivingLicence: 
         drivingLicence
 
-    assign-output carOwnership -> vehicle: 
+    assign-output vehicleOwnership -> vehicle: 
         vehicle
 
-    assign-output carOwnership -> dateOfPurchase: 
+    assign-output vehicleOwnership -> dateOfPurchase: 
         dateOfPurchase
  
+    assign-output vehicleOwnership -> isFirstHand: 
+        isFirstHand 
+
 func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving licence is expired or not">
     inputs: 
         drivingLicence DrivingLicence (1..1)
@@ -32,7 +42,7 @@ func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving li
         if drivingLicence->dateofRenewal < todayDate then True
         else False
 
- func Check_Car: <"Function to check whether the car is of diesel type">
+ func Check_DieselEngine: <"Function to check whether the engine of the vehicle is of diesel type">
     inputs: 
         engine Engine (1..1)
     output:
@@ -42,7 +52,7 @@ func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving li
         if engine-> engineType = EngineTypeEnum -> Diesel then True 
         else False
 
-func Check_YearOfManufacture: <"Function to check whether the car is of diesel type">
+func Check_YearOfManufacture: <"Function to check whether the year of manufacture of the vehicle is older than a year cut">
     inputs: 
         specification Specification (1..1)
         yearCut int (1..1)
