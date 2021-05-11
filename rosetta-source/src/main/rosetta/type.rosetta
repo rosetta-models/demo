@@ -57,7 +57,7 @@ type Person: <"A class to represent the attributes that are specific to a person
 	dateOfBirth date (0..1) <"The person's date of birth.">
 
 type DrivingLicence extends Person: <"Driving licence authorisation granted by a jurisdiction">
-    countryofIssuance string (1..1)
+    countryofIssuance string (1..1) <"The ISO 3166 standard code for the country of issuance.">
         [metadata scheme]
     licenceNumber string (1..1)
     dateofIssuance date (1..1)

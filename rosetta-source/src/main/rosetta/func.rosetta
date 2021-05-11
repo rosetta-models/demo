@@ -19,6 +19,13 @@ func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
     condition: <"Vehicle classification allowed by the driving licence needs to encompass the vehicle classification of the considered vehicle">
         drivingLicence->vehicleEntitlement contains vehicle-> vehicleClassification
 
+    condition: <"The country of issuance of the driving licence must correspond to a specific list of countries">
+        drivingLicence->countryofIssuance = "GBR"
+        or drivingLicence->countryofIssuance = "FRA"
+        or drivingLicence->countryofIssuance = "DEU"
+        or drivingLicence->countryofIssuance = "ITA"
+        or drivingLicence->countryofIssuance = "ESP"
+
     assign-output vehicleOwnership -> drivingLicence: 
         drivingLicence
 
