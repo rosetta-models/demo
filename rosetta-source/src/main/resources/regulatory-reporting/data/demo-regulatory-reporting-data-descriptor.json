@@ -1,0 +1,17 @@
+[
+  {
+    "dataSetName": "DRR Vehicle Ownership",
+    "inputType" : "demo.types.VehicleOwnership",
+    "applicableReports": [],
+    "data": [
+      {
+        "name": "Vehicle Registered Before Euro6Standard",
+        "input": "demo-1.json"
+      },
+      {
+        "name":"Vehicle Registered Before Euro6Standard",
+        "input": "demo-2.json"
+      }
+    ]
+  }
+]

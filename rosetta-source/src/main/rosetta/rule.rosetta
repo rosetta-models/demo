@@ -75,7 +75,7 @@ reporting rule Euro6Standard
         filter when rule IsRegisteredAfterSpecifiedDate
 
 reporting rule IsRegisteredAfterSpecifiedDate
-    extract Vehicle -> specification -> dateOfFirstRegistration > Create_Date(2020, 1, 31)
+    extract Vehicle -> specification -> dateOfFirstRegistration > Create_Date(2020, 3, 1)
 
 
 
