@@ -72,7 +72,8 @@ reporting rule Euro6Standard
                 or
                 Vehicle -> vehicleClassification = VehicleClassificationEnum -> M2_Passengers
             ) then 
-        filter when rule IsRegisteredAfterSpecifiedDate
+        filter when rule IsRegisteredAfterSpecifiedDate then
+        return "Yes" as "Euro6Standard"
 
 reporting rule IsRegisteredAfterSpecifiedDate
     extract Vehicle -> specification -> dateOfFirstRegistration > Create_Date(2020, 3, 1)

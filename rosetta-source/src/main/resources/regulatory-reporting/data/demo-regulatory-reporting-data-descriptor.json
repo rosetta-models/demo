@@ -9,7 +9,7 @@
         "input": "demo-1.json"
       },
       {
-        "name":"Vehicle Registered Before Euro6Standard",
+        "name":"Vehicle Registered After Euro6Standard",
         "input": "demo-2.json"
       }
     ]
