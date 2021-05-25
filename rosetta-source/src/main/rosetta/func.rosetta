@@ -61,3 +61,11 @@ func Check_YearOfManufacture: <"Function to check whether the year of manufactur
     assign-output isOlderThanYearCut: 
         if specification-> yearOfManufacture < yearCut then True 
         else False
+
+func Create_Date: <"Function to create a date for the given year, month and dayOfMonth.">
+    inputs:
+        year int (1..1)
+        month int (1..1)
+        day int (1..1)
+    output:
+        result date (1..1)

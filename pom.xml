@@ -20,6 +20,7 @@
         <java.version>11</java.version>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+        <xtext.version>2.23.0</xtext.version>
 
         <isda.cdm.version>2.105.2</isda.cdm.version>
         <rosetta.dsl.version>4.8.7</rosetta.dsl.version>

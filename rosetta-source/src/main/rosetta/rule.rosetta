@@ -3,6 +3,7 @@ version "${project.version}"
 
 import demo.types.*
 import demo.enumeration.*
+import demo.functions.*
 
 segment annex 
 segment table
@@ -38,6 +39,7 @@ report EuropeanCommission  StandardEmissionsEuro1  in real-time
         FirstRegistrationDate
         VehicleClassificationType
         EngineType
+        Euro6Standard
 
     
 eligibility rule Euro6StandardsCoverage
@@ -65,10 +67,19 @@ reporting rule Euro6Standard
    [regulatoryReference EuropeanCommission StandardEmissionsEuro6 annex "1" table "2" 
     provision "Annex  I  to  Regulation  (EC)  No  715/2007  is  amended  as  follows:(1)   the  text  in  the  second  row  of  the  last  column of  Table  1  (Euro  5  emission  limits)  is  replaced  by  the  following:Number  of  particles  (PN);(2)  Table  2  is  replaced  by  the following  table:"]
     extract VehicleOwnership -> vehicle then
-    filter when 
-        (
-            Vehicle -> vehicleClassification = VehicleClassificationEnum -> M1_Passengers
-            or
-            Vehicle -> vehicleClassification = VehicleClassificationEnum -> M2_Passengers
-        )
+        filter when 
+            (
+                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M1_Passengers
+                or
+                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M2_Passengers
+            ) then 
+        filter when rule IsRegisteredAfterSpecifiedDate then
+        return "Yes" as "Euro6Standard"
+
+reporting rule IsRegisteredAfterSpecifiedDate
+    extract Vehicle -> specification -> dateOfFirstRegistration > Create_Date(2020, 3, 1)
+
+
+
+    
         

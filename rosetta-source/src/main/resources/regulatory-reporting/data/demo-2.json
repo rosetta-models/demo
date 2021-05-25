@@ -1,0 +1,41 @@
+{
+  "vehicle" : {
+    "specification": {
+      "make": "Volkswagen",
+      "model": "Golf",
+      "carType": "HATCHBACK",
+      "zeroTo60": 4.5,
+      "engine": {
+        "engineType": "PETROL",
+        "power": 1,
+        "mpg": 1,
+        "emissionMetrics": {
+          "carbonMonoxideCO" : 0,
+          "totalHydrocarbonTHC" : 0,
+          "volatileOrganicCompoundVOC" : 0,
+          "nitrogenOxydeNOX" : 0,
+          "combineHCNOX" : 0,
+          "particulateMatterPM" : 0,
+          "particuleNumberPN" : 0
+        }
+      },
+      "yearOfManufacture": 2020,
+      "chassisNumber": 0,
+      "dateOfFirstRegistration": {
+        "year": 2020,
+        "month": 6,
+        "day": 1
+      }
+    },
+    "registrationID": "X1",
+    "vehicleTaxBand": "A_BAND",
+    "vehicleClassification": "M_1_PASSENGERS"
+  },
+  "dateOfPurchase": {
+    "year": 2020,
+    "month": 6,
+    "day": 2
+  },
+  "isFirstHand": true,
+  "vehicleOwnershipRegistrationID": 1
+}
