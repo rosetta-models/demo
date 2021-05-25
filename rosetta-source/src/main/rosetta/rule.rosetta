@@ -39,6 +39,7 @@ report EuropeanCommission  StandardEmissionsEuro1  in real-time
         FirstRegistrationDate
         VehicleClassificationType
         EngineType
+        Euro6Standard
 
     
 eligibility rule Euro6StandardsCoverage
