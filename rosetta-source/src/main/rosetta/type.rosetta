@@ -3,7 +3,7 @@ version "${project.version}"
 
 import demo.enumeration.*
 
-type VehicleOwnership:
+type VehicleOwnership: <"Representative record of vehicle ownership">
     [rootType]
     drivingLicence DrivingLicence (0..*)
     vehicle Vehicle (1..1)
@@ -11,17 +11,17 @@ type VehicleOwnership:
     isFirstHand boolean (1..1)
     vehicleOwnershipRegistrationID int (1..1)
 
-type VehicleFeature:
+type VehicleFeature: <"Features qualifying a vehicle in addition to technical specifications">
     colour ColourEnum (1..1)
     doorNumber int (1..1)
 
-type Vehicle extends VehicleFeature:
+type Vehicle extends VehicleFeature: <"Representation of a vehicle">
     specification Specification (1..1)
     registrationID string (1..1)
     vehicleTaxBand VehicleTaxBandEnum (1..1)
     vehicleClassification VehicleClassificationEnum (1..1)
 
-type Specification:
+type Specification: <"Technical specifications of a vehicle">
     make string (1..1)
     model string (1..1)
     carType CarTypeEnum (1..1)
@@ -31,7 +31,7 @@ type Specification:
     chassisNumber int (1..1)
     dateOfFirstRegistration date (1..1)
 
-type Engine:
+type Engine: <"Description of the engine">
     engineType EngineTypeEnum (1..1) <"Type of engine">
     power number (1..1) <"Break horse power">
     mpg number (1..1) <"Miles per gallon">
