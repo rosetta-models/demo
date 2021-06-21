@@ -1,3 +1,5 @@
+// The Domonstration Model asims to illustrate the model
+
 namespace demo.types
 version "${project.version}"
 
