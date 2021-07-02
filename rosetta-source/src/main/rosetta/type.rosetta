@@ -64,7 +64,7 @@ type DrivingLicence extends Person: <"Driving licence authorisation granted by a
         [metadata scheme]
     licenceNumber string (1..1)
     dateofIssuance date (1..1)
-    dateofRenewal date (0..1)
+    dateOfRenewal date (0..1)
     vehicleEntitlement VehicleClassificationEnum (0..*)
 
  
