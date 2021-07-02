@@ -14,7 +14,7 @@ func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
         vehicleOwnership VehicleOwnership (1..1)
 
     condition: <"Driving licence must not be expired">
-        drivingLicence->dateofRenewal > dateOfPurchase
+        drivingLicence -> dateOfRenewal all > dateOfPurchase
 
     condition: <"Vehicle classification allowed by the driving licence needs to encompass the vehicle classification of the considered vehicle">
         drivingLicence->vehicleEntitlement contains vehicle-> vehicleClassification
@@ -39,7 +39,7 @@ func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving li
         isExpired boolean (1..1)
 
     assign-output isExpired: 
-        if drivingLicence->dateofRenewal < todayDate then True
+        if drivingLicence->dateOfRenewal < todayDate then True
         else False
 
  func Check_DieselEngine: <"Function to check whether the engine of the vehicle is of diesel type">
