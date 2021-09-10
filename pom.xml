@@ -23,7 +23,7 @@
         <xtext.version>2.23.0</xtext.version>
 
         <isda.cdm.version>2.122.0</isda.cdm.version>
-        <rosetta.dsl.version>4.18.1</rosetta.dsl.version>
+        <rosetta.dsl.version>4.18.3</rosetta.dsl.version>
         <guava.version>26.0-jre</guava.version>
 
         <!-- Testing -->
