@@ -12,7 +12,7 @@
       {
         "name":"Vehicle Registered After Euro6Standard",
         "input": "demo-2.json",
-        "expected" : "expected/demo-1-expected.json"
+        "expected" : "expected/demo-2-expected.json"
       }
     ]
   }
