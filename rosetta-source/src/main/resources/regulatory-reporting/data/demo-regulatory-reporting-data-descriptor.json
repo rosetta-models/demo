@@ -6,11 +6,13 @@
     "data": [
       {
         "name": "Vehicle Registered Before Euro6Standard",
-        "input": "demo-1.json"
+        "input": "demo-1.json",
+        "expected" : "expected/demo-1-expected.json"
       },
       {
         "name":"Vehicle Registered After Euro6Standard",
-        "input": "demo-2.json"
+        "input": "demo-2.json",
+        "expected" : "expected/demo-1-expected.json"
       }
     ]
   }
