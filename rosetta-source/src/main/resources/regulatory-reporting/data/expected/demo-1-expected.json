@@ -1,0 +1,28 @@
+{
+  "EuropeanParliamentEmissionPerformanceStandardsEU": [
+    {
+      "name": "CARBON MONOXIDE",
+      "value": "0"
+    },
+    {
+      "name": "EMISSION STANDARDS",
+      "value": "Euro 5 Standard"
+    },
+    {
+      "name": "ENGINE TYPE",
+      "value": "PETROL"
+    },
+    {
+      "name": "FIRST REGISTRATION DATE",
+      "value": "2020-1-1"
+    },
+    {
+      "name": "VEHICLE CLASSIFICATION TYPE",
+      "value": "M_1_PASSENGERS"
+    },
+    {
+      "name": "VEHICLE REGISTRATION ID",
+      "value": "X1"
+    }
+  ]
+}
