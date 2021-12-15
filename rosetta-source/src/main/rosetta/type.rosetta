@@ -40,12 +40,12 @@ type Engine: <"Description of the engine">
 
 type EmissionMetrics: <"Emission metrics used for EU emission standards">
     carbonMonoxide int (1..1)
-    totalHydrocarbonTHC int (1..1)
-    volatileOrganicCompoundVOC int (1..1)
+    totalHydrocarbon int (1..1)
+    volatileOrganicCompound int (1..1)
     nitrogenOxide int (1..1)
     combineHCNOX int (1..1)
     particulateMatter int (1..1)
-    particuleNumberPN int (1..1)
+    particleNumber int (1..1)
 
 type Person: <"A class to represent the attributes that are specific to a person.">
 	honorific string (0..1) <"An honorific title, such as Mr., Ms., Dr. etc.">
