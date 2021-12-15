@@ -111,7 +111,7 @@ reporting rule CarbonMonoxide <"Carbon Monoxyde (CO) reported under emission met
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 article "1"  
     provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
     include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
-    extract VehicleOwnership -> vehicle -> specification -> engine -> emissionMetrics -> carbonMonoxideCO
+    extract VehicleOwnership -> vehicle -> specification -> engine -> emissionMetrics -> carbonMonoxide
     as "Carbon Monoxide"
 
 //Utility Rules - Euro standards 

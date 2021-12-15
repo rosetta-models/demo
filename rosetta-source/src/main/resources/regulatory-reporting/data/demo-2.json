@@ -13,7 +13,7 @@
           "carbonMonoxideCO" : 0,
           "totalHydrocarbonTHC" : 0,
           "volatileOrganicCompoundVOC" : 0,
-          "nitrogenOxydeNOX" : 0,
+          "nitrogenOxide" : 0,
           "combineHCNOX" : 0,
           "particulateMatterPM" : 0,
           "particuleNumberPN" : 0

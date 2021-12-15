@@ -95,17 +95,17 @@ func FindVehiclesByEngineType: <"Find all vehicles with given engine type.">
 func FindVehiclesWithinEmissionLimits: <"Find all vehicles within given emissions metrics.">
     inputs:
         vehicles Vehicle (0..*)
-        carbonMonoxideCOLimit int (0..1)
-        nitrogenOxydeNOXLimit int (0..1)
-        particulateMatterPMLimit int (0..1)
+        coLimit int (0..1)
+        noxLimit int (0..1)
+        pmLimit int (0..1)
     output:
         vehiclesWithinEmissionLimits Vehicle (0..*)
 
     set vehiclesWithinEmissionLimits: <"Filter (and other list operations) can contain expressions, and can be chained together.">
         vehicles
-            filter [ if carbonMonoxideCOLimit exists then item -> specification -> engine -> emissionMetrics -> carbonMonoxideCO <= carbonMonoxideCOLimit else True ]
-            filter [ if nitrogenOxydeNOXLimit exists then item -> specification -> engine -> emissionMetrics -> nitrogenOxydeNOX <= nitrogenOxydeNOXLimit else True ]
-            filter [ if particulateMatterPMLimit exists then item -> specification -> engine -> emissionMetrics -> particulateMatterPM <= particulateMatterPMLimit else True ]   
+            filter [ if coLimit exists then item -> specification -> engine -> emissionMetrics -> carbonMonoxide <= coLimit else True ]
+            filter [ if noxLimit exists then item -> specification -> engine -> emissionMetrics -> nitrogenOxide <= noxLimit else True ]
+            filter [ if pmLimit exists then item -> specification -> engine -> emissionMetrics -> particulateMatter <= pmLimit else True ]
 
 func FindOwnersWithinPenaltyPointLimit: <"Find all owners within penalty point limits on any driver licence (owners can have multiple licences, issued by different countries).">
     inputs:
@@ -130,3 +130,18 @@ func GetDrivingLicenceNames: <"Get driver's names from given list of licences.">
         drivingLicences
             filter [ item -> firstName exists and item -> surname exists ]
             map [ item -> firstName + " " + item -> surname ]
+
+func GetAllDrivingLicencesFromInternationalOwners: <"Get list of driving licences from owners with 2 or more licences.">
+    inputs:
+        owners VehicleOwnership (0..*) <"List of owners, each contain a list of driving licences.">
+    output:
+        drivingLicences DrivingLicence (0..*) <"Flattened list of driving licences.">
+
+    set drivingLicences:
+        owners
+            // map each owner item into a list of driving licences
+            map [ item -> drivingLicence ] // each item is now a list of driving licences
+            // filter to include only items which contain more than one driving licence
+            filter [ item count > 1 ] // each item is still a list of driving licences
+            // flatten list so output is a "flat" list of driving licences (rather that a list where each item is a list of driving licences)
+            flatten
