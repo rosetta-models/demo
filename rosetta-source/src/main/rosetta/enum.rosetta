@@ -1,7 +1,7 @@
 namespace demo.enumeration
 version "${project.version}"
 
-enum ColourEnum: <"Colour of the vehicle used as an additional feature for a vehicle">
+enum ColourEnum: <"C. olour of the vehicle used as an additional feature for a vehicle">
     Red
     Orange
     Yellow
