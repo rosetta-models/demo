@@ -22,8 +22,8 @@
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <xtext.version>2.23.0</xtext.version>
 
-        <isda.cdm.version>2.135.1</isda.cdm.version>
-        <rosetta.dsl.version>4.24.0</rosetta.dsl.version>
+        <isda.cdm.version>2.137.1</isda.cdm.version>
+        <rosetta.dsl.version>4.26.2</rosetta.dsl.version>
         <guava.version>26.0-jre</guava.version>
 
         <!-- Testing -->
@@ -70,8 +70,8 @@
             </dependency>
             <dependency>
                 <groupId>com.regnosys</groupId>
-                <artifactId>rosetta-ingest-cdm</artifactId>
-                <version>${isda.cdm.version}</version>
+                <artifactId>ingest-test-framework</artifactId>
+                <version>2.137.1</version>
             </dependency>
             <dependency>
                 <groupId>com.regnosys.rosetta</groupId>

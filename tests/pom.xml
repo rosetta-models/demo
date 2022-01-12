@@ -26,7 +26,8 @@
 
         <dependency>
             <groupId>com.regnosys</groupId>
-            <artifactId>rosetta-ingest-cdm</artifactId>
+            <artifactId>ingest-test-framework</artifactId>
+            <scope>test</scope>
         </dependency>
 
 
