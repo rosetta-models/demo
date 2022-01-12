@@ -30,17 +30,6 @@
             <scope>test</scope>
         </dependency>
 
-
-        <dependency>
-            <groupId>com.regnosys</groupId>
-            <artifactId>rosetta-ingest-cdm</artifactId>
-            <classifier>tests</classifier>
-            <type>test-jar</type>
-            <scope>test</scope>
-            <version>${isda.cdm.version}</version>
-        </dependency>
-
-
         <!--
 	    	The osgi dependency from rosetta.lib can take precedence on the classpath causing
 	    	Java security exceptions when matchers form the same package are subsequently loaded from Hamcrest
