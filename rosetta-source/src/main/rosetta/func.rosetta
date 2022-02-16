@@ -199,48 +199,54 @@ func RenewDrivingLicence: <"Create new driving licence with new date of renewal.
     set renewedDrivingLicence -> dateOfRenewal:
         newDateOfRenewal
 
- func SumNumbers: <"Returns the sum of the given list of numbers, using the reduce keyword.">
+ func SumNumbers: <"Returns the sum of the given list of numbers.">
     inputs:
         numbers number (0..*)
     output:
         total number (1..1)
 
     set total:
-        numbers 
-            reduce a, b [ a + b ]
+        numbers sum
 
 func JoinStrings: <"Concatenates the list of strings, separating each element with the given delimiter, using the reduce keyword.">
     inputs:
         strings string (0..*)
-        delimiter string (1..1)
     output:
         result string (1..1)
 
     set result:
-        strings 
-            reduce a, b [ a + delimiter + b ]
+        strings join [ ", " ]
 
 func FindMaxNumber: <"Returns the highest number from the given list of numbers, using the reduce keyword.">
     inputs:
         numbers number (0..*)
     output:
-        max number (1..1)
+        result number (1..1)
 
-    set max:
-        numbers 
-            reduce n1, n2 [ if n1 > n2 then n1 else n2 ]
+    set result:
+        numbers max
 
-func FindVehicleWithMaxPower: <"Returns the vehicle with the highest power engine, using the reduce keyword.">
+ func FindVehicleWithMaxPower: <"Returns the vehicle with the highest power engine.">
     inputs:
         vehicles Vehicle (0..*)
     output:
         vehicleWithMaxPower Vehicle (1..1)
 
     set vehicleWithMaxPower:
-        vehicles 
-            reduce v1, v2 [ 
-                if v1 -> specification -> engine -> power > v2 -> specification -> engine -> power then 
-                    v1 
-                else 
-                    v2 
+        vehicles
+            max [ item -> specification -> engine -> power ]
+
+func FindVehicleWithMaxPowerUsingReduce: <"Returns the vehicle with the highest power engine, using the reduce keyword.">
+    inputs:
+        vehicles Vehicle (0..*)
+    output:
+        vehicleWithMaxPower Vehicle (1..1)
+
+    set vehicleWithMaxPower:
+        vehicles
+            reduce v1, v2 [
+                if v1 -> specification -> engine -> power > v2 -> specification -> engine -> power then
+                    v1
+                else
+                    v2
             ]
