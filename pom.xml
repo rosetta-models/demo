@@ -22,8 +22,8 @@
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <xtext.version>2.25.0</xtext.version>
 
-        <isda.cdm.version>2.151.0</isda.cdm.version>
-        <rosetta.dsl.version>4.33.0</rosetta.dsl.version>
+        <isda.cdm.version>2.152.1</isda.cdm.version>
+        <rosetta.dsl.version>4.34.0</rosetta.dsl.version>
         <guava.version>30.0-jre</guava.version>
 
         <!-- Testing -->
@@ -163,7 +163,6 @@
         </plugins>
     </build>
 
-
     <distributionManagement>
         <repository>
             <id>snapshots</id>
@@ -171,4 +170,18 @@
             <url>https://regnosys.jfrog.io/regnosys/libs-snapshot-local</url>
         </repository>
     </distributionManagement>
+
+    <!-- Required for Xsemantics, added as part of DSL version 4.34.0 -->
+    <repositories>
+        <repository>
+            <id>sonatype_snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
