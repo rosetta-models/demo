@@ -29,7 +29,7 @@ func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
         dateOfPurchase
  
     set vehicleOwnership -> isFirstHand: 
-        isFirstHand 
+        isFirstHand
 
 func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving licence is expired or not">
     inputs: 
@@ -199,7 +199,7 @@ func RenewDrivingLicence: <"Create new driving licence with new date of renewal.
     set renewedDrivingLicence -> dateOfRenewal:
         newDateOfRenewal
 
- func SumNumbers: <"Returns the sum of the given list of numbers.">
+func SumNumbers: <"Returns the sum of the given list of numbers.">
     inputs:
         numbers number (0..*)
     output:
@@ -208,7 +208,7 @@ func RenewDrivingLicence: <"Create new driving licence with new date of renewal.
     set total:
         numbers sum
 
-func JoinStrings: <"Concatenates the list of strings, separating each element with the given delimiter, using the reduce keyword.">
+func JoinStrings: <"Concatenates the list of strings, separating each element with the given delimiter, using the join keyword.">
     inputs:
         strings string (0..*)
     output:
@@ -217,7 +217,7 @@ func JoinStrings: <"Concatenates the list of strings, separating each element wi
     set result:
         strings join [ ", " ]
 
-func FindMaxNumber: <"Returns the highest number from the given list of numbers, using the reduce keyword.">
+func FindMaxNumber: <"Returns the highest number from the given list of numbers, using the max keyword.">
     inputs:
         numbers number (0..*)
     output:
@@ -226,7 +226,25 @@ func FindMaxNumber: <"Returns the highest number from the given list of numbers,
     set result:
         numbers max
 
- func FindVehicleWithMaxPower: <"Returns the vehicle with the highest power engine.">
+func SortDatesChronologically: <"Sorts the list of dates chronologically.">
+    inputs:
+        dates date (0..*)
+    output:
+        sortedDates date (0..*)
+
+    set sortedDates:
+        dates sort
+
+func GetFirst: <"Get the first date.">
+    inputs:
+        dates date (0..*)
+    output:
+        firstDate date (0..1)
+
+    set firstDate:
+        dates first
+
+func FindVehicleWithMaxPower: <"Returns the vehicle with the highest power engine.">
     inputs:
         vehicles Vehicle (0..*)
     output:
