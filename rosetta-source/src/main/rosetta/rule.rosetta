@@ -42,13 +42,28 @@ corpus Directive "Directive 2014/46/EU" VehicleRegistrationEU
 
 report EuropeanParliament  EmissionPerformanceStandardsEU in real-time
     when EuroStandardsCoverage
-    with fields
-        VehicleRegistrationID
-        FirstRegistrationDate
-        VehicleClassificationType
-        EngineType
-        EuroEmissionStandard
-        CarbonMonoxide
+    with type EuropeanParliamentReport
+    // with fields
+    //     VehicleRegistrationID
+    //     FirstRegistrationDate
+    //     VehicleClassificationType
+    //     EngineType
+    //     EuroEmissionStandard
+    //     CarbonMonoxide
+
+type EuropeanParliamentReport:
+    vehicleRegistrationID string (1..1)
+        [ruleReference VehicleRegistrationID]
+    firstRegistrationDate date (1..1)
+        [ruleReference FirstRegistrationDate]
+    vehicleClassificationType VehicleClassificationEnum (1..1)
+        [ruleReference VehicleClassificationType]
+    engineType EngineTypeEnum (1..1)
+        [ruleReference EngineType]
+    euroEmissionStandard string (1..1)
+        [ruleReference EuroEmissionStandard]
+     carbonMonoxide int (1..1)
+        [ruleReference CarbonMonoxide]   
 
 eligibility rule EuroStandardsCoverage
     filter when 
