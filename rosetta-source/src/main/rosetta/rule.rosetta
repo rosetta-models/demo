@@ -43,13 +43,6 @@ corpus Directive "Directive 2014/46/EU" VehicleRegistrationEU
 report EuropeanParliament  EmissionPerformanceStandardsEU in real-time
     when EuroStandardsCoverage
     with type EuropeanParliamentReport
-    // with fields
-    //     VehicleRegistrationID
-    //     FirstRegistrationDate
-    //     VehicleClassificationType
-    //     EngineType
-    //     EuroEmissionStandard
-    //     CarbonMonoxide
 
 type EuropeanParliamentReport:
     vehicleRegistrationID string (1..1)
