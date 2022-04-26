@@ -1,66 +1,220 @@
-//The Demonstration Model aims to illustrate the main concepts of logical modelling, the syntax used in Rosetta (Rosetta DSL) and the main components, views and features of Rosetta. 
-namespace demo.types
+namespace finos.labs.morphir.techsprint
 version "${project.version}"
 
-import demo.enumeration.*
+isEvent root BusinessEvent;
 
-type VehicleOwnership: <"Representative record of vehicle ownership">
-    [rootType]
-    drivingLicence DrivingLicence (0..*)
-    vehicle Vehicle (1..1)
-    dateOfPurchase date (1..1)
-    isFirstHand boolean (1..1)
-    vehicleOwnershipRegistrationID int (1..1)
+type ReportableEvent: <"Specifies a workflowstep with enriched information required for reporting.">
+	[rootType]
+    originatingWorkflowStep WorkflowStep (1..1) <"The workflowstep that originated the reportable event.">
+    reportableTrade TradeState (0..1) <"The reportable trade decomposed from the originating workflow step when required.">
+    reportableInformation ReportableInformation (0..*) <"Additional information required for a reportable transaction, including the reporting regime. A list of reportable information is provided when an event is reportable to more than one regime.">
 
-type VehicleFeature: <"Features qualifying a vehicle in addition to technical specifications">
-    colour ColourEnum (1..1)
-    doorNumber int (1..1)
 
-type Vehicle extends VehicleFeature: <"Representation of a vehicle">
-    specification Specification (1..1)
-    registrationID string (1..1)
-    vehicleTaxBand VehicleTaxBandEnum (1..1)
-    vehicleClassification VehicleClassificationEnum (1..1)
+type WorkflowStep: <"A workflow step represents the state of a business event. The workflow step contains a reference to a previous WorkflowStep in order to preserve lineage. A workflow step is accepted if it contains a business event, proposed if proposedInstruction is present and is rejected if the rejected flag is set.">
+	[metadata key]
+	[rootType]
 
-type Specification: <"Technical specifications of a vehicle">
-    make string (1..1)
-    model string (1..1)
-    carType CarTypeEnum (1..1)
-    zeroTo60 number (1..1)
-    engine Engine (1..1)
-    yearOfManufacture int (1..1)
-    chassisNumber int (1..1)
-    dateOfFirstRegistration date (1..1)
+	businessEvent BusinessEvent (0..1) <"Life cycle event for the step. The businessEvent is optional when a proposedInstruction or rejection are present.">
+	messageInformation MessageInformation (0..1) <"Contains all information pertaining the FpML messaging header ">
+	timestamp EventTimestamp (1..*) <"The set of timestamp(s) associated with the event as a collection of [dateTime, qualifier].">
+	eventIdentifier Identifier (1..*) <"The identifier(s) that uniquely identify a lifecycle event. The unbounded cardinality is meant to provide the ability to associate identifiers that are issued by distinct parties. As an example, each of the parties to the event may choose to associate their own identifiers to the event.">
+	party Party (0..*) <"The specification of the event parties. This attribute is optional, as not applicable to certain events (e.g. most of the observations).">
 
-type Engine: <"Description of the engine">
-    engineType EngineTypeEnum (1..1) <"Type of engine">
-    power number (1..1) <"Break horse power">
-    mpg number (1..1) <"Miles per gallon">
-    emissionMetrics EmissionMetrics (1..1) <"List of emission metrics in grams per km">
+type MessageInformation: <"This class corresponds to the components of the FpML MessageHeader.model.">
 
-type EmissionMetrics: <"Emission metrics used for EU emission standards">
-    carbonMonoxide int (1..1)
-    totalHydrocarbon int (1..1)
-    volatileOrganicCompound int (1..1)
-    nitrogenOxide int (1..1)
-    combineHCNOX int (1..1)
-    particulateMatter int (1..1)
-    particleNumber int (1..1)
+	messageId string (1..1) <"A unique identifier assigned to the message.">
+		[metadata scheme]
+	sentBy string (0..1) <"The identifier for the originator of a message instance.">
+		[metadata scheme]
+	sentTo string (0..*) <"The identifier(s) for the recipient(s) of a message instance.">
+		[metadata scheme]
+	copyTo string (0..*) <"A unique identifier (within the specified coding scheme) giving the details of some party to whom a copy of this message will be sent for reference.">
+		[metadata scheme]
 
-type Person: <"A class to represent the attributes that are specific to a person.">
+type EventTimestamp: <"A class to represent the various set of timestamps that can be associated with lifecycle events, as a collection of [dateTime, qualifier].">
+
+	dateTime zonedDateTime (1..1) <"The CDM specifies that the zoned date time is to be expressed in accordance with ISO 8601, either as UTC as an offset to UTC.">
+	qualification EventTimestampQualificationEnum (1..1) <"The timestamp qualifier is specified through an enumeration because the experience of integrating the DTCC and CME data representations suggests that a wide set of timestamps are currently utilized among service providers, while there is not at present an objective set of criteria that could help suggest a defined set of timestamps as part of the CDM. At some future point, one possible baseline could be developed from the review of the set of timestamps specified across regulatory regimes and regulations (incl. regulations such as high frequency trading). Also, the integration with a further set of implementations and the specification of business workflows such as clearing as part of the CDM development should help confirm the implementation approach in this respect.">
+
+type BusinessEvent: <"A business event represents a life cycle event of a trade and consists of a series of primitive events. The combination of the state changes results in a qualifiable life cycle event. An example of a Business Event is a PartialTermination which is a defined by a quantity change primitive event.">
+	[metadata key]
+	[rootType]
+
+	eventQualifier eventType (0..1) <"The CDM event qualifier, which corresponds to the outcome of the isEvent qualification logic which qualifies the lifecycle event as a function of its features (e.g. PartialTermination, ClearingSubmission, Novation, ...).">
+
+    instruction Instruction (0..*) <"Specifies the instructions that were used to create the Business Event.">
+    after TradeState (0..*) <"Specifies the after trade state(s) created.">
+
+type Instruction: <"Instruction to a function that will be used to perform a business event">
+	[rootType]
+	primitiveInstruction PrimitiveInstruction (0..1) <"Specifies the primitive instructions that will be used to call primitive event functions.">
+	before TradeState (0..1) <"Specifies the trade state that will be acted on by the primitive event functions.">
+		[metadata reference]
+
+type PrimitiveInstruction: <"A Primitive Instruction describes the inputs required to pass into the corresponding PrimitiveEvent function.">
+
+type TradeState: <"Defines the fundamental financial information that can be changed by a Primitive Event and by extension any business or life-cycle event. Each TradeState specifies where a Trade is in its life-cycle. TradeState is a root type and as such, can be created independently to any other CDM data type, but can also be used as part of the CDM Event Model.">
+	[metadata key]
+	[rootType]
+	trade Trade (1..1) <"Represents the Trade that has been effected by a business or life-cycle event.">
+
+
+type Trade: <"Defines the output of a financial transaction between parties - a Business Event. A Trade impacts the financial position (i.e. the balance sheet) of involved parties.">
+	[metadata key]
+	tradeIdentifier Identifier (1..*) <"Represents the identifier(s) that uniquely identify a trade for an identity issuer. A trade can include multiple identifiers, for example a trade that is reportable to both the CFTC and ESMA, and then has an associated USI (Unique Swap Identifier) UTI (Unique Trade Identifier).">
+	tradeDate date (1..1) <"Specifies the date which the trade was agreed.">
+        [metadata id]
+	party Party (0..*) <"Represents the parties to the trade. The cardinality is optional to address the case where the trade is defined within a BusinessEvent data type, in which case the party is specified in BusinessEvent.">
+	partyRole PartyRole (0..*) <"Represents the role each specified party takes in the trade. further to the principal roles, payer and receiver.">
+	contractDetails ContractDetails (0..1) <"Represents information specific to trades involving contractual products.">
+
+type Identifier: <"A class to specify a generic identifier, applicable to CDM artefacts such as executions, contracts, lifecycle events and legal documents. An issuer can be associated with the actual identifier value as a way to properly qualify it.">
+	[metadata key]
+
+	issuerReference Party (0..1) <"The identifier issuer, when specified by reference to a party specified as part of the transaction.">
+		[metadata reference]
+	issuer string (0..1) <"The identifier issuer, when specified explicitly alongside the identifier value (instead of being specified by reference to a party).">
+		[metadata scheme]
+	assignedIdentifier AssignedIdentifier (1..*) <"The identifier value. This level of indirection between the issuer and the identifier and its version provides the ability to associate multiple identifiers to one issuer, consistently with the FpML PartyTradeIdentifier.">
+
+type Party: <"A class to specify a party, without a qualification as to whether this party is a legal entity or a natural person, although the model provides the ability to associate a person (or set of persons) to a party, which use case would imply that such party would be a legal entity (even if not formally specified as such). ">
+	[metadata key]
+
+	partyId string (1..*) <"The identifier associated with a party, e.g. the 20 digits LEI code.">
+		[metadata scheme]
+	name string (0..1) <"The party name.">
+		[metadata scheme]
+	person NaturalPerson (0..*) <"The person(s) who might be associated with the party as part of the execution, contract or legal document.">
+
+type NaturalPerson: <"A class to represent the attributes that are specific to a natural person.">
+	[metadata key]
+
+	personId string (0..*) <"The identifier associated with a person, e.g. the internal identification code.">
+		[metadata scheme]
 	honorific string (0..1) <"An honorific title, such as Mr., Ms., Dr. etc.">
-	firstName string (1..1) <"The natural person's first name.">
-	middleName string (0..*)
-	initial string (0..*)
-	surname string (1..1) <"The natural person's surname.">
+	firstName string (0..1) <"The natural person's first name. It is optional in FpML.">
+	middleName string (0..*) <"The natural person's middle name(s). If a middle name is provided then an initial should be absent.">
+	initial string (0..*) <"The natural person's middle initial(s). If a middle initial is provided then a name should be absent.">
+	surname string (0..1) <"The natural person's surname.">
 	suffix string (0..1) <"Name suffix, such as Jr., III, etc.">
-	dateOfBirth date (0..1) <"The person's date of birth.">
+	dateOfBirth date (0..1) <"The natural person's date of birth.">
 
-type DrivingLicence extends Person: <"Driving licence authorisation granted by a jurisdiction">
-    countryofIssuance string (1..1)
-        [metadata scheme]
-    licenceNumber string (1..1)
-    dateofIssuance date (1..1)
-    dateOfRenewal date (0..1)
-    vehicleEntitlement VehicleClassificationEnum (0..*)
-    penaltyPoints int (1..1)
+	condition NameOrIdChoice: 
+        (firstName exists and surname exists) or personId exists
+
+	condition NaturalPersonChoice: <"Choice rule to represent an FpML choice construct.">
+		optional choice middleName, initial
+
+type AssignedIdentifier: <"A class to specify the identifier value and its associated version.">
+
+	identifier string (1..1) <"The identifier value.">
+		[metadata scheme]
+	identifierType TradeIdentifierTypeEnum (0..1) <"The enumerated classification of the identifier.">
+	version int (0..1) <"The identifier version, which is specified as an integer and is meant to be incremented each time the transaction terms (whether contract or event) change. This version is made option to support the use case where the identifier is referenced without the version. The constraint that a contract and a lifecycle event need to have an associated version is enforced through data rules.">
+
+type PartyRole: <"A class to specify the role(s) that party(ies) may have in relation to the execution, contract or other legal agreement.">
+
+	partyReference Party (1..1) <"A reference to the party to which the role refers to.">
+		[metadata reference]
+	role PartyRoleEnum (1..1) <"The party role.">
+	ownershipPartyReference Party (0..1) <"A reference to the party that has ownership of this party role information. FpML specifies that For shared trade information, this attribute will reference the originator of the data (for example, an execution facility or clearing house).">
+		[metadata reference]
+
+type ReportableInformation: <"Specifies the relevant regulators or other supervisory bodies the transaction is relevant for, and regime specific information required relating to the transaction and the parties.">
+
+	blockTradeIndicator boolean (0..1) <"Indicator of whether an election has been made to report the swap transaction as a block transaction by the reporting counterparty.">
+	executionVenueType ExecutionVenueTypeEnum (1..1) <"Specifies the type of venue where a trade could be executed.">
+    mandatorilyClearable boolean (1..1) <"Indicator of whether the transaction is mandatorily clearable.">
+	partyInformation PartyInformation (1..*) <"Specifies party specific information required for reporting of the transaction">
+    regulatorApplicability RegulatorApplicability (1..1) <"Specifies the regulatory regime requiring reporting of the transaction.">
+
+    condition regimeInformation:
+        if regulatorApplicability -> supervisoryBody = SupervisoryBodyEnum -> CFTC
+            then partyInformation -> cftcPartyInformation exists
+		else if regulatorApplicability -> supervisoryBody = SupervisoryBodyEnum -> SEC
+            then partyInformation -> secPartyInformation exists
+        else if regulatorApplicability -> supervisoryBody = SupervisoryBodyEnum -> ESMA
+            then partyInformation -> esmaPartyInformation exists
+
+type RegulatorApplicability: <"Specifies the regulatory regime requiring reporting of the transaction.">
+	regimeName RegimeNameEnum (1..1) <"Identifies the reporting regime under which this data is reported. For example, Dodd-Frank, MiFID, HongKongOTCDRepository, ODRF">
+	supervisoryBody SupervisoryBodyEnum (0..1) <"Identifies the specific regulator or other supervisory body for which this data is produced. For example, CFTC, SEC, UKFSA, ODRF, SFC, ESMA.">
+
+		condition supervisorInformation: <"For certain regimes a supervisor registration must be provided.">
+		if regimeName = RegimeNameEnum -> DoddFrankAct then
+			supervisoryBody = SupervisoryBodyEnum -> CFTC or supervisoryBody = SupervisoryBodyEnum -> SEC
+
+
+type PartyInformation: <"Specifies party specific information required for reporting of the transaction">
+    partyReference Party (1..1) <"Specifies the party that is associated with the enriched information.">
+		[metadata reference]
+	relatedParty RelatedParty (0..*) <"Specifies one or more parties that perform a role within the transaction. The related party performs the role with respect to the party identified by the 'partyReference'.">
+	reportingRole ReportingRoleEnum (0..1) <"Identifies the role of this party in reporting this trade (e.g. originator, counterparty).">
+	cftcPartyInformation CFTCPartyInformation (0..1) <"Party information required for reporting a transaction to the CFTC.">
+	esmaPartyInformation ESMAPartyInformation (0..1) <"Party information required for reporting a transaction under ESMA.">
+	secPartyInformation SECPartyInformation (0..1) <"Party information required for reporting a transaction under SEC.">
+
+type RelatedParty:
+	partyReference Party (1..1) <"Reference to a party.">
+		[metadata reference]
+	role PartyRoleEnum (1..1) <"The category of the relationship. The related party performs the role specified in this field for the base party. For example, if the role is ,Guarantor, the related party acts as a guarantor for the base party.">
+
+type CFTCPartyInformation: <"Enriched party information required for reporting a transaction to the CFTC.">
+    federalIndicator boolean (1..1) <"Indicator of whether counterparty is a federal entity.">
+    financialIndicator boolean (1..1) <"Indicator of whether counterparty is a financial entity.">
+    clearingException ClearingException (0..1) <"Identifies the type of clearing exception or exemption that the counterparty has elected.">
+	postPricedIndicator boolean (0..1) <"Indication of whether the transaction satisfies the definition of 'post-priced swap'.">
+
+type ClearingException: <"Specifies information related to clearing exceptions or exemptions that are applied to the trade.">
+	clearingException boolean (0..1) <"Indication of whether an exception from normal clearing mandates is being applied caused by the type of the parties or their relationship, such as inter-affiliate trades.">
+    clearingExceptionReason ClearingExceptionReasonEnum (0..1) <"Identifies the type of clearing exception or exemption that the counterparty has elected.">
+	clearingExceptionDeclaration ClearingExceptionDeclaration (0..1) <"Specifies supporting evidence when claiming an end user exception.">
+
+type ClearingExceptionDeclaration: <"Specifies supporting evidence when claiming an end user exception.">
+	creditDocument CreditDocumentEnum (0..*) <"Specifies arrangements being made to provide credit.">
+	organizationCharacteristic OrganizationCharacteristicEnum (0..*) <"Specifies the categories or characteristics that apply to an organization which allow it to apply for an end-user exception determination.">
+	transactionCharacteristic TransactionCharacteristicEnum (0..*) <"Specifies the categories or characteristics that apply to a transaction which allow application of an end-user exception determination.">
+
+
+type ESMAPartyInformation: <"Enriched party information required for reporting a transaction under ESMA EMIR.">
+    natureOfParty NatureOfPartyEnum (1..1) <"Specifies the nature of the counterparty.">
+    corporateSector CorporateSector (0..1) <"Specifies the corporate sector of the counterparty.">
+
+    condition CorporateSector: <"Condition to ensure that the corporate sector of the counterparty is specified when required.">
+        if natureOfParty = NatureOfPartyEnum -> F or natureOfParty = NatureOfPartyEnum -> N
+        then corporateSector exists
+        else corporateSector is absent
+
+type CorporateSector: <"Specifies the corporate sector of the counterparty.">
+    financialSector FinancialSectorEnum (0..1) <"Specifies the ESMA EMIR Financial Sector of a counterparty.">
+    nonFinancialSector NonFinancialSector (0..*) <"Specifies the ESMA EMIR Non Financial Sector of a counterparty.">
+
+type NonFinancialSector: <"Specifies the ESMA Non Financial Sector of a counterparty and the ordinality of the relative importance of the corresponding activity.">
+    ordinal int (1..1)
+    nonFinancialSectorIndicator NonFinancialSectorEnum (1..1)
+
+type SECPartyInformation: <"Enriched party information required for reporting a transaction to the CFTC.">
+	entityClassification SECEntityClassificationEnum (1..1) <"Specifies the entity classification of a party under the U.S. Securities and Exchange Commission (SEC).">
+
+type ContractDetails: <"Defines specific attributes that relate to contractual details of trades.">
+	[metadata key]
+	governingLaw GoverningLawEnum (0..1) <"Represents the law governing the trade and associated contractual product terms.">
+		[metadata scheme]
+	partyContractInformation PartyContractInformation (0..*) <"Represents additional contractual information provided by each involved party.">
+
+type PartyContractInformation: <"A class defining party-specific additional information that may be recorded with respect to a contract.">
+
+	partyReference Party (1..1) <"The reference to the party that owns this party contract information or, in the case of shared trades information, the reference that originated such information.">
+		[metadata reference]
+	naturalPersonRole NaturalPersonRole (0..*) <"The role(s) that natural person(s) may have in relation to the contract.">
+	relatedParty RelatedParty (0..*)
+	category CategoryEnum (0..1) <"The qualification of the trade by the counterparty, e.g. customer or principal. This information is relevant for a number of marketplace processes, such as regulatory reporting or clearing.">
+		[metadata scheme]
+
+type NaturalPersonRole: <"A class to specify the role(s) that natural person(s) may have in relation to the contract.">
+
+	personReference NaturalPerson (1..1) <"A reference to the natural person to whom the role refers to.">
+		[metadata reference]
+	role NaturalPersonRoleEnum (0..*) <"FpML specifies a person role that is distinct from the party role.">
+		[metadata scheme]
+

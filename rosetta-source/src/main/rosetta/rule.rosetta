@@ -1,301 +1,323 @@
-namespace demo.emissionsrules
+namespace finos.labs.morphir.techsprint
 version "${project.version}"
 
-import demo.types.*
-import demo.enumeration.*
-import demo.functions.*
+segment rationale
+segment rationale_author
+segment structured_provision
 
-segment annex 
 segment article
-segment section
+segment whereas
+segment annex
 segment table
+segment section
+segment field
+segment paragraph
+segment question
+segment dataElement
+segment appendix
 
-body Authority EuropeanCommission <"European Commission (ec.europa.eu).">
+annotation enrichment:
+annotation decomposition:
 
-body Authority EuropeanParliament <"European Parliament (europarl.europa.eu).">
+body Organisation ISO <"The International Organization for Standardization is an international standard-setting body composed of representatives from various national standards organizations. Founded on 23 February 1947, the organization promotes worldwide proprietary, industrial, and commercial standards.">
 
-body Authority EuropeanCouncil <"European Council (consilium.europa.eu/en/european-council/).">
+body Authority BIS <"The Bank for International Settlements (BIS) is an international financial institution owned by central banks that fosters international monetary and financial cooperation and serves as a bank for central banks">
 
-corpus Directive "93/59/EC" StandardEmissionsEuro1
-    <"COUNCIL DIRECTIVE 93 /59/EEC of 28 June 1993 amending Directive 70/220/EEC on the approximation of the laws of the Member States
-    relating to measures to be taken against air pollution by emissions from motor vehicles https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A31993L0059">
+body Authority CPMI <"The Committee on Payments and Market Infrastructures (CPMI) is an international standard setter that promotes, monitors and makes recommendations about the safety and efficiency of payment, clearing, settlement and related arrangements, thereby supporting financial stability and the wider economy. The CPMI also serves as a forum for central bank cooperation in related oversight, policy and operational matters, including the provision of central bank services.">
 
-corpus Directive "96/69/EC" StandardEmissionsEuro2
-    <"DIRECTIVE 96/69/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 8 October 1996 amending Directive 70/220/EEC on the approximation of the laws of the Member States relating to
-    measures to be taken against air pollution by emissions from motor vehicles https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CONSLEG:1996L0069:19961121:EN:PDF">
+body Authority IOSCO <"The International Organization of Securities Commissions (IOSCO) is the international body that brings together the world's securities regulators and is recognized as the global standard setter for the securities sector. IOSCO develops, implements and promotes adherence to internationally recognized standards for securities regulation. It works intensively with the G20 and the Financial Stability Board (FSB) on the global regulatory reform agenda.">
 
-corpus Directive "98/69/EC" StandardEmissionsEuro3Euro4
-    <"Directive 98/69/EC of the European Parliament and of the Council of 13 October 1998 relating to measures to be taken against air pollution by emissions from motor vehicles and amending Council Directive 70/220/EEC https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A31998L0069">
+body Authority CPMI_IOSCO <"IOSCO and the Committee on Payments and Market Infrastructures (CPMI) work together to enhance coordination of standard and policy development and implementation, regarding clearing, settlement and reporting arrangements including financial market infrastructures (FMIs) worldwide. FMIs, which include central counterparties (CCPs), trade repositories (TRs), central securities depositories (CSDs), securities settlement systems (SSSs), and payment systems (PSs), play an essential role in the global financial system. IOSCO and the CPMI monitor the implementation of the Principles for financial market infrastructures (PFMI), which are international standards for payment systems, central securities depositories, securities settlement systems, central counterparties and trade repositories. The PFMI are designed to help ensure the safety, efficiency and resilience of these infrastructures supporting global financial markets - so their full, timely and consistent implementation is fundamental. CPMI and IOSCO members have committed to adopting the principles and responsibilities contained in the PFMI in line with the G20 expectations.">
 
-corpus Regulation "EC 715/2007" StandardEmissionsEuro5
-    <"REGULATION (EC) No 715/2007 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 20 June 2007 on type approval of motor vehicles with respect to emissions from light passenger and commercial
-    vehicles (Euro 5 and Euro 6) and on access to vehicle repair and maintenance information https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32007R0715">
+corpus TechnicalGuidance "Harmonisation of Critical Data Elements (other than UTI and UPI)" CDE <"The G20 Leaders agreed in 2009 that all over-the-counter (OTC) derivative transactions should be reported to trade repositories (TRs) to further the goals of improving transparency, mitigating systemic risk and preventing market abuse.1 Aggregation of the data being reported across TRs will help authorities to obtain a comprehensive view of the OTC derivatives market and its activity. Such aggregation is feasible if the work on standardisation and harmonisation of important data elements [is] completed.2 Since November 2014, the CPMI and IOSCO working group for the harmonisation of key OTC derivatives data elements (Harmonisation Group) has worked to develop global guidance regarding the definition, format and usage of key OTC derivatives data elements reported to TRs, including the Unique Transaction Identifier (UTI), the Unique Product Identifier (UPI) and other critical data elements. Technical Guidance on the Harmonisation of the Unique Transaction Identifier (UTI) was published in February 20173 and Technical Guidance on the Harmonisation of the Unique Product Identifier (UPI) was published in September 2017.4 The CPMI and IOSCO also published consultative reports on a first, a second and a third batch of critical data elements other than UTI and UPI in September 2015, October 2016 and June 2017, respectively">
 
-corpus Regulation "EC 459/2012" StandardEmissionsEuro6
-    <"COMMISSION REGULATION (EU) No 459/2012 of 29 May 2012 amending Regulation (EC) No 715/2007 of the European Parliament and of the Council and Commission Regulation (EC) No 692/2008 as regards emissions from light passenger and commercial vehicles (Euro 6) https://eur-lex.europa.eu/eli/reg/2012/459/oj">
+corpus UPITechnicalGuidance "Harmonisation of the Unique Product Identifier" UPI <"This document (the Technical Guidance) provides authorities with technical guidance on a uniform global Unique Product Identifier (UPI). 1 A number of reports2 have identified OTC derivatives data elements  including the UPI  that are critical to many aspects of regulatory work. This report envisions a system under which a unique UPI code would be assigned to each distinct OTC derivative product and each UPI code would map to a set of data comprised of eference data elements with specific values that together describe the product. The collection of reference data elements and their values for each product would reside in a corresponding UPI reference data library.">
 
-corpus Regulation "Regulation (EU) 2019/631" EmissionPerformanceStandardsEU
-    <"Regulation (EU) 2019/631 of the European Parliament and of the Council of 17 April 2019 setting CO2 emission performance standards for new passenger cars and for new light commercial vehicles, and repealing Regulations (EC) No 443/2009 and (EU) No 510/2011. https://eur-lex.europa.eu/eli/reg/2019/631/oj/eng">
+corpus ReportingStandard "ISO 20022" ISO_20022
+	<"ISO 20022 is a multi part International Standard prepared by ISO Technical Committee TC68 Financial Services.">
 
-corpus Directive "Directive 2014/46/EU" VehicleRegistrationEU
-    <"Directive 2014/46/EU of the European Parliament and of the Council of 3 April 2014 amending Council Directive 1999/37/EC on the registration documents for vehicles https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1526982904241&uri=CELEX:32014L0046">
+corpus BestPractice "3Mar2020" EMIRReportingBestPractice
+	<"The EMIR Reporting Best Practices cover 87 data points across 61 reporting fields, including both over-the-counter and exchange-traded derivatives, and were developed to improve the accuracy and efficiency of trade reporting and to reduce compliance costs. The best practices are available to all market participants to access and implement.  The EMIR Reporting Best Practices is a cross-trade association initiative developed jointly by the European Fund and Asset Management Association (EFAMA), European Venues and Intermediaries Association (EVIA), Futures Industry Association (FIA), German Investment Funds Association (BVI), Global Foreign Exchange Division (GFXD), International Swaps and Derivatives Association, Inc. (ISDA) and Investment Association (IA).">
 
-report EuropeanParliament  EmissionPerformanceStandardsEU in real-time
-    when EuroStandardsCoverage
-    with type EuropeanParliamentReport
+body Authority CFTC <"Commodity Futures Trading Commission (CFTC): The Federal regulatory agency established by the Commodity Futures Trading Act of 1974 to administer the Commodity Exchange Act.">
 
-type EuropeanParliamentReport:
-    vehicleRegistrationID string (1..1)
-        [ruleReference VehicleRegistrationID]
-    firstRegistrationDate date (1..1)
-        [ruleReference FirstRegistrationDate]
-    vehicleClassificationType VehicleClassificationEnum (1..1)
-        [ruleReference VehicleClassificationType]
-    engineType EngineTypeEnum (1..1)
-        [ruleReference EngineType]
-    euroEmissionStandard string (1..1)
-        [ruleReference EuroEmissionStandard]
-     carbonMonoxide int (1..1)
-        [ruleReference CarbonMonoxide]   
+corpus Regulation "CFTC 17 CFR Parts 45" Part45 <"Part 45 of the CFTCs regulations specifies the Commissions swap data recordkeeping and reporting requirements, pursuant to section 2(a)(13)(G) of the Commodity Exchange Act (CEA), which states that all swaps, whether cleared or uncleared, must be reported to a Swap Data Repository (SDR)">
 
-eligibility rule EuroStandardsCoverage
-    filter when 
-        ( 
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> M1_Passengers
-            or
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> M2_Passengers
-            or
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> M3_Passengers
-            or
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> N1I_Commercial
-            or
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> N1II_Commercial
-            or
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> N1III_Commercial
-            or
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> N2_Commercial
-            or
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> N3_Commercial
-            or
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> l3e_Motorcycle
-            or
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> l4e_Motorcycle
-            or
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> l5e_Motortricycle
-            or
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> l6e_Quadricycle
-            or
-            VehicleOwnership -> vehicle -> vehicleClassification = VehicleClassificationEnum -> l7e_Quadricycle
-        )
+corpus Software "Morphir" Morphir <"Morphir is a library of tools that works to capture business logic as data.">
 
-reporting rule VehicleRegistrationID <"Unique ID for the vehicle registration">
-    [regulatoryReference EuropeanParliament VehicleRegistrationEU article "1"  
-     provision "This Directive shall apply to the vehicle registration documents issued by the Member States"]
-    extract VehicleOwnership -> vehicle -> registrationID
-    as "Vehicle Registration ID"
+report CFTC Part45 Morphir in T+1
+    when ReportableEvent
+  	using standard ISO_20022
+  	with type CFTCPart45TransactionReport
 
-reporting rule FirstRegistrationDate <"Date of first registration of the vehicle">
-   [regulatoryReference EuropeanParliament VehicleRegistrationEU article "3" section "4"  
-    provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
-    include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
-   extract VehicleOwnership -> vehicle -> specification -> dateOfFirstRegistration
-    as "First Registration Date"
+eligibility rule ReportableEvent <"When eligible for Part45">
+	[regulatoryReference CFTC Part45 section "45.3(b)"
+   		provision "For each off-facility swap, the reporting counterparty shall report required swap creation data electronically to a swap data repository as provided by paragraph (b)(1) or (2) of this section, as applicable.
+            (1) If the reporting counterparty is a swap dealer, major swap participant, or derivatives clearing organization, the reporting counterparty shall report required swap creation data electronically to a swap data repository in the manner provided in  45.13(a) not later than the end of the next business day following the execution date.
+            (2) If the reporting counterparty is a non-SD/MSP/DCO counterparty, the reporting counterparty shall report required swap creation data electronically to a swap data repository in the manner provided in  45.13(a) not later than the end of the second business day following the execution date. "]
+		filter when ReportableEvent -> originatingWorkflowStep exists
 
-reporting rule VehicleClassificationType <"Classification type of the vehicle">
-    [regulatoryReference EuropeanParliament VehicleRegistrationEU article "3" section "4"  
-    provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
-    include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
-    extract VehicleOwnership -> vehicle -> vehicleClassification
-    as "Vehicle Classification Type"
 
-reporting rule EngineType <"Engine type of the vehicle">
-    [regulatoryReference EuropeanParliament VehicleRegistrationEU article "3" section "4"  
-    provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
-    include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
-    extract VehicleOwnership -> vehicle -> specification -> engine -> engineType
-    as "Engine Type"
+type CFTCPart45TransactionReport:
 
-reporting rule CarbonMonoxide <"Carbon Monoxyde (CO) reported under emission metrics for the type of engine">
-    [regulatoryReference EuropeanCommission StandardEmissionsEuro6 article "1"  
-    provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
-    include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
-    extract VehicleOwnership -> vehicle -> specification -> engine -> emissionMetrics -> carbonMonoxide
-    as "Carbon Monoxide"
+    tradeDate date (1..1)
+        [ruleReference TradeDate]
 
-//Utility Rules - Euro standards 
+    eventTimestamp zonedDateTime (1..1)
+        [ruleReference EventTimestamp]
 
-reporting rule EuroEmissionStandard
-   [regulatoryReference EuropeanCommission StandardEmissionsEuro6 article "1"  
-    provision "Regulation (EC) No 715/2007 is amended as follows:"]
-    ( 
-        // If conditions below are not mutually exclusive, then statements need to be in reverse order (the last matching condition will be displayed)
-        Euro1Standard as "Emission Standards",
-        Euro2Standard as "Emission Standards",
-        Euro3Standard as "Emission Standards",
-        Euro4Standard as "Emission Standards",
-        Euro5Standard as "Emission Standards",
-        Euro6Standard as "Emission Standards"
-    )
 
-reporting rule Euro6Standard
-   [regulatoryReference EuropeanCommission StandardEmissionsEuro6 annex "1" table "2" 
-    provision "Annex  I  to  Regulation  (EC)  No  715/2007  is  amended  as  follows:(1)   the  text  in  the  second  row  of  the  last  column of  Table  1  (Euro  5  emission  limits)  is  replaced  by  the  following:Number  of  particles  (PN);(2)  Table  2  is  replaced  by  the following  table:"]
-    extract VehicleOwnership -> vehicle then
-        filter when 
-            (
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M1_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M2_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M3_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1I_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1II_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1III_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N2_Commercial
-            ) then 
-        filter when rule IsRegisteredAfterEuro6StandardDate then // Alternative where Before / After a date could be possible (new release required)
-        extract "Euro 6 Standard"
+    cleared string (1..1)
+//        [ruleReference Cleared]
+    centralCounterparty string (0..1)
+//        [ruleReference CentralCounterparty]
+    clearingAccountOrigin string (0..1)
+//        [ruleReference ClearingAccountOrigin]
+    clearingMember string (0..1)
+//        [ruleReference ClearingMember]
+    clearingSwapUSIs string (0..1)
+//        [ruleReference ClearingSwapUSIs]
+    clearingSwapUTIs string (0..1)
+//        [ruleReference ClearingSwapUTIs]
+    originalSwapUSI string (0..1)
+//        [ruleReference OriginalSwapUSI]
+    originalSwapUTI string (0..1)
+//        [ruleReference OriginalSwapUTI]
+    originalSwapSDRIdentifier string (0..1)
+//        [ruleReference OriginalSwapSDRIdentifier]
+    clearingReceiptTimestamp zonedDateTime (0..1)
+//        [ruleReference ClearingReceiptTimestamp]
+    clearingExceptionsAndExemptionsCounterparty1 string (0..1)
+//        [ruleReference ClearingExceptionsAndExemptionsCounterparty1]
+    clearingExceptionsAndExemptionsCounterparty2 string (0..1)
+//        [ruleReference ClearingExceptionsAndExemptionsCounterparty2]
+    counterparty1 string (1..1)
+//        [ruleReference Counterparty1]
+    counterparty2 string (1..1)
+//        [ruleReference Counterparty2]
+    counterparty2IdentifierSource string (1..1)
+//        [ruleReference Counterparty2IdentifierSource]
+    counterparty1FinancialEntityIndicator boolean (0..1)
+//        [ruleReference Counterparty1FinancialEntityIndicator]
+    counterparty2FinancialEntityIndicator boolean (1..1)
+//        [ruleReference Counterparty2FinancialEntityIndicator]
+    buyerIdentifier string (0..1)
+//        [ruleReference BuyerIdentifier]
+    sellerIdentifier string (0..1)
+//        [ruleReference SellerIdentifier]
+    payerIdentifierLeg1 string (0..1)
+//        [ruleReference PayerIdentifierLeg1]
+    payerIdentifierLeg2 string (0..1)
+//        [ruleReference PayerIdentifierLeg2]
+    receiverIdentifierLeg1 string (0..1)
+//        [ruleReference ReceiverIdentifierLeg1]
+    receiverIdentifierLeg2 string (0..1)
+//        [ruleReference ReceiverIdentifierLeg2]
+    submitterIdentifier string (1..1)
+//        [ruleReference SubmitterIdentifier]
+    counterparty1FederalEntityIndicator boolean (1..1)
+//        [ruleReference Counterparty1FederalEntityIndicator]
+    counterparty2FederalEntityIndicator boolean (1..1)
+//        [ruleReference Counterparty2FederalEntityIndicator]
+    customBasketIndicator boolean (1..1)
+//        [ruleReference CustomBasketIndicator]
+    actionType string (1..1)
+//        [ruleReference ActionType]
+    eventType string (1..1)
+//        [ruleReference EventType]
+    amendmentIndicator string (0..1)
+//        [ruleReference AmendmentIndicator]
+    eventIdentifier string (0..1)
+//        [ruleReference EventIdentifier]
+    
+    
 
-reporting rule IsRegisteredAfterEuro6StandardDate
-    extract Vehicle -> specification -> dateOfFirstRegistration > Create_Date(2020, 5, 1) // Create_Date(2015, 9, 1)
+    notionalAmountLeg1 number (0..1)
+//        [ruleReference NotionalAmountLeg1]
+    notionalAmountLeg2 number (0..1)
+//        [ruleReference NotionalAmountLeg2]
+    notionalCurrencyLeg1 string (0..1)
+//        [ruleReference NotionalCurrencyLeg1]
+    notionalCurrencyLeg2 string (0..1)
+//        [ruleReference NotionalCurrencyLeg2]
+    callAmount number (0..1)
+//        [ruleReference CallAmount]
+    callCurrency string (0..1)
+//        [ruleReference CallCurrency]
+    putAmount number (0..1)
+//        [ruleReference PutAmount]
+    putCurrency string (0..1)
+//        [ruleReference PutCurrency]
+    notionalQuantityLeg1 number (0..1)
+//        [ruleReference NotionalQuantityLeg1]
+    notionalQuantityLeg2 number (0..1)
+//        [ruleReference NotionalQuantityLeg2]
+    quantityFrequencyLeg1 string (0..1)
+//        [ruleReference QuantityFrequencyLeg1]
+    quantityFrequencyLeg2 string (0..1)
+//        [ruleReference QuantityFrequencyLeg2]
+    quantityFrequencyMultiplierLeg1 int (0..1)
+//        [ruleReference QuantityFrequencyMultiplierLeg1]
+    quantityFrequencyMultiplierLeg2 int (0..1)
+//        [ruleReference QuantityFrequencyMultiplierLeg2]
+    quantityUnitOfMeasureLeg1 string (0..1)
+//        [ruleReference QuantityUnitOfMeasureLeg1]
+    quantityUnitOfMeasureLeg2 string (0..1)
+//        [ruleReference QuantityUnitOfMeasureLeg2]
+    totalNotionalQuantityLeg1 number (0..1)
+//        [ruleReference TotalNotionalQuantityLeg1]
+    totalNotionalQuantityLeg2 number (0..1)
+//        [ruleReference TotalNotionalQuantityLeg2]
+    packageIndicator boolean (1..1)
+//        [ruleReference PackageIndicator]
+    packageIdentifier string (0..1)
+//        [ruleReference PackageIdentifier]
+    fixedRateDayCountConventionLeg1 string (0..1)
+//        [ruleReference FixedRateDayCountConventionLeg1]
+    fixedRateDayCountConventionLeg2 string (0..1)
+//        [ruleReference FixedRateDayCountConventionLeg2]
+    floatingRateDayCountConventionLeg1 string (0..1)
+//        [ruleReference FloatingRateDayCountConventionLeg1]
+    floatingRateDayCountConventionLeg2 string (0..1)
+//        [ruleReference FloatingRateDayCountConventionLeg2]
+    fixingDateLeg1 date (0..1)
+//        [ruleReference FixingDateLeg1]
+	fixingDateLeg2 date (0..1)
+//        [ruleReference FixingDateLeg2]
+    floatingRateResetFrequencyPeriodLeg1 string (0..1)
+//        [ruleReference FloatingRateResetFrequencyPeriodLeg1]
+    floatingRateResetFrequencyPeriodLeg2 string (0..1)
+//        [ruleReference FloatingRateResetFrequencyPeriodLeg2]
+    floatingRateResetFrequencyPeriodMultiplierLeg1 int (0..1)
+//        [ruleReference FloatingRateResetFrequencyPeriodMultiplierLeg1]
+    floatingRateResetFrequencyPeriodMultiplierLeg2 int (0..1)
+//        [ruleReference FloatingRateResetFrequencyPeriodMultiplierLeg2]
+    fixedRatePaymentFrequencyPeriodLeg1 string (0..1)
+//        [ruleReference FixedRatePaymentFrequencyPeriodLeg1]
+    fixedRatePaymentFrequencyPeriodLeg2 string (0..1)
+//        [ruleReference FixedRatePaymentFrequencyPeriodLeg2]
+    floatingRatePaymentFrequencyPeriodLeg1 string (0..1)
+//        [ruleReference FloatingRatePaymentFrequencyPeriodLeg1]
+    floatingRatePaymentFrequencyPeriodLeg2 string (0..1)
+//        [ruleReference FloatingRatePaymentFrequencyPeriodLeg2]
+    fixedRatePaymentFrequencyPeriodMultiplerLeg1 int (0..1)
+//        [ruleReference FixedRatePaymentFrequencyPeriodMultiplierLeg1]
+    fixedRatePaymentFrequencyPeriodMultiplerLeg2 int (0..1)
+//        [ruleReference FixedRatePaymentFrequencyPeriodMultiplierLeg2]
+    floatingRatePaymentFrequencyPeriodMultiplerLeg1 int (0..1)
+//        [ruleReference FloatingRatePaymentFrequencyPeriodMultiplierLeg1]
+    floatingRatePaymentFrequencyPeriodMultiplerLeg2 int (0..1)
+//        [ruleReference FloatingRatePaymentFrequencyPeriodMultiplierLeg2]
+    exchangeRateLeg1 number (0..1)
+//        [ruleReference ExchangeRateLeg1]
+    exchangeRateBasis string (0..1)
+//        [ruleReference ExchangeRateBasis]
+    fixedRateLeg1 number (0..1)
+//        [ruleReference FixedRateLeg1]
+    fixedRateLeg2 number (0..1)
+//        [ruleReference FixedRateLeg2]
+    postPricedSwapIndicator boolean (1..1)
+//        [ruleReference PostPricedSwapIndicator]
+    price number (0..1)
+//        [ruleReference Price]
+    priceCurrency string (0..1)
+//        [ruleReference PriceCurrency]
+    priceNotation string (0..1)
+//        [ruleReference PriceNotation]
+    priceUnitOfMeasure string (0..1)
+//        [ruleReference PriceUnitOfMeasure]
+    spreadLeg1 number (0..1)
+//        [ruleReference SpreadLeg1]
+    spreadLeg2 number (0..1)
+//        [ruleReference SpreadLeg2]
+    spreadCurrencyLeg1 string (0..1)
+//        [ruleReference SpreadCurrencyLeg1]
+    spreadCurrencyLeg2 string (0..1)
+//        [ruleReference SpreadCurrencyLeg2]
+    spreadNotationLeg1 string (0..1)
+//        [ruleReference SpreadNotationLeg1]
+    spreadNotationLeg2 string (0..1)
+//        [ruleReference SpreadNotationLeg2]
+    strikePrice number (0..1)
+//        [ruleReference StrikePrice]
+    strikePriceCurrency string (0..1)
+//        [ruleReference StrikePriceCurrency]
+    strikePriceNotation string (0..1)
+//        [ruleReference StrikePriceNotation]
+    optionPremiumAmount number (0..1)
+//        [ruleReference OptionPremiumAmount]
+    optionPremiumCurrency string (0..1)
+//        [ruleReference OptionPremiumCurrency]
+    optionPremiumPaymentDate date (0..1)
+//        [ruleReference OptionPremiumPaymentDate]
+    firstExerciseDate date (0..1)
+//        [ruleReference FirstExerciseDate]
+    cDSIndexAttachmentPoint number (0..1)
+//        [ruleReference CDSIndexAttachmentPoint]
+    cDSIndexDetachmentPoint number (0..1)
+//        [ruleReference CDSIndexDetachmentPoint]
+    indexFactor number (0..1)
+//        [ruleReference IndexFactor]
+    embeddedOptionType string (0..1)
+//        [ruleReference EmbeddedOptionType]
+    uniqueProductIdentifier string (0..1)
+//        [ruleReference UniqueProductIdentifier]
+    finalContractualSettlementDate date (1..1)
+//        [ruleReference FinalContractualSettlementDate]
+    settlementCurrencyLeg1 string (0..1)
+//        [ruleReference SettlementCurrencyLeg1]
+    settlementCurrencyLeg2 string (0..1)
+//        [ruleReference SettlementCurrencyLeg2]
+    settlementLocationLeg1 string (0..1)
+//        [ruleReference SettlementLocationLeg1]
+    settlementLocationLeg2 string (0..1)
+//        [ruleReference SettlementLocationLeg2]
+	allocationIndicator string (1..1)
+//        [ruleReference AllocationIndicator]
+    nonStandardizedTermIndicator string (0..1)
+//        [ruleReference NonStandardizedTermIndicator]
+    blockTradeElectionIndicator boolean (1..1)
+//        [ruleReference BlockTradeElectionIndicator]
+    effectiveDate date (1..1)
+//        [ruleReference EffectiveDate]
+    expirationDate date (1..1)
+//        [ruleReference ExpirationDate]
+    executionTimestamp zonedDateTime (1..1)
+//        [ruleReference ExecutionTimestamp]
+    reportingTimestamp zonedDateTime (1..1)
+//        [ruleReference ReportingTimestamp]
+    platformIdentifier string (0..1)
+//        [ruleReference PlatformIdentifier]
+    primeBrokerageTransactionIndicator boolean (0..1)
+//        [ruleReference PrimeBrokerageTransactionIndicator]
+    priorUSI string (0..1)
+//        [ruleReference PriorUSI]
+    priorUTI string (0..1)
+//        [ruleReference PriorUTI]
+    uniqueSwapIdentifier string (0..1)
+//        [ruleReference UniqueSwapIdentifier]
+    uniqueTransactionIdentifier string (0..1)
+//        [ruleReference UniqueTransactionIdentifier]
+    jurisdiction string (1..1)
+//        [ruleReference Jurisdiction]
+    newSDRIdentifier string (0..1)
+//        [ruleReference NewSDRIdentifier]
+    initialMarginCollateralPortfolioCode string (1..1)
+//        [ruleReference InitialMarginCollateralPortfolioCode]
+    variationMarginCollateralPortfolioCode string (1..1)
+//        [ruleReference VariationMarginCollateralPortfolioCode]
 
-reporting rule Euro5Standard
-   [regulatoryReference EuropeanCommission StandardEmissionsEuro5 annex "1" table "1" 
-    provision "Annex  I  to  Regulation  (EC)  No  715/2007"]
-    extract VehicleOwnership -> vehicle then
-        filter when 
-            (
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M1_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M2_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M3_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1I_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1II_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1III_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N2_Commercial
-            ) then 
-        filter when rule IsRegisteredAfterEuro5StandardDate then
-        extract "Euro 5 Standard"
+reporting rule TradeDate <"Trade Date">
+    [regulatoryReference CFTC Part45 appendix "1" dataElement "30" field "Trade Date"
+        provision "Date and time of occurrence of the event as determined by the reporting counterparty or a service provider. In the case of a clearing event, date and time when the original swap is accepted by the derivative clearing organization (DCO) for clearing and recorded by the DCOs system should be reported in this data element. The time element is as specific as technologically practicable."]
+    extract ReportableEvent -> reportableTrade -> trade -> tradeDate 
+    as "Trade timestamp"
 
-reporting rule IsRegisteredAfterEuro5StandardDate
-    extract Vehicle -> specification -> dateOfFirstRegistration > Create_Date(2019, 12, 31) // Create_Date(2011, 1, 1)
+reporting rule EventTimestamp <"Event Timestamp">
+    [regulatoryReference CFTC Part45 appendix "1" dataElement "30" field "Event Timestamp"
+        provision "Date and time of occurrence of the event as determined by the reporting counterparty or a service provider. In the case of a clearing event, date and time when the original swap is accepted by the derivative clearing organization (DCO) for clearing and recorded by the DCOs system should be reported in this data element. The time element is as specific as technologically practicable."]
+    extract ReportableEvent -> originatingWorkflowStep -> timestamp  then
+        filter when EventTimestamp -> qualification = EventTimestampQualificationEnum -> eventCreationDateTime then
+        	extract EventTimestamp -> dateTime
+    as "30 Event timestamp"
 
-reporting rule Euro4Standard
-   [regulatoryReference EuropeanCommission StandardEmissionsEuro3Euro4 annex "1" section "5.3.1.4" 
-    provision "Annex  I  The heading reads as follows: Scope, Definitions, Application for EC Type-Approval, Granting of EC Type-Approval, Requirements and Tests, Extension of EC Type-Approval, Conformity of Production and In-Service Vehicles, On-Board Diagnostic (OBD) Systems"]
-    extract VehicleOwnership -> vehicle then
-        filter when 
-            (
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M1_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M2_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M3_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1I_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1II_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1III_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N2_Commercial
-            ) then 
-        filter when rule IsRegisteredAfterEuro4StandardDate then
-        extract "Euro 4 Standard"
-
-reporting rule IsRegisteredAfterEuro4StandardDate
-    extract Vehicle -> specification -> dateOfFirstRegistration > Create_Date(2006, 1, 1)
-   
-reporting rule Euro3Standard
-   [regulatoryReference EuropeanCommission StandardEmissionsEuro3Euro4 annex "1" section "5.3.1.4" 
-    provision "Annex  I  The heading reads as follows: Scope, Definitions, Application for EC Type-Approval, Granting of EC Type-Approval, Requirements and Tests, Extension of EC Type-Approval, Conformity of Production and In-Service Vehicles, On-Board Diagnostic (OBD) Systems"]
-    extract VehicleOwnership -> vehicle then
-        filter when 
-            (
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M1_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M2_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M3_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1I_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1II_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1III_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N2_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> l3e_Motorcycle
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> l4e_Motorcycle
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> l5e_Motortricycle
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> l6e_Quadricycle
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> l7e_Quadricycle
-            ) then 
-        filter when rule IsRegisteredAfterEuro3StandardDate then
-        extract "Euro 3 Standard"
-
-reporting rule IsRegisteredAfterEuro3StandardDate
-    extract Vehicle -> specification -> dateOfFirstRegistration > Create_Date(2001, 1, 1)   
-
-reporting rule Euro2Standard
-   [regulatoryReference EuropeanCommission StandardEmissionsEuro2 annex "" 
-    provision "Amendments to the Annexes to Directive 70/220/EEC as amended by Directive 93/59/EEC
-        The table in Section 5.3.1.4 is replaced by the following:"]
-    extract VehicleOwnership -> vehicle then
-        filter when 
-            (
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M1_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M2_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M3_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1I_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1II_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1III_Commercial
-            ) then 
-        filter when rule IsRegisteredAfterEuro4StandardDate then
-        extract "Euro 2 Standard"
-
-reporting rule IsRegisteredAfterEuro2StandardDate
-    extract Vehicle -> specification -> dateOfFirstRegistration > Create_Date(1997, 1, 1)    
-
-reporting rule Euro1Standard
-   [regulatoryReference EuropeanCommission StandardEmissionsEuro1 annex "1" section "8" 
-    provision "Amendments to the Annexes to Directive 70/220/EEC Item 5.3.1.4: The table is replaced by the following:"]
-    extract VehicleOwnership -> vehicle then
-        filter when 
-            (
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M1_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M2_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> M3_Passengers
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1I_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1II_Commercial
-                or
-                Vehicle -> vehicleClassification = VehicleClassificationEnum -> N1III_Commercial
-            ) then 
-        filter when rule IsRegisteredAfterEuro4StandardDate then
-        extract "Euro 1 Standard"
-
-reporting rule IsRegisteredAfterEuro1StandardDate
-    extract Vehicle -> specification -> dateOfFirstRegistration > Create_Date(1993, 1, 1)
