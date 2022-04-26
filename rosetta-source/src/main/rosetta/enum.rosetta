@@ -1,66 +1,15 @@
-namespace demo.enumeration
+namespace finos.labs.morphir.techsprint
 version "${project.version}"
 
-enum ColourEnum: <"Colour of the vehicle used as an additional feature for a vehicle">
-    Red
-    Orange
-    Yellow
-    Green
-    Blue
-    Indigo
-    Violet
 
-enum CarTypeEnum: <"Category of the car used as an additional technical specification for a vehicle">
-    Hatchback
-	Saloon
-	Estate
-	MPV
-	SUV
-	Coupe
-	Sports car
-	Convertible
-
-enum EngineTypeEnum: <"Type of the engine used as an additional technical specification for a vehicle">
-    Diesel
-    Petrol
-    Electric
-    Hybrid
-    LPG
-
-enum VehicleClassificationEnum: <"Vehicle classification as per 2002/24/EC of 18 March 2002 and 2007/46/EC of 5 September 2007">
-    l1e_Moped
-    l2e_Moped
-    l3e_Motorcycle
-    l4e_Motorcycle
-    l5e_Motortricycle
-    l6e_Quadricycle
-    l7e_Quadricycle
-    M1_Passengers
-    M2_Passengers 
-    M3_Passengers
-    N1I_Commercial 
-    N1II_Commercial 
-    N1III_Commercial 
-    N2_Commercial
-    N3_Commercial
-    O1_Trailers
-    O2_Trailers
-    O3_Trailers 
-    O4_Trailers 
-        
-enum VehicleTaxBandEnum: <"Vehicle tax band as per UK regulations for vehicles registered between 1 March 2001 and 31 March 2017">
-    ABand  
-    BBand  
-    CBand  
-    DBand  
-    EBand  
-    FBand  
-    GBand  
-    HBand  
-    IBand  
-    JBand  
-    KBand
-    LBand  
-    MBand 
-
-
+enum EventTimestampQualificationEnum: <"The enumeration values to qualify the timestamps that can be associated with a lifecycle event. The reason for such approach is that the experience of integrating the DTCC and CME data representations suggests that a wide set of timestamps are currently utilized among service providers, while there is not at present an objective set of criteria that could help suggest a defined set of timestamps as part of the CDM. Implementers are expected to evaluate the current enumeration values to determine whether those meet their requirements. If not, they are expected to engage with the CDM team to evaluate the addition of further value(s) to this enumeration, which will then participate to the development of a compendium for further evaluation at a later point in order to determine whether this modeling is appropriate.">
+	clearingDateTime <"The date and time on the trade was cleared.">
+	clearingConfirmationDateTime <"The date and time on which trade was confirmed as cleared.">
+	clearingSubmissionDateTime <"The date and time on which the event was submitted for clearing.">
+	eventCreationDateTime <"The date and time on which the event was created.">
+	eventExpirationDateTime <"The date and time on which the event will be considered expired.">
+	eventProcessingDateTime <"The date and time on which the event was processed.">
+	eventSentDateTime <"The date and time on which the event was sent.">
+	eventSubmittedDateTime <"The date and time on which the event was submitted.">
+	executionDateTime <"The date and time on which the trade execution was performed.">
+	transactionCreationDateTime <"The date and time on which the transaction has been created. This timestamp is specified as such by the CME ClearPort Matched IRS Trade submission API specification: 'The transaction date time of the trade. Represents the date & time on which the trade was initially generated either by CME Clearing or firm. The transaction date time may be assigned by CME Clearing at the point the trade is reported as cleared. Transaction date time can also be provided by an external submitter of the trade at the point the trade is submitted.'">
