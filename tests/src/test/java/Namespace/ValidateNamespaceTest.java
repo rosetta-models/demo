@@ -1,4 +1,4 @@
-package cdm;
+package Namespace;
 
 import com.regnosys.testing.RosettaFileNameValidator;
 import com.regnosys.testing.ValidationReport;
@@ -17,7 +17,7 @@ public class ValidateNamespaceTest {
     @Test
 
     void validateFileNamesMatchNamespace() throws IOException {
-        String modelShortName = "cdm";
+        String modelShortName = "demo";
         Path path = Paths.get("src/main/rosetta");
         RosettaFileNameValidator validator = new RosettaFileNameValidator();
 
