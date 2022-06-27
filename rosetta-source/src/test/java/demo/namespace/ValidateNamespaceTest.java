@@ -1,4 +1,4 @@
-package Namespace;
+package demo.namespace;
 
 import com.regnosys.testing.RosettaFileNameValidator;
 import com.regnosys.testing.ValidationReport;
