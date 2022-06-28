@@ -1,5 +1,5 @@
 //The Demonstration Model aims to illustrate the main concepts of logical modelling, the syntax used in Rosetta (Rosetta DSL) and the main components, views and features of Rosetta. 
-namespace demo.types
+namespace demo.emissions
 version "${project.version}"
 
 import demo.enumeration.*
