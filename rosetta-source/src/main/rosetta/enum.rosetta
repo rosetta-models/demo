@@ -1,66 +1,7 @@
-namespace demo.enumeration
+namespace com.rob.num
 version "${project.version}"
 
-enum ColourEnum: <"Colour of the vehicle used as an additional feature for a vehicle">
-    Red
-    Orange
-    Yellow
-    Green
-    Blue
-    Indigo
-    Violet
-
-enum CarTypeEnum: <"Category of the car used as an additional technical specification for a vehicle">
-    Hatchback
-	Saloon
-	Estate
-	MPV
-	SUV
-	Coupe
-	Sports car
-	Convertible
-
-enum EngineTypeEnum: <"Type of the engine used as an additional technical specification for a vehicle">
-    Diesel
-    Petrol
-    Electric
-    Hybrid
-    LPG
-
-enum VehicleClassificationEnum: <"Vehicle classification as per 2002/24/EC of 18 March 2002 and 2007/46/EC of 5 September 2007">
-    l1e_Moped
-    l2e_Moped
-    l3e_Motorcycle
-    l4e_Motorcycle
-    l5e_Motortricycle
-    l6e_Quadricycle
-    l7e_Quadricycle
-    M1_Passengers
-    M2_Passengers 
-    M3_Passengers
-    N1I_Commercial 
-    N1II_Commercial 
-    N1III_Commercial 
-    N2_Commercial
-    N3_Commercial
-    O1_Trailers
-    O2_Trailers
-    O3_Trailers 
-    O4_Trailers 
-        
-enum VehicleTaxBandEnum: <"Vehicle tax band as per UK regulations for vehicles registered between 1 March 2001 and 31 March 2017">
-    ABand  
-    BBand  
-    CBand  
-    DBand  
-    EBand  
-    FBand  
-    GBand  
-    HBand  
-    IBand  
-    JBand  
-    KBand
-    LBand  
-    MBand 
-
-
+enum Status :
+  open
+  closed
+  indeterminate

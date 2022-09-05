@@ -1,66 +1,9 @@
-//The Demonstration Model aims to illustrate the main concepts of logical modelling, the syntax used in Rosetta (Rosetta DSL) and the main components, views and features of Rosetta. 
-namespace demo.types
+//simple mucking about...
+
+namespace com.rob
 version "${project.version}"
 
-import demo.enumeration.*
+type JavaBlaster:
 
-type VehicleOwnership: <"Representative record of vehicle ownership">
-    [rootType]
-    drivingLicence DrivingLicence (0..*)
-    vehicle Vehicle (1..1)
-    dateOfPurchase date (1..1)
-    isFirstHand boolean (1..1)
-    vehicleOwnershipRegistrationID int (1..1)
-
-type VehicleFeature: <"Features qualifying a vehicle in addition to technical specifications">
-    colour ColourEnum (1..1)
-    doorNumber int (1..1)
-
-type Vehicle extends VehicleFeature: <"Representation of a vehicle">
-    specification Specification (1..1)
-    registrationID string (1..1)
-    vehicleTaxBand VehicleTaxBandEnum (1..1)
-    vehicleClassification VehicleClassificationEnum (1..1)
-
-type Specification: <"Technical specifications of a vehicle">
-    make string (1..1)
-    model string (1..1)
-    carType CarTypeEnum (1..1)
-    zeroTo60 number (1..1)
-    engine Engine (1..1)
-    yearOfManufacture int (1..1)
-    chassisNumber int (1..1)
-    dateOfFirstRegistration date (1..1)
-
-type Engine: <"Description of the engine">
-    engineType EngineTypeEnum (1..1) <"Type of engine">
-    power number (1..1) <"Break horse power">
-    mpg number (1..1) <"Miles per gallon">
-    emissionMetrics EmissionMetrics (1..1) <"List of emission metrics in grams per km">
-
-type EmissionMetrics: <"Emission metrics used for EU emission standards">
-    carbonMonoxide int (1..1)
-    totalHydrocarbon int (1..1)
-    volatileOrganicCompound int (1..1)
-    nitrogenOxide int (1..1)
-    combineHCNOX int (1..1)
-    particulateMatter int (1..1)
-    particleNumber int (1..1)
-
-type Person: <"A class to represent the attributes that are specific to a person.">
-	honorific string (0..1) <"An honorific title, such as Mr., Ms., Dr. etc.">
-	firstName string (1..1) <"The natural person's first name.">
-	middleName string (0..*)
-	initial string (0..*)
-	surname string (1..1) <"The natural person's surname.">
-	suffix string (0..1) <"Name suffix, such as Jr., III, etc.">
-	dateOfBirth date (0..1) <"The person's date of birth.">
-
-type DrivingLicence extends Person: <"Driving licence authorisation granted by a jurisdiction">
-    countryofIssuance string (1..1)
-        [metadata scheme]
-    licenceNumber string (1..1)
-    dateofIssuance date (1..1)
-    dateOfRenewal date (0..1)
-    vehicleEntitlement VehicleClassificationEnum (0..*)
-    penaltyPoints int (1..1)
+  thingy string (0..5)
+  status com.rob.num.Status(1..1)
