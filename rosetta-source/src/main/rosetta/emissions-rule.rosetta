@@ -1,10 +1,6 @@
 namespace demo.emissions
 version "${project.version}"
 
-import demo.types.*
-import demo.enumeration.*
-import demo.functions.*
-
 segment annex 
 segment article
 segment section

@@ -2,8 +2,6 @@
 namespace demo.emissions
 version "${project.version}"
 
-import demo.enumeration.*
-
 type VehicleOwnership: <"Representative record of vehicle ownership">
     [rootType]
     drivingLicence DrivingLicence (0..*)

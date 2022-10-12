@@ -22,9 +22,9 @@
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <xtext.version>2.25.0</xtext.version>
 
-        <rosetta.bundle.version>3.6.1</rosetta.bundle.version>
-        <isda.cdm.version>2.162.1</isda.cdm.version>
-        <rosetta.dsl.version>4.39.1</rosetta.dsl.version>
+        <rosetta.bundle.version>3.18.0</rosetta.bundle.version>
+        <isda.cdm.version>2.182.2</isda.cdm.version>
+        <rosetta.dsl.version>4.44.2</rosetta.dsl.version>
         <guava.version>30.0-jre</guava.version>
 
         <!-- Testing -->

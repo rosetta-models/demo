@@ -1,4 +1,4 @@
-package demo.functions.functions;
+package demo.emissions.functions;
 
 import com.regnosys.model.AbstractFunctionTest;
 import com.rosetta.model.lib.records.Date;

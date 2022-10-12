@@ -1,9 +1,6 @@
 namespace demo.emissions
 version "${project.version}"
 
-import demo.types.*
-import demo.enumeration.*
-
 func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
     inputs: 
         drivingLicence DrivingLicence (0..*)
@@ -13,11 +10,11 @@ func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
     output: 
         vehicleOwnership VehicleOwnership (1..1)
 
-    condition: <"Driving licence must not be expired">
+    condition DrivingLicenceExpiry: <"Driving licence must not be expired">
         drivingLicence -> dateOfRenewal all > dateOfPurchase
 
-    condition: <"Vehicle classification allowed by the driving licence needs to encompass the vehicle classification of the considered vehicle">
-        drivingLicence->vehicleEntitlement contains vehicle-> vehicleClassification
+    condition DrivingLicenceVehicleClassification: <"Vehicle classification allowed by the driving licence needs to encompass the vehicle classification of the considered vehicle">
+        drivingLicence -> vehicleEntitlement contains vehicle -> vehicleClassification
 
     set vehicleOwnership -> drivingLicence: 
         drivingLicence

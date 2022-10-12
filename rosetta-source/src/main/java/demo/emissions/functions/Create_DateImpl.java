@@ -1,4 +1,4 @@
-package demo.functions.functions;
+package demo.emissions.functions;
 
 import com.rosetta.model.lib.records.Date;
 import com.rosetta.model.lib.records.DateImpl;

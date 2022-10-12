@@ -19,9 +19,9 @@ public class ValidateNamespaceTest {
     void validateFileNamesMatchNamespace() throws IOException {
         String modelShortName = "demo";
         Path path = Paths.get("src/main/rosetta");
-        RosettaFileNameValidator validator = new RosettaFileNameValidator();
+        RosettaFileNameValidator validator = new RosettaFileNameValidator(modelShortName, path, null);
 
-        ValidationReport validationReport = validator.validateFileNamesMatchNamespace(modelShortName, path);
+        ValidationReport validationReport = validator.validateFileNamesMatchNamespace();
 
         assertTrue(validationReport.getPassed(),validationReport.getErrors().toString());
 
