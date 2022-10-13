@@ -1,7 +1,7 @@
 [
   {
     "dataSetName": "DRR Vehicle Ownership",
-    "inputType" : "demo.types.VehicleOwnership",
+    "inputType" : "demo.emissions.VehicleOwnership",
     "applicableReports": [],
     "data": [
       {
