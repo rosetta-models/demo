@@ -9,6 +9,10 @@ enum ColourEnum: <"Colour of the vehicle used as an additional feature for a veh
     Blue
     Indigo
     Violet
+    Pink
+    Gold
+    Silver
+    Matt
 
 enum CarTypeEnum: <"Category of the car used as an additional technical specification for a vehicle">
     Hatchback
@@ -27,9 +31,10 @@ enum EngineTypeEnum: <"Type of the engine used as an additional technical specif
     Hybrid
     LPG
 
-enum VehicleClassificationEnum: <"Vehicle classification as per 2002/24/EC of 18 March 2002 and 2007/46/EC of 5 September 2007">
+enum VehicleClassificationEnum: <"Vehicle classificatioTESTSTSn as per 2002/24/EC of 18 March 2002 and 2007/46/EC of 5 September 2007">
     l1e_Moped
     l2e_Moped
+    l32_Moped
     l3e_Motorcycle
     l4e_Motorcycle
     l5e_Motortricycle
