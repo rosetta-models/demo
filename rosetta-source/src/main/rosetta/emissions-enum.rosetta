@@ -10,7 +10,7 @@ enum ColourEnum: <"Colour of the vehicle used as an additional feature for a veh
     Indigo
     Violet
 
-enum CarTypeEnum: <"Category of the car used as an additional technical specification for a vehicle">
+enum CarTypeEnum: <"Category of the car used as an additional technical TEST Comments specification for a vehicle">
     Hatchback
 	Saloon
 	Estate
@@ -40,13 +40,15 @@ enum VehicleClassificationEnum: <"Vehicle classification as per 2002/24/EC of 18
     M3_Passengers
     N1I_Commercial 
     N1II_Commercial 
-    N1III_Commercial 
+    N1III_Commercial
+    N1IIV_Commercial
     N2_Commercial
     N3_Commercial
     O1_Trailers
     O2_Trailers
     O3_Trailers 
-    O4_Trailers 
+    O4_Trailers
+    O5_Trailers 
         
 enum VehicleTaxBandEnum: <"Vehicle tax band as per UK regulations for vehicles registered between 1 March 2001 and 31 March 2017">
     ABand  
