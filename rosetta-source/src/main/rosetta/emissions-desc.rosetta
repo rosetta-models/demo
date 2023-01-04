@@ -1,0 +1,4 @@
+namespace demo.emissions
+version "${project.version}"
+
+//
