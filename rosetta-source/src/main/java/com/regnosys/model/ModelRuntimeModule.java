@@ -1,6 +1,7 @@
 package com.regnosys.model;
 
 import com.google.inject.AbstractModule;
+import com.regnosys.rosetta.common.hashing.ReferenceConfig;
 import com.regnosys.rosetta.common.postprocess.qualify.QualificationHandlerProvider;
 import com.rosetta.model.lib.qualify.QualifyFunctionFactory;
 import com.rosetta.model.lib.validation.ValidatorFactory;
@@ -16,6 +17,7 @@ public class ModelRuntimeModule extends AbstractModule {
 		bind(Create_Date.class).to(bindCreateDate());
 		bind(QualifyFunctionFactory.class).to(bindQualifyFunctionFactory());
 		bind(QualificationHandlerProvider.class).to(bindQualificationConfigProvider());
+		bind(ReferenceConfig.class).toInstance(ReferenceConfig.noScopeOrExcludedPaths());
 	}
 
 	protected Class<? extends ValidatorFactory> bindValidatorFactory() {
