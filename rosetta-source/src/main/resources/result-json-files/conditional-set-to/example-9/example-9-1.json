@@ -1,0 +1,8 @@
+{
+  "engine" : {
+    "engineSpecification" : {
+      "engineEnum" : "COMBUSTION",
+      "fuel" : "Gasoline"
+    }
+  }
+}

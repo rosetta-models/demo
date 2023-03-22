@@ -1,0 +1,37 @@
+{
+  "defaultTranslator": "META_SCOPED_REFERENCE_EXAMPLE_1",
+  "options": {
+    "META_SCOPED_REFERENCE_EXAMPLE_1": {
+      "name": "META_SCOPED_REFERENCE_EXAMPLE_1",
+      "modelClasspath": ["model", "translate-demo/rosetta"],
+      "modelFileDirIncludeRegex": ".*\\.rosetta",
+      "modelFileDirExcludeRegex": null,
+      "rosettaClasses": ["Root"],
+      "generatedPackage": "demo.translate.meta_scoped_reference.example_1",
+      "generatedFactoryName": "META_SCOPED_REFERENCE_EXAMPLE_1XmlHandlerFactory",
+      "xsdFilePaths": {
+        "Root": "schemas/meta-scoped-reference/example-1.xsd"
+      },
+      "synonymSources": {
+          "Root": ["META_SCOPED_REFERENCE_EXAMPLE_1"]
+      },
+      "topLevelTags": {
+        "Root": ["dataDocument"]
+      },
+      "verbose": false,
+      "clean": false,
+      "json": false,
+      "xmlExclusionsFilePath": "config/translate-demo.excluded-paths.txt",
+      "cdmClassesDir": "",
+      "integrationTestRoots": {
+        "Root": ["cdm-sample-files/meta-scoped-reference/example-1"]
+      },
+      "default": true,
+      "childPackageName":
+        {
+          "Root": "dataDocument"
+        },
+      "fullClassnames": { "Root": "demo.translate.meta_scoped_reference.example_1.Root" }
+    }
+  }
+}

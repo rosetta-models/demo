@@ -1,0 +1,37 @@
+{
+  "defaultTranslator": "SINGLE_CARDINALITY_EXAMPLE_5",
+  "options": {
+    "SINGLE_CARDINALITY_EXAMPLE_5": {
+      "name": "SINGLE_CARDINALITY_EXAMPLE_5",
+      "modelClasspath": ["model", "translate-demo/rosetta"],
+      "modelFileDirIncludeRegex": ".*\\.rosetta",
+      "modelFileDirExcludeRegex": null,
+      "rosettaClasses": ["Root"],
+      "generatedPackage": "demo.translate.single_cardinality.example_5",
+      "generatedFactoryName": "SINGLE_CARDINALITY_EXAMPLE_5XmlHandlerFactory",
+      "xsdFilePaths": {
+        "Root": "schemas/single-cardinality/example-5.xsd"
+      },
+      "synonymSources": {
+          "Root": ["SINGLE_CARDINALITY_EXAMPLE_5"]
+      },
+      "topLevelTags": {
+        "Root": ["dataDocument"]
+      },
+      "verbose": false,
+      "clean": false,
+      "json": false,
+      "xmlExclusionsFilePath": "config/translate-demo.excluded-paths.txt",
+      "cdmClassesDir": "",
+      "integrationTestRoots": {
+        "Root": ["cdm-sample-files/single-cardinality/example-5"]
+      },
+      "default": true,
+      "childPackageName":
+        {
+          "Root": "dataDocument"
+        },
+      "fullClassnames": { "Root": "demo.translate.single_cardinality.example_5.Root" }
+    }
+  }
+}

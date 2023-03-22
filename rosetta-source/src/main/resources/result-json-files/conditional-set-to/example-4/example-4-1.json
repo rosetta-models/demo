@@ -1,0 +1,10 @@
+{
+  "engine" : {
+    "engineSpecification" : {
+      "engineMetric" : {
+        "fuelType" : "Gasoline"
+      }
+    },
+    "engineSystem" : "Unknown"
+  }
+}

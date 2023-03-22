@@ -1,0 +1,27 @@
+namespace demo.translate.mappers.example_3
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source MAPPERS_EXAMPLE_3
+
+type Root:
+    [rootType]
+	engineSpecification EngineSpecification (1..1)
+	    [synonym MAPPERS_EXAMPLE_3 value "engineType"]
+
+type EngineSpecification:
+	volumeUnit string (1..1)
+	    [synonym MAPPERS_EXAMPLE_3 value "capacityUnit" path "engineDetail->metric"]
+	fuelType string (0..1)
+	    [metadata scheme]
+	    // value set by synonyms
+	    // scheme updated by mapper
+	    [synonym MAPPERS_EXAMPLE_3 value "combustible" path "engineDetail->metric" mapper "Example3"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

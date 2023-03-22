@@ -19,14 +19,13 @@
             <artifactId>com.regnosys.rosetta</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.regnosys.rosetta</groupId>
+            <artifactId>com.regnosys.rosetta.lib</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.isda</groupId>
             <artifactId>cdm</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.regnosys</groupId>
-            <artifactId>rosetta-translate</artifactId>
-        </dependency>
-
         <!--
 	    	The osgi dependency from rosetta.lib can take precedence on the classpath causing
 	    	Java security exceptions when matchers form the same package are subsequently loaded from Hamcrest
@@ -45,6 +44,11 @@
             <artifactId>rosetta-testing</artifactId>
             <version>${rosetta.bundle.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>4.2.3</version>
         </dependency>
     </dependencies>
 

@@ -1,0 +1,18 @@
+namespace demo.translate.format.example_2
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source FORMAT_EXAMPLE_2
+
+type Root:
+    [rootType]
+	fuelType string (1..1)
+	    [synonym FORMAT_EXAMPLE_2 value "combustible" path "engineType" removeHtml]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

@@ -1,0 +1,18 @@
+{
+  "engine" : {
+    "energyCategory" : "Combustion",
+    "engineSpecification" : [ {
+      "engineMetric" : {
+        "fuelType" : "Gasoline"
+      }
+    }, {
+      "engineMetric" : {
+        "fuelType" : "Diesel"
+      }
+    }, {
+      "engineMetric" : {
+        "fuelType" : "Propane"
+      }
+    } ]
+  }
+}

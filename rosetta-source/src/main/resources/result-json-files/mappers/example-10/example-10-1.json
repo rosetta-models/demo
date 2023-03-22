@@ -1,0 +1,16 @@
+{
+  "engineSpecification" : {
+    "emissions" : "Low-Emissions",
+    "fuelType" : [ {
+      "meta" : {
+        "scheme" : "fuel-type-scheme"
+      },
+      "value" : "Gasoline"
+    }, {
+      "meta" : {
+        "scheme" : "fuel-type-scheme"
+      },
+      "value" : "Propane"
+    } ]
+  }
+}

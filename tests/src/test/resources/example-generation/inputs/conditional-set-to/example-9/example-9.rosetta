@@ -1,0 +1,34 @@
+namespace demo.translate.conditional_set_to.example_9
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source CONDITIONAL_SET_TO_EXAMPLE_9
+
+type Root:
+    [rootType]
+    engine Engine (1..1)
+        [synonym CONDITIONAL_SET_TO_EXAMPLE_9 value
+            "fuelDetail" path "engineType->engineDetail",
+            "alternativeFuel" path "engineType->engineDetail"]
+
+type Engine:
+    engineSpecification EngineSpecification (0..1)
+
+type EngineSpecification:
+    fuel string (1..1)
+        [synonym CONDITIONAL_SET_TO_EXAMPLE_9 value "combustible"]
+    engineEnum EngineEnum (1..1)
+        [synonym CONDITIONAL_SET_TO_EXAMPLE_9 set to EngineEnum -> Combustion when path = "fuelDetail"]
+        [synonym CONDITIONAL_SET_TO_EXAMPLE_9 set to EngineEnum -> Hybrid when path = "alternativeFuel"]
+
+enum EngineEnum:
+	Hybrid
+	Combustion
+
+/*
+Schema:
+
+$SCHEMA$
+*/

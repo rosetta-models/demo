@@ -1,0 +1,10 @@
+{
+  "engineSpecification" : [ {
+    "fuelType" : {
+      "meta" : {
+        "scheme" : "gasScheme"
+      },
+      "value" : "Propane"
+    }
+  } ]
+}

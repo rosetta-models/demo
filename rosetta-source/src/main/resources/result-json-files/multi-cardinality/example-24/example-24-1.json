@@ -1,0 +1,21 @@
+{
+  "engine" : {
+    "globalVersion" : [ {
+      "engineSpecification" : [ {
+        "engineMetric" : [ {
+          "volume" : [ {
+            "fuel" : "Petrol"
+          }, {
+            "capacity" : "Gallon"
+          } ]
+        }, {
+          "volume" : [ {
+            "fuel" : "Diesel"
+          }, {
+            "capacity" : "Gallon"
+          } ]
+        } ]
+      } ]
+    } ]
+  }
+}

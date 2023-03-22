@@ -1,0 +1,24 @@
+namespace demo.translate.conditional_set.example_2
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source CONDITIONAL_SET_EXAMPLE_2
+
+type Root:
+    [rootType]
+	engineSpecification EngineSpecification (1..1)
+	    [synonym CONDITIONAL_SET_EXAMPLE_2 value "engine"]
+
+type EngineSpecification:
+	fuelType string (1..1)
+	    [synonym CONDITIONAL_SET_EXAMPLE_2 value "combustible" path "engineType->engineDetail"]
+	capacityUnit string (0..1)
+	    [synonym CONDITIONAL_SET_EXAMPLE_2 value "volumeCapacityUnit" path "engineType->engineDetail" set when "engineType->engineDetail->powerUnit" exists]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

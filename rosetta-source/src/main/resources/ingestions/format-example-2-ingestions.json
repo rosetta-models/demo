@@ -1,0 +1,37 @@
+{
+  "defaultTranslator": "FORMAT_EXAMPLE_2",
+  "options": {
+    "FORMAT_EXAMPLE_2": {
+      "name": "FORMAT_EXAMPLE_2",
+      "modelClasspath": ["model", "translate-demo/rosetta"],
+      "modelFileDirIncludeRegex": ".*\\.rosetta",
+      "modelFileDirExcludeRegex": null,
+      "rosettaClasses": ["Root"],
+      "generatedPackage": "demo.translate.format.example_2",
+      "generatedFactoryName": "FORMAT_EXAMPLE_2XmlHandlerFactory",
+      "xsdFilePaths": {
+        "Root": "schemas/format/example-2.xsd"
+      },
+      "synonymSources": {
+          "Root": ["FORMAT_EXAMPLE_2"]
+      },
+      "topLevelTags": {
+        "Root": ["dataDocument"]
+      },
+      "verbose": false,
+      "clean": false,
+      "json": false,
+      "xmlExclusionsFilePath": "config/translate-demo.excluded-paths.txt",
+      "cdmClassesDir": "",
+      "integrationTestRoots": {
+        "Root": ["cdm-sample-files/format/example-2"]
+      },
+      "default": true,
+      "childPackageName":
+        {
+          "Root": "dataDocument"
+        },
+      "fullClassnames": { "Root": "demo.translate.format.example_2.Root" }
+    }
+  }
+}

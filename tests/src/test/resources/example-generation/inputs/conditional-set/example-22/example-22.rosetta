@@ -1,0 +1,29 @@
+namespace demo.translate.conditional_set.example_22
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source CONDITIONAL_SET_EXAMPLE_22
+
+type Root:
+    [rootType]
+	engineSpecification EngineSpecification (1..1)
+	    [synonym CONDITIONAL_SET_EXAMPLE_22 value "engineType"]
+
+type EngineSpecification:
+	volume Volume (0..*)
+    fuelType string (0..1)
+	    [synonym CONDITIONAL_SET_EXAMPLE_22 value "combustible" set when "capacity" is absent]
+	alternativeFuelType string (0..1)
+	    [synonym CONDITIONAL_SET_EXAMPLE_22 value "complementaryEnergy"]
+
+type Volume:
+	capacityUnit string (0..1)
+	    [synonym CONDITIONAL_SET_EXAMPLE_22 value "capacityUnit" path "capacity"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

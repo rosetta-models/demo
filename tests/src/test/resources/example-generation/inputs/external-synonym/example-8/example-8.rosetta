@@ -1,0 +1,89 @@
+namespace demo.translate.external_synonym.example_8
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source EXTERNAL_SYNONYM_EXAMPLE_8_BASE_0
+
+synonym source EXTERNAL_SYNONYM_EXAMPLE_8_BASE_1 extends EXTERNAL_SYNONYM_EXAMPLE_8_BASE_0
+{
+	Root:
+		+ engine
+			[value "engineType"]
+
+	Engine:
+		+ engineSpecificationRef
+			[value "specificationRef" path "engineDetail" meta "href"]
+		+ engineSpecification
+			[value "specification"]
+
+	EngineSpecification:
+		[value "engineDetail" meta "id"]
+		+ powerUnit
+			[value "powerUnit"]
+		+ fuelEnum
+			[value "combustible"]
+
+	enums
+
+	FuelEnum:
+		+ Diesel
+			[value "Diesel"]
+		+ Gasoline
+			[value "Gasoline"]
+}
+
+synonym source EXTERNAL_SYNONYM_EXAMPLE_8_BASE_2 extends EXTERNAL_SYNONYM_EXAMPLE_8_BASE_1
+{
+	EngineSpecification:
+		- fuel
+
+	enums
+
+	FuelEnum:
+		- Diesel
+}
+
+synonym source EXTERNAL_SYNONYM_EXAMPLE_8 extends EXTERNAL_SYNONYM_EXAMPLE_8_BASE_2
+{
+	EngineSpecification:
+		- fuel
+		+ fuel
+			[value "combustible"]
+
+	enums
+
+	FuelEnum:
+		- Diesel
+		+ Diesel
+			[value "Diesel"]
+		- Gasoline
+		+ Gasoline
+			[value "Gasoline"]
+}
+
+type Root:
+    [rootType]
+	engine Engine (0..1)
+
+type Engine:
+	engineSpecificationRef EngineSpecification (1..1)
+		[metadata reference]
+	engineSpecification EngineSpecification (1..1)
+
+type EngineSpecification:
+	[metadata key]
+	fuel string (0..1)
+	powerUnit string (0..1)
+    fuelEnum FuelEnum (0..1)
+
+enum FuelEnum:
+	Diesel
+	Gasoline
+
+/*
+Schema:
+
+$SCHEMA$
+*/

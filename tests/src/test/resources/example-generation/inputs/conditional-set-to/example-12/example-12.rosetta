@@ -1,0 +1,31 @@
+namespace demo.translate.conditional_set_to.example_12
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source CONDITIONAL_SET_TO_EXAMPLE_12
+
+type Root:
+    [rootType]
+	engine Engine (1..*)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_12 value "fuelDetail" path "engineType->engineDetail"]
+
+type Engine:
+	engineSpecification EngineSpecification (1..*)
+
+type EngineSpecification:
+	fuelType string (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_12 set to "Combustible" when path = "type"]
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_12 set to "Diesel For Agricultural Uses" when path = "dieselType->usage" and "dieselType->Typ"=2]
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_12 set to "RegularGasoline" when path = "combustible->octanes"]
+	alternativeFuelType string (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_12 value "type"]
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_12 value "RegularDiesel" path "dieselType"]
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_12 set to "PremiumGasoline" when "combustible->octanes" = "93"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

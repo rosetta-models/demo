@@ -1,0 +1,37 @@
+{
+  "defaultTranslator": "CONDITIONAL_SET_TO_EXAMPLE_13",
+  "options": {
+    "CONDITIONAL_SET_TO_EXAMPLE_13": {
+      "name": "CONDITIONAL_SET_TO_EXAMPLE_13",
+      "modelClasspath": ["model", "translate-demo/rosetta"],
+      "modelFileDirIncludeRegex": ".*\\.rosetta",
+      "modelFileDirExcludeRegex": null,
+      "rosettaClasses": ["Root"],
+      "generatedPackage": "demo.translate.conditional_set_to.example_13",
+      "generatedFactoryName": "CONDITIONAL_SET_TO_EXAMPLE_13XmlHandlerFactory",
+      "xsdFilePaths": {
+        "Root": "schemas/conditional-set-to/example-13.xsd"
+      },
+      "synonymSources": {
+          "Root": ["CONDITIONAL_SET_TO_EXAMPLE_13"]
+      },
+      "topLevelTags": {
+        "Root": ["dataDocument"]
+      },
+      "verbose": false,
+      "clean": false,
+      "json": false,
+      "xmlExclusionsFilePath": "config/translate-demo.excluded-paths.txt",
+      "cdmClassesDir": "",
+      "integrationTestRoots": {
+        "Root": ["cdm-sample-files/conditional-set-to/example-13"]
+      },
+      "default": true,
+      "childPackageName":
+        {
+          "Root": "dataDocument"
+        },
+      "fullClassnames": { "Root": "demo.translate.conditional_set_to.example_13.Root" }
+    }
+  }
+}

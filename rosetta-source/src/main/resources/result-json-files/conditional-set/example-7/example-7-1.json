@@ -1,0 +1,16 @@
+{
+  "ukEngineVersion" : {
+    "terminology" : {
+      "capacity" : "UK Gallon",
+      "fuelType" : "Petrol",
+      "volume" : "UK Gallon"
+    }
+  },
+  "usEngineVersion" : {
+    "terminology" : {
+      "capacity" : "US Gallon",
+      "combustibleTaxBand" : "Gas",
+      "fuelType" : "Gas"
+    }
+  }
+}

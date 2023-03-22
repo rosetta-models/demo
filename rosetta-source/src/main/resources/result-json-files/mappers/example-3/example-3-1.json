@@ -1,0 +1,11 @@
+{
+  "engineSpecification" : {
+    "fuelType" : {
+      "meta" : {
+        "scheme" : "fuel-type-scheme"
+      },
+      "value" : "Gasoline"
+    },
+    "volumeUnit" : "Gallon"
+  }
+}

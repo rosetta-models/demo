@@ -1,0 +1,59 @@
+package demo.translate;
+
+import com.regnosys.TestUtils;
+import com.regnosys.ingest.test.framework.ingestor.ExpectationUtil;
+import com.regnosys.ingest.test.framework.ingestor.IngestionTest;
+import com.regnosys.ingest.test.framework.ingestor.IngestionTestUtil;
+import com.regnosys.ingest.test.framework.ingestor.service.IngestionFactory;
+import com.regnosys.ingest.test.framework.ingestor.service.IngestionService;
+import com.regnosys.model.ModelRuntimeModule;
+import org.junit.jupiter.api.function.Executable;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.params.provider.Arguments;
+
+import java.net.URL;
+import java.util.*;
+import java.util.stream.Stream;
+
+$TEST_ANNOTATIONS$
+public class $UNIT_TEST_NAME$ extends IngestionTest<$NAMESPACE$.$ROOT_TYPE$> {
+
+    private static final String SAMPLE_FILES_DIR = "cdm-sample-files/$CATEGORY_NAME$/$TEST_NAME$";
+    private static final String INSTANCE_NAME = "target/$SYNONYM_NAME$";
+
+    private static IngestionService ingestionService;
+
+    @BeforeAll
+    static void setup() {
+        writeActualExpectations = ExpectationUtil.WRITE_EXPECTATIONS;
+
+        ClassLoader cl = $UNIT_TEST_NAME$.class.getClassLoader();
+        Collection<URL> ingestURLs = List.of(
+                Objects.requireNonNull(cl.getResource("ingestions/$CATEGORY_NAME$-$TEST_NAME$-ingestions.json")));
+        ModelRuntimeModule runtimeModule = new ModelRuntimeModule();
+        initialiseIngestionFactory(INSTANCE_NAME, ingestURLs, runtimeModule, new ArrayList<>(IngestionTestUtil.getPostProcessors(runtimeModule)));
+        IngestionFactory factory = IngestionFactory.getInstance(INSTANCE_NAME);
+        ingestionService = factory.getService("$SYNONYM_NAME$");
+    }
+
+    @Override
+    protected Class<$NAMESPACE$.$ROOT_TYPE$> getClazz() {
+        return $NAMESPACE$.$ROOT_TYPE$.class;
+    }
+
+    @Override
+    protected IngestionService ingestionService() {
+        return ingestionService;
+    }
+
+    @Override
+    protected Executable assertJsonEquals(String expectedJson, String resultJson) {
+        return TestUtils.assertJsonEquals(expectedJson, resultJson, getClazz());
+    }
+
+    @SuppressWarnings("unused")//used by the junit parameterized test
+    private static Stream<Arguments> fpMLFiles() {
+        return readExpectationsFromPath(SAMPLE_FILES_DIR);
+    }
+
+}

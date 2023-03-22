@@ -1,0 +1,37 @@
+{
+  "defaultTranslator": "MAPPERS_EXAMPLE_5",
+  "options": {
+    "MAPPERS_EXAMPLE_5": {
+      "name": "MAPPERS_EXAMPLE_5",
+      "modelClasspath": ["model", "translate-demo/rosetta"],
+      "modelFileDirIncludeRegex": ".*\\.rosetta",
+      "modelFileDirExcludeRegex": null,
+      "rosettaClasses": ["Root"],
+      "generatedPackage": "demo.translate.mappers.example_5",
+      "generatedFactoryName": "MAPPERS_EXAMPLE_5XmlHandlerFactory",
+      "xsdFilePaths": {
+        "Root": "schemas/mappers/example-5.xsd"
+      },
+      "synonymSources": {
+          "Root": ["MAPPERS_EXAMPLE_5"]
+      },
+      "topLevelTags": {
+        "Root": ["dataDocument"]
+      },
+      "verbose": false,
+      "clean": false,
+      "json": false,
+      "xmlExclusionsFilePath": "config/translate-demo.excluded-paths.txt",
+      "cdmClassesDir": "",
+      "integrationTestRoots": {
+        "Root": ["cdm-sample-files/mappers/example-5"]
+      },
+      "default": true,
+      "childPackageName":
+        {
+          "Root": "dataDocument"
+        },
+      "fullClassnames": { "Root": "demo.translate.mappers.example_5.Root" }
+    }
+  }
+}
