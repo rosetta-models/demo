@@ -3,7 +3,7 @@
   "options": {
     "TYPE_INHERITANCE_EXAMPLE_1": {
       "name": "TYPE_INHERITANCE_EXAMPLE_1",
-      "modelClasspath": ["model", "translate-demo/rosetta"],
+      "modelClasspath": ["model", "demo/rosetta"],
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
       "rosettaClasses": ["Root"],

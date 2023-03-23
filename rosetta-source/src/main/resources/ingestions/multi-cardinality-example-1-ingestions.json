@@ -3,7 +3,7 @@
   "options": {
     "MULTI_CARDINALITY_EXAMPLE_1": {
       "name": "MULTI_CARDINALITY_EXAMPLE_1",
-      "modelClasspath": ["model", "translate-demo/rosetta"],
+      "modelClasspath": ["model", "demo/rosetta"],
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
       "rosettaClasses": ["Root"],

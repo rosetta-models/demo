@@ -3,7 +3,7 @@
   "options": {
     "META_SCOPED_REFERENCE_EXAMPLE_2": {
       "name": "META_SCOPED_REFERENCE_EXAMPLE_2",
-      "modelClasspath": ["model", "translate-demo/rosetta"],
+      "modelClasspath": ["model", "demo/rosetta"],
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
       "rosettaClasses": ["Root"],

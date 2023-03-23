@@ -3,7 +3,7 @@
   "options": {
     "CONDITIONAL_DEFAULT_EXAMPLE_1": {
       "name": "CONDITIONAL_DEFAULT_EXAMPLE_1",
-      "modelClasspath": ["model", "translate-demo/rosetta"],
+      "modelClasspath": ["model", "demo/rosetta"],
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
       "rosettaClasses": ["Root"],

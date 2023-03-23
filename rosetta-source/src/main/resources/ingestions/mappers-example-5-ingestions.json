@@ -3,7 +3,7 @@
   "options": {
     "MAPPERS_EXAMPLE_5": {
       "name": "MAPPERS_EXAMPLE_5",
-      "modelClasspath": ["model", "translate-demo/rosetta"],
+      "modelClasspath": ["model", "demo/rosetta"],
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
       "rosettaClasses": ["Root"],
