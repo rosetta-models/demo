@@ -1,0 +1,10 @@
+{
+  "engine" : {
+    "engineSpecification" : {
+      "engineMetric" : {
+        "fuelType" : "Electricity"
+      }
+    },
+    "engineSystem" : "Electric"
+  }
+}

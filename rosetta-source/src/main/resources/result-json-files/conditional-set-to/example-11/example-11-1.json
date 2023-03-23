@@ -1,0 +1,16 @@
+{
+  "engineSpecification" : [ {
+    "engineMetric" : [ {
+      "alternativeFuelType" : "gasoline",
+      "fuelType" : "Combustible"
+    }, {
+      "alternativeFuelType" : "PremiumGasoline",
+      "fuelType" : "RegularGasoline"
+    } ]
+  }, {
+    "engineMetric" : [ {
+      "alternativeFuelType" : "gasoline",
+      "fuelType" : "Combustible"
+    } ]
+  } ]
+}

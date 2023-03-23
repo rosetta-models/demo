@@ -1,0 +1,45 @@
+namespace demo.translate.external_synonym.example_5
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source EXTERNAL_SYNONYM_EXAMPLE_5_BASE
+
+synonym source EXTERNAL_SYNONYM_EXAMPLE_5_MID extends EXTERNAL_SYNONYM_EXAMPLE_5_BASE
+{
+	EngineMetric:
+		+ fuel
+			[value "alternativeCombustible" meta "scheme"]
+}
+
+synonym source EXTERNAL_SYNONYM_EXAMPLE_5 extends EXTERNAL_SYNONYM_EXAMPLE_5_MID
+{
+	Engine:
+		+ engineSpecification
+			[value "engineDetail" path "engineType"]
+
+	EngineMetric:
+		+ fuel
+			[value "combustible" meta "scheme"]
+}
+
+type Root:
+    [rootType]
+	engine Engine (1..1)
+
+type Engine:
+	engineSpecification EngineSpecification (1..*)
+
+type EngineSpecification:
+	engineMetric EngineMetric (1..*)
+
+type EngineMetric:
+	fuel string (1..1)
+		[metadata scheme]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

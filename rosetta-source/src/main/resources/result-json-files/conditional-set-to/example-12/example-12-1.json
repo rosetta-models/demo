@@ -1,0 +1,16 @@
+{
+  "engine" : [ {
+    "engineSpecification" : [ {
+      "alternativeFuelType" : "gasoline",
+      "fuelType" : "Combustible"
+    }, {
+      "alternativeFuelType" : "PremiumGasoline",
+      "fuelType" : "RegularGasoline"
+    } ]
+  }, {
+    "engineSpecification" : [ {
+      "alternativeFuelType" : "diesel",
+      "fuelType" : "Combustible"
+    } ]
+  } ]
+}

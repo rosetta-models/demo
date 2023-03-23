@@ -1,0 +1,25 @@
+{
+  "engine" : {
+    "engineMetric" : {
+      "meta" : {
+        "location" : [ {
+          "scope" : "DOCUMENT",
+          "value" : "engineMetric-1"
+        } ]
+      },
+      "value" : {
+        "horsePower" : 300
+      }
+    }
+  },
+  "vehicle" : {
+    "engineSpecification" : {
+      "engineMetric" : {
+        "address" : {
+          "scope" : "DOCUMENT",
+          "value" : "engineMetric-1"
+        }
+      }
+    }
+  }
+}

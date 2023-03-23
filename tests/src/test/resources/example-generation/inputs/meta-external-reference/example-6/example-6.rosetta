@@ -1,0 +1,28 @@
+namespace demo.translate.meta_external_reference.example_6
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source META_EXTERNAL_REFERENCE_EXAMPLE_6
+
+type Root:
+    [rootType]
+	engine Engine (0..*)
+
+type Engine:
+	engineSpecification EngineSpecification (1..1)
+        [metadata reference]
+        [synonym META_EXTERNAL_REFERENCE_EXAMPLE_6 value "fuelDetail" path "engineType->engineDetail"]
+
+type EngineSpecification:
+	[metadata key]
+	[synonym META_EXTERNAL_REFERENCE_EXAMPLE_6 meta "id"]
+	fuelType string (0..1)
+		[synonym META_EXTERNAL_REFERENCE_EXAMPLE_6 value "combustible"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

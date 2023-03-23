@@ -1,0 +1,31 @@
+namespace demo.translate.type_inheritance.example_1
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source TYPE_INHERITANCE_EXAMPLE_1
+
+type Root:
+    [rootType]
+    owner Owner (1..1)
+        [synonym TYPE_INHERITANCE_EXAMPLE_1 value "vehicle"]
+
+type Vehicle:
+    capacity int (0..1)
+        [synonym TYPE_INHERITANCE_EXAMPLE_1 value "capacity" path "vehicleDetail"]
+    state string (0..1)
+        [synonym TYPE_INHERITANCE_EXAMPLE_1 value "state" path "vehicleDetail"]
+
+type VehicleOwner extends Vehicle:
+    fuelType string (0..1)
+
+type Owner extends VehicleOwner:
+    model string (1..1)
+        [synonym TYPE_INHERITANCE_EXAMPLE_1 value "model" path "vehicleDetail"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

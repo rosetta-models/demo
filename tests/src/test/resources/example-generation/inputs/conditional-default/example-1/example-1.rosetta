@@ -1,0 +1,24 @@
+namespace demo.translate.conditional_default.example_1
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source CONDITIONAL_DEFAULT_EXAMPLE_1
+
+type Root:
+    [rootType]
+	engineSpecification EngineSpecification (1..1)
+	    [synonym CONDITIONAL_DEFAULT_EXAMPLE_1 value "engine"]
+
+type EngineSpecification:
+	fuelType string (1..1)
+	    [synonym CONDITIONAL_DEFAULT_EXAMPLE_1 value "combustible" path "engineType->engineDetail"]
+	capacityUnit string (0..1)
+	    [synonym CONDITIONAL_DEFAULT_EXAMPLE_1 value "volumeCapacityUnit" path "engineType->engineDetail" default to "UK Gallon"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

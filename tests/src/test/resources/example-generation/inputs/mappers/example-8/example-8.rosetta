@@ -1,0 +1,27 @@
+namespace demo.translate.mappers.example_8
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source MAPPERS_EXAMPLE_8
+
+type Root:
+    [rootType]
+     // list items updated by mapper
+	engineSpecification EngineSpecification (1..*)
+	    [synonym MAPPERS_EXAMPLE_8 value "engineType" mapper "Example8"]
+
+type EngineSpecification:
+	emissions string (1..1)
+	    [synonym MAPPERS_EXAMPLE_8 value "emissions" path "engineDetail->metric"]
+	fuelType string (1..1)
+	    [synonym MAPPERS_EXAMPLE_8 value "combustible" path "engineDetail->metric"]
+	volumeUnit string (1..1)
+	    [synonym MAPPERS_EXAMPLE_8 value "capacityUnit" path "engineDetail->metric"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

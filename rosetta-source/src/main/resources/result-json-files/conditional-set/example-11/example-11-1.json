@@ -1,0 +1,9 @@
+{
+  "engineSpecification" : [ {
+    "fuelType" : "Gasoline"
+  }, {
+    "fuelType" : "Diesel"
+  }, {
+    "fuelType" : "Electricity"
+  } ]
+}

@@ -1,0 +1,15 @@
+{
+  "engine" : {
+    "engineSpecification" : {
+      "meta" : {
+        "externalKey" : "xyz",
+        "globalKey" : "908"
+      },
+      "powerUnit" : "HP"
+    },
+    "engineSpecificationRef" : {
+      "externalReference" : "xyz",
+      "globalReference" : "908"
+    }
+  }
+}

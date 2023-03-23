@@ -1,0 +1,25 @@
+namespace demo.translate.conditional_set.example_18
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source CONDITIONAL_SET_EXAMPLE_18
+
+type Root:
+    [rootType]
+	usEngineVersion EngineVersion (1..*)
+	ukEngineVersion EngineVersion (1..*)
+
+type EngineVersion:
+	volumeCapacity string (1..1)
+        [metadata scheme]
+        [synonym CONDITIONAL_SET_EXAMPLE_18 value "volumeCapacityUnit" path "engineType"
+            set when "engineType->volumeCapacityUnit->scheme" = "usScheme" and rosettaPath = Root->ukEngineVersion->volumeCapacity,
+            set when "engineType->volumeCapacityUnit->scheme" = "ukScheme" and rosettaPath = Root->usEngineVersion->volumeCapacity meta "scheme"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

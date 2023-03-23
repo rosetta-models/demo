@@ -1,0 +1,39 @@
+namespace demo.translate.format.example_1
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source FORMAT_EXAMPLE_1
+
+type Root:
+    [rootType]
+	engineSpecification EngineSpecification (0..1)
+		[synonym FORMAT_EXAMPLE_1 value "engineType"]
+
+type EngineSpecification:
+	fabricationDate date (1..1)
+		[synonym FORMAT_EXAMPLE_1 value "fabricationDate" dateFormat "MM/dd/yyyy"]
+	guaranteePeriod int (1..1)
+		[synonym FORMAT_EXAMPLE_1 value "guaranteePeriod" maps 2 pattern "([0-9])*.*" "$1"]
+	periodEnum PeriodEnum (1..1)
+		[synonym FORMAT_EXAMPLE_1 value "guaranteePeriod" maps 2 pattern "[0-9]*(.*)" "$1"]
+	fuel string (0..*)
+		[synonym FORMAT_EXAMPLE_1 value "combustible"]
+		[synonym FORMAT_EXAMPLE_1 value "alternativeCombustible" pattern "Gasoline and ([a-zA-Z]*)" "$1"]
+
+enum PeriodEnum:
+	D
+		[synonym FORMAT_EXAMPLE_1 value "D" pattern "[0-9]*(.*)" "$1"]
+	W
+		[synonym FORMAT_EXAMPLE_1 value "W" pattern "[0-9]*(.*)" "$1"]
+	M
+		[synonym FORMAT_EXAMPLE_1 value "M" pattern "[0-9]*(.*)" "$1"]
+	Y
+		[synonym FORMAT_EXAMPLE_1 value "Y" pattern "[0-9]*(.*)" "$1"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

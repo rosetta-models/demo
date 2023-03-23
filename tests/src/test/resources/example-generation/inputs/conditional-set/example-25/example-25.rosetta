@@ -1,0 +1,32 @@
+namespace demo.translate.conditional_set.example_25
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source CONDITIONAL_SET_EXAMPLE_25
+
+type Root:
+    [rootType]
+	engineSpecification EngineSpecification (0..1)
+		[synonym CONDITIONAL_SET_EXAMPLE_25 value "engineType"]
+
+type EngineSpecification:
+    usEngineVersion EngineVersion (0..1)
+        [synonym CONDITIONAL_SET_EXAMPLE_25 value "fuelSpecs" set when "fuel->combustibleref->href" = "US"]
+        [synonym CONDITIONAL_SET_EXAMPLE_25 value "combustible" set when "combustible->id" = "US"]
+    ukEngineSpecification EngineVersion (0..1)
+        [synonym CONDITIONAL_SET_EXAMPLE_25 value "fuelSpecs" set when "fuelSpecs->combustibleref->href" = "UK"]
+        [synonym CONDITIONAL_SET_EXAMPLE_25 value "combustible" set when "combustible->id" = "UK"]
+
+type EngineVersion:
+    fuelType string (0..1)
+        [synonym CONDITIONAL_SET_EXAMPLE_25 value "combustibleId"]
+    capacityUnit string (0..1)
+        [synonym CONDITIONAL_SET_EXAMPLE_25 value "capacityUnitId"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

@@ -1,0 +1,22 @@
+namespace demo.translate.multi_cardinality.example_2
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source MULTI_CARDINALITY_EXAMPLE_2
+
+type Root:
+    [rootType]
+	engineSpecification EngineSpecification (1..1)
+	    [synonym MULTI_CARDINALITY_EXAMPLE_2 value "engineType"]
+
+type EngineSpecification:
+	fuel string (1..*)
+	    [synonym MULTI_CARDINALITY_EXAMPLE_2 value "combustible" path "engineDetail"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

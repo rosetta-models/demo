@@ -1,0 +1,16 @@
+{
+  "engine" : {
+    "engineSpecification" : {
+      "fuelEnum" : "GASOLINE",
+      "meta" : {
+        "externalKey" : "xyz",
+        "globalKey" : "30ec9c9e"
+      },
+      "powerUnit" : "HP"
+    },
+    "engineSpecificationRef" : {
+      "externalReference" : "xyz",
+      "globalReference" : "30ec9c9e"
+    }
+  }
+}

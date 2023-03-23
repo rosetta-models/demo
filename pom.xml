@@ -20,11 +20,11 @@
         <java.version>11</java.version>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
-        <xtext.version>2.25.0</xtext.version>
+        <xtext.version>2.27.0</xtext.version>
 
-        <rosetta.bundle.version>3.24.0</rosetta.bundle.version>
-        <isda.cdm.version>2.187.0</isda.cdm.version>
-        <rosetta.dsl.version>4.49.2</rosetta.dsl.version>
+        <rosetta.bundle.version>5.6.2</rosetta.bundle.version>
+        <isda.cdm.version>4.0.0-dev.34</isda.cdm.version>
+        <rosetta.dsl.version>7.1.1</rosetta.dsl.version>
         <guava.version>30.0-jre</guava.version>
 
         <!-- Testing -->
@@ -83,11 +83,6 @@
                 <groupId>com.regnosys.rosetta</groupId>
                 <artifactId>com.regnosys.rosetta.lib</artifactId>
                 <version>${rosetta.dsl.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.regnosys</groupId>
-                <artifactId>rosetta-translate</artifactId>
-                <version>${rosetta.bundle.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.google.guava</groupId>

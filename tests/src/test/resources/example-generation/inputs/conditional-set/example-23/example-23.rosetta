@@ -1,0 +1,23 @@
+namespace demo.translate.conditional_set.example_23
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source CONDITIONAL_SET_EXAMPLE_23
+
+type Root:
+    [rootType]
+	engineSpecification EngineSpecification (1..1)
+	    [synonym CONDITIONAL_SET_EXAMPLE_23 value "engineType"]
+
+type EngineSpecification:
+	fuelType string (0..*)
+        [synonym CONDITIONAL_SET_EXAMPLE_23 value "combustible" set when rosettaPath = Root->engineSpecification]
+        [synonym CONDITIONAL_SET_EXAMPLE_23 value "complementaryEnergy" set when rosettaPath = Root->engineSpecification]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

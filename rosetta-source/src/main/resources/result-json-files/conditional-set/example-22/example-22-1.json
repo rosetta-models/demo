@@ -1,0 +1,8 @@
+{
+  "engineSpecification" : {
+    "alternativeFuelType" : "Electricity",
+    "volume" : [ {
+      "capacityUnit" : "Gallon"
+    } ]
+  }
+}

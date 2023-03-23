@@ -1,0 +1,26 @@
+namespace demo.translate.conditional_set_to.example_10
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source CONDITIONAL_SET_TO_EXAMPLE_10
+
+type Root:
+    [rootType]
+	engineSpecification EngineSpecification (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_10 value "engineType"]
+
+type EngineSpecification:
+	engineEnum EngineEnum (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_10 set to EngineEnum -> Hybrid when "engineDetail->fuelDetail->hasAlternativeCombustible" = True]
+
+enum EngineEnum:
+	Hybrid
+	Combustion
+
+/*
+Schema:
+
+$SCHEMA$
+*/

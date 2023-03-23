@@ -13,10 +13,6 @@
     <artifactId>demo-tests</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.regnosys</groupId>
-            <artifactId>rosetta-translate</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.regnosys.model.demo</groupId>

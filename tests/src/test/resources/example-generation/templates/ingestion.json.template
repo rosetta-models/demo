@@ -1,0 +1,37 @@
+{
+  "defaultTranslator": "$SYNONYM_NAME$",
+  "options": {
+    "$SYNONYM_NAME$": {
+      "name": "$SYNONYM_NAME$",
+      "modelClasspath": ["model", "demo/rosetta"],
+      "modelFileDirIncludeRegex": ".*\\.rosetta",
+      "modelFileDirExcludeRegex": null,
+      "rosettaClasses": ["$ROOT_TYPE$"],
+      "generatedPackage": "$NAMESPACE$",
+      "generatedFactoryName": "$SYNONYM_NAME$XmlHandlerFactory",
+      "xsdFilePaths": {
+        "$ROOT_TYPE$": "schemas/$CATEGORY_NAME$/$TEST_NAME$.xsd"
+      },
+      "synonymSources": {
+          "$ROOT_TYPE$": ["$SYNONYM_NAME$"]
+      },
+      "topLevelTags": {
+        "$ROOT_TYPE$": ["dataDocument"]
+      },
+      "verbose": false,
+      "clean": false,
+      "json": false,
+      "xmlExclusionsFilePath": "config/translate-demo.excluded-paths.txt",
+      "cdmClassesDir": "",
+      "integrationTestRoots": {
+        "$ROOT_TYPE$": ["cdm-sample-files/$CATEGORY_NAME$/$TEST_NAME$"]
+      },
+      "default": true,
+      "childPackageName":
+        {
+          "$ROOT_TYPE$": "dataDocument"
+        },
+      "fullClassnames": { "$ROOT_TYPE$": "$NAMESPACE$.$ROOT_TYPE$" }
+    }
+  }
+}

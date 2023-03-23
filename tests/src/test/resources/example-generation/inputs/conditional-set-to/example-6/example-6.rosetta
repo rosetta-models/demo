@@ -1,0 +1,35 @@
+namespace demo.translate.conditional_set_to.example_6
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source CONDITIONAL_SET_TO_EXAMPLE_6
+
+type Root:
+    [rootType]
+	engine Engine (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_6 value "engineType"]
+
+type Engine:
+	engineSpecification EngineSpecification (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_6 value "engineDetail"]
+	engineSystem string (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_6
+			set to "Combustion" when "engineDetail->fuelDetail->combustible" = "Gasoline",
+			set to "Electric" when "engineDetail->fuelDetail->combustible" = "Electricity",
+			set to "Default"]
+
+type EngineSpecification:
+	engineMetric EngineMetric (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_6 value "fuelDetail"]
+
+type EngineMetric:
+	fuelType string (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_6 value "combustible"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

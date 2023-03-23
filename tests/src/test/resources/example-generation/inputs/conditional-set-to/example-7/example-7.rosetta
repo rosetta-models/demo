@@ -1,0 +1,37 @@
+namespace demo.translate.conditional_set_to.example_7
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source CONDITIONAL_SET_TO_EXAMPLE_7
+
+type Root:
+    [rootType]
+	engine Engine (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_7 value "engineType"]
+
+type Engine:
+	engineSpecification EngineSpecification (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_7 value "engineDetail"]
+	alternativeCombustible FuelEnum (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_7 set to FuelEnum -> Electricity when "engineDetail->fuelDetail->alternativeCombustible" exists]
+
+type EngineSpecification:
+	engineMetric EngineMetric (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_7 value "fuelDetail"]
+
+type EngineMetric:
+	fuelEnum FuelEnum (1..1)
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_7 value "combustible"]
+
+enum FuelEnum:
+	Electricity
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_7 value "electricity"]
+	Gasoline
+		[synonym CONDITIONAL_SET_TO_EXAMPLE_7 value "gasoline"]
+/*
+Schema:
+
+$SCHEMA$
+*/

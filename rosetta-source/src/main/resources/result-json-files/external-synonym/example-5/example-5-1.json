@@ -1,0 +1,28 @@
+{
+  "engine" : {
+    "engineSpecification" : [ {
+      "engineMetric" : [ {
+        "fuel" : {
+          "meta" : {
+            "scheme" : "scheme1"
+          },
+          "value" : "Gasoline"
+        }
+      }, {
+        "fuel" : {
+          "meta" : {
+            "scheme" : "scheme2"
+          },
+          "value" : "Diesel"
+        }
+      }, {
+        "fuel" : {
+          "meta" : {
+            "scheme" : "acc-scheme1"
+          },
+          "value" : "Electricity"
+        }
+      } ]
+    } ]
+  }
+}

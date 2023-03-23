@@ -1,0 +1,34 @@
+namespace demo.translate.conditional_set.example_7
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source CONDITIONAL_SET_EXAMPLE_7
+
+type Root:
+    [rootType]
+	usEngineVersion EngineVersion (1..1)
+	    [synonym CONDITIONAL_SET_EXAMPLE_7 value "usEngineSpecification" path "engineType"]
+	ukEngineVersion EngineVersion (1..1)
+	    [synonym CONDITIONAL_SET_EXAMPLE_7 value "ukEngineSpecification" path "engineType"]
+
+type EngineVersion:
+	terminology Terminology (1..1)
+	    [synonym CONDITIONAL_SET_EXAMPLE_7 value "engineDetail"]
+
+type Terminology:
+    fuelType string (1..1)
+    	[synonym CONDITIONAL_SET_EXAMPLE_7 value "combustible" maps 2]
+    capacity string (1..1)
+        [synonym CONDITIONAL_SET_EXAMPLE_7 value "capacity" maps 2]
+	combustibleTaxBand string (0..1)
+        [synonym CONDITIONAL_SET_EXAMPLE_7 value "combustible" set when rosettaPath = Root->usEngineVersion->terminology]
+	volume string (0..1)
+	    [synonym CONDITIONAL_SET_EXAMPLE_7 value "capacity" set when rosettaPath = Root->ukEngineVersion->terminology]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

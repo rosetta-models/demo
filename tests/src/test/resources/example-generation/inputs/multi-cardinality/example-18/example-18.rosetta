@@ -1,0 +1,38 @@
+namespace demo.translate.multi_cardinality.example_18
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source MULTI_CARDINALITY_EXAMPLE_18
+
+type Root:
+    [rootType]
+    engine Engine (1..1)
+	    [synonym MULTI_CARDINALITY_EXAMPLE_18 value "engineType"]
+
+type Engine:
+	globalVersion EngineVersion (0..*)
+        [synonym MULTI_CARDINALITY_EXAMPLE_18 value "fuelDetail"]
+        [synonym MULTI_CARDINALITY_EXAMPLE_18 value "capacityDetail"]
+
+type EngineVersion:
+	engineSpecification EngineSpecification (0..*)
+
+type EngineSpecification:
+	engineMetric EngineMetric (0..*)
+
+type EngineMetric:
+	volume Volume (0..*)
+
+type Volume:
+	fuel string (0..1)
+	    [synonym MULTI_CARDINALITY_EXAMPLE_18 value "combustible"]
+	capacity string (0..1)
+	    [synonym MULTI_CARDINALITY_EXAMPLE_18 value "capacity"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

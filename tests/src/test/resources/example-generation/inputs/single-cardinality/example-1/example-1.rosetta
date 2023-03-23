@@ -1,0 +1,25 @@
+namespace demo.translate.single_cardinality.example_1
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source SINGLE_CARDINALITY_EXAMPLE_1
+
+type Root:
+    [rootType]
+	engineSpecification EngineSpecification (1..1)
+	    [synonym SINGLE_CARDINALITY_EXAMPLE_1 value "engineType"]
+
+type EngineSpecification:
+	fuel Fuel (1..1)
+
+type Fuel:
+	fuelType string (1..1)
+	    [synonym SINGLE_CARDINALITY_EXAMPLE_1 value "combustible"]
+
+/*
+Schema:
+
+$SCHEMA$
+*/

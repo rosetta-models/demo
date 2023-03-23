@@ -1,0 +1,38 @@
+namespace demo.translate.external_synonym.example_3
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source EXTERNAL_SYNONYM_EXAMPLE_3_BASE
+
+synonym source EXTERNAL_SYNONYM_EXAMPLE_3 extends EXTERNAL_SYNONYM_EXAMPLE_3_BASE
+{
+	Root:
+		+ engineSpecification
+			[value "engineDetail" path "engineType"]
+
+	EngineSpecification:
+		+ fuelEnum
+			[value "combustible"]
+
+	enums
+
+	FuelEnum:
+		+ Gasoline
+			[value "Gasoline"]
+		+ Diesel
+			[value "Diesel"]
+}
+
+type Root:
+    [rootType]
+    engineSpecification EngineSpecification (0..1)
+
+
+type EngineSpecification:
+    fuelEnum FuelEnum (1..*)
+
+enum FuelEnum:
+    Gasoline
+    Diesel

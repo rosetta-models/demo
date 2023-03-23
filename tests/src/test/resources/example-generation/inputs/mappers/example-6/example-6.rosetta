@@ -1,0 +1,35 @@
+namespace demo.translate.mappers.example_6
+version "${project.version}"
+
+/*
+$DESCRIPTION$
+*/
+synonym source MAPPERS_EXAMPLE_6
+
+type Root:
+    [rootType]
+	engine Engine (1..1)
+	vehicle Vehicle (1..1)
+
+type Engine:
+	engineMetric EngineMetric (1..1)
+        [metadata location]
+        [synonym MAPPERS_EXAMPLE_6 value "engineDetail" path "engineType" mapper "Example6"]
+
+type Vehicle:
+    engineSpecification EngineSpecification (1..1)
+	    [synonym MAPPERS_EXAMPLE_6 value "engineDetail" path "engineType"]
+
+type EngineSpecification:
+	resolvedAmount EngineMetric (1..1)
+        [metadata address "pointsTo"=Engine->engineMetric]
+        [synonym MAPPERS_EXAMPLE_6 meta "horsePower"]
+
+type EngineMetric:
+	amount number (1..1)
+
+/*
+Schema:
+
+$SCHEMA$
+*/

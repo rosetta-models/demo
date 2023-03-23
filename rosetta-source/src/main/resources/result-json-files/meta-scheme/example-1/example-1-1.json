@@ -1,0 +1,15 @@
+{
+  "engineSpecification" : {
+    "fuelType" : [ {
+      "meta" : {
+        "scheme" : "mainCombustibles"
+      },
+      "value" : "Gasoline"
+    }, {
+      "meta" : {
+        "scheme" : "alternativeCombustibles"
+      },
+      "value" : "Electricity"
+    } ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "engine" : {
+    "engineSpecification" : {
+      "engineMetric" : {
+        "fuelType" : "Gasoline"
+      }
+    },
+    "engineType" : {
+      "engineSystem" : "Hybrid"
+    }
+  }
+}
