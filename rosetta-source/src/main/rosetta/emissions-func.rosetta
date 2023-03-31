@@ -212,7 +212,7 @@ func JoinStrings: <"Concatenates the list of strings, separating each element wi
         result string (1..1)
 
     set result:
-        strings join [ ", " ]
+        strings join  ", "
 
 func FindMaxNumber: <"Returns the highest number from the given list of numbers, using the max keyword.">
     inputs:
