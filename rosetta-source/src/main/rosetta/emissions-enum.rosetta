@@ -20,7 +20,7 @@ enum CarTypeEnum: <"Category test of the car used as an additional technical spe
 	Sports car
 	Convertible
 
-enum EngineTypeEnum: <"Type of the engine used as an additional technical specification for a vehicle">
+enum EngineTypeEnum: <"Type test of the engine used as an additional technical specification for a vehicle">
     Diesel
     Petrol
     Electric
