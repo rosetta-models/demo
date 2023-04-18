@@ -14,6 +14,9 @@ import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
 
+/**
+ * Working directory should be $MODULE_WORKING_DIR$
+ */
 public class ExampleGenerator {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExampleGenerator.class);
@@ -165,8 +168,13 @@ public class ExampleGenerator {
                         .replace($SCHEMA$, schema);
 
         Path rosettaPath = mainResourcesPath.getParent().resolve("rosetta")
-                .resolve(exampleSet.categoryName.replace("-", "_")
-                        + "-" + exampleSet.rosettaFile.getFileName().toString().replace("-", "_"));
+                .resolve("translate"
+                        + "-"
+                        + exampleSet.categoryName.replace("-", "_")
+                        + "-"
+                        + exampleSet.rosettaFile.getFileName().toString()
+                        .replace("-", "_")
+                        .replace(".rosetta", "-synonym.rosetta"));
 
         Files.write(rosettaPath, rosetta.getBytes());
     }
