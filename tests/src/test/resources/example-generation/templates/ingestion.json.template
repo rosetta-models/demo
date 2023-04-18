@@ -1,5 +1,4 @@
 {
-  "defaultTranslator": "$SYNONYM_NAME$",
   "options": {
     "$SYNONYM_NAME$": {
       "name": "$SYNONYM_NAME$",
