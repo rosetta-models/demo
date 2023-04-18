@@ -3,7 +3,7 @@
   "description": "Demonstration Model",
   "modelPath": "rosetta-source/src/main",
   "permissions": [],
-  "lowestVersion": "0.27.0",
+  "lowestVersion": "0.29.1",
   "upmostVersion": "0.29.999",
   "parentReadOnly": false,
   "dependencyArtifact": {
