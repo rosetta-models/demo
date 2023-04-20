@@ -2,7 +2,7 @@
 namespace demo.emissions
 version "${project.version}"
 
-type VehicleOwnership: <"Representative record of vehicle ownership">
+type VehicleOwnership: <"test Representative record of vehicle ownership">
     [rootType]
     drivingLicence DrivingLicence (0..*)
     vehicle Vehicle (1..1)
@@ -10,7 +10,7 @@ type VehicleOwnership: <"Representative record of vehicle ownership">
     isFirstHand boolean (1..1)
     vehicleOwnershipRegistrationID int (1..1)
 
-type VehicleFeature: <"Features qualifying a vehicle in addition to technical specifications">
+type VehicleFeature: <"test Features qualifying a vehicle in addition to technical specifications">
     colour ColourEnum (1..1)
     doorNumber int (1..1)
 
