@@ -10,7 +10,7 @@ enum ColourEnum: <"Colour of the vehicle used as an additional feature for a veh
     Indigo
     Violet
 
-enum CarTypeEnum: <"test Category of the car used as an additional technical specification for a vehicle">
+enum CarTypeEnum: <"makecontribution work as expected test Category of the car used as an additional technical specification for a vehicle">
     Hatchback
 	Saloon
 	Estate
