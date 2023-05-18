@@ -22,9 +22,9 @@
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <xtext.version>2.27.0</xtext.version>
 
-        <rosetta.bundle.version>5.9.0</rosetta.bundle.version>
+        <rosetta.bundle.version>6.1.6</rosetta.bundle.version>
         <isda.cdm.version>4.0.0-dev.39</isda.cdm.version>
-        <rosetta.dsl.version>7.3.1</rosetta.dsl.version>
+        <rosetta.dsl.version>7.5.3</rosetta.dsl.version>
 
         <guava.version>30.0-jre</guava.version>
 
@@ -119,11 +119,6 @@
                 <artifactId>mockito-core</artifactId>
                 <version>${mockito.version}</version>
                 <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.regnosys</groupId>
-                <artifactId>ingest-test-framework</artifactId>
-                <version>${rosetta.bundle.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -31,11 +31,6 @@
 	    	Java security exceptions when matchers form the same package are subsequently loaded from Hamcrest
 	    -->
         <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>java-hamcrest</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
         </dependency>
