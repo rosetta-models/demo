@@ -2,6 +2,12 @@
 namespace demo.emissions
 version "${project.version}"
 
+typeAlias PositiveInteger: <"Positive integer">
+	number(fractionalDigits: 0, min: 0)
+
+typeAlias AlphaNumericText: <"Text containing letters and numbers only (i.e. no special characters), and with a minimum length of 1.">
+    string(minLength: 1, pattern: "[a-zA-Z0-9]{1,4}")
+
 type VehicleOwnership: <"Representative record of vehicle ownership">
     [rootType]
     drivingLicence DrivingLicence (0..*)
@@ -57,8 +63,8 @@ type Person: <"A class to represent the attributes that are specific to a person
 type DrivingLicence extends Person: <"Driving licence authorisation granted by a jurisdiction">
     countryofIssuance string (1..1)
         [metadata scheme]
-    licenceNumber string (1..1)
+    licenceNumber AlphaNumericText (1..1)
     dateofIssuance date (1..1)
     dateOfRenewal date (0..1)
     vehicleEntitlement VehicleClassificationEnum (0..*)
-    penaltyPoints int (1..1)
+    penaltyPoints PositiveInteger (1..1)
