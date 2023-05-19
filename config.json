@@ -9,7 +9,7 @@
   "dependencyArtifact": {
     "groupId": "com.regnosys",
     "artifactId": "core-cdm-dependencies",
-    "version": "4.0.0-dev.44"
+    "version": "4.0.0-dev.45"
   },
   "modelArtifacts": [
     {
