@@ -3,7 +3,7 @@ namespace demo.emissions
 version "${project.version}"
 
 typeAlias PositiveInteger: <"Positive integer">
-	number(fractionalDigits: 0, min: 0)
+    number(fractionalDigits: 0, min: 0)
 
 typeAlias AlphaNumericText: <"Text containing letters and numbers only (i.e. no special characters), and with a minimum length of 1.">
     string(minLength: 1, pattern: "[a-zA-Z0-9]{1,4}")
@@ -52,13 +52,13 @@ type EmissionMetrics: <"Emission metrics used for EU emission standards">
     particleNumber int (1..1)
 
 type Person: <"A class to represent the attributes that are specific to a person.">
-	honorific string (0..1) <"An honorific title, such as Mr., Ms., Dr. etc.">
-	firstName string (0..1) <"The natural person's first name.">
-	middleName string (0..*)
-	initial string (0..*)
-	surname string (0..1) <"The natural person's surname.">
-	suffix string (0..1) <"Name suffix, such as Jr., III, etc.">
-	dateOfBirth date (0..1) <"The person's date of birth.">
+    honorific string (0..1) <"An honorific title, such as Mr., Ms., Dr. etc.">
+    firstName string (0..1) <"The natural person's first name.">
+    middleName string (0..*)
+    initial string (0..*)
+    surname string (0..1) <"The natural person's surname.">
+    suffix string (0..1) <"Name suffix, such as Jr., III, etc.">
+    dateOfBirth date (0..1) <"The person's date of birth.">
 
 type DrivingLicence extends Person: <"Driving licence authorisation granted by a jurisdiction">
     countryofIssuance string (1..1)
