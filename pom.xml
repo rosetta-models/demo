@@ -22,11 +22,11 @@
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <xtext.version>2.27.0</xtext.version>
 
-        <rosetta.bundle.version>6.2.0</rosetta.bundle.version>
-        <isda.cdm.version>4.0.0-dev.45</isda.cdm.version>
-        <rosetta.dsl.version>7.5.4</rosetta.dsl.version>
+        <rosetta.bundle.version>7.1.1</rosetta.bundle.version>
+        <finos.cdm.version>5.0.0-dev.4</finos.cdm.version>
+        <rosetta.dsl.version>8.2.0</rosetta.dsl.version>
 
-        <guava.version>30.0-jre</guava.version>
+        <guava.version>32.0.1-jre</guava.version>
 
         <!-- Testing -->
         <junit.jupiter.version>5.8.1</junit.jupiter.version>
@@ -66,9 +66,9 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.isda</groupId>
-                <artifactId>cdm</artifactId>
-                <version>${isda.cdm.version}</version>
+                <groupId>org.finos.cdm</groupId>
+                <artifactId>cdm-java</artifactId>
+                <version>${finos.cdm.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.regnosys</groupId>
