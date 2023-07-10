@@ -23,8 +23,8 @@
             <artifactId>com.regnosys.rosetta.lib</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.isda</groupId>
-            <artifactId>cdm</artifactId>
+            <groupId>org.finos.cdm</groupId>
+            <artifactId>cdm-java</artifactId>
         </dependency>
         <!--
 	    	The osgi dependency from rosetta.lib can take precedence on the classpath causing
