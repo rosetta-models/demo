@@ -19,7 +19,8 @@ type VehicleOwnership: <"Representative record of vehicle ownership">
 type VehicleFeature: <"Features qualifying a vehicle in addition to technical specifications">
     colour ColourEnum (1..1)
     doorNumber int (1..1)
-
+type NewType:
+     newAttribute string (1..1)
 type Vehicle extends VehicleFeature: <"Representation of a vehicle">
     specification Specification (1..1)
     registrationID string (1..1)
