@@ -2,7 +2,7 @@ namespace demo.translate.external_synonym.example_8
 version "${project.version}"
 
 /*
-Example 8:
+Example 8: tes 
 Mappings are performed comming from an external synonym source where for each type it is defined the mappings then
 another external synonym which delete the previous mappings with "-" sign
 */

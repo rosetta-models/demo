@@ -2,7 +2,7 @@ namespace demo.translate.conditional_set_to.example_13
 version "${project.version}"
 
 /*
-Example 13:
+Example 13: tes 
 The rosetta element engineEnum is conditional set to "Hybrid" from EngineEnum when "alternativeFuelDetail" exists and  "
 fuelDetail" exists
 */

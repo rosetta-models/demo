@@ -2,7 +2,7 @@ namespace demo.translate.conditional_set.example_7
 version "${project.version}"
 
 /*
-Example 7:
+Example 7: tes 
 
 Conditional mapping using "set" with a "when" clause that is predicated on the upstream rosetta path.
 

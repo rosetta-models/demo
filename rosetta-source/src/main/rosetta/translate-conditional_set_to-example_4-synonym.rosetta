@@ -2,7 +2,7 @@ namespace demo.translate.conditional_set_to.example_4
 version "${project.version}"
 
 /*
-Example 4:
+Example 4: tes 
 The rosetta element engineSystem is conditional set to "Unknown" when xml element "engineType" exists
 */
 synonym source CONDITIONAL_SET_TO_EXAMPLE_4

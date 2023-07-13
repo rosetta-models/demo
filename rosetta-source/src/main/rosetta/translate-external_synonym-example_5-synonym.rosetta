@@ -2,7 +2,7 @@ namespace demo.translate.external_synonym.example_5
 version "${project.version}"
 
 /*
-Example 5:
+Example 5: tes 
 Mappings are performed comming from 2 external synonym source where for each type (Root) and another synonym source is
 used defining other types (EngineSpecification ) where it is defined the mappings
 */

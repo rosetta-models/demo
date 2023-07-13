@@ -2,7 +2,7 @@ namespace demo.translate.conditional_set_to.example_11
 version "${project.version}"
 
 /*
-Example 11:
+Example 11: tes 
 The rosetta element fuelType is conditional set to "Gasoline" when xml attribute "type"  or "RegularGasoline" when
 path = "combustible->octanes"
 and element alternativeFuelType set to "PremiumGasoline" when "combustible->octanes" = "93"
