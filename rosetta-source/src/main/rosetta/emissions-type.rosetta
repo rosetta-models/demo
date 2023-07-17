@@ -16,6 +16,10 @@ type VehicleOwnership: <"Representative record of vehicle ownership">
     isFirstHand boolean (1..1)
     vehicleOwnershipRegistrationID int (1..1)
 
+type Foo:
+    [rootType]
+    bla string (1..1)
+
 type VehicleFeature: <"Features qualifying a vehicle in addition to technical specifications">
     colour ColourEnum (1..1)
     doorNumber int (1..1)
