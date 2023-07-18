@@ -24,7 +24,7 @@
 
         <rosetta.bundle.version>7.1.1</rosetta.bundle.version>
         <finos.cdm.version>5.0.0-dev.4</finos.cdm.version>
-        <rosetta.dsl.version>8.2.0</rosetta.dsl.version>
+        <rosetta.dsl.version>8.3.1</rosetta.dsl.version>
 
         <guava.version>32.0.1-jre</guava.version>
 
