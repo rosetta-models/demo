@@ -2,7 +2,7 @@ namespace demo.translate.format.example_2
 version "${project.version}"
 
 /*
-Example 2:
+Example 2: tes 
 Map the value into the rosetta attribute removing the HTML value of it.
 */
 synonym source FORMAT_EXAMPLE_2

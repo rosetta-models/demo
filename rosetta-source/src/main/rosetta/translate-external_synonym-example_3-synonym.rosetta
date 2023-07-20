@@ -1,7 +1,7 @@
 namespace demo.translate.external_synonym.example_3
 version "${project.version}"
 
-/*
+/*tes 
 Example 3:
 Mappings are performed comming from an external synonym source where for each type (Root and EngineSpecification) and
 FuelEnum it is defined the mappings

@@ -2,7 +2,7 @@ namespace demo.translate.conditional_set_to.example_7
 version "${project.version}"
 
 /*
-Example 7:
+Example 7: tes 
 The rosetta element alternativeCombustible is conditional set to "Electricity" value from the FuelEnum when xml
 element "engineDetail->fuelDetail->alternativeCombustible" exists
 */

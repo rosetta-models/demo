@@ -2,7 +2,7 @@ namespace demo.translate.conditional_set_to.example_6
 version "${project.version}"
 
 /*
-Example 6:
+Example 6: tes 
 The rosetta element engineSystem is conditional set to "Combustion" when xml element "engineDetail->fuelDetail->
 combustible" = "Gasoline" else if "engineDetail->fuelDetail->combustible" = "Electricity" is set to ELECTRIC else is
 DEFAULT

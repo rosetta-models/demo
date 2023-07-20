@@ -2,7 +2,7 @@ namespace demo.translate.conditional_set.example_1
 version "${project.version}"
 
 /*
-Example 1:
+Example 1: tes 
 
 Conditional mapping using "set" with a "when" clause that is predicated on the value of a xml element at the specified
 xml path.

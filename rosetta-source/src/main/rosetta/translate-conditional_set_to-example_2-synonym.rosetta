@@ -2,7 +2,7 @@ namespace demo.translate.conditional_set_to.example_2
 version "${project.version}"
 
 /*
-Example 2:
+Example 2: tes 
 The rosetta element engineSystem is conditional set to "Hybrid" when xml element found in "engineType->engineDetail->
 fuelDetail->alternativeCombustible" exists
 */

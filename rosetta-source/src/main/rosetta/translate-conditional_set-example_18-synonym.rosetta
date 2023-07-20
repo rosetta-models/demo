@@ -2,7 +2,7 @@ namespace demo.translate.conditional_set.example_18
 version "${project.version}"
 
 /*
-Example 18:
+Example 18: tes 
 Conditional mapping using "set" with a "when" clause that is predicated on the value of a xml element at the specified
 xml path and rosettaPath with multi-cardinality and meta.
 The attribute Root->usEngineVersion->capacityUnit and Root->ukEngineVersion->capacityUnit are conditional set from xml

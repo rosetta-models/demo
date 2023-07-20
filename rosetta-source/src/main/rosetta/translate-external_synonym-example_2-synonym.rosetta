@@ -1,7 +1,7 @@
 namespace demo.translate.external_synonym.example_2
 version "${project.version}"
 
-/*
+/* tes 
 Mappings are performed comming from an external synonym source where for each type (Root and EngineSpecification) it is
 defined the mappings
 */

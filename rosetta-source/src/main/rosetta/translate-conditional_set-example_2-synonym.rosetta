@@ -3,7 +3,7 @@ version "${project.version}"
 
 /*
 Example 2:
-
+tes 
 Conditional mapping using "set" with a "when" clause that is predicated on a xml element at the specified xml path
 exists.
 
