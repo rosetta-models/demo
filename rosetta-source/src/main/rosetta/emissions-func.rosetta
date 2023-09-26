@@ -258,3 +258,10 @@ func FindVehicleWithMaxPowerUsingReduce: <"Returns the vehicle with the highest 
                 then v1
                 else v2
             ]
+
+func NewFunc:
+    inputs:
+        input NewType (1..1)
+    output:
+        out NewType (1..1)
+    set out: input
