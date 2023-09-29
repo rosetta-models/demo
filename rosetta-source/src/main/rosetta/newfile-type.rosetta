@@ -1,0 +1,5 @@
+namespace demo.newfile
+version "${project.version}"
+
+type NewType:
+    field string (1..1)
