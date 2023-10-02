@@ -2,6 +2,8 @@
 namespace demo.emissions
 version "${project.version}"
 
+broken
+
 typeAlias PositiveInteger: <"Positive integer">
     number(fractionalDigits: 0, min: 0)
 
