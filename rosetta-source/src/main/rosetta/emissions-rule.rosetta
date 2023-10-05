@@ -89,14 +89,14 @@ reporting rule EngineType from VehicleOwnership: <"Engine type of the vehicle">
         provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
     include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
     extract vehicle -> specification -> engine -> engineType
-        as "Engine Type"
+        as "Engine Types"
 
 reporting rule CarbonMonoxide from VehicleOwnership: <"Carbon Monoxyde (CO) reported under emission metrics for the type of engine">
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 article "1"
         provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
     include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
     extract vehicle -> specification -> engine -> emissionMetrics -> carbonMonoxide
-        as "Carbon Monodfss"
+        as "No carbon pls"
 
 //Utility Rules - Euro standards 
 reporting rule EuroEmissionStandard from VehicleOwnership:
