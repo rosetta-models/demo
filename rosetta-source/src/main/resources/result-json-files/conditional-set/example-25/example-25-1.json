@@ -1,11 +1,11 @@
 {
   "engineSpecification" : {
-    "ukEngineSpecification" : {
-      "capacityUnit" : "UK Gallon",
-      "fuelType" : "Petrol"
-    },
     "usEngineVersion" : {
       "fuelType" : "Gasoline"
+    },
+    "ukEngineSpecification" : {
+      "fuelType" : "Petrol",
+      "capacityUnit" : "UK Gallon"
     }
   }
 }

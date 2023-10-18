@@ -2,7 +2,7 @@
   "engine" : {
     "engineSpecification" : {
       "engineMetric" : {
-        "fuelEnum" : "ELECTRICITY"
+        "fuelEnum" : "Electricity"
       }
     }
   }

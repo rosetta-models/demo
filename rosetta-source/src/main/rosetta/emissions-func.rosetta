@@ -7,6 +7,7 @@ func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
         vehicle Vehicle (1..1)
         dateOfPurchase date (1..1)
         isFirstHand boolean (1..1)
+        vehicleOwnershipRegistrationID int (1..1)
     output:
         vehicleOwnership VehicleOwnership (1..1)
 
@@ -16,10 +17,14 @@ func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
     condition DrivingLicenceVehicleClassification: <"Vehicle classification allowed by the driving licence needs to encompass the vehicle classification of the considered vehicle">
         drivingLicence -> vehicleEntitlement contains vehicle -> vehicleClassification
 
-    set vehicleOwnership -> drivingLicence: drivingLicence
-    set vehicleOwnership -> vehicle: vehicle
-    set vehicleOwnership -> dateOfPurchase: dateOfPurchase
-    set vehicleOwnership -> isFirstHand: isFirstHand
+    set vehicleOwnership:
+        VehicleOwnership {
+            drivingLicence: drivingLicence,
+            vehicle: vehicle,
+            dateOfPurchase: dateOfPurchase,
+            isFirstHand: isFirstHand,
+            vehicleOwnershipRegistrationID: vehicleOwnershipRegistrationID
+        }
 
 func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving licence is expired or not">
     inputs:
@@ -29,9 +34,7 @@ func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving li
         isExpired boolean (1..1)
 
     set isExpired:
-        if drivingLicence -> dateOfRenewal < todayDate
-        then True
-        else False
+        drivingLicence -> dateOfRenewal < todayDate
 
 func Check_DieselEngine: <"Function to check whether the engine of the vehicle is of diesel type">
     inputs:
@@ -40,9 +43,7 @@ func Check_DieselEngine: <"Function to check whether the engine of the vehicle i
         isEngineTypeDiesel boolean (1..1)
 
     set isEngineTypeDiesel:
-        if engine -> engineType = EngineTypeEnum -> Diesel
-        then True
-        else False
+        engine -> engineType = EngineTypeEnum -> Diesel
 
 func Check_YearOfManufacture: <"Function to check whether the year of manufacture of the vehicle is older than a year cut">
     inputs:
@@ -52,17 +53,7 @@ func Check_YearOfManufacture: <"Function to check whether the year of manufactur
         isOlderThanYearCut boolean (1..1)
 
     set isOlderThanYearCut:
-        if specification -> yearOfManufacture < yearCut
-        then True
-        else False
-
-func Create_Date: <"Function to create a date for the given year, month and dayOfMonth.">
-    inputs:
-        year int (1..1)
-        month int (1..1)
-        day int (1..1)
-    output:
-        result date (1..1)
+        specification -> yearOfManufacture < yearCut
 
 func FindVehiclesByEngineType: <"Find all vehicles with given engine type.">
     inputs:
@@ -82,7 +73,8 @@ func FindDriversWithMaximumZeroTo60: <"Find all vehicles with given maximum 0 - 
         vehiclesWithMaximumZeroTo60 Vehicle (0..*)
 
     add vehiclesWithMaximumZeroTo60: <"Each list 'item' can have a name specified.">
-        vehicles filter vehicle [ vehicle -> specification -> zeroTo60 < zeroTo60 ]
+        vehicles
+            filter vehicle [ vehicle -> specification -> zeroTo60 < zeroTo60 ]
 
 func FindVehiclesWithinEmissionLimits: <"Find all vehicles within given emissions metrics.">
     inputs:
@@ -144,9 +136,9 @@ func GetAllDrivingLicencesFromInternationalOwners: <"Get list of driving licence
         owners
             // map each owner item into a list of driving licences
             extract drivingLicence // each item is now a list of driving licences
-                // filter to include only items which contain more than one driving licence
+            // filter to include only items which contain more than one driving licence
             then filter count > 1 // each item is still a list of driving licences
-                // flatten list so output is a "flat" list of driving licences (rather that a list where each item is a list of driving licences)
+            // flatten list so output is a "flat" list of driving licences (rather that a list where each item is a list of driving licences)
             then flatten
 
 func GetDrivingLicence: <"Find driving licence for the given licence number.">

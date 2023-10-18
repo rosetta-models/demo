@@ -1,14 +1,14 @@
 {
   "engine" : {
     "engineMetric" : {
+      "value" : {
+        "amount" : 300
+      },
       "meta" : {
         "location" : [ {
           "scope" : "DOCUMENT",
           "value" : "engineMetric-1"
         } ]
-      },
-      "value" : {
-        "amount" : 300
       }
     }
   },

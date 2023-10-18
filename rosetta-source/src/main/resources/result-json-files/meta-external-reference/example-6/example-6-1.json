@@ -4,8 +4,8 @@
       "value" : {
         "fuelType" : "blah",
         "meta" : {
-          "externalKey" : "g4789",
-          "globalKey" : "2e2df1"
+          "globalKey" : "2e2df1",
+          "externalKey" : "g4789"
         }
       }
     }

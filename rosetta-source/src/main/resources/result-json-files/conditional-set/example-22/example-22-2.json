@@ -1,6 +1,6 @@
 {
   "engineSpecification" : {
-    "alternativeFuelType" : "Electricity",
-    "fuelType" : "Gasoline"
+    "fuelType" : "Gasoline",
+    "alternativeFuelType" : "Electricity"
   }
 }

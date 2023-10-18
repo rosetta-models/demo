@@ -3,13 +3,13 @@
     "engineSpecification" : [ {
       "emissions" : "Mid-Emissions",
       "fuelType" : "Gasoline",
-      "volumeConsumption" : "Liters",
-      "volumeUnit" : "7L/100km"
+      "volumeUnit" : "7L/100km",
+      "volumeConsumption" : "Liters"
     }, {
       "emissions" : "High-Emissions",
       "fuelType" : "Diesel",
-      "volumeConsumption" : "Gallon",
-      "volumeUnit" : "0.03889 gal/mi"
+      "volumeUnit" : "0.03889 gal/mi",
+      "volumeConsumption" : "Gallon"
     } ]
   }
 }

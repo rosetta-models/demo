@@ -5,15 +5,12 @@ import com.regnosys.ingest.test.framework.ingestor.IngestionTest;
 import com.regnosys.ingest.test.framework.ingestor.IngestionTestUtil;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionFactory;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionService;
-import com.regnosys.model.ModelRuntimeModule;
+import com.regnosys.demo.DemoRuntimeModule;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.provider.Arguments;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Stream;
 
 //@org.junit.jupiter.api.Disabled
@@ -31,7 +28,7 @@ public class MultiCardinalityExample23IngestionTest extends IngestionTest<demo.t
         ClassLoader cl = MultiCardinalityExample23IngestionTest.class.getClassLoader();
         Collection<URL> ingestURLs = List.of(
                 Objects.requireNonNull(cl.getResource("ingestions/multi-cardinality-example-23-ingestions.json")));
-        ModelRuntimeModule runtimeModule = new ModelRuntimeModule();
+        DemoRuntimeModule runtimeModule = new DemoRuntimeModule();
         initialiseIngestionFactory(INSTANCE_NAME, ingestURLs, runtimeModule, new ArrayList<>(IngestionTestUtil.getPostProcessors(runtimeModule)));
         IngestionFactory factory = IngestionFactory.getInstance(INSTANCE_NAME);
         ingestionService = factory.getService("MULTI_CARDINALITY_EXAMPLE_23");
@@ -51,5 +48,4 @@ public class MultiCardinalityExample23IngestionTest extends IngestionTest<demo.t
     private static Stream<Arguments> fpMLFiles() {
         return readExpectationsFromPath(SAMPLE_FILES_DIR);
     }
-
 }

@@ -1,6 +1,6 @@
 {
   "engineSpecification" : {
-    "capacityUnit" : "Gallon",
-    "fuelType" : "Gasoline"
+    "fuelType" : "Gasoline",
+    "capacityUnit" : "Gallon"
   }
 }

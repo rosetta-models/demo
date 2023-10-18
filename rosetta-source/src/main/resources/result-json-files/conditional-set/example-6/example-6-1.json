@@ -1,14 +1,14 @@
 {
-  "ukEngineVersion" : {
-    "terminology" : {
-      "capacity" : "US Gallon",
-      "fuelType" : "Gas"
-    }
-  },
   "usEngineVersion" : {
     "terminology" : {
-      "capacity" : "UK Gallon",
-      "fuelType" : "Petrol"
+      "fuelType" : "Petrol",
+      "capacity" : "UK Gallon"
+    }
+  },
+  "ukEngineVersion" : {
+    "terminology" : {
+      "fuelType" : "Gas",
+      "capacity" : "US Gallon"
     }
   }
 }

@@ -1,11 +1,11 @@
 {
   "engine" : {
     "engineSpecification" : [ {
-      "engineEnum" : "COMBUSTION",
-      "fuel" : "Gasoline"
+      "fuel" : "Gasoline",
+      "engineEnum" : "Combustion"
     }, {
-      "engineEnum" : "HYBRID",
-      "fuel" : "Electricity"
+      "fuel" : "Electricity",
+      "engineEnum" : "Hybrid"
     } ]
   }
 }

@@ -1,8 +1,8 @@
 {
   "engineSpecification" : {
     "engineMetric" : [ {
-      "capacity" : "Gallon",
-      "fuel" : "Gasoline"
+      "fuel" : "Gasoline",
+      "capacity" : "Gallon"
     }, {
       "fuel" : "Diesel"
     } ]
