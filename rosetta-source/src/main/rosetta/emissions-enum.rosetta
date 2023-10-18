@@ -1,7 +1,7 @@
 namespace demo.emissions
 version "${project.version}"
 
-enum ColourEnum: <"Colour of the vehicle usedbvnvbn as an additional feature for a vehicle">
+enum ColourEnum: <"Colour of the vehicle used as an additional feature for a vehicle">
     Red
     Orange
     Yellow
@@ -10,7 +10,7 @@ enum ColourEnum: <"Colour of the vehicle usedbvnvbn as an additional feature for
     Indigo
     Violet
 
-enum CarTypeEnum: <"Category of the car used as lkjlkjlktest label replaceean additional technical specification for a vehicle">
+enum CarTypeEnum: <"Category of the car used as an additional technical specification for a vehicle">
     Hatchback
     Saloon
     Estate
@@ -19,8 +19,8 @@ enum CarTypeEnum: <"Category of the car used as lkjlkjlktest label replaceean ad
     Coupe
     SportsCar
     Convertible
-
-enum EngineTypeEnum: <"Type of the engine used as an additional technical specification for a vehicle">
+    replace
+enum EngineTypeEnum: <"Type of the engtestine used as an additional technical specification for a vehicle">
     Diesel
     Petrol
     Electric
