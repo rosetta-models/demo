@@ -1,5 +1,5 @@
 {
   "engineSpecification" : {
-    "fuelEnum" : [ "GASOLINE", "DIESEL" ]
+    "fuelEnum" : [ "Gasoline", "Diesel" ]
   }
 }

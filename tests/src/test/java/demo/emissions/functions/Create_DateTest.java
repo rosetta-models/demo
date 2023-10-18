@@ -1,6 +1,6 @@
 package demo.emissions.functions;
 
-import com.regnosys.model.AbstractFunctionTest;
+import com.regnosys.demo.AbstractFunctionTest;
 import com.rosetta.model.lib.records.Date;
 import org.junit.jupiter.api.Test;
 

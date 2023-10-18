@@ -2,8 +2,8 @@
   "engine" : {
     "engine" : [ {
       "engineMetric" : [ {
-        "capacity" : "Gallon",
-        "fuel" : "Petrol"
+        "fuel" : "Petrol",
+        "capacity" : "Gallon"
       } ]
     } ]
   }

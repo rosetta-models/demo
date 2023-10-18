@@ -2,8 +2,8 @@
   "engineSpecification" : {
     "fuelType" : "Gasoline",
     "meta" : {
-      "externalKey" : "g4789",
-      "globalKey" : "a53c15ca"
+      "globalKey" : "a53c15ca",
+      "externalKey" : "g4789"
     }
   }
 }

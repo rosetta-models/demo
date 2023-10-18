@@ -2,11 +2,11 @@
   "engine" : {
     "engineSpecification" : [ {
       "engineMetric" : [ {
-        "capacity" : "Gallon",
-        "fuel" : "Petrol"
+        "fuel" : "Petrol",
+        "capacity" : "Gallon"
       }, {
-        "capacity" : "Gallon",
-        "fuel" : "Diesel"
+        "fuel" : "Diesel",
+        "capacity" : "Gallon"
       } ]
     } ]
   }

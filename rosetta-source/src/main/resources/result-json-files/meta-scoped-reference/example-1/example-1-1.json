@@ -1,14 +1,14 @@
 {
   "engine" : {
     "engineMetric" : {
+      "value" : {
+        "horsePower" : 300
+      },
       "meta" : {
         "location" : [ {
           "scope" : "DOCUMENT",
           "value" : "engineMetric-1"
         } ]
-      },
-      "value" : {
-        "horsePower" : 300
       }
     }
   },

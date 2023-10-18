@@ -1,4 +1,4 @@
-package com.regnosys.model;
+package com.regnosys.demo;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -10,7 +10,7 @@ public class AbstractFunctionTest  {
 
 	@BeforeEach
 	public void setUp() {
-		injector = Guice.createInjector(new ModelRuntimeModule());
+		injector = Guice.createInjector(new DemoRuntimeModule());
 		injector.injectMembers(this);
 	}
 }

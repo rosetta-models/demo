@@ -100,18 +100,18 @@ reporting rule CarbonMonoxide from VehicleOwnership: <"Carbon Monoxyde (CO) repo
 
 //Utility Rules - Euro standards 
 reporting rule EuroEmissionStandard from VehicleOwnership:
-    [legacy-syntax]
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 article "1"
         provision "Regulation (EC) No 715/2007 is amended as follows:"]
-    (
-        // If conditions below are not mutually exclusive, then statements need to be in reverse order (the last matching condition will be displayed)
-        Euro1Standard as "Emission Standards",
-        Euro2Standard as "Emission Standards",
-        Euro3Standard as "Emission Standards",
-        Euro4Standard as "Emission Standards",
-        Euro5Standard as "Emission Standards",
-        Euro6Standard as "Emission Standards"
-    )
+    extract ([
+        Euro1Standard,
+        Euro2Standard,
+        Euro3Standard,
+        Euro4Standard,
+        Euro5Standard,
+        Euro6Standard
+    ])
+    then last
+        as "Emission Standards"
 
 reporting rule Euro6Standard from VehicleOwnership:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 annex "1" table "2"

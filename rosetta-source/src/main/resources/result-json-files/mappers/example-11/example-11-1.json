@@ -1,21 +1,21 @@
 {
   "engineSpecification" : [ {
-    "meta" : {
-      "scheme" : "engine-specification-scheme"
-    },
     "value" : {
       "emissions" : "Low-Emissions",
       "fuelType" : "Gasoline",
       "volumeUnit" : "Gallon"
-    }
-  }, {
+    },
     "meta" : {
       "scheme" : "engine-specification-scheme"
-    },
+    }
+  }, {
     "value" : {
       "emissions" : "High-Emissions",
       "fuelType" : "Diesel",
       "volumeUnit" : "Liters"
+    },
+    "meta" : {
+      "scheme" : "engine-specification-scheme"
     }
   } ]
 }

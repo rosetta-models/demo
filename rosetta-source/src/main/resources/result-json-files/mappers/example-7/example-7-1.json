@@ -1,6 +1,6 @@
 {
   "engineSpecification" : {
-    "fuelType" : [ "Gasoline_Updated", "Diesel_Updated", "Gasoline-Premium_Updated", "DieselB_Updated" ],
-    "volumeUnit" : "Gallon"
+    "volumeUnit" : "Gallon",
+    "fuelType" : [ "Gasoline_Updated", "Diesel_Updated", "Gasoline-Premium_Updated", "DieselB_Updated" ]
   }
 }

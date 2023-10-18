@@ -15,66 +15,31 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!-- Plugins -->
         <java.version>11</java.version>
-        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
-        <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+
+        <rosetta.bundle.version>8.0.3</rosetta.bundle.version>
+        <rosetta.dsl.version>8.8.2</rosetta.dsl.version>
+
         <xtext.version>2.27.0</xtext.version>
-
-        <rosetta.bundle.version>7.6.1</rosetta.bundle.version>
-        <finos.cdm.version>5.0.0-dev.23</finos.cdm.version>
-        <rosetta.dsl.version>8.4.0</rosetta.dsl.version>
-
         <guava.version>32.0.1-jre</guava.version>
 
-        <!-- Testing -->
-        <junit.jupiter.version>5.8.1</junit.jupiter.version>
-        <junit.platform.version>1.8.1</junit.platform.version>
-        <hamcrest.version>2.0.0.0</hamcrest.version>
-        <mockito.version>2.23.0</mockito.version>
-    </properties>
+        <!-- test -->
+        <junit.version>5.9.1</junit.version>
+        <junit-platform-commons.version>1.9.1</junit-platform-commons.version>
+        <mockito.version>5.1.1</mockito.version>
+        <hamcrest.version>2.2</hamcrest.version>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>java-hamcrest</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-launcher</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+        <!-- plugins -->
+        <build-helper-maven-plugin.version>3.1.0</build-helper-maven-plugin.version>
+        <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
+        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.finos.cdm</groupId>
-                <artifactId>cdm-java</artifactId>
-                <version>${finos.cdm.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.regnosys</groupId>
-                <artifactId>ingest-test-framework</artifactId>
-                <version>${rosetta.bundle.version}</version>
-            </dependency>
             <dependency>
                 <groupId>com.regnosys.rosetta</groupId>
                 <artifactId>com.regnosys.rosetta</artifactId>
@@ -86,39 +51,43 @@
                 <version>${rosetta.dsl.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.regnosys</groupId>
+                <artifactId>rosetta-common</artifactId>
+                <version>${rosetta.bundle.version}</version>
+            </dependency>
+            <!-- xtext START -->
+            <dependency>
+                <groupId>org.eclipse.xtext</groupId>
+                <artifactId>xtext-dev-bom</artifactId>
+                <version>${xtext.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- xtext END -->
+            <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
+            <!-- test -->
             <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter-params</artifactId>
-                <version>${junit.jupiter.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter-engine</artifactId>
-                <version>${junit.jupiter.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.junit.platform</groupId>
-                <artifactId>junit-platform-launcher</artifactId>
-                <version>${junit.platform.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.hamcrest</groupId>
-                <artifactId>java-hamcrest</artifactId>
-                <version>${hamcrest.version}</version>
-                <scope>test</scope>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>${junit.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
-                <artifactId>mockito-core</artifactId>
+                <artifactId>mockito-bom</artifactId>
                 <version>${mockito.version}</version>
-                <scope>test</scope>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest</artifactId>
+                <version>${hamcrest.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -146,7 +115,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>${maven-source-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -167,18 +136,4 @@
             <url>https://regnosys.jfrog.io/regnosys/libs-snapshot-local</url>
         </repository>
     </distributionManagement>
-
-    <!-- Required for Xsemantics, added as part of DSL version 4.34.0 -->
-    <repositories>
-        <repository>
-            <id>sonatype_snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 </project>

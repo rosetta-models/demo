@@ -1,8 +1,8 @@
 {
   "engineSpecification" : {
-    "alternativeFuelType" : "Electricity",
     "volume" : [ {
       "capacityUnit" : "Gallon"
-    } ]
+    } ],
+    "alternativeFuelType" : "Electricity"
   }
 }

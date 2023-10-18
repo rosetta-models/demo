@@ -1,6 +1,5 @@
 {
   "engine" : {
-    "engineCategory" : "Combustion",
     "engineSpecification" : [ {
       "engineMetric" : {
         "fuelType" : "Gasoline"
@@ -13,6 +12,7 @@
       "engineMetric" : {
         "fuelType" : "Propane"
       }
-    } ]
+    } ],
+    "engineCategory" : "Combustion"
   }
 }
