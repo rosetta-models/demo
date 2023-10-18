@@ -7,8 +7,6 @@ import com.regnosys.rosetta.common.postprocess.qualify.QualificationHandlerProvi
 import com.rosetta.model.lib.ModuleConfig;
 import com.rosetta.model.lib.qualify.QualifyFunctionFactory;
 import com.rosetta.model.lib.validation.ValidatorFactory;
-import demo.emissions.functions.Create_Date;
-import demo.emissions.functions.Create_DateImpl;
 
 import java.util.Collections;
 import java.util.Map;
