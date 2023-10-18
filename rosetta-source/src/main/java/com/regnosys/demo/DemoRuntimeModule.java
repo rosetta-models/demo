@@ -22,8 +22,6 @@ public class DemoRuntimeModule extends AbstractModule {
 		bind(QualificationHandlerProvider.class).to(bindQualificationConfigProvider());
 		bind(ValidatorFactory.class).to(bindValidatorFactory());
 		bind(ReferenceConfig.class).toInstance(ReferenceConfig.noScopeOrExcludedPaths());
-
-		bind(Create_Date.class).to(bindCreateDate());
 	}
 
 	protected Class<? extends QualifyFunctionFactory> bindQualifyFunctionFactory() {
@@ -36,10 +34,6 @@ public class DemoRuntimeModule extends AbstractModule {
 
 	protected Class<? extends ValidatorFactory> bindValidatorFactory() {
 		return ValidatorFactory.Default.class;
-	}
-
-	protected Class<? extends Create_Date> bindCreateDate() {
-		return Create_DateImpl.class;
 	}
 
 	public static class NoOpQualificationHandlerProvider implements QualificationHandlerProvider {
