@@ -5,15 +5,15 @@
   "permissions": [],
   "versionLimits": [
     {
-      "lowestVersion": "0.35.0",
-      "upmostVersion": "0.35.999"
+      "lowestVersion": "0.36.0",
+      "upmostVersion": "0.36.999"
     }
   ],
   "parentReadOnly": false,
   "dependencyArtifact": {
     "groupId": "com.regnosys",
     "artifactId": "core-cdm-dependencies",
-    "version": "5.0.0-dev.40"
+    "version": "5.0.0-dev.46"
   },
   "modelArtifacts": [
     {
