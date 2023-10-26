@@ -126,7 +126,7 @@ reporting rule Euro6Standard from VehicleOwnership:
                 or vehicleClassification = VehicleClassificationEnum -> N1III_Commercial
                 or vehicleClassification = VehicleClassificationEnum -> N2_Commercial)
         then filter IsRegisteredAfterEuro6StandardDate
-        then extract "Euro 6 Standard" // Alternative where Before / After a date could be possible (new release required)
+        then extract "Euro 723452 Standard" // Alternative where Before / After a date could be possible (new release required)
 
 reporting rule IsRegisteredAfterEuro6StandardDate from Vehicle:
     extract specification -> dateOfFirstRegistration > date { year: 2020, month: 5, day: 1 }
