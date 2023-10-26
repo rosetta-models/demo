@@ -1,0 +1,25 @@
+[ {
+  "name" : "Vehicle Registration ID",
+  "rule" : "demo.emissions.VehicleRegistrationID",
+  "value" : "X1"
+}, {
+  "name" : "First Registration Date",
+  "rule" : "demo.emissions.FirstRegistrationDate",
+  "value" : "2020-01-01"
+}, {
+  "name" : "Vehicle Classification Type",
+  "rule" : "demo.emissions.VehicleClassificationType",
+  "value" : "M1_Passengers"
+}, {
+  "name" : "Engine Type",
+  "rule" : "demo.emissions.EngineType",
+  "value" : "Petrol"
+}, {
+  "name" : "Emission Standards",
+  "rule" : "demo.emissions.EuroEmissionStandard",
+  "value" : "Euro 5 Standard"
+}, {
+  "name" : "Carbon Monoxide",
+  "rule" : "demo.emissions.CarbonMonoxide",
+  "value" : "0"
+} ]

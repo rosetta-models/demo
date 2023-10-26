@@ -1,5 +1,5 @@
 {
-  "reportName" : "EuropeanParliamentEmissionPerformanceStandardsEU",
+  "reportId" : "demo.emissions.<EuropeanParliament EmissionPerformanceStandardsEU>",
   "dataSetName" : "DRR Vehicle Ownership",
   "dataItemExpectations" : [ {
     "fileName" : "regulatory-reporting/input/drr-vehicle-ownership/demo-1.json",

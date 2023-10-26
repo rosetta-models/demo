@@ -1,10 +1,9 @@
 package demo.report.emissions;
 
-import com.google.common.collect.ImmutableList;
-import com.regnosys.rosetta.common.reports.RegReportIdentifier;
 import com.regnosys.rosetta.common.reports.RegReportPaths;
 import com.regnosys.testing.reports.ReportDataItemExpectation;
 import com.regnosys.testing.reports.ReportTestExtension;
+import com.rosetta.model.lib.ModelReportId;
 import demo.emissions.VehicleOwnership;
 import demo.emissions.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportFunction;
 import demo.emissions.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportTabulator;
@@ -31,9 +30,8 @@ public class EmissionsReportTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EmissionsReportTest.class);
 
-    private static final ImmutableList<String> ROSETTA_PATHS = ImmutableList.of("demo/rosetta");
     private static final Path OUTPUT_PATH = RegReportPaths.getDefault().getOutputRelativePath();
-    private static final Path EXPECTATIONS_ROOT_PATH = OUTPUT_PATH.resolve("europeanparliamentemissionperformancestandardseu");
+    private static final Path EXPECTATIONS_ROOT_PATH = OUTPUT_PATH.resolve("europeanparliament-emissionperformancestandardseu");
 
     @Inject
     EuropeanParliamentEmissionPerformanceStandardsEUReportFunction reportFunction;
@@ -42,19 +40,19 @@ public class EmissionsReportTest {
 
     @RegisterExtension
     static ReportTestExtension<VehicleOwnership> testExtension =
-            new ReportTestExtension<>(new ReportTestRuntimeModule(), ROSETTA_PATHS, VehicleOwnership.class)
+            new ReportTestExtension<>(new ReportTestRuntimeModule(), VehicleOwnership.class)
                     .withRootExpectationsPath(EXPECTATIONS_ROOT_PATH);
 
     @ParameterizedTest(name = "{0}")
     @MethodSource("inputFiles")
     void runReport(String testName,
-                   RegReportIdentifier reportIdentifier,
+                   ModelReportId reportIdentifier,
                    String dataSetName,
                    VehicleOwnership vehicleOwnership,
                    ReportDataItemExpectation expectation) throws Throwable {
-        LOGGER.info("Running report '{}' with data set '{}' file '{}'", reportIdentifier.getName(), dataSetName, expectation.getFileName());
+        LOGGER.info("Running report '{}' with data set '{}' file '{}'", reportIdentifier, dataSetName, expectation.getFileName());
 
-        testExtension.assertTest(reportIdentifier, dataSetName, expectation, reportFunction, tabulator, vehicleOwnership);
+        testExtension.runReportAndAssertExpected(reportIdentifier, dataSetName, expectation, reportFunction, tabulator, vehicleOwnership);
     }
 
     @SuppressWarnings("unused")//used by the junit parameterized test
