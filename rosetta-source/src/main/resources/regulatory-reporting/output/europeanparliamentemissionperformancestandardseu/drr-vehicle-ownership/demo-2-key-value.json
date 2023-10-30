@@ -17,7 +17,7 @@
 }, {
   "name" : "Emission Standards",
   "rule" : "demo.emissions.blueprint.EuroEmissionStandardRule",
-  "value" : "Euro 8 Standard"
+  "value" : "Euro 18 Standard"
 }, {
   "name" : "Carbon Monoxide",
   "rule" : "demo.emissions.blueprint.CarbonMonoxideRule",
