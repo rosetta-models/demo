@@ -1,15 +1,7 @@
 [ {
-  "name" : "Carbon Monoxide",
-  "rule" : "demo.emissions.blueprint.CarbonMonoxideRule",
-  "value" : "0"
-}, {
-  "name" : "Emission Standards",
-  "rule" : "demo.emissions.blueprint.EuroEmissionStandardRule",
-  "value" : "Euro 6 Standard"
-}, {
-  "name" : "Engine Type",
-  "rule" : "demo.emissions.blueprint.EngineTypeRule",
-  "value" : "Petrol"
+  "name" : "Vehicle Registration ID",
+  "rule" : "demo.emissions.blueprint.VehicleRegistrationIDRule",
+  "value" : "X1"
 }, {
   "name" : "First Registration Date",
   "rule" : "demo.emissions.blueprint.FirstRegistrationDateRule",
@@ -19,7 +11,15 @@
   "rule" : "demo.emissions.blueprint.VehicleClassificationTypeRule",
   "value" : "M1_Passengers"
 }, {
-  "name" : "Vehicle Registration ID",
-  "rule" : "demo.emissions.blueprint.VehicleRegistrationIDRule",
-  "value" : "X1"
+  "name" : "Engine Type",
+  "rule" : "demo.emissions.blueprint.EngineTypeRule",
+  "value" : "Petrol"
+}, {
+  "name" : "Emission Standards",
+  "rule" : "demo.emissions.blueprint.EuroEmissionStandardRule",
+  "value" : "Euro 8 Standard"
+}, {
+  "name" : "Carbon Monoxide",
+  "rule" : "demo.emissions.blueprint.CarbonMonoxideRule",
+  "value" : "0"
 } ]
