@@ -17,9 +17,9 @@
 }, {
   "name" : "Emission Standards",
   "rule" : "demo.emissions.EuroEmissionStandard",
-  "value" : "Euro 6 Standard"
+  "value" : "Euro 6 Standardssss"
 }, {
-  "name" : "Carbon Monoxide",
+  "name" : "Carbon Monoxide fgdh",
   "rule" : "demo.emissions.CarbonMonoxide",
   "value" : "0"
 } ]
