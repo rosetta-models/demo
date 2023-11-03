@@ -96,7 +96,7 @@ reporting rule CarbonMonoxide from VehicleOwnership: <"Carbon Monoxyde (CO) repo
         provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
     include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
     extract vehicle -> specification -> engine -> emissionMetrics -> carbonMonoxide
-        as "Carbon Monoxide"
+        as "Carbon Monoxide fgdh"
 
 //Utility Rules - Euro standards 
 reporting rule EuroEmissionStandard from VehicleOwnership:
