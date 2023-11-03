@@ -1,8 +1,8 @@
 {
-  "vehicleRegistrationID" : "X1",
-  "firstRegistrationDate" : "2020-01-01",
-  "vehicleClassificationType" : "M1_Passengers",
+  "carbonMonoxide" : 0,
   "engineType" : "Petrol",
   "euroEmissionStandard" : "Euro 5 Standard",
-  "carbonMonoxide" : 0
+  "firstRegistrationDate" : "2020-01-01",
+  "vehicleClassificationType" : "M1_Passengers",
+  "vehicleRegistrationID" : "X1"
 }
