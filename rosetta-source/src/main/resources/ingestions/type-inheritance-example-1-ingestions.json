@@ -2,6 +2,7 @@
   "options": {
     "TYPE_INHERITANCE_EXAMPLE_1": {
       "name": "TYPE_INHERITANCE_EXAMPLE_1",
+      "modelId": "DEMO",
       "modelClasspath": ["model", "demo/rosetta"],
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,

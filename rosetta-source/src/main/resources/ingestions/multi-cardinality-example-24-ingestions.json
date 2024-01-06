@@ -2,6 +2,7 @@
   "options": {
     "MULTI_CARDINALITY_EXAMPLE_24": {
       "name": "MULTI_CARDINALITY_EXAMPLE_24",
+      "modelId": "DEMO",
       "modelClasspath": ["model", "demo/rosetta"],
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
