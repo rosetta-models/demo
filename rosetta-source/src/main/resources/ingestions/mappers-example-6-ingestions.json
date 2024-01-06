@@ -2,6 +2,7 @@
   "options": {
     "MAPPERS_EXAMPLE_6": {
       "name": "MAPPERS_EXAMPLE_6",
+      "modelId": "DEMO",
       "modelClasspath": ["model", "demo/rosetta"],
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,

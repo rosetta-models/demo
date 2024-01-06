@@ -2,6 +2,7 @@
   "options": {
     "EXTERNAL_SYNONYM_EXAMPLE_2": {
       "name": "EXTERNAL_SYNONYM_EXAMPLE_2",
+      "modelId": "DEMO",
       "modelClasspath": ["model", "demo/rosetta"],
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,

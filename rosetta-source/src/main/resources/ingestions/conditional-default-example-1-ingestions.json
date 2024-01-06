@@ -2,6 +2,7 @@
   "options": {
     "CONDITIONAL_DEFAULT_EXAMPLE_1": {
       "name": "CONDITIONAL_DEFAULT_EXAMPLE_1",
+      "modelId": "DEMO",
       "modelClasspath": ["model", "demo/rosetta"],
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,

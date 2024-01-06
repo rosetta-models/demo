@@ -2,6 +2,7 @@
   "options": {
     "META_EXTERNAL_REFERENCE_EXAMPLE_5": {
       "name": "META_EXTERNAL_REFERENCE_EXAMPLE_5",
+      "modelId": "DEMO",
       "modelClasspath": ["model", "demo/rosetta"],
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
