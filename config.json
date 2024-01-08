@@ -6,7 +6,7 @@
   "versionLimits": [
     {
       "lowestVersion": "0.36.0",
-      "upmostVersion": "0.37.999"
+      "upmostVersion": "0.38.999"
     }
   ],
   "parentReadOnly": false,
