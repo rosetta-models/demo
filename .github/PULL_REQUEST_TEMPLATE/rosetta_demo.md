@@ -35,6 +35,7 @@ _Please enter a brief summary of the changes here_
 ** As Owner, I have confirmed that this PR is ready for release: (tick each list item once completed):**
 
 - [ ] A link to an Issue describing the work, background and any associated documentation
+- [ ] No static compile issues
 
 
 > [!IMPORTANT]
