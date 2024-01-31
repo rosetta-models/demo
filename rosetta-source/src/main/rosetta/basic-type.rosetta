@@ -14,3 +14,5 @@ type BasicTypeExample2: <"Example with all required basic types">
     dateTimeExample dateTime (1..1) <"Comment 6">
     zonedDateTimeExample zonedDateTime (1..1) <"Comment 7">
     booleanExample boolean (1..1) <"Comment 8">
+
+type BasicTypeExample3: <"Nothing to see here">
