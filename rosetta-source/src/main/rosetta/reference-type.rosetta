@@ -1,0 +1,22 @@
+namespace demo.reference
+version "${project.version}"
+
+type KeyExample:
+    [metadata key]
+    basicString string (0..1) <"Comment 1">
+
+type ReferenceExample:
+    keyExampleReference KeyExample (0..1) <"Comment 1">
+        [metadata reference]
+
+type LocationExample:
+	example Example (1..1)
+        [metadata location]
+
+type AddressExample:
+	example Example (1..1)
+        [metadata address "pointsTo"=LocationExample->example]
+
+type Example:
+	eg number (1..1)
+
