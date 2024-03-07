@@ -10,12 +10,10 @@
     }
   ],
   "parentReadOnly": false,
-  "modelArtifacts": [
-    {
-      "groupId": "com.regnosys.model.demo",
-      "artifactId": "rosetta-source"
-    }
-  ],
+  "modelArtifact": {
+    "groupId": "com.regnosys.model.demo",
+    "artifactId": "rosetta-source"
+  },
   "primaryColor": "#bb2771",
   "shortname": "DEMO"
 }
