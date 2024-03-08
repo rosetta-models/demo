@@ -10,10 +10,17 @@
     }
   ],
   "parentReadOnly": false,
-  "modelArtifact": {
-    "groupId": "com.regnosys.model.demo",
-    "artifactId": "rosetta-source"
+  "dependencyArtifact": {
+    "groupId": "com.regnosys",
+    "artifactId": "core-cdm-dependencies",
+    "version": "5.0.0-dev.46"
   },
+  "modelArtifacts": [
+    {
+      "groupId": "com.regnosys.model.demo",
+      "artifactId": "rosetta-source"
+    }
+  ],
   "primaryColor": "#bb2771",
   "shortname": "DEMO"
 }
