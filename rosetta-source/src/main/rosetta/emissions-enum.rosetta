@@ -14,6 +14,7 @@ enum CarTypeEnum: <"Category of the car used as an additional technical specific
     Hatchback
     Saloon
     Estate
+    Estate2
     MPV
     SUV
     Coupe
