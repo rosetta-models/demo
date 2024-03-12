@@ -2,6 +2,7 @@
   "name": "DEMO",
   "description": "Demonstration Model",
   "modelPath": "rosetta-source/src/main",
+  "pullRequestTemplatePath": ".github/PULL_REQUEST_TEMPLATE/rosetta_demo.md",
   "permissions": [],
   "versionLimits": [
     {
@@ -10,17 +11,10 @@
     }
   ],
   "parentReadOnly": false,
-  "dependencyArtifact": {
-    "groupId": "com.regnosys",
-    "artifactId": "core-cdm-dependencies",
-    "version": "5.0.0-dev.46"
+  "modelArtifact": {
+    "groupId": "com.regnosys.model.demo",
+    "artifactId": "rosetta-source"
   },
-  "modelArtifacts": [
-    {
-      "groupId": "com.regnosys.model.demo",
-      "artifactId": "rosetta-source"
-    }
-  ],
   "primaryColor": "#bb2771",
   "shortname": "DEMO"
 }
