@@ -22,4 +22,8 @@
   "name" : "Carbon Monoxide",
   "rule" : "demo.emissions.CarbonMonoxide",
   "value" : "0"
+}, {
+  "name" : "New Field",
+  "rule" : "demo.emissions.NewField",
+  "value" : "0"
 } ]

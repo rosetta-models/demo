@@ -27,12 +27,24 @@ corpus Regulation "EC 459/2012" StandardEmissionsEuro6 <"COMMISSION REGULATION (
 
 corpus Regulation "Regulation (EU) 2019/631" EmissionPerformanceStandardsEU <"Regulation (EU) 2019/631 of the European Parliament and of the Council of 17 April 2019 setting CO2 emission performance standards for new passenger cars and for new light commercial vehicles, and repealing Regulations (EC) No 443/2009 and (EU) No 510/2011. https://eur-lex.europa.eu/eli/reg/2019/631/oj/eng">
 
+corpus Regulation "Regulation (EU) 2019/631" EmissionEU2 <"Regulation (EU) 2019/631 of the European Parliament and of the Council of 17 April 2019 setting CO2 emission performance standards for new passenger cars and for new light commercial vehicles, and repealing Regulations (EC) No 443/2009 and (EU) No 510/2011. https://eur-lex.europa.eu/eli/reg/2019/631/oj/eng">
+
+
 corpus Directive "Directive 2014/46/EU" VehicleRegistrationEU <"Directive 2014/46/EU of the European Parliament and of the Council of 3 April 2014 amending Council Directive 1999/37/EC on the registration documents for vehicles https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1526982904241&uri=CELEX:32014L0046">
 
 report EuropeanParliament EmissionPerformanceStandardsEU in real-time
     from VehicleOwnership
     when IsEuroStandardsCoverage
     with type EuropeanParliamentReport
+
+report EuropeanParliament EmissionEU2 in real-time
+    from VehicleOwnership
+    when IsEuroStandardsCoverage
+    with type EuropeanParliamentReport2
+
+type EuropeanParliamentReport2 extends EuropeanParliamentReport:
+    anNewField int (1..1)
+        [ruleReference NewField]
 
 type EuropeanParliamentReport:
     vehicleRegistrationID string (1..1)
@@ -98,6 +110,13 @@ reporting rule CarbonMonoxide from VehicleOwnership: <"Carbon Monoxyde (CO) repo
     extract vehicle -> specification -> engine -> emissionMetrics -> carbonMonoxide
         as "Carbon Monoxide"
 
+reporting rule NewField from VehicleOwnership: <"New Field">
+    [regulatoryReference EuropeanCommission StandardEmissionsEuro6 article "1"
+        provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
+    include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
+    extract vehicle -> specification -> engine -> emissionMetrics -> carbonMonoxide
+        as "New Field"
+
 //Utility Rules - Euro standards 
 reporting rule EuroEmissionStandard from VehicleOwnership:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 article "1"
@@ -126,7 +145,7 @@ reporting rule Euro6Standard from VehicleOwnership:
                 or vehicleClassification = VehicleClassificationEnum -> N1III_Commercial
                 or vehicleClassification = VehicleClassificationEnum -> N2_Commercial)
         then filter IsRegisteredAfterEuro6StandardDate
-        then extract "Euro 6 Standard" // Alternative where Before / After a date could be possible (new release required)
+        then extract "Euro 7 Standard" // Alternative where Before / After a date could be possible (new release required)
 
 reporting rule IsRegisteredAfterEuro6StandardDate from Vehicle:
     extract specification -> dateOfFirstRegistration > date { year: 2020, month: 5, day: 1 }
