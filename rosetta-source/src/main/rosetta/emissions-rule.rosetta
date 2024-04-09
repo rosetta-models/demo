@@ -115,7 +115,7 @@ reporting rule EuroEmissionStandard from VehicleOwnership:
 
 reporting rule Euro6Standard from VehicleOwnership:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 annex "1" table "2"
-        provision "Annex I to Regulation (EC) No 715/2007 is amended as follows:(1) the text in the second row of the last column of Table 1 (Euro 5 emission limits) is replaced by the following:Number of particles (PN);(2) Table 2 is replaced by the following table:"]
+        provision "Annex I to Regulation (EC) No 715/2007 is amended as follows:(1) the text in the second row of the last column of Table 1 (Euro 5 emission limits) is replaced by the following:Number of particles (PN);(2) Table 2 is replaced by the following table:vtretsd"]
     extract vehicle
         then filter
             (vehicleClassification = VehicleClassificationEnum -> M1_Passengers
