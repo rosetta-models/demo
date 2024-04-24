@@ -29,7 +29,7 @@ public class EmissionsReportTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EmissionsReportTest.class);
 
-    private static final Path OUTPUT_PATH = RegReportPaths.getDefault().getOutputRelativePath();
+    private static final Path CONFIG_PATH = RegReportPaths.getDefault().getConfigRelativePath();
     private static final String testPackFileName = "test-pack-report-drr-vehicle-ownership.json";
 
 
@@ -41,7 +41,7 @@ public class EmissionsReportTest {
     @RegisterExtension
     static ReportTestExtension<VehicleOwnership> testExtension =
             new ReportTestExtension<>(new ReportTestRuntimeModule(), VehicleOwnership.class)
-                    .withRootExpectationsPath(OUTPUT_PATH)
+                    .withRootExpectationsPath(CONFIG_PATH)
                     .withTestPackFileName(testPackFileName);
 
     @ParameterizedTest(name = "{0}")
