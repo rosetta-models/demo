@@ -30,7 +30,7 @@ public class EmissionsReportTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(EmissionsReportTest.class);
 
     private static final Path CONFIG_PATH = RegReportPaths.getDefault().getConfigRelativePath();
-    private static final String testPackFileName = "test-pack-report-drr-vehicle-ownership.json";
+    private static final String testPackFileName = "test-pack-report-europeanparliament-emissionperformancestandardseu-drr vehicle ownership.json";
 
 
     @Inject

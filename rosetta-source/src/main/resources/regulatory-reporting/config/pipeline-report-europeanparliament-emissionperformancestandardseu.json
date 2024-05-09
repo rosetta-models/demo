@@ -1,6 +1,6 @@
 {
-  "id" : "pipeline-report",
-  "name" : "European Parliament Report",
+  "id" : "pipeline-report-europeanparliament-emissionperformancestandardseu",
+  "name" : "EuropeanParliament / EmissionPerformanceStandardsEU",
   "transform" : {
     "type" : "REPORT",
     "function" : "demo.emissions.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportFunction",
