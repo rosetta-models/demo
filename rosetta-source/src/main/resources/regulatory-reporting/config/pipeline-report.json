@@ -1,0 +1,10 @@
+{
+  "id" : "pipeline-report",
+  "name" : "European Parliament Report",
+  "transform" : {
+    "type" : "REPORT",
+    "function" : "demo.emissions.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportFunction",
+    "inputType" : "demo.emissions.VehicleOwnership",
+    "outputType" : "demo.emissions.EuropeanParliamentReport"
+  }
+}

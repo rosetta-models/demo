@@ -1,7 +1,7 @@
 {
   "id" : "test-pack-report-drr-vehicle-ownership",
   "pipelineId" : "pipeline-report",
-  "name" : "demo-regulatory-reporting-data-descriptor.json",
+  "name" : "DRR Vehicle Ownership",
   "samples" : [ {
     "id" : "Vehicle-Registered-After-Euro6Standard",
     "name" : "Vehicle Registered After Euro6Standard",
