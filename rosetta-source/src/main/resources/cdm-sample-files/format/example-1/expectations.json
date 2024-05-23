@@ -1,2 +1,2 @@
 [
-{"fileName":"cdm-sample-files/format/example-1/example-1-1.xml","excludedPaths":0,"externalPaths":4,"outstandingMappings":1,"validationFailures":1,"qualificationExpectation":{"success":true,"qualifyResults":[],"qualifiableObjectCount":0}}]
+{"fileName":"cdm-sample-files/format/example-1/example-1-1.xml","excludedPaths":0,"externalPaths":4,"outstandingMappings":1,"validationFailures":2,"qualificationExpectation":{"success":true,"qualifyResults":[],"qualifiableObjectCount":0}}]
