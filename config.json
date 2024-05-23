@@ -6,8 +6,8 @@
   "permissions": [],
   "versionLimits": [
     {
-      "lowestVersion": "0.38.0",
-      "upmostVersion": "0.38.999"
+      "lowestVersion": "0.39.0",
+      "upmostVersion": "0.39.999"
     }
   ],
   "parentReadOnly": false,
