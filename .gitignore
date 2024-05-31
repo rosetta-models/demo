@@ -4,3 +4,4 @@ rosetta-source/target/
 rosetta-source/.classpath
 rosetta-source/.project
 tests/target/
+.DS_Store
