@@ -7,7 +7,7 @@
     <groupId>com.regnosys.model</groupId>
     <artifactId>demo</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.0.master</version>
+    <version>0.0.0.master-SNAPSHOT</version>
     <modules>
         <module>rosetta-source</module>
         <module>tests</module>

@@ -25,19 +25,18 @@ steps:
         all:
           releaseNameNotDefined: "${{TAG_REPO}} == false"
     commands:
-      - cf_export RELEASE_NAME=${{GLOBAL_RELEASE_VERSION}}.${{CF_BRANCH_TAG_NORMALIZED}}
+      - cf_export RELEASE_NAME=${{GLOBAL_RELEASE_VERSION}}.${{CF_BRANCH_TAG_NORMALIZED}}-SNAPSHOT
 
   Build:
     title: Maven build
     fail_fast: false
-    no_cache: true
-    no_cf_cache: true
-    image: regnosys-docker-registry.jfrog.io/regnosys/mvn-docker-build:java-11
+    image: maven:3.8.5-openjdk-11
     working_directory: ./
     commands:
-      - rm -rf ${{CF_VOLUME_PATH}}/.m2/com/regnosys ${{CF_VOLUME_PATH}}/.m2/com/isda
-      - mvn -s /settings.xml versions:set -DnewVersion=${{RELEASE_NAME}}
-      - mvn -U -s /settings.xml clean deploy
+      - echo "${{ARTIFACT_REGISTRY_SA_KEY}}"|base64 -d>"${{CF_VOLUME_PATH}}"/sa
+      - cf_export GOOGLE_APPLICATION_CREDENTIALS="${{CF_VOLUME_PATH}}"/sa
+      - mvn versions:set -DnewVersion=${{RELEASE_NAME}}
+      - mvn -U clean deploy
 
   NotifySlackOnFail:
     title: Trigger Slack dev channel notification if master build failed
