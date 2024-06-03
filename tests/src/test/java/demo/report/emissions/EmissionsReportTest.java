@@ -2,7 +2,7 @@ package demo.report.emissions;
 
 import com.regnosys.rosetta.common.reports.RegReportPaths;
 import com.regnosys.rosetta.common.transform.TestPackModel;
-import com.regnosys.testing.reports.ReportTestExtension;
+import com.regnosys.testing.transform.TransformTestExtension;
 import demo.emissions.VehicleOwnership;
 import demo.emissions.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportFunction;
 import demo.emissions.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportTabulator;
@@ -25,7 +25,7 @@ import java.util.stream.Stream;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @ExtendWith(InjectionExtension.class)
 @InjectWith(ReportTestRuntimeModule.InjectorProvider.class)
-public class EmissionsReportTest {
+class EmissionsReportTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EmissionsReportTest.class);
 
@@ -39,8 +39,8 @@ public class EmissionsReportTest {
     EuropeanParliamentEmissionPerformanceStandardsEUReportTabulator tabulator;
 
     @RegisterExtension
-    static ReportTestExtension<VehicleOwnership> testExtension =
-            new ReportTestExtension<>(new ReportTestRuntimeModule(), VehicleOwnership.class)
+    static TransformTestExtension<VehicleOwnership> testExtension =
+            new TransformTestExtension<>(new ReportTestRuntimeModule(), VehicleOwnership.class)
                     .withRootExpectationsPath(CONFIG_PATH)
                     .withTestPackFileName(testPackFileName);
 
@@ -53,7 +53,7 @@ public class EmissionsReportTest {
                    TestPackModel.SampleModel sampleModel) throws Throwable {
         LOGGER.info("Running TestPack '{}' file '{}'", testPackId, sampleModel.getInputPath ());
 
-        testExtension.runReportAndAssertExpected(testPackId, pipeLineId, dataSetName, sampleModel, reportFunction, tabulator, vehicleOwnership);
+        testExtension.runTransformAndAssert(testPackId, pipeLineId, dataSetName, sampleModel, reportFunction, tabulator, vehicleOwnership);
     }
 
     @SuppressWarnings("unused")//used by the junit parameterized test
