@@ -7,7 +7,7 @@
     <groupId>com.regnosys.model</groupId>
     <artifactId>demo</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.0.master</version>
+    <version>0.0.0.master-SNAPSHOT</version>
     <modules>
         <module>rosetta-source</module>
         <module>tests</module>
@@ -17,8 +17,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
 
-        <rosetta.bundle.version>11.0.10</rosetta.bundle.version>
-        <rosetta.dsl.version>9.8.0</rosetta.dsl.version>
+        <rosetta.bundle.version>11.7.4</rosetta.bundle.version>
+        <rosetta.dsl.version>9.8.5</rosetta.dsl.version>
 
         <xtext.version>2.27.0</xtext.version>
         <guava.version>32.0.1-jre</guava.version>
@@ -127,13 +127,57 @@
                 </executions>
             </plugin>
         </plugins>
+
+        <extensions>
+            <extension>
+                <groupId>com.google.cloud.artifactregistry</groupId>
+                <artifactId>artifactregistry-maven-wagon</artifactId>
+                <version>2.2.1</version>
+            </extension>
+        </extensions>
     </build>
+
+    <repositories>
+        <repository>
+            <id>artifact-registry</id>
+            <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/public-maven</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>artifact-registry-regnosys</id>
+            <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/regnosys-maven</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>artifact-registry-regnosys-snapshot</id>
+            <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/regnosys-maven-snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <distributionManagement>
         <repository>
-            <id>snapshots</id>
-            <name>libs-snapshots</name>
-            <url>https://regnosys.jfrog.io/regnosys/libs-snapshot-local</url>
+            <id>artifact-registry-regnosys</id>
+            <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/public-maven</url>
         </repository>
+        <snapshotRepository>
+            <id>artifact-registry-regnosys-snapshot</id>
+            <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/regnosys-maven-snapshot</url>
+        </snapshotRepository>
     </distributionManagement>
 </project>

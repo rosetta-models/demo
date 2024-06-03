@@ -5,7 +5,7 @@
     <parent>
         <artifactId>demo</artifactId>
         <groupId>com.regnosys.model</groupId>
-        <version>0.0.0.master</version>
+        <version>0.0.0.master-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -24,24 +24,12 @@
                 <artifactId>ingest-test-framework</artifactId>
                 <version>${rosetta.bundle.version}</version>
                 <scope>test</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.osgi</groupId>
-                        <artifactId>org.osgi.service.prefs</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.regnosys</groupId>
                 <artifactId>rosetta-testing</artifactId>
                 <version>${rosetta.bundle.version}</version>
                 <scope>test</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.osgi</groupId>
-                        <artifactId>org.osgi.service.prefs</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.junit</groupId>
