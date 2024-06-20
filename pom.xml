@@ -149,6 +149,16 @@
             </snapshots>
         </repository>
         <repository>
+            <id>regnosys-maven</id>
+            <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/regnosys-maven</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
             <id>regnosys-maven-snapshot</id>
             <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/regnosys-maven-snapshot</url>
             <releases>
