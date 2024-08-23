@@ -11,15 +11,5 @@
         } ]
       }
     }
-  },
-  "vehicle" : {
-    "engineSpecification" : {
-      "resolvedAmount" : {
-        "address" : {
-          "scope" : "DOCUMENT",
-          "value" : "engineMetric-1"
-        }
-      }
-    }
   }
 }
