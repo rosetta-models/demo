@@ -1,7 +1,10 @@
 model:
-  name: DRR
+  name: demo
 dependencies:
 generators:
   namespaces:
   - demo.*
   - com.rosetta.model
+  tabulators:
+    types:
+      - demo.emissions.VehicleOwnership
