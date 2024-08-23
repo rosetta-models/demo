@@ -1,0 +1,7 @@
+model:
+  name: DRR
+dependencies:
+generators:
+  namespaces:
+  - demo.*
+  - com.rosetta.model
