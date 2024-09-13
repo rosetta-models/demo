@@ -17,8 +17,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
 
-        <rosetta.dsl.version>9.16.3</rosetta.dsl.version>
-        <rosetta.bundle.version>11.19.0</rosetta.bundle.version>
+        <rosetta.dsl.version>9.17.1</rosetta.dsl.version>
+        <rosetta.bundle.version>11.21.0</rosetta.bundle.version>
 
         <xtext.version>2.27.0</xtext.version>
         <guava.version>32.0.1-jre</guava.version>
