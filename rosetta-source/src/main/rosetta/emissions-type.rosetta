@@ -16,22 +16,41 @@ type VehicleOwnership: <"Representative record of vehicle ownership">
     isFirstHand boolean (1..1)
     vehicleOwnershipRegistrationID int (1..1)
 
-type VehicleFeature: <"Features qualifying a vehicle in addition to technical specifications">
+type VehicleBase: <"Attributes of a vehicle">
     colour ColourEnum (1..1)
     doorNumber int (1..1)
-
-type Vehicle extends VehicleFeature: <"Representation of a vehicle">
     specification Specification (1..1)
     registrationID string (1..1)
     vehicleTaxBand VehicleTaxBandEnum (1..1)
     vehicleClassification VehicleClassificationEnum (1..1)
 
+choice Vehicle: <"Representation of any vehicle">
+    ElectricCar
+    CombustibleVehicle
+    Bicycle
+
+choice CombustibleVehicle: <"Representation of any combustible vehicle">
+    Car
+    Motorcycle
+
+type ElectricCar extends VehicleBase: <"Representation of an electric car">
+    batteryCapacity number (1..1)
+
+type Car extends VehicleBase: <"Representation of a combustible car">
+    fuelCapacity number (1..1)
+    engine Engine (1..1)
+    carType CarTypeEnum (1..1)
+
+type Motorcycle extends VehicleBase: <"Representation of a motorcycle">
+    fuelCapacity number (1..1)
+
+type Bicycle extends VehicleBase: <"Representation of a bicycle">
+    weight number (1..1)
+
 type Specification: <"Technical specifications of a vehicle">
     make string (1..1)
     model string (1..1)
-    carType CarTypeEnum (1..1)
     zeroTo60 number (1..1)
-    engine Engine (1..1)
     yearOfManufacture int (1..1)
     chassisNumber int (1..1)
     dateOfFirstRegistration date (1..1)
