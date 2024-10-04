@@ -15,7 +15,7 @@ func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
         drivingLicence -> dateOfRenewal all > dateOfPurchase
 
     condition DrivingLicenceVehicleClassification: <"Vehicle classification allowed by the driving licence needs to encompass the vehicle classification of the considered vehicle">
-        drivingLicence -> vehicleEntitlement contains vehicle -> vehicleClassification
+        drivingLicence -> vehicleEntitlement contains vehicle ->> vehicleClassification
 
     set vehicleOwnership:
         VehicleOwnership {
@@ -63,7 +63,7 @@ func FindVehiclesByEngineType: <"Find all vehicles with given engine type.">
         vehiclesWithEngineType Vehicle (0..*)
 
     add vehiclesWithEngineType: <"Filter each list 'item' with the given test.">
-        vehicles filter specification -> engine -> engineType = engineType
+        vehicles filter CombustibleVehicle -> Car -> engine -> engineType = engineType
 
 func FindDriversWithMaximumZeroTo60: <"Find all vehicles with given maximum 0 - 60 mph.">
     inputs:
@@ -74,30 +74,30 @@ func FindDriversWithMaximumZeroTo60: <"Find all vehicles with given maximum 0 - 
 
     add vehiclesWithMaximumZeroTo60: <"Each list 'item' can have a name specified.">
         vehicles
-            filter vehicle [ vehicle -> specification -> zeroTo60 < zeroTo60 ]
+            filter vehicle [ vehicle ->> specification -> zeroTo60 < zeroTo60 ]
 
-func FindVehiclesWithinEmissionLimits: <"Find all vehicles within given emissions metrics.">
+func FindCarsWithinEmissionLimits: <"Find all vehicles within given emissions metrics.">
     inputs:
-        vehicles Vehicle (0..*)
+        cars Car (0..*)
         coLimit int (0..1)
         noxLimit int (0..1)
         pmLimit int (0..1)
     output:
-        vehiclesWithinEmissionLimits Vehicle (0..*)
+        carsWithinEmissionLimits Car (0..*)
 
-    add vehiclesWithinEmissionLimits: <"Filter (and other list operations) can contain expressions, and can be chained together.">
-        vehicles
+    add carsWithinEmissionLimits: <"Filter (and other list operations) can contain expressions, and can be chained together.">
+        cars
             filter
                 if coLimit exists
-                then specification -> engine -> emissionMetrics -> carbonMonoxide <= coLimit
+                then item -> engine -> emissionMetrics -> carbonMonoxide <= coLimit
                 else True
             then filter
                 if noxLimit exists
-                then specification -> engine -> emissionMetrics -> nitrogenOxide <= noxLimit
+                then item -> engine -> emissionMetrics -> nitrogenOxide <= noxLimit
                 else True
             then filter
                 if pmLimit exists
-                then specification -> engine -> emissionMetrics -> particulateMatter <= pmLimit
+                then item -> engine -> emissionMetrics -> particulateMatter <= pmLimit
                 else True
 
 func FindOwnersWithinPenaltyPointLimit: <"Find all owners within penalty point limits on any driver licence (owners can have multiple licences, issued by different countries).">
@@ -219,7 +219,7 @@ func SortDatesChronologically: <"Sorts the list of dates chronologically.">
     output:
         sortedDates date (0..*)
 
-    set sortedDates: dates sort
+    add sortedDates: dates sort
 
 func GetFirst: <"Get the first date.">
     inputs:
@@ -229,24 +229,37 @@ func GetFirst: <"Get the first date.">
 
     set firstDate: dates first
 
-func FindVehicleWithMaxPower: <"Returns the vehicle with the highest power engine.">
+func FindCarWithMaxPower: <"Returns the car with the highest power engine.">
     inputs:
-        vehicles Vehicle (0..*)
+        cars Car (0..*)
     output:
-        vehicleWithMaxPower Vehicle (1..1)
+        carWithMaxPower Car (1..1)
 
-    set vehicleWithMaxPower: vehicles max [ item -> specification -> engine -> power ]
+    set carWithMaxPower: cars max [ item -> engine -> power ]
 
 func FindVehicleWithMaxPowerUsingReduce: <"Returns the vehicle with the highest power engine, using the reduce keyword.">
     inputs:
-        vehicles Vehicle (0..*)
+        cars Car (0..*)
     output:
-        vehicleWithMaxPower Vehicle (1..1)
+        carWithMaxPower Car (1..1)
 
-    set vehicleWithMaxPower:
-        vehicles
+    set carWithMaxPower:
+        cars
             reduce v1, v2 [
-                if v1 -> specification -> engine -> power > v2 -> specification -> engine -> power
+                if v1 -> engine -> power > v2 -> engine -> power
                 then v1
                 else v2
             ]
+
+func ComputeMileage: <"Estimates the mileage in kilometres of a given vehicle.">
+    inputs:
+        vehicle Vehicle (1..1)
+    output:
+        mileage number (1..1)
+
+    set mileage:
+        vehicle switch
+            ElectricCar        then 5 * batteryCapacity, // assume 5 kilometres per kWh of battery
+            Car                then 15 * fuelCapacity,   // assume 15 kilometres per litre of fuel
+            CombustibleVehicle then 80,                  // for any other combustible vehicle, assume a mileage of 80 kilometres
+            Bicycle            then 30                   // assume a mileage of 30 kilometres for a bicycle
