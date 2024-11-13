@@ -14,6 +14,8 @@ enum ColourEnum: <"Colour of the vehicle used as an additional feature for a veh
     Indigo
     Violet
 
+//ts
+
 enum CarTypeEnum: <"Category of the car used as an additional technical specification for a vehicle">
     Hatchback
     Saloon
