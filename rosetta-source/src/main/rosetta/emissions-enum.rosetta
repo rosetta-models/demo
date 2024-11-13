@@ -34,6 +34,8 @@ enum EngineTypeEnum: <"Type of the engine used as an additional technical specif
     LPG
 
 // more
+
+// another commit
 enum VehicleClassificationEnum: <"Vehicle classification as per 2002/24/EC of 18 March 2002 and 2007/46/EC of 5 September 2007">
     l1e_Moped
     l2e_Moped
