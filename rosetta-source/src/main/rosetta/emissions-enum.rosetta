@@ -5,6 +5,9 @@ version "${project.version}"
 
 // commit
 
+
+// changes
+
 enum ColourEnum: <"Colour of the vehicle used as an additional feature for a vehicle">
     Red
     Orange
