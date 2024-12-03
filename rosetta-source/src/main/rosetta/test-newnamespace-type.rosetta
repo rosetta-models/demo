@@ -1,0 +1,6 @@
+namespace demo.test.newnamespace
+version "${project.version}"
+
+type Attribute:
+    colour string (1..1)
+    doorNumber int (1..1)
