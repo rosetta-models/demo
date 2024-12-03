@@ -8,3 +8,13 @@ func Max: <"Returns the greater number of two supplied numbers.">
     output:
         result number (1..1)
     set result: if a > b then a else b
+
+func MaxRegAttribute: <"Returns the greater number of two supplied numbers.">
+    inputs:
+        a TestRegExtraAttribute (1..1)
+        b TestRegExtraAttribute (1..1)
+    output:
+        result number (1..1)
+    set result: if a -> serialNum > b -> serialNum then a -> serialNum else b -> serialNum
+
+
