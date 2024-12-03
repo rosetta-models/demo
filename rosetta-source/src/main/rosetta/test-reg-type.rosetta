@@ -8,3 +8,9 @@ type TestRegAttribute: <"Description">
 type TestRegExtraAttribute: <"Description">
     regAttribute TestRegAttribute (1..1)
     serialNum number (1..1)
+
+type Attribute extends demo.test.reg.TestRegAttribute:  <"Description">
+   attribute_3 string (1..1)
+   attribute_4 string (1..1)
+
+

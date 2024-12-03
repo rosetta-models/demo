@@ -24,10 +24,6 @@ type VehicleBase: <"Attributes of a vehicle">
     vehicleTaxBand VehicleTaxBandEnum (1..1)
     vehicleClassification VehicleClassificationEnum (1..1)
 
-type Attribute extends demo.test.reg.TestRegAttribute:  <"Description">
-   attribute_3 string (1..1)
-   attribute_4 string (1..1)
-
 
 choice Vehicle: <"Representation of any vehicle">
     ElectricCar

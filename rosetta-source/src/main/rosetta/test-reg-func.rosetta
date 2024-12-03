@@ -17,4 +17,10 @@ func MaxRegAttribute: <"Returns the greater number of two supplied numbers.">
         result number (1..1)
     set result: if a -> serialNum > b -> serialNum then a -> serialNum else b -> serialNum
 
+func SumNumbers: <"Returns the sum of the given list of numbers.">
+    inputs:
+        numbers number (0..*)
+    output:
+        total number (1..1)
 
+    set total: numbers sum
