@@ -1,0 +1,6 @@
+namespace demo.test.reg
+version "${project.version}"
+
+type TestRegAttribute: <"Description">
+    attribute_1 date (1..1)
+    attribute_2 boolean (1..1)
