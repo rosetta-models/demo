@@ -90,3 +90,4 @@ type TestRegAttributeExtended extends demo.test.reg.TestRegAttribute: <"Descript
     
     attribute_5 boolean (1..1)
 
+//Some more coming up
