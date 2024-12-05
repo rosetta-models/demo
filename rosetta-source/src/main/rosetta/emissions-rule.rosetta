@@ -41,7 +41,7 @@ type EuropeanParliamentReport:
         [ruleReference FirstRegistrationDate]
     vehicleClassificationType VehicleClassificationEnum (1..1)
         [ruleReference VehicleClassificationType]
-    engineType EngineTypeEnum (1..1)
+    engineType demo.test.reg.EngineTypeEnum (1..1)
         [ruleReference EngineType]
     euroEmissionStandard string (1..1)
         [ruleReference EuroEmissionStandard]

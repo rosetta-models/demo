@@ -20,12 +20,7 @@ enum CarTypeEnum: <"Category of the car used as an additional technical specific
     SportsCar
     Convertible
 
-enum EngineTypeEnum: <"Type of the engine used as an additional technical specification for a vehicle">
-    Diesel
-    Petrol
-    Electric
-    Hybrid
-    LPG
+
 
 enum VehicleClassificationEnum: <"Vehicle classification as per 2002/24/EC of 18 March 2002 and 2007/46/EC of 5 September 2007">
     l1e_Moped

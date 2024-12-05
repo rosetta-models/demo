@@ -1,0 +1,9 @@
+namespace demo.test.reg
+version "${project.version}"
+
+enum EngineTypeEnum: <"Type of the engine used as an additional technical specification for a vehicle">
+    Diesel
+    Petrol
+    Electric
+    Hybrid
+    LPG
