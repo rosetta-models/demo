@@ -55,6 +55,10 @@ type Specification: <"Technical specifications of a vehicle">
     chassisNumber int (1..1)
     dateOfFirstRegistration date (1..1)
 
+type TestRegAttributeExtended extends demo.test.reg.TestRegAttribute: <"Description">
+     attribute_2 boolean (1..1)
+    attribute_5 boolean (1..1)
+
 type Engine: <"Description of the engine">
     engineType EngineTypeEnum (1..1) <"Type of engine">
     power number (1..1) <"Break horse power">
