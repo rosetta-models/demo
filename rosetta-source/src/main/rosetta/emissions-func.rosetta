@@ -76,6 +76,8 @@ func FindDriversWithMaximumZeroTo60: <"Find all vehicles with given maximum 0 - 
         vehicles
             filter vehicle [ vehicle ->> specification -> zeroTo60 < zeroTo60 ]
 
+
+
 func FindCarsWithinEmissionLimits: <"Find all vehicles within given emissions metrics.">
     inputs:
         cars Car (0..*)
@@ -189,13 +191,6 @@ func RenewDrivingLicence: <"Create new driving licence with new date of renewal.
 
     set renewedDrivingLicence -> dateOfRenewal: newDateOfRenewal
 
-func SumNumbers: <"Returns the sum of the given list of numbers.">
-    inputs:
-        numbers number (0..*)
-    output:
-        total number (1..1)
-
-    set total: numbers sum
 
 func JoinStrings: <"Concatenates the list of strings, separating each element with the given delimiter, using the join keyword.">
     inputs:

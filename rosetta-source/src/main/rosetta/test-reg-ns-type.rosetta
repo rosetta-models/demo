@@ -1,0 +1,6 @@
+namespace demo.test.reg.ns
+version "${project.version}"
+
+type TestRegAttribute2 extends demo.emissions.TestRegAttributeExtended: <"Description">
+    attribute_6 date (1..1)
+    attribute_7 boolean (1..1)

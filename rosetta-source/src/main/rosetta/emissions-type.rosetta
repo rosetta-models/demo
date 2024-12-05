@@ -24,6 +24,7 @@ type VehicleBase: <"Attributes of a vehicle">
     vehicleTaxBand VehicleTaxBandEnum (1..1)
     vehicleClassification VehicleClassificationEnum (1..1)
 
+
 choice Vehicle: <"Representation of any vehicle">
     ElectricCar
     CombustibleVehicle
@@ -87,3 +88,8 @@ type DrivingLicence extends Person: <"Driving licence authorisation granted by a
     dateOfRenewal date (0..1)
     vehicleEntitlement VehicleClassificationEnum (0..*)
     penaltyPoints PositiveInteger (1..1)
+
+type TestRegAttributeExtended extends demo.test.reg.TestRegAttribute: <"Description">
+     attribute_2 boolean (1..1)
+    attribute_5 boolean (1..1)
+

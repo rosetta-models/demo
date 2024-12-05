@@ -1,0 +1,26 @@
+namespace demo.test.reg
+version "${project.version}"
+
+func Max: <"Returns the greater number of two supplied numbers.">
+    inputs:
+        a number (1..1)
+        b number (1..1)
+    output:
+        result number (1..1)
+    set result: if a > b then a else b
+
+func MaxRegAttribute: <"Returns the greater number of two supplied numbers.">
+    inputs:
+        a TestRegAttribute (1..1)
+        b TestRegAttribute (1..1)
+    output:
+        result number (1..1)
+    set result: if a -> numberAttribute > b -> numberAttribute then a -> numberAttribute else b -> numberAttribute
+
+func SumNumbers: <"Returns the sum of the given list of numbers.">
+    inputs:
+        numbers number (0..*)
+    output:
+        total number (1..1)
+
+    set total: numbers sum
