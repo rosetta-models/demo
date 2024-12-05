@@ -60,7 +60,7 @@ type TestRegAttributeExtended extends demo.test.reg.TestRegAttribute: <"Descript
     attribute_5 boolean (1..1)
 
 type Engine: <"Description of the engine">
-    engineType EngineTypeEnum (1..1) <"Type of engine">
+    engineType demo.test.reg.EngineTypeEnum (1..1) <"Type of engine">
     power number (1..1) <"Break horse power">
     mpg number (1..1) <"Miles per gallon">
     emissionMetrics EmissionMetrics (1..1) <"List of emission metrics in grams per km">
