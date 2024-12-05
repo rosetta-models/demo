@@ -56,10 +56,7 @@ type Specification: <"Technical specifications of a vehicle">
     chassisNumber int (1..1)
     dateOfFirstRegistration date (1..1)
 
-type Engine: <"Description of the engine">
-    engineType EngineTypeEnum (1..1) <"Type of engine">
-    power number (1..1) <"Break horse power">
-    mpg number (1..1) <"Miles per gallon">
+type Engine extends demo.test.reg.engine.EngineParent: <"Description of the engine">
     emissionMetrics EmissionMetrics (1..1) <"List of emission metrics in grams per km">
 
 type EmissionMetrics: <"Emission metrics used for EU emission standards">

@@ -43,7 +43,7 @@ func Check_DieselEngine: <"Function to check whether the engine of the vehicle i
         isEngineTypeDiesel boolean (1..1)
 
     set isEngineTypeDiesel:
-        engine -> engineType = EngineTypeEnum -> Diesel
+        engine -> engineType = demo.test.reg.engine.EngineTypeEnum -> Diesel
 
 func Check_YearOfManufacture: <"Function to check whether the year of manufacture of the vehicle is older than a year cut">
     inputs:
@@ -58,7 +58,7 @@ func Check_YearOfManufacture: <"Function to check whether the year of manufactur
 func FindVehiclesByEngineType: <"Find all vehicles with given engine type.">
     inputs:
         vehicles Vehicle (0..*)
-        engineType EngineTypeEnum (1..1)
+        engineType demo.test.reg.engine.EngineTypeEnum (1..1)
     output:
         vehiclesWithEngineType Vehicle (0..*)
 

@@ -1,0 +1,8 @@
+namespace demo.test.reg.engine
+version "${project.version}"
+
+type EngineParent: <"Description of the engine">
+    engineType EngineTypeEnum (1..1) <"Type of engine">
+    power number (1..1) <"Break horse power">
+    mpg number (1..1) <"Miles per gallon">
+  
