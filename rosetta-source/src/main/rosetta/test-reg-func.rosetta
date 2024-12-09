@@ -1,0 +1,10 @@
+namespace demo.test.reg
+version "${project.version}"
+
+func SumNumbers: <"Returns the sum of the given list of numbers.">
+    inputs:
+        numbers number (0..*)
+    output:
+        total number (1..1)
+
+    set total: numbers sum

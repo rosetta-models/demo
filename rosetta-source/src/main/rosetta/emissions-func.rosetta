@@ -189,13 +189,7 @@ func RenewDrivingLicence: <"Create new driving licence with new date of renewal.
 
     set renewedDrivingLicence -> dateOfRenewal: newDateOfRenewal
 
-func SumNumbers: <"Returns the sum of the given list of numbers.">
-    inputs:
-        numbers number (0..*)
-    output:
-        total number (1..1)
 
-    set total: numbers sum
 
 func JoinStrings: <"Concatenates the list of strings, separating each element with the given delimiter, using the join keyword.">
     inputs:
