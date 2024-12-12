@@ -1,0 +1,6 @@
+namespace demo.test.reg
+version "${project.version}"
+
+type NewType: <"New type">
+    attribute_1 string (1..1)
+    atribute_2 string (1..1)
