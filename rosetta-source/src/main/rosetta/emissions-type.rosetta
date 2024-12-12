@@ -87,3 +87,7 @@ type DrivingLicence extends Person: <"Driving licence authorisation granted by a
     dateOfRenewal date (0..1)
     vehicleEntitlement VehicleClassificationEnum (0..*)
     penaltyPoints PositiveInteger (1..1)
+
+type NewTypeExtended extends demo.test.reg.NewType: <"New extendded type">
+    attr3 string (1..1)
+    attr4 string (1..1)
