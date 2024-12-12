@@ -87,3 +87,6 @@ type DrivingLicence extends Person: <"Driving licence authorisation granted by a
     dateOfRenewal date (0..1)
     vehicleEntitlement VehicleClassificationEnum (0..*)
     penaltyPoints PositiveInteger (1..1)
+
+type ExtendedNewType : <"New extended type">
+    attr3 boolean (1..1)

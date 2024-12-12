@@ -1,0 +1,6 @@
+namespace demo.test
+version "${project.version}"
+
+type NewType: <"New type">
+    attr1 string (1..1)
+    attr2 string(1..1)
