@@ -1,6 +1,6 @@
 namespace demo.test
 version "${project.version}"
 
-enum ParentEningTypeEnum: <"Parent enum">
-    Hybrid
-    LPG
+enum TestEnum: <"Test">
+    Value1
+    Value2
