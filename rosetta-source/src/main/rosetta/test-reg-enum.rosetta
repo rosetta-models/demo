@@ -1,0 +1,6 @@
+namespace demo.test.reg
+version "${project.version}"
+
+
+enum EngineTypeEnumPArent: <"Test">
+    Diesel
