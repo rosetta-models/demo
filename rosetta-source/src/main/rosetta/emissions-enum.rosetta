@@ -20,13 +20,14 @@ enum CarTypeEnum: <"Category of the car used as an additional technical specific
     SportsCar
     Convertible
 
-enum EngineTypeEnum extends demo.test.reg.EngineTypeEnumParent: <"Type of the engine used as an additional technical specification for a vehicle">
+enum EngineTypeEnum: <"Type of the engine used as an additional technical specification for a vehicle">
+    Diesel
     Petrol
     Electric
     Hybrid
     LPG
 
-enum VehicleClassificationEnum: <"Vehicle classification as per 2002/24/EC of 18 March 2002 and 2007/46/EC of 5 September 2007">
+enum VehicleClassificationEnum extends demo.test.VehicleClassificationEnumParent: <"Vehicle classification as per 2002/24/EC of 18 March 2002 and 2007/46/EC of 5 September 2007">
     l1e_Moped
     l2e_Moped
     l3e_Motorcycle
@@ -44,8 +45,7 @@ enum VehicleClassificationEnum: <"Vehicle classification as per 2002/24/EC of 18
     N3_Commercial
     O1_Trailers
     O2_Trailers
-    O3_Trailers
-    O4_Trailers
+
 
 enum VehicleTaxBandEnum: <"Vehicle tax band as per UK regulations for vehicles registered between 1 March 2001 and 31 March 2017">
     ABand

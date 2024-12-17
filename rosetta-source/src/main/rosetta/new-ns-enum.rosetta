@@ -1,0 +1,12 @@
+namespace demo.test
+version "${project.version}"
+
+enum ColourEnumTEst2: <"Test">
+    Value1
+    Value2
+
+enum VehicleClassificationEnumParent: <"Desc">
+    Value1
+    Value2
+    O3_Trailers
+    O4_Trailers
