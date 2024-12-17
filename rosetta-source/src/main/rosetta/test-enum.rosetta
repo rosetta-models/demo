@@ -1,0 +1,6 @@
+namespace demo.test
+version "${project.version}"
+
+enum NewEnum : <"Test">
+    Value1
+    Value2
