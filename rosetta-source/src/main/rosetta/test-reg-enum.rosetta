@@ -1,0 +1,5 @@
+namespace demo.test.reg
+version "${project.version}"
+
+enum EngineTypeEnumParent: <"Type of the engine used as an additional technical specification for a vehicle">
+    Diesel
