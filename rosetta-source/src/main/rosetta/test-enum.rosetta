@@ -1,0 +1,6 @@
+namespace demo.test
+version "${project.version}"
+
+enum TestEnum: <"test">
+    Value1
+    Value2
