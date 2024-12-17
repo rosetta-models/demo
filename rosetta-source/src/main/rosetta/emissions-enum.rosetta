@@ -10,15 +10,14 @@ enum ColourEnum: <"test Colour of the vehicle used as an additional feature for 
     Indigo
     Violet
 
-enum CarTypeEnum: <"Category of the car used as an additional technical specification for a vehicle">
+enum CarTypeEnum extends demo.test.reg.ns.CarTypeEnumParent: <"Category of the car used as an additional technical specification for a vehicle">
     Hatchback
     Saloon
     Estate
     MPV
     SUV
     Coupe
-    SportsCar
-    Convertible
+
 
 enum EngineTypeEnum extends demo.test.reg.EngineTypeEnumPArent: <"Type of the engine used as an additional technical specification for a vehicle">
     Petrol

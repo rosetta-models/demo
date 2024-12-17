@@ -1,0 +1,6 @@
+namespace demo.test.reg.ns
+version "${project.version}"
+
+enum CarTypeEnumParent: <"test">
+    SportsCar
+    Convertible
