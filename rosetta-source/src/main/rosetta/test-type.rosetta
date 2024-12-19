@@ -1,0 +1,2 @@
+namespace demo.test
+version "${project.version}"

@@ -20,9 +20,7 @@ enum CarTypeEnum: <"Category of the car used as an additional technical specific
     SportsCar
     Convertible
 
-enum EngineTypeEnum: <"Type of the engine used as an additional technical specification for a vehicle">
-    Diesel
-    Petrol
+enum EngineTypeEnum extends demo.test.reg.EngineTypeEnumParent: <"Type of the engine used as an additional technical specification for a vehicle">
     Electric
     Hybrid
     LPG

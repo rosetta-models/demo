@@ -1,0 +1,5 @@
+namespace demo.test.reg
+version "${project.version}"
+
+enum EngineTypeEnumParent extends demo.ns.EngineTypeEnumParent1: <"Type of the engine used as an additional technical specification for a vehicle">
+    Petrol

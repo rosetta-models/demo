@@ -1,0 +1,5 @@
+namespace demo.ns
+version "${project.version}"
+
+enum EngineTypeEnumParent1: <"Type of the engine used as an additional technical specification for a vehicle">
+    Diesel
