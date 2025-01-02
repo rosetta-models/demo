@@ -1,4 +1,4 @@
-package demo.translate;
+package demo.ingest_synonym;
 
 import com.regnosys.ingest.test.framework.ingestor.ExpectationUtil;
 import com.regnosys.ingest.test.framework.ingestor.IngestionTest;

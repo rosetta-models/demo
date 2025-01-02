@@ -1,4 +1,4 @@
-namespace demo.translate.external_synonym.example_6
+namespace demo.ingest_synonym.external_synonym.example_6
 version "${project.version}"
 
 /*

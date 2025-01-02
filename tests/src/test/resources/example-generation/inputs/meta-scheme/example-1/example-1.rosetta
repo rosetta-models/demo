@@ -1,4 +1,4 @@
-namespace demo.translate.meta_scheme.example_1
+namespace demo.ingest_synonym.meta_scheme.example_1
 version "${project.version}"
 
 /*

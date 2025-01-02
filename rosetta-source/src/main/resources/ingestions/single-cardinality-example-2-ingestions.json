@@ -7,7 +7,7 @@
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
       "rosettaClasses": ["Root"],
-      "generatedPackage": "demo.translate.single_cardinality.example_2",
+      "generatedPackage": "demo.ingest_synonym.single_cardinality.example_2",
       "generatedFactoryName": "SINGLE_CARDINALITY_EXAMPLE_2XmlHandlerFactory",
       "xsdFilePaths": {
         "Root": "schemas/single-cardinality/example-2.xsd"
@@ -31,7 +31,7 @@
         {
           "Root": "dataDocument"
         },
-      "fullClassnames": { "Root": "demo.translate.single_cardinality.example_2.Root" }
+      "fullClassnames": { "Root": "demo.ingest_synonym.single_cardinality.example_2.Root" }
     }
   }
 }

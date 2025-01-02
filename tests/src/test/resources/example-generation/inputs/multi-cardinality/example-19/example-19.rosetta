@@ -1,4 +1,4 @@
-namespace demo.translate.multi_cardinality.example_19
+namespace demo.ingest_synonym.multi_cardinality.example_19
 version "${project.version}"
 
 /*

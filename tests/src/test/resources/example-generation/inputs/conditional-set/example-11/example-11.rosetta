@@ -1,4 +1,4 @@
-namespace demo.translate.conditional_set.example_11
+namespace demo.ingest_synonym.conditional_set.example_11
 version "${project.version}"
 
 /*
