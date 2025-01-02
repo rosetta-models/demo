@@ -7,7 +7,7 @@
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
       "rosettaClasses": ["Root"],
-      "generatedPackage": "demo.translate.mappers.example_3",
+      "generatedPackage": "demo.ingest_synonym.mappers.example_3",
       "generatedFactoryName": "MAPPERS_EXAMPLE_3XmlHandlerFactory",
       "xsdFilePaths": {
         "Root": "schemas/mappers/example-3.xsd"
@@ -31,7 +31,7 @@
         {
           "Root": "dataDocument"
         },
-      "fullClassnames": { "Root": "demo.translate.mappers.example_3.Root" }
+      "fullClassnames": { "Root": "demo.ingest_synonym.mappers.example_3.Root" }
     }
   }
 }

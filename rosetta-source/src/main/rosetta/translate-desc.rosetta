@@ -1,7 +1,0 @@
-namespace demo.translate
-version "${project.version}"
-
-metaType id string
-metaType key string
-metaType reference string
-metaType scheme string

@@ -7,7 +7,7 @@
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
       "rosettaClasses": ["Root"],
-      "generatedPackage": "demo.translate.meta_external_reference.example_4",
+      "generatedPackage": "demo.ingest_synonym.meta_external_reference.example_4",
       "generatedFactoryName": "META_EXTERNAL_REFERENCE_EXAMPLE_4XmlHandlerFactory",
       "xsdFilePaths": {
         "Root": "schemas/meta-external-reference/example-4.xsd"
@@ -31,7 +31,7 @@
         {
           "Root": "dataDocument"
         },
-      "fullClassnames": { "Root": "demo.translate.meta_external_reference.example_4.Root" }
+      "fullClassnames": { "Root": "demo.ingest_synonym.meta_external_reference.example_4.Root" }
     }
   }
 }

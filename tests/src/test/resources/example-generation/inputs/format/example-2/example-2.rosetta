@@ -1,4 +1,4 @@
-namespace demo.translate.format.example_2
+namespace demo.ingest_synonym.format.example_2
 version "${project.version}"
 
 /*

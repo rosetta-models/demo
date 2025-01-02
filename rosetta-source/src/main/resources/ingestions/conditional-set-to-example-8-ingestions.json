@@ -7,7 +7,7 @@
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
       "rosettaClasses": ["Root"],
-      "generatedPackage": "demo.translate.conditional_set_to.example_8",
+      "generatedPackage": "demo.ingest_synonym.conditional_set_to.example_8",
       "generatedFactoryName": "CONDITIONAL_SET_TO_EXAMPLE_8XmlHandlerFactory",
       "xsdFilePaths": {
         "Root": "schemas/conditional-set-to/example-8.xsd"
@@ -31,7 +31,7 @@
         {
           "Root": "dataDocument"
         },
-      "fullClassnames": { "Root": "demo.translate.conditional_set_to.example_8.Root" }
+      "fullClassnames": { "Root": "demo.ingest_synonym.conditional_set_to.example_8.Root" }
     }
   }
 }

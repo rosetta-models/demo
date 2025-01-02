@@ -1,4 +1,4 @@
-namespace demo.translate.mappers.example_8
+namespace demo.ingest_synonym.mappers.example_8
 version "${project.version}"
 
 /*

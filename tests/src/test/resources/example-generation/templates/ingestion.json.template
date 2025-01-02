@@ -2,6 +2,7 @@
   "options": {
     "$SYNONYM_NAME$": {
       "name": "$SYNONYM_NAME$",
+      "modelId": "DEMO",
       "modelClasspath": ["model", "demo/rosetta"],
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,

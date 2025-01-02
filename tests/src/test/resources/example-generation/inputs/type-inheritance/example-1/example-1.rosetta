@@ -1,4 +1,4 @@
-namespace demo.translate.type_inheritance.example_1
+namespace demo.ingest_synonym.type_inheritance.example_1
 version "${project.version}"
 
 /*

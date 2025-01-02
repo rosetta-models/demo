@@ -168,7 +168,7 @@ public class ExampleGenerator {
                         .replace($SCHEMA$, schema);
 
         Path rosettaPath = mainResourcesPath.getParent().resolve("rosetta")
-                .resolve("translate"
+                .resolve("ingest_synonym"
                         + "-"
                         + exampleSet.categoryName.replace("-", "_")
                         + "-"
@@ -180,7 +180,7 @@ public class ExampleGenerator {
     }
 
     void writeUnitTest(ExampleSet exampleSet) throws IOException {
-        Path unitTestBasePath = Files.createDirectories(testJavaPath.resolve("demo").resolve("translate"));
+        Path unitTestBasePath = Files.createDirectories(testJavaPath.resolve("demo").resolve("ingest_synonym"));
         Path unitTestPath = unitTestBasePath.resolve(exampleSet.getUnitTestName() + ".java");
 
         String testAnnotations = exampleSet.settings.getProperty(TEST_ANNOTATIONS_SETTING_NAME, "");
@@ -217,7 +217,7 @@ public class ExampleGenerator {
     }
 
     public static String getNamespace(String categoryName, String exampleName) {
-        return ("demo.translate." + categoryName + "." + exampleName)
+        return ("demo.ingest_synonym." + categoryName + "." + exampleName)
                 .toLowerCase()
                 .replace("-", "_");
     }

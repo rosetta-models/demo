@@ -7,7 +7,7 @@
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
       "rosettaClasses": ["Root"],
-      "generatedPackage": "demo.translate.meta_scoped_reference.example_1",
+      "generatedPackage": "demo.ingest_synonym.meta_scoped_reference.example_1",
       "generatedFactoryName": "META_SCOPED_REFERENCE_EXAMPLE_1XmlHandlerFactory",
       "xsdFilePaths": {
         "Root": "schemas/meta-scoped-reference/example-1.xsd"
@@ -31,7 +31,7 @@
         {
           "Root": "dataDocument"
         },
-      "fullClassnames": { "Root": "demo.translate.meta_scoped_reference.example_1.Root" }
+      "fullClassnames": { "Root": "demo.ingest_synonym.meta_scoped_reference.example_1.Root" }
     }
   }
 }

@@ -7,7 +7,7 @@
       "modelFileDirIncludeRegex": ".*\\.rosetta",
       "modelFileDirExcludeRegex": null,
       "rosettaClasses": ["Root"],
-      "generatedPackage": "demo.translate.type_inheritance.example_1",
+      "generatedPackage": "demo.ingest_synonym.type_inheritance.example_1",
       "generatedFactoryName": "TYPE_INHERITANCE_EXAMPLE_1XmlHandlerFactory",
       "xsdFilePaths": {
         "Root": "schemas/type-inheritance/example-1.xsd"
@@ -31,7 +31,7 @@
         {
           "Root": "dataDocument"
         },
-      "fullClassnames": { "Root": "demo.translate.type_inheritance.example_1.Root" }
+      "fullClassnames": { "Root": "demo.ingest_synonym.type_inheritance.example_1.Root" }
     }
   }
 }
