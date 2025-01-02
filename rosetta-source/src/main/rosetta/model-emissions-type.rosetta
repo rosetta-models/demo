@@ -1,5 +1,4 @@
-//The Demonstration Model aims to illustrate the main concepts of logical modelling, the syntax used in Rosetta (Rosetta DSL) and the main components, views and features of Rosetta. 
-namespace demo.emissions
+namespace demo.model.emissions : <"The Demonstration Model aims to illustrate the main concepts of logical modelling, the syntax used in Rune (Rune DSL) and the main components, views and features of Rune.">
 version "${project.version}"
 
 typeAlias PositiveInteger: <"Positive integer">

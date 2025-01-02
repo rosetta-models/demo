@@ -3,8 +3,8 @@
   "name" : "EuropeanParliament / EmissionPerformanceStandardsEU",
   "transform" : {
     "type" : "REPORT",
-    "function" : "demo.emissions.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportFunction",
-    "inputType" : "demo.emissions.VehicleOwnership",
-    "outputType" : "demo.emissions.EuropeanParliamentReport"
+    "function" : "demo.model.emissions.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportFunction",
+    "inputType" : "demo.model.emissions.VehicleOwnership",
+    "outputType" : "demo.model.emissions.EuropeanParliamentReport"
   }
 }

@@ -1,4 +1,4 @@
-namespace demo.emissions
+namespace demo.model.emissions
 version "${project.version}"
 
 segment annex
