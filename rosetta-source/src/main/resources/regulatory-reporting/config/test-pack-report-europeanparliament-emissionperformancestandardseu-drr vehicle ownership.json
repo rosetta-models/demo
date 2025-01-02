@@ -7,7 +7,6 @@
     "name" : "demo 1",
     "inputPath" : "regulatory-reporting/input/drr-vehicle-ownership/demo-1.json",
     "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/drr-vehicle-ownership/demo-1-report.json",
-    "outputTabulatedPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/drr-vehicle-ownership/demo-1-key-value.json",
     "assertions" : {
       "modelValidationFailures" : 0,
       "runtimeError" : false
@@ -17,7 +16,6 @@
     "name" : "demo 2",
     "inputPath" : "regulatory-reporting/input/drr-vehicle-ownership/demo-2.json",
     "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/drr-vehicle-ownership/demo-2-report.json",
-    "outputTabulatedPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/drr-vehicle-ownership/demo-2-key-value.json",
     "assertions" : {
       "modelValidationFailures" : 0,
       "runtimeError" : false

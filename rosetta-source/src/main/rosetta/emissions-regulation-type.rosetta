@@ -1,0 +1,25 @@
+namespace demo.emissions.regulation
+version "${project.version}"
+
+import demo.emissions.model.*
+
+type ReportableVehicle:
+    vehicle Vehicle (1..1)
+    country string (1..1)
+        [metadata scheme]
+    licenceNumber AlphaNumericText (1..1)
+
+type EuropeanParliamentReport:
+    vehicleRegistrationID string (1..1)
+        [ruleReference VehicleRegistrationID]
+    firstRegistrationDate date (1..1)
+        [ruleReference FirstRegistrationDate]
+    vehicleClassificationType VehicleClassificationEnum (1..1)
+        [ruleReference VehicleClassificationType]
+    engineType EngineTypeEnum (1..1)
+        [ruleReference EngineType]
+    euroEmissionStandard EuroEmissionStandardEnum (1..1)
+        [ruleReference EuroEmissionStandard]
+    carbonMonoxide int (1..1)
+        [ruleReference CarbonMonoxide]
+

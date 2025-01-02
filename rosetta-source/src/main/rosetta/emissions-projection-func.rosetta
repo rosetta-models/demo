@@ -1,0 +1,4 @@
+namespace demo.emissions.projection
+version "${project.version}"
+
+annotation projection: <"Annotation that describes a projection function.">

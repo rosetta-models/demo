@@ -1,4 +1,4 @@
-namespace demo.model.emissions
+namespace demo.emissions.model
 version "${project.version}"
 
 enum ColourEnum: <"Colour of the vehicle used as an additional feature for a vehicle">

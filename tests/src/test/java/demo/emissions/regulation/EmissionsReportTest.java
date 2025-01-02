@@ -1,9 +1,9 @@
-package demo.report.emissions;
+package demo.emissions.regulation;
 
 import com.regnosys.rosetta.common.reports.RegReportPaths;
 import com.regnosys.rosetta.common.transform.TestPackModel;
 import com.regnosys.testing.transform.TransformTestExtension;
-import demo.model.emissions.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportFunction;
+import demo.emissions.regulation.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportFunction;
 import demo.report.ReportTestRuntimeModule;
 import org.eclipse.xtext.testing.InjectWith;
 import org.eclipse.xtext.testing.extensions.InjectionExtension;

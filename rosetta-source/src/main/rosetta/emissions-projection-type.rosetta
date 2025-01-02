@@ -1,0 +1,2 @@
+namespace demo.emissions.projection
+version "${project.version}"
