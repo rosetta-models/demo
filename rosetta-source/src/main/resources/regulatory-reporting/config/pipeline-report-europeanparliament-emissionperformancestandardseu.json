@@ -6,5 +6,6 @@
     "function" : "demo.emissions.regulation.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportFunction",
     "inputType" : "demo.emissions.regulation.ReportableVehicle",
     "outputType" : "demo.emissions.regulation.EuropeanParliamentReport"
-  }
+  },
+  "upstreamPipelineId" : "pipeline-enrich-vehicle-ownership-to-reportable-vehicle"
 }
