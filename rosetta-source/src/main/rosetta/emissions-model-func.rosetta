@@ -123,7 +123,8 @@ func GetDrivingLicenceNames: <"Get driver's names from given list of licences.">
 
     add ownersName: <"Filter lists to only include drivers with first and last names, then use 'map' to convert driving licences into list of names.">
         drivingLicences
-            filter firstName exists and surname exists
+            extract person
+            then filter firstName exists and surname exists
             then extract firstName + " " + surname
 
 func GetAllDrivingLicencesFromInternationalOwners: <"Get list of driving licences from owners with 2 or more licences.">
