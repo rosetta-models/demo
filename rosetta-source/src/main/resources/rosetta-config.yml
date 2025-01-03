@@ -7,7 +7,8 @@ generators:
   - com.rosetta.model
   tabulators:
     types:
-      - demo.emissions.VehicleOwnership
+      - demo.emissions.model.VehicleOwnership
+      - demo.emissions.regulation.ReportableVehicle
       - demo.ingest_synonym.conditional_default.example_1.Root
       - demo.ingest_synonym.conditional_set.example_1.Root
       - demo.ingest_synonym.conditional_set.example_2.Root
@@ -115,3 +116,6 @@ generators:
       - demo.ingest_synonym.single_cardinality.example_6.Root
       - demo.ingest_synonym.type_inheritance.example_1.Root
       - demo.ingest_synonym.type_inheritance.example_2.Root
+    annotations:
+      - projection
+      - enrichment
