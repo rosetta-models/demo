@@ -1,0 +1,14 @@
+{
+  "emissionClassification" : "Euro5",
+  "emissionsData" : {
+    "co" : 0
+  },
+  "registrationData" : {
+    "date" : "2020-01-01",
+    "id" : "X1"
+  },
+  "vehicleData" : {
+    "classificationType" : "M1_Passengers",
+    "engineType" : "Petrol"
+  }
+}

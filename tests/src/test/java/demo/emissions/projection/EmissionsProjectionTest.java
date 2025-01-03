@@ -1,10 +1,10 @@
-package demo.emissions.regulation;
+package demo.emissions.projection;
 
 import com.regnosys.rosetta.common.transform.TestPackModel;
 import com.regnosys.rosetta.common.transform.TransformType;
 import com.regnosys.testing.transform.TransformTestExtension;
 import demo.emissions.DemoTestRuntimeModule;
-import demo.emissions.regulation.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportFunction;
+import demo.emissions.projection.functions.Project_EuropeanParliamentReportToIsoEmissionsReport;
 import org.eclipse.xtext.testing.InjectWith;
 import org.eclipse.xtext.testing.extensions.InjectionExtension;
 import org.junit.jupiter.api.TestInstance;
@@ -21,22 +21,22 @@ import java.util.stream.Stream;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @ExtendWith(InjectionExtension.class)
 @InjectWith(DemoTestRuntimeModule.InjectorProvider.class)
-class EmissionsReportTest {
+class EmissionsProjectionTest {
 
-    public static final Path REPORT_CONFIG_PATH = Paths.get(TransformType.REPORT.getResourcePath()).resolve("config");
+    public static final Path PROJECTION_CONFIG_PATH = Paths.get(TransformType.PROJECTION.getResourcePath()).resolve("config");
 
     @RegisterExtension
-    static TransformTestExtension<EuropeanParliamentEmissionPerformanceStandardsEUReportFunction> testExtension =
+    static TransformTestExtension<Project_EuropeanParliamentReportToIsoEmissionsReport> testExtension =
             new TransformTestExtension<>(new DemoTestRuntimeModule(),
-                    REPORT_CONFIG_PATH,
-                    EuropeanParliamentEmissionPerformanceStandardsEUReportFunction.class);
+                    PROJECTION_CONFIG_PATH,
+                    Project_EuropeanParliamentReportToIsoEmissionsReport.class);
 
     @ParameterizedTest(name = "{0}")
     @MethodSource("inputFiles")
     void runTest(String testName,
                  String testPackId,
                  TestPackModel.SampleModel sampleModel,
-                 EuropeanParliamentEmissionPerformanceStandardsEUReportFunction func) {
+                 Project_EuropeanParliamentReportToIsoEmissionsReport func) {
         testExtension.runTransformAndAssert(testPackId, sampleModel, func::evaluate);
     }
 

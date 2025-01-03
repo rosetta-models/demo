@@ -1,4 +1,57 @@
 namespace demo.emissions.projection
 version "${project.version}"
 
+import demo.emissions.regulation.*
+
 annotation projection: <"Annotation that describes a projection function.">
+
+func Project_EuropeanParliamentReportToIsoEmissionsReport:
+    [projection]
+    inputs:
+        europeanParliamentReport EuropeanParliamentReport (1..1)
+    output:
+        isoEmissionsReport IsoEmissionsReport (1..1)
+
+    set isoEmissionsReport:
+        IsoEmissionsReport {
+            emissionClassification: europeanParliamentReport -> euroEmissionStandard to-string,
+            registrationData: Create_IsoRegistrationData(europeanParliamentReport),
+            vehicleData: Create_IsoVehicleData(europeanParliamentReport),
+            emissionsData: Create_IsoEmissionsData(europeanParliamentReport)
+        }
+ 
+func Create_IsoRegistrationData:
+    inputs:
+        europeanParliamentReport EuropeanParliamentReport (1..1)
+    output:
+        isoRegistrationData IsoRegistrationData (1..1)
+    
+    set isoRegistrationData:
+        IsoRegistrationData {
+            id: europeanParliamentReport -> vehicleRegistrationID,
+            date: europeanParliamentReport -> firstRegistrationDate,
+        }
+ 
+ func Create_IsoVehicleData:
+     inputs:
+         europeanParliamentReport EuropeanParliamentReport (1..1)
+     output:
+         isoVehicleData IsoVehicleData (1..1)
+     
+     set isoVehicleData:
+         IsoVehicleData {
+             classificationType: europeanParliamentReport -> vehicleClassificationType to-string,
+             engineType: europeanParliamentReport -> engineType to-string,
+         }
+ 
+  func Create_IsoEmissionsData:
+      inputs:
+          europeanParliamentReport EuropeanParliamentReport (1..1)
+      output:
+          isoEmissionsData IsoEmissionsData (1..1)
+      
+      set isoEmissionsData:
+          IsoEmissionsData {
+              co:  europeanParliamentReport -> carbonMonoxide
+          }
+  

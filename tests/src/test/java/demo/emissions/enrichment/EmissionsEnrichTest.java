@@ -33,10 +33,10 @@ class EmissionsEnrichTest {
 
     @ParameterizedTest(name = "{0}")
     @MethodSource("inputFiles")
-    void runReport(String testName,
-                   String testPackId,
-                   TestPackModel.SampleModel sampleModel,
-                   Enrich_VehicleOwnershipToReportableVehicle func) {
+    void runTest(String testName,
+                 String testPackId,
+                 TestPackModel.SampleModel sampleModel,
+                 Enrich_VehicleOwnershipToReportableVehicle func) {
         testExtension.runTransformAndAssert(testPackId, sampleModel, func::evaluate);
     }
 
