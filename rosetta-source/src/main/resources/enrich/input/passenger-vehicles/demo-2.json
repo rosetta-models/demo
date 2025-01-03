@@ -1,4 +1,20 @@
 {
+  "drivingLicence": [
+    {
+      "person": {
+        "firstName": "Jane",
+        "surname": "Doe"
+      },
+      "countryOfIssuance": {
+        "value": "GB"
+      },
+      "licenceNumber": "FG34HJK",
+      "dateOfIssuance": "2018-08-01",
+      "dateOfRenewal": "2028-08-01",
+      "vehicleEntitlement": [ "M_1_PASSENGERS", "M_2_PASSENGERS", "M_3_PASSENGERS" ],
+      "penaltyPoints": 0
+    }
+  ],
   "vehicle" : {
     "CombustibleVehicle": {
       "Car": {

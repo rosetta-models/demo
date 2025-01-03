@@ -8,7 +8,7 @@
     "inputPath" : "enrich/input/passenger-vehicles/demo-1.json",
     "outputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/demo-1.json",
     "assertions" : {
-      "modelValidationFailures" : 4,
+      "modelValidationFailures" : 3,
       "runtimeError" : false
     }
   }, {
@@ -17,7 +17,7 @@
     "inputPath" : "enrich/input/passenger-vehicles/demo-2.json",
     "outputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/demo-2.json",
     "assertions" : {
-      "modelValidationFailures" : 4,
+      "modelValidationFailures" : 3,
       "runtimeError" : false
     }
   } ]
