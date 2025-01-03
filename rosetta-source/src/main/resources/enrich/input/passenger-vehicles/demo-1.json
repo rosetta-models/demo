@@ -15,8 +15,8 @@
             "day": 1
           }
         },
-        "registrationID": "X1",
-        "vehicleTaxBand": "A_BAND",
+        "registrationID": "X2",
+        "vehicleTaxBand": "B_BAND",
         "vehicleClassification": "M_1_PASSENGERS",
         "fuelCapacity": 200,
         "engine": {
@@ -24,7 +24,7 @@
           "power": 1,
           "mpg": 1,
           "emissionMetrics": {
-            "carbonMonoxide" : 0,
+            "carbonMonoxide" : 2.70,
             "totalHydrocarbon" : 0,
             "volatileOrganicCompound" : 0,
             "nitrogenOxide" : 0,

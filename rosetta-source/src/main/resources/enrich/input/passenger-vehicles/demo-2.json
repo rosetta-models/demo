@@ -16,14 +16,14 @@
         },
         "registrationID": "X1",
         "vehicleTaxBand": "A_BAND",
-        "vehicleClassification": "M_1_PASSENGERS",
+        "vehicleClassification": "M_2_PASSENGERS",
         "fuelCapacity": 150,
         "engine": {
           "engineType": "PETROL",
           "power": 1,
           "mpg": 1,
           "emissionMetrics": {
-            "carbonMonoxide" : 0,
+            "carbonMonoxide" : 2.66,
             "totalHydrocarbon" : 0,
             "volatileOrganicCompound" : 0,
             "nitrogenOxide" : 0,

@@ -16,4 +16,4 @@ type IsoVehicleData:
     engineType string (1..1)
 
 type IsoEmissionsData:
-    co int (1..1)
+    co number (1..1)

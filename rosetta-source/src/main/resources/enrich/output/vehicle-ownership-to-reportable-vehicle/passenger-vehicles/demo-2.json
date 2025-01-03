@@ -5,7 +5,7 @@
         "carType" : "Hatchback",
         "engine" : {
           "emissionMetrics" : {
-            "carbonMonoxide" : 0,
+            "carbonMonoxide" : 2.66,
             "combineHCNOX" : 0,
             "nitrogenOxide" : 0,
             "particleNumber" : 0,
@@ -27,7 +27,7 @@
           "yearOfManufacture" : 2020,
           "zeroTo60" : 4.5
         },
-        "vehicleClassification" : "M1_Passengers",
+        "vehicleClassification" : "M2_Passengers",
         "vehicleTaxBand" : "ABand"
       }
     }

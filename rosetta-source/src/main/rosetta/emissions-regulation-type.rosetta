@@ -20,6 +20,6 @@ type EuropeanParliamentReport:
         [ruleReference EngineType]
     euroEmissionStandard EuroEmissionStandardEnum (1..1)
         [ruleReference EuroEmissionStandard]
-    carbonMonoxide int (1..1)
+    carbonMonoxide number (1..1)
         [ruleReference CarbonMonoxide]
 

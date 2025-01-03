@@ -1,8 +1,8 @@
 {
-  "carbonMonoxide" : 0,
+  "carbonMonoxide" : 2.70,
   "engineType" : "Petrol",
   "euroEmissionStandard" : "Euro5",
   "firstRegistrationDate" : "2020-01-01",
   "vehicleClassificationType" : "M1_Passengers",
-  "vehicleRegistrationID" : "X1"
+  "vehicleRegistrationID" : "X2"
 }

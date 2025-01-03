@@ -6,7 +6,7 @@
     "id" : "demo-1",
     "name" : "demo 1",
     "inputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-1.json",
-    "outputPath" : "projection/output/european-parliament-report-to-iso-emissions-report/passenger-vehicles/demo-1.json",
+    "outputPath" : "projection/output/european-parliament-report-to-iso-emissions-report/passenger-vehicles/demo-1.xml",
     "assertions" : {
       "modelValidationFailures" : 0,
       "runtimeError" : false
@@ -15,7 +15,7 @@
     "id" : "demo-2",
     "name" : "demo 2",
     "inputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-2.json",
-    "outputPath" : "projection/output/european-parliament-report-to-iso-emissions-report/passenger-vehicles/demo-2.json",
+    "outputPath" : "projection/output/european-parliament-report-to-iso-emissions-report/passenger-vehicles/demo-2.xml",
     "assertions" : {
       "modelValidationFailures" : 0,
       "runtimeError" : false

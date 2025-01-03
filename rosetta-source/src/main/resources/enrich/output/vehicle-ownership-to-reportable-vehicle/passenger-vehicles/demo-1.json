@@ -5,7 +5,7 @@
         "carType" : "Hatchback",
         "engine" : {
           "emissionMetrics" : {
-            "carbonMonoxide" : 0,
+            "carbonMonoxide" : 2.70,
             "combineHCNOX" : 0,
             "nitrogenOxide" : 0,
             "particleNumber" : 0,
@@ -18,7 +18,7 @@
           "power" : 1
         },
         "fuelCapacity" : 200,
-        "registrationID" : "X1",
+        "registrationID" : "X2",
         "specification" : {
           "chassisNumber" : 0,
           "dateOfFirstRegistration" : "2020-01-01",
@@ -28,7 +28,7 @@
           "zeroTo60" : 4.5
         },
         "vehicleClassification" : "M1_Passengers",
-        "vehicleTaxBand" : "ABand"
+        "vehicleTaxBand" : "BBand"
       }
     }
   }
