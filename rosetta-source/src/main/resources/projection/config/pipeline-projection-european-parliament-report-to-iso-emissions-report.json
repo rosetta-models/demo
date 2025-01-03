@@ -1,0 +1,15 @@
+{
+  "id" : "pipeline-projection-european-parliament-report-to-iso-emissions-report",
+  "name" : "European Parliament Report To Iso Emissions Report",
+  "transform" : {
+    "type" : "PROJECTION",
+    "function" : "demo.emissions.projection.functions.Project_EuropeanParliamentReportToIsoEmissionsReport",
+    "inputType" : "demo.emissions.regulation.EuropeanParliamentReport",
+    "outputType" : "demo.emissions.projection.IsoEmissionsReport"
+  },
+  "upstreamPipelineId" : "pipeline-report-europeanparliament-emissionperformancestandardseu",
+  "outputSerialisation" : {
+    "format" : "XML",
+    "configPath" : "schemas/iso-emissions/xml-config/iso-emissions-rosetta-xml-config.json"
+  }
+}

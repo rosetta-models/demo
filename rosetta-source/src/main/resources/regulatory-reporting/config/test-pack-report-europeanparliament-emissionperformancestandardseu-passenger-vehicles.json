@@ -1,0 +1,24 @@
+{
+  "id" : "test-pack-report-europeanparliament-emissionperformancestandardseu-passenger-vehicles",
+  "pipelineId" : "pipeline-report-europeanparliament-emissionperformancestandardseu",
+  "name" : "Passenger Vehicles",
+  "samples" : [ {
+    "id" : "demo-1",
+    "name" : "demo 1",
+    "inputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/demo-1.json",
+    "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-1.json",
+    "assertions" : {
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "demo-2",
+    "name" : "demo 2",
+    "inputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/demo-2.json",
+    "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-2.json",
+    "assertions" : {
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  } ]
+}

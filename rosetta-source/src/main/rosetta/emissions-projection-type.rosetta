@@ -1,0 +1,19 @@
+namespace demo.emissions.projection
+version "${project.version}"
+
+type IsoEmissionsReport:
+    emissionClassification string (1..1)
+    registrationData IsoRegistrationData (1..1)
+    vehicleData IsoVehicleData (1..1)
+    emissionsData IsoEmissionsData (1..1)
+
+type IsoRegistrationData:
+    id string (1..1)
+    date date (1..1)
+
+type IsoVehicleData:
+    classificationType string (1..1)
+    engineType string (1..1)
+
+type IsoEmissionsData:
+    co number (1..1)

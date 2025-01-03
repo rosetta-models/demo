@@ -1,5 +1,4 @@
-//The Demonstration Model aims to illustrate the main concepts of logical modelling, the syntax used in Rosetta (Rosetta DSL) and the main components, views and features of Rosetta. 
-namespace demo.emissions
+namespace demo.emissions.model : <"The Demonstration Model aims to illustrate the main concepts of logical modelling, the syntax used in Rune (Rune DSL) and the main components, views and features of Rune.">
 version "${project.version}"
 
 typeAlias PositiveInteger: <"Positive integer">
@@ -62,13 +61,13 @@ type Engine: <"Description of the engine">
     emissionMetrics EmissionMetrics (1..1) <"List of emission metrics in grams per km">
 
 type EmissionMetrics: <"Emission metrics used for EU emission standards">
-    carbonMonoxide int (1..1)
-    totalHydrocarbon int (1..1)
-    volatileOrganicCompound int (1..1)
-    nitrogenOxide int (1..1)
-    combineHCNOX int (1..1)
-    particulateMatter int (1..1)
-    particleNumber int (1..1)
+    carbonMonoxide number (1..1)
+    totalHydrocarbon number (1..1)
+    volatileOrganicCompound number (1..1)
+    nitrogenOxide number (1..1)
+    combineHCNOX number (1..1)
+    particulateMatter number (1..1)
+    particleNumber number (1..1)
 
 type Person: <"A class to represent the attributes that are specific to a person.">
     honorific string (0..1) <"An honorific title, such as Mr., Ms., Dr. etc.">
@@ -80,10 +79,10 @@ type Person: <"A class to represent the attributes that are specific to a person
     dateOfBirth date (0..1) <"The person's date of birth.">
 
 type DrivingLicence extends Person: <"Driving licence authorisation granted by a jurisdiction">
-    countryofIssuance string (1..1)
+    countryOfIssuance string (1..1)
         [metadata scheme]
     licenceNumber AlphaNumericText (1..1)
-    dateofIssuance date (1..1)
+    dateOfIssuance date (1..1)
     dateOfRenewal date (0..1)
     vehicleEntitlement VehicleClassificationEnum (0..*)
     penaltyPoints PositiveInteger (1..1)

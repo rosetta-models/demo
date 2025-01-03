@@ -1,0 +1,24 @@
+namespace demo.emissions.enrichment
+version "${project.version}"
+
+import demo.emissions.model.*
+import demo.emissions.regulation.*
+
+annotation enrichment: <"Annotation that describes an enrichment function.">
+
+func Enrich_VehicleOwnershipToReportableVehicle:
+    [enrichment]
+    inputs:
+        vehicleOwnership VehicleOwnership (1..1)
+    output:
+        reportableVehicle ReportableVehicle (1..1)
+
+    alias drivingLicence:
+        vehicleOwnership -> drivingLicence first
+
+    set reportableVehicle:
+        ReportableVehicle {
+            vehicle: vehicleOwnership -> vehicle,
+            country: drivingLicence -> countryOfIssuance,
+            licenceNumber: drivingLicence -> licenceNumber
+        }

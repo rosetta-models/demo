@@ -4,27 +4,26 @@
       "Car": {
         "specification": {
           "make": "Volkswagen",
-          "model": "Polo",
-          "carType": "HATCHBACK",
+          "model": "Golf",
           "zeroTo60": 4.5,
           "yearOfManufacture": 2020,
           "chassisNumber": 0,
           "dateOfFirstRegistration": {
             "year": 2020,
-            "month": 1,
+            "month": 6,
             "day": 1
           }
         },
         "registrationID": "X1",
         "vehicleTaxBand": "A_BAND",
-        "vehicleClassification": "M_1_PASSENGERS",
-        "fuelCapacity": 200,
+        "vehicleClassification": "M_2_PASSENGERS",
+        "fuelCapacity": 150,
         "engine": {
           "engineType": "PETROL",
           "power": 1,
           "mpg": 1,
           "emissionMetrics": {
-            "carbonMonoxide" : 0,
+            "carbonMonoxide" : 2.66,
             "totalHydrocarbon" : 0,
             "volatileOrganicCompound" : 0,
             "nitrogenOxide" : 0,
@@ -39,7 +38,7 @@
   },
   "dateOfPurchase": {
     "year": 2020,
-    "month": 1,
+    "month": 6,
     "day": 2
   },
   "isFirstHand": true,

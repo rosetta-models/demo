@@ -1,0 +1,10 @@
+{
+  "id" : "pipeline-enrich-vehicle-ownership-to-reportable-vehicle",
+  "name" : "Vehicle Ownership To Reportable Vehicle",
+  "transform" : {
+    "type" : "ENRICH",
+    "function" : "demo.emissions.enrichment.functions.Enrich_VehicleOwnershipToReportableVehicle",
+    "inputType" : "demo.emissions.model.VehicleOwnership",
+    "outputType" : "demo.emissions.regulation.ReportableVehicle"
+  }
+}

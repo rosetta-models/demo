@@ -1,4 +1,4 @@
-package demo.report;
+package demo.emissions;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -8,7 +8,7 @@ import com.regnosys.rosetta.RosettaStandaloneSetup;
 import com.regnosys.testing.RosettaTestingInjectorProvider;
 import com.regnosys.testing.RosettaTestingModule;
 
-public class ReportTestRuntimeModule extends DemoRuntimeModule {
+public class DemoTestRuntimeModule extends DemoRuntimeModule {
 
     @Override
     protected void configure() {
@@ -22,7 +22,7 @@ public class ReportTestRuntimeModule extends DemoRuntimeModule {
             return new RosettaStandaloneSetup() {
                 @Override
                 public Injector createInjector() {
-                    return Guice.createInjector(Modules.override(createRuntimeModule()).with(new ReportTestRuntimeModule()));
+                    return Guice.createInjector(Modules.override(createRuntimeModule()).with(new DemoTestRuntimeModule()));
                 }
             }.createInjectorAndDoEMFRegistration();
         }

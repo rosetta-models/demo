@@ -1,5 +1,7 @@
-namespace demo.emissions
+namespace demo.emissions.regulation
 version "${project.version}"
+
+import demo.emissions.model.*
 
 segment annex
 segment article
@@ -30,25 +32,11 @@ corpus Regulation "Regulation (EU) 2019/631" EmissionPerformanceStandardsEU <"Re
 corpus Directive "Directive 2014/46/EU" VehicleRegistrationEU <"Directive 2014/46/EU of the European Parliament and of the Council of 3 April 2014 amending Council Directive 1999/37/EC on the registration documents for vehicles https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1526982904241&uri=CELEX:32014L0046">
 
 report EuropeanParliament EmissionPerformanceStandardsEU in real-time
-    from VehicleOwnership
+    from ReportableVehicle
     when IsEuroStandardsCoverage
     with type EuropeanParliamentReport
 
-type EuropeanParliamentReport:
-    vehicleRegistrationID string (1..1)
-        [ruleReference VehicleRegistrationID]
-    firstRegistrationDate date (1..1)
-        [ruleReference FirstRegistrationDate]
-    vehicleClassificationType VehicleClassificationEnum (1..1)
-        [ruleReference VehicleClassificationType]
-    engineType EngineTypeEnum (1..1)
-        [ruleReference EngineType]
-    euroEmissionStandard string (1..1)
-        [ruleReference EuroEmissionStandard]
-    carbonMonoxide int (1..1)
-        [ruleReference CarbonMonoxide]
-
-eligibility rule IsEuroStandardsCoverage from VehicleOwnership:
+eligibility rule IsEuroStandardsCoverage from ReportableVehicle:
     vehicle ->> vehicleClassification
         filter
             item = M1_Passengers
@@ -65,34 +53,34 @@ eligibility rule IsEuroStandardsCoverage from VehicleOwnership:
             or item = l6e_Quadricycle
             or item = l7e_Quadricycle
 
-reporting rule VehicleRegistrationID from VehicleOwnership: <"Unique ID for the vehicle registration">
+reporting rule VehicleRegistrationID from ReportableVehicle: <"Unique ID for the vehicle registration">
     [regulatoryReference EuropeanParliament VehicleRegistrationEU article "1"
         provision "This Directive shall apply to the vehicle registration documents issued by the Member States"]
     extract vehicle ->> registrationID
         as "Vehicle Registration ID"
 
-reporting rule FirstRegistrationDate from VehicleOwnership: <"Date of first registration of the vehicle">
+reporting rule FirstRegistrationDate from ReportableVehicle: <"Date of first registration of the vehicle">
     [regulatoryReference EuropeanParliament VehicleRegistrationEU article "3" section "4"
         provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
     include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
     extract vehicle ->> specification -> dateOfFirstRegistration
         as "First Registration Date"
 
-reporting rule VehicleClassificationType from VehicleOwnership: <"Classification type of the vehicle">
+reporting rule VehicleClassificationType from ReportableVehicle: <"Classification type of the vehicle">
     [regulatoryReference EuropeanParliament VehicleRegistrationEU article "3" section "4"
         provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
     include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
     extract vehicle ->> vehicleClassification
         as "Vehicle Classification Type"
 
-reporting rule EngineType from VehicleOwnership: <"Engine type of the vehicle">
+reporting rule EngineType from ReportableVehicle: <"Engine type of the vehicle">
     [regulatoryReference EuropeanParliament VehicleRegistrationEU article "3" section "4"
         provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
     include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
     extract Engine -> engineType
         as "Engine Type"
 
-reporting rule CarbonMonoxide from VehicleOwnership: <"Carbon Monoxyde (CO) reported under emission metrics for the type of engine">
+reporting rule CarbonMonoxide from ReportableVehicle: <"Carbon Monoxyde (CO) reported under emission metrics for the type of engine">
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 article "1"
         provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
     include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
@@ -100,14 +88,13 @@ reporting rule CarbonMonoxide from VehicleOwnership: <"Carbon Monoxyde (CO) repo
         as "Carbon Monoxide"
 
 //Utility Rules - Euro standards
-reporting rule Engine from VehicleOwnership: <"A utility to extract the engine data from vehicle ownership data">
+reporting rule Engine from ReportableVehicle: <"A utility to extract the engine data from vehicle ownership data">
     vehicle switch
         Car then engine,
         default empty
             as "Engine"
 
-
-reporting rule EuroEmissionStandard from VehicleOwnership:
+reporting rule EuroEmissionStandard from ReportableVehicle:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 article "1"
         provision "Regulation (EC) No 715/2007 is amended as follows:"]
     extract ([
@@ -121,7 +108,7 @@ reporting rule EuroEmissionStandard from VehicleOwnership:
     then last
         as "Emission Standards"
 
-reporting rule Euro6Standard from VehicleOwnership:
+reporting rule Euro6Standard from ReportableVehicle:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 annex "1" table "2"
         provision "Annex I to Regulation (EC) No 715/2007 is amended as follows:(1) the text in the second row of the last column of Table 1 (Euro 5 emission limits) is replaced by the following:Number of particles (PN);(2) Table 2 is replaced by the following table:"]
     extract vehicle
@@ -134,12 +121,12 @@ reporting rule Euro6Standard from VehicleOwnership:
                 or item ->> vehicleClassification = N1III_Commercial
                 or item ->> vehicleClassification = N2_Commercial)
         then filter IsRegisteredAfterEuro6StandardDate
-        then extract "Euro 6 Standard" // Alternative where Before / After a date could be possible (new release required)
+        then extract EuroEmissionStandardEnum -> Euro6 // Alternative where Before / After a date could be possible (new release required)
 
 reporting rule IsRegisteredAfterEuro6StandardDate from Vehicle:
     extract item ->> specification -> dateOfFirstRegistration > date { year: 2020, month: 5, day: 1 }
 
-reporting rule Euro5Standard from VehicleOwnership:
+reporting rule Euro5Standard from ReportableVehicle:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro5 annex "1" table "1"
         provision "Annex  I  to  Regulation  (EC)  No  715/2007"]
     extract vehicle
@@ -152,12 +139,12 @@ reporting rule Euro5Standard from VehicleOwnership:
                 or item ->> vehicleClassification = N1III_Commercial
                 or item ->> vehicleClassification = N2_Commercial)
         then filter IsRegisteredAfterEuro5StandardDate
-        then extract "Euro 5 Standard"
+        then extract EuroEmissionStandardEnum -> Euro5
 
 reporting rule IsRegisteredAfterEuro5StandardDate from Vehicle:
     extract item ->> specification -> dateOfFirstRegistration > date { year: 2019, month: 12, day: 31 }
 
-reporting rule Euro4Standard from VehicleOwnership:
+reporting rule Euro4Standard from ReportableVehicle:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro3Euro4 annex "1" section "5.3.1.4"
         provision "Annex  I  The heading reads as follows: Scope, Definitions, Application for EC Type-Approval, Granting of EC Type-Approval, Requirements and Tests, Extension of EC Type-Approval, Conformity of Production and In-Service Vehicles, On-Board Diagnostic (OBD) Systems"]
     extract vehicle
@@ -170,12 +157,12 @@ reporting rule Euro4Standard from VehicleOwnership:
                 or item ->> vehicleClassification = N1III_Commercial
                 or item ->> vehicleClassification = N2_Commercial)
         then filter IsRegisteredAfterEuro4StandardDate
-        then extract "Euro 4 Standard"
+        then extract EuroEmissionStandardEnum -> Euro4
 
 reporting rule IsRegisteredAfterEuro4StandardDate from Vehicle:
     extract item ->> specification -> dateOfFirstRegistration > date { year: 2006, month: 1, day: 1 }
 
-reporting rule Euro3Standard from VehicleOwnership:
+reporting rule Euro3Standard from ReportableVehicle:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro3Euro4 annex "1" section "5.3.1.4"
         provision "Annex  I  The heading reads as follows: Scope, Definitions, Application for EC Type-Approval, Granting of EC Type-Approval, Requirements and Tests, Extension of EC Type-Approval, Conformity of Production and In-Service Vehicles, On-Board Diagnostic (OBD) Systems"]
     extract vehicle
@@ -193,12 +180,12 @@ reporting rule Euro3Standard from VehicleOwnership:
                 or item ->> vehicleClassification = l6e_Quadricycle
                 or item ->> vehicleClassification = l7e_Quadricycle)
         then filter IsRegisteredAfterEuro3StandardDate
-        then extract "Euro 3 Standard"
+        then extract EuroEmissionStandardEnum -> Euro3
 
 reporting rule IsRegisteredAfterEuro3StandardDate from Vehicle:
     extract item ->> specification -> dateOfFirstRegistration > date { year: 2001, month: 1, day: 1 }
 
-reporting rule Euro2Standard from VehicleOwnership:
+reporting rule Euro2Standard from ReportableVehicle:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro2 annex ""
         provision "Amendments to the Annexes to Directive 70/220/EEC as amended by Directive 93/59/EEC
         The table in Section 5.3.1.4 is replaced by the following:"]
@@ -211,12 +198,12 @@ reporting rule Euro2Standard from VehicleOwnership:
                 or item ->> vehicleClassification = N1II_Commercial
                 or item ->> vehicleClassification = N1III_Commercial)
         then filter IsRegisteredAfterEuro4StandardDate
-        then extract "Euro 2 Standard"
+        then extract EuroEmissionStandardEnum -> Euro2
 
 reporting rule IsRegisteredAfterEuro2StandardDate from Vehicle:
     extract item ->> specification -> dateOfFirstRegistration > date { year: 1997, month: 1, day: 1 }
 
-reporting rule Euro1Standard from VehicleOwnership:
+reporting rule Euro1Standard from ReportableVehicle:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro1 annex "1" section "8"
         provision "Amendments to the Annexes to Directive 70/220/EEC Item 5.3.1.4: The table is replaced by the following:"]
     extract vehicle
@@ -228,7 +215,7 @@ reporting rule Euro1Standard from VehicleOwnership:
                 or item ->> vehicleClassification = N1II_Commercial
                 or item ->> vehicleClassification = N1III_Commercial)
         then filter IsRegisteredAfterEuro4StandardDate
-        then extract "Euro 1 Standard"
+        then extract EuroEmissionStandardEnum -> Euro1
 
 reporting rule IsRegisteredAfterEuro1StandardDate from Vehicle:
     extract item ->> specification -> dateOfFirstRegistration > date { year: 1993, month: 1, day: 1 }
