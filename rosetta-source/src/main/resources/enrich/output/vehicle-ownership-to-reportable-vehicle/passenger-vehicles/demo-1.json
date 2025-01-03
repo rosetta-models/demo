@@ -1,0 +1,35 @@
+{
+  "vehicle" : {
+    "CombustibleVehicle" : {
+      "Car" : {
+        "carType" : "Hatchback",
+        "engine" : {
+          "emissionMetrics" : {
+            "carbonMonoxide" : 0,
+            "combineHCNOX" : 0,
+            "nitrogenOxide" : 0,
+            "particleNumber" : 0,
+            "particulateMatter" : 0,
+            "totalHydrocarbon" : 0,
+            "volatileOrganicCompound" : 0
+          },
+          "engineType" : "Petrol",
+          "mpg" : 1,
+          "power" : 1
+        },
+        "fuelCapacity" : 200,
+        "registrationID" : "X1",
+        "specification" : {
+          "chassisNumber" : 0,
+          "dateOfFirstRegistration" : "2020-01-01",
+          "make" : "Volkswagen",
+          "model" : "Polo",
+          "yearOfManufacture" : 2020,
+          "zeroTo60" : 4.5
+        },
+        "vehicleClassification" : "M1_Passengers",
+        "vehicleTaxBand" : "ABand"
+      }
+    }
+  }
+}
