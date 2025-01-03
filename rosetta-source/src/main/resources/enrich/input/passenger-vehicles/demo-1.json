@@ -1,4 +1,20 @@
 {
+  "drivingLicence": [
+    {
+      "person": {
+        "firstName": "Joe",
+        "surname": "Bloggs"
+      },
+      "countryOfIssuance": {
+        "value": "GB"
+      },
+      "licenceNumber": "AB12CDE",
+      "dateOfIssuance": "2019-07-01",
+      "dateOfRenewal": "2029-07-01",
+      "vehicleEntitlement": [ "M_1_PASSENGERS", "M_2_PASSENGERS", "M_3_PASSENGERS" ],
+      "penaltyPoints": 3
+    }
+  ],
   "vehicle" : {
     "CombustibleVehicle": {
       "Car": {
@@ -37,11 +53,7 @@
       }
     }
   },
-  "dateOfPurchase": {
-    "year": 2020,
-    "month": 1,
-    "day": 2
-  },
+  "dateOfPurchase": "2020-01-02",
   "isFirstHand": true,
   "vehicleOwnershipRegistrationID": 1
 }

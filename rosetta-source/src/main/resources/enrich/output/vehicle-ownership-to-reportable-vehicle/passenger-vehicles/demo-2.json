@@ -1,4 +1,8 @@
 {
+  "country" : {
+    "value" : "GB"
+  },
+  "licenceNumber" : "FG34HJK",
   "vehicle" : {
     "CombustibleVehicle" : {
       "Car" : {
