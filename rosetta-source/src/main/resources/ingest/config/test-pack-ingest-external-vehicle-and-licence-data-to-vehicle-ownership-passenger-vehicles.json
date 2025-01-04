@@ -5,7 +5,7 @@
   "samples" : [ {
     "id" : "demo-1",
     "name" : "demo 1",
-    "inputPath" : "ingest/input/passenger-vehicles/demo-1.json",
+    "inputPath" : "ingest/input/passenger-vehicles/demo-1.xml",
     "outputPath" : "ingest/output/external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/demo-1.json",
     "assertions" : {
       "modelValidationFailures" : 3,
@@ -14,7 +14,7 @@
   }, {
     "id" : "demo-2",
     "name" : "demo 2",
-    "inputPath" : "ingest/input/passenger-vehicles/demo-2.json",
+    "inputPath" : "ingest/input/passenger-vehicles/demo-2.xml",
     "outputPath" : "ingest/output/external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/demo-2.json",
     "assertions" : {
       "modelValidationFailures" : 3,

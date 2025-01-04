@@ -1,7 +1,7 @@
 namespace demo.emissions.ingestion
 version "${project.version}"
 
-type ExternalVehicleAndLicenceData: <"Representative record of vehicle and licence data">
+type ExternalVehicleAndLicenceData: <"Record of vehicle and licence data in external data format">
     [rootType]
     vehicleData VehicleData (1..1)
     drivingLicenceData DrivingLicenceData (0..*)
@@ -42,7 +42,6 @@ type DrivingLicenceData: <"Representation of vehicle data">
     surname string (0..1) <"The natural person's surname.">
     dateOfBirth date (0..1) <"The person's date of birth.">
     countryOfIssuance string (1..1)
-        [metadata scheme]
     licenceNumber string (1..1)
     dateOfIssuance date (1..1)
     dateOfRenewal date (0..1)
