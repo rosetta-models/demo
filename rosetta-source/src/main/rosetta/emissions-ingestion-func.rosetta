@@ -1,0 +1,200 @@
+namespace demo.emissions.ingestion
+version "${project.version}"
+
+import demo.emissions.model.*
+
+annotation ingest: <"Annotation that describes an ingestion function.">
+
+func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership:
+    [ingest]
+    inputs:
+        vehicleAndLicenceData ExternalVehicleAndLicenceData (1..1)
+    output:
+        vehicleOwnership VehicleOwnership (1..1)
+
+    set vehicleOwnership:
+        VehicleOwnership {
+            drivingLicence: Create_DrivingLicences(vehicleAndLicenceData -> drivingLicenceData),
+            vehicle: Create_Vehicle(vehicleAndLicenceData -> vehicleData),
+            dateOfPurchase: vehicleAndLicenceData -> vehicleData -> dateOfPurchase,
+            isFirstHand: vehicleAndLicenceData -> vehicleData -> isFirstHand,
+            vehicleOwnershipRegistrationID: vehicleAndLicenceData -> vehicleData -> vehicleOwnershipRegistrationID,
+        }
+
+func Create_DrivingLicences:
+    inputs:
+        drivingLicenceData DrivingLicenceData (0..*)
+    output:
+        drivingLicences DrivingLicence (0..*)
+
+    add drivingLicences:
+        drivingLicenceData
+            extract DrivingLicence {
+                person: Person {
+                    firstName: item -> firstName,
+                    surname: item -> surname,
+                    dateOfBirth: item -> dateOfBirth,
+                    ...
+                },
+                countryOfIssuance: item -> countryOfIssuance,
+                licenceNumber: item -> licenceNumber,
+                dateOfIssuance: item -> dateOfIssuance,
+                dateOfRenewal: item -> dateOfRenewal,
+                vehicleEntitlement: item -> vehicleEntitlement extract to-enum VehicleClassificationEnum,
+                penaltyPoints: item -> penaltyPoints
+            }
+
+func Create_Vehicle:
+    inputs:
+        vehicleData VehicleData (0..1)
+    output:
+        vehicle Vehicle (0..1)
+
+    set vehicle:
+        if vehicleData -> vehicleType = "CAR" 
+        then 
+            Vehicle {
+                CombustibleVehicle: CombustibleVehicle {
+                    Car: Create_Car(vehicleData),
+                    ...
+                },
+                ...
+            }
+        else if vehicleData -> vehicleType = "ELECTRIC_CAR" 
+        then
+            Vehicle {
+                ElectricCar: Create_ElectricCar(vehicleData),
+                ...
+            }
+        else if vehicleData -> vehicleType = "MOTORCYCLE" 
+        then
+            Vehicle {
+                CombustibleVehicle: CombustibleVehicle {
+                    Motorcycle: Create_Motorcycle(vehicleData),
+                    ...
+                },
+                ...
+            }
+        else if vehicleData -> vehicleType = "BICYCLE" 
+        then
+            Vehicle {
+                Bicycle: Create_Bicycle(vehicleData),
+                ...
+            }
+
+func Create_ElectricCar:
+    inputs:
+        vehicleData VehicleData (0..1)
+    output:
+        electricCar ElectricCar (0..1)
+
+    set electricCar:
+        ElectricCar {
+            colour: vehicleData -> colour to-enum ColourEnum,
+            doorNumber: vehicleData -> doorNumber,
+            specification: Create_Specification(vehicleData),
+            vehicleTaxBand: vehicleData -> vehicleTaxBand to-enum VehicleTaxBandEnum,
+            vehicleClassification: vehicleData -> vehicleClassification to-enum VehicleClassificationEnum,
+            registrationID: vehicleData -> registrationID,
+            batteryCapacity: vehicleData -> batteryCapacity, 
+        }
+
+func Create_Car:
+    inputs:
+        vehicleData VehicleData (0..1)
+    output:
+        car Car (0..1)
+    
+    set car:
+        Car {
+            colour: vehicleData -> colour to-enum ColourEnum,
+            doorNumber: vehicleData -> doorNumber,
+            specification: Create_Specification(vehicleData),
+            vehicleTaxBand: vehicleData -> vehicleTaxBand to-enum VehicleTaxBandEnum,
+            vehicleClassification: vehicleData -> vehicleClassification to-enum VehicleClassificationEnum,
+            registrationID: vehicleData -> registrationID,
+            fuelCapacity: vehicleData -> fuelCapacity,
+            engine: Create_Engine(vehicleData),
+            carType: vehicleData -> carType to-enum CarTypeEnum
+        }
+
+func Create_Motorcycle:
+    inputs:
+        vehicleData VehicleData (0..1)
+    output:
+        motorcycle Motorcycle (0..1)
+        
+    set motorcycle:
+        Motorcycle {
+            colour: vehicleData -> colour to-enum ColourEnum,
+            doorNumber: vehicleData -> doorNumber,
+            specification: Create_Specification(vehicleData),
+            vehicleTaxBand: vehicleData -> vehicleTaxBand to-enum VehicleTaxBandEnum,
+            vehicleClassification: vehicleData -> vehicleClassification to-enum VehicleClassificationEnum,
+            registrationID: vehicleData -> registrationID,
+            fuelCapacity: vehicleData -> fuelCapacity
+        }
+
+ func Create_Bicycle:
+    inputs:
+        vehicleData VehicleData (0..1)
+    output:
+        bicycle Bicycle (0..1)
+              
+    set bicycle:
+        Bicycle {
+            colour: vehicleData -> colour to-enum ColourEnum,
+            doorNumber: vehicleData -> doorNumber,
+            specification: Create_Specification(vehicleData),
+            vehicleTaxBand: vehicleData -> vehicleTaxBand to-enum VehicleTaxBandEnum,
+            vehicleClassification: vehicleData -> vehicleClassification to-enum VehicleClassificationEnum,
+            registrationID: vehicleData -> registrationID,
+            weight: vehicleData -> weight
+        }
+
+func Create_Specification:
+    inputs:
+        vehicleData VehicleData (0..1)
+    output:
+        specification Specification (0..1)
+
+    set specification:
+        Specification {
+            make: vehicleData -> make,
+            model: vehicleData -> model,
+            zeroTo60: vehicleData -> zeroTo60,
+            yearOfManufacture: vehicleData -> yearOfManufacture,
+            chassisNumber: vehicleData -> chassisNumber,
+            dateOfFirstRegistration: vehicleData -> dateOfFirstRegistration,
+        }
+
+func Create_Engine:
+    inputs:
+        vehicleData VehicleData (0..1)
+    output:
+        engine Engine (0..1)
+
+    set engine:
+        Engine {
+            engineType: vehicleData -> engineType to-enum EngineTypeEnum,
+            power: vehicleData -> power,
+            mpg: vehicleData -> mpg,
+            emissionMetrics: Create_EmissionMetrics(vehicleData)
+        }
+
+func Create_EmissionMetrics:
+    inputs:
+        vehicleData VehicleData (0..1)
+    output:
+        emissionMetrics EmissionMetrics (0..1)
+
+    set emissionMetrics:
+        EmissionMetrics {
+            carbonMonoxide: vehicleData -> carbonMonoxide,
+            totalHydrocarbon: vehicleData -> totalHydrocarbon,
+            volatileOrganicCompound: vehicleData -> volatileOrganicCompound,
+            nitrogenOxide: vehicleData -> nitrogenOxide,
+            combineHCNOX: vehicleData -> combineHCNOX,
+            particulateMatter: vehicleData -> particulateMatter,
+            particleNumber: vehicleData -> particleNumber
+        }

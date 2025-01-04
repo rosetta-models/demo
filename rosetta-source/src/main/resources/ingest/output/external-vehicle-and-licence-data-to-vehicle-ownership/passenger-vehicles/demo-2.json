@@ -1,0 +1,52 @@
+{
+  "dateOfPurchase" : "2020-06-02",
+  "drivingLicence" : [ {
+    "countryOfIssuance" : {
+      "value" : "GB"
+    },
+    "dateOfIssuance" : "2018-08-01",
+    "dateOfRenewal" : "2028-08-01",
+    "licenceNumber" : "FG34HJK",
+    "penaltyPoints" : 0,
+    "person" : {
+      "firstName" : "Jane",
+      "surname" : "Doe"
+    },
+    "vehicleEntitlement" : [ "M1_Passengers", "M2_Passengers", "M3_Passengers" ]
+  } ],
+  "isFirstHand" : true,
+  "vehicle" : {
+    "CombustibleVehicle" : {
+      "Car" : {
+        "carType" : "Hatchback",
+        "engine" : {
+          "emissionMetrics" : {
+            "carbonMonoxide" : 2.66,
+            "combineHCNOX" : 0,
+            "nitrogenOxide" : 0,
+            "particleNumber" : 0,
+            "particulateMatter" : 0,
+            "totalHydrocarbon" : 0,
+            "volatileOrganicCompound" : 0
+          },
+          "engineType" : "Petrol",
+          "mpg" : 1,
+          "power" : 1
+        },
+        "fuelCapacity" : 150,
+        "registrationID" : "X1",
+        "specification" : {
+          "chassisNumber" : 0,
+          "dateOfFirstRegistration" : "2020-06-01",
+          "make" : "Volkswagen",
+          "model" : "Golf",
+          "yearOfManufacture" : 2020,
+          "zeroTo60" : 4.5
+        },
+        "vehicleClassification" : "M2_Passengers",
+        "vehicleTaxBand" : "ABand"
+      }
+    }
+  },
+  "vehicleOwnershipRegistrationID" : 1
+}
