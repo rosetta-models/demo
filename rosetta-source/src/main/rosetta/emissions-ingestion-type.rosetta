@@ -1,0 +1,49 @@
+namespace demo.emissions.ingestion
+version "${project.version}"
+
+type VehicleAndLicenceData: <"Representative record of vehicle and licence data">
+    [rootType]
+    drivingLicence DrivingLicenceData (0..*)
+    vehicle VehicleData (1..1)
+    
+type VehicleData: <"Representation of vehicle data">
+    dateOfPurchase date (1..1)
+    isFirstHand boolean (1..1)
+    vehicleOwnershipRegistrationID int (1..1)
+    colour string (0..1)
+    doorNumber int (0..1)
+    make string (0..1)
+    model string (0..1)
+    zeroTo60 number (0..1)
+    yearOfManufacture int (0..1)
+    chassisNumber int (0..1)
+    dateOfFirstRegistration date (0..1)
+    registrationID string (0..1)
+    vehicleTaxBand string (0..1)
+    vehicleClassification string (0..1)
+    engineType string (0..1) <"Type of engine">
+    power number (0..1) <"Break horse power">
+    mpg number (0..1) <"Miles per gallon">
+    carbonMonoxide number (0..1)
+    totalHydrocarbon number (0..1)
+    volatileOrganicCompound number (0..1)
+    nitrogenOxide number (0..1)
+    combineHCNOX number (0..1)
+    particulateMatter number (0..1)
+    particleNumber number (0..1)
+    carType string (0..1)
+    fuelCapacity number (0..1)
+    weight number (0..1)
+    batteryCapacity number (0..1)
+
+type DrivingLicenceData: <"Representation of vehicle data">
+    firstName string (0..1) <"The natural person's first name.">
+    surname string (0..1) <"The natural person's surname.">
+    dateOfBirth date (0..1) <"The person's date of birth.">
+    countryOfIssuance string (1..1)
+        [metadata scheme]
+    licenceNumber string (1..1)
+    dateOfIssuance date (1..1)
+    dateOfRenewal date (0..1)
+    vehicleEntitlement string (0..*)
+    penaltyPoints int (1..1)
