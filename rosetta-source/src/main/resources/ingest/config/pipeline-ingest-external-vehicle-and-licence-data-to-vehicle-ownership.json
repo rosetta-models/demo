@@ -1,0 +1,10 @@
+{
+  "id" : "pipeline-ingest-external-vehicle-and-licence-data-to-vehicle-ownership",
+  "name" : "External Vehicle And Licence Data To Vehicle Ownership",
+  "transform" : {
+    "type" : "TRANSLATE",
+    "function" : "demo.emissions.ingestion.functions.Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership",
+    "inputType" : "demo.emissions.ingestion.ExternalVehicleAndLicenceData",
+    "outputType" : "demo.emissions.model.VehicleOwnership"
+  }
+}

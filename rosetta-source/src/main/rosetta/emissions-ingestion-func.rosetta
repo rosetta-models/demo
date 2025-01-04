@@ -5,20 +5,20 @@ import demo.emissions.model.*
 
 annotation ingest: <"Annotation that describes an ingestion function.">
 
-func Ingest_VehicleAndLicenceDataToVehicleOwnership:
+func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership:
     [ingest]
     inputs:
-        vehicleAndLicenceData VehicleAndLicenceData (1..1)
+        vehicleAndLicenceData ExternalVehicleAndLicenceData (1..1)
     output:
         vehicleOwnership VehicleOwnership (1..1)
 
     set vehicleOwnership:
         VehicleOwnership {
-            drivingLicence: Create_DrivingLicences(vehicleAndLicenceData -> drivingLicence),
-            vehicle: Create_Vehicle(vehicleAndLicenceData -> vehicle),
-            dateOfPurchase: vehicleAndLicenceData -> vehicle -> dateOfPurchase,
-            isFirstHand: vehicleAndLicenceData -> vehicle -> isFirstHand,
-            vehicleOwnershipRegistrationID: vehicleAndLicenceData -> vehicle -> vehicleOwnershipRegistrationID,
+            drivingLicence: Create_DrivingLicences(vehicleAndLicenceData -> drivingLicenceData),
+            vehicle: Create_Vehicle(vehicleAndLicenceData -> vehicleData),
+            dateOfPurchase: vehicleAndLicenceData -> vehicleData -> dateOfPurchase,
+            isFirstHand: vehicleAndLicenceData -> vehicleData -> isFirstHand,
+            vehicleOwnershipRegistrationID: vehicleAndLicenceData -> vehicleData -> vehicleOwnershipRegistrationID,
         }
 
 func Create_DrivingLicences:
@@ -51,14 +51,36 @@ func Create_Vehicle:
         vehicle Vehicle (0..1)
 
     set vehicle:
-        Vehicle {
-            ElectricCar: Create_ElectricCar(vehicleData),
-            CombustibleVehicle: CombustibleVehicle {
-                Car: Create_Car(vehicleData),
-                Motorcycle: Create_Motorcycle(vehicleData)
-            },
-            Bicycle: Create_Bicycle(vehicleData)
-        }
+        if vehicleData -> vehicleType = "CAR" 
+        then 
+            Vehicle {
+                CombustibleVehicle: CombustibleVehicle {
+                    Car: Create_Car(vehicleData),
+                    ...
+                },
+                ...
+            }
+        else if vehicleData -> vehicleType = "ELECTRIC_CAR" 
+        then
+            Vehicle {
+                ElectricCar: Create_ElectricCar(vehicleData),
+                ...
+            }
+        else if vehicleData -> vehicleType = "MOTORCYCLE" 
+        then
+            Vehicle {
+                CombustibleVehicle: CombustibleVehicle {
+                    Motorcycle: Create_Motorcycle(vehicleData),
+                    ...
+                },
+                ...
+            }
+        else if vehicleData -> vehicleType = "BICYCLE" 
+        then
+            Vehicle {
+                Bicycle: Create_Bicycle(vehicleData),
+                ...
+            }
 
 func Create_ElectricCar:
     inputs:

@@ -117,5 +117,6 @@ generators:
       - demo.ingest_synonym.type_inheritance.example_1.Root
       - demo.ingest_synonym.type_inheritance.example_2.Root
     annotations:
-      - projection
+      - ingest
       - enrichment
+      - projection

@@ -6,5 +6,6 @@
     "function" : "demo.emissions.enrichment.functions.Enrich_VehicleOwnershipToReportableVehicle",
     "inputType" : "demo.emissions.model.VehicleOwnership",
     "outputType" : "demo.emissions.regulation.ReportableVehicle"
-  }
+  },
+  "upstreamPipelineId" : "pipeline-ingest-external-vehicle-and-licence-data-to-vehicle-ownership"
 }
