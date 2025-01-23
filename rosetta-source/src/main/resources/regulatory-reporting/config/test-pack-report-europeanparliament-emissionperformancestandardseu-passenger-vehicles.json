@@ -20,5 +20,21 @@
       "modelValidationFailures" : 0,
       "runtimeError" : false
     }
+  }, {
+    "id" : "bug-fix-sample",
+    "name" : "bug-fix-sample",
+    "inputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/bug-fix-sample.json",
+    "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/bug-fix-sample.json",
+    "assertions" : {
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "bug-fix-sample-1",
+    "name" : "bug-fix-sample (1)",
+    "inputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/bug-fix-sample-1.json",
+    "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/bug-fix-sample-1.json",
+    "assertions" : {
+      "runtimeError" : false
+    }
   } ]
 }
