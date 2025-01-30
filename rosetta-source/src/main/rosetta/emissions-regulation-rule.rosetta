@@ -57,42 +57,36 @@ reporting rule VehicleRegistrationID from ReportableVehicle: <"Unique ID for the
     [regulatoryReference EuropeanParliament VehicleRegistrationEU article "1"
         provision "This Directive shall apply to the vehicle registration documents issued by the Member States"]
     extract vehicle ->> registrationID
-        as "Vehicle Registration ID"
 
 reporting rule FirstRegistrationDate from ReportableVehicle: <"Date of first registration of the vehicle">
     [regulatoryReference EuropeanParliament VehicleRegistrationEU article "3" section "4"
         provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
     include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
     extract vehicle ->> specification -> dateOfFirstRegistration
-        as "First Registration Date"
 
 reporting rule VehicleClassificationType from ReportableVehicle: <"Classification type of the vehicle">
     [regulatoryReference EuropeanParliament VehicleRegistrationEU article "3" section "4"
         provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
     include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
     extract vehicle ->> vehicleClassification
-        as "Vehicle Classification Type"
 
 reporting rule EngineType from ReportableVehicle: <"Engine type of the vehicle">
     [regulatoryReference EuropeanParliament VehicleRegistrationEU article "3" section "4"
         provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
     include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
     extract Engine -> engineType
-        as "Engine Type"
 
 reporting rule CarbonMonoxide from ReportableVehicle: <"Carbon Monoxyde (CO) reported under emission metrics for the type of engine">
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 article "1"
         provision "In Article 3, the following paragraphs are added: 4. Member States shall record electronically data on all vehicles registered on their territory. Those data shall 
     include: (a) all mandatory elements in accordance with point II.5 of Annex I as well as the elements of points II.6(J) and II.6(V.7) and (V.9) of that Annex, where the data are available"]
     extract Engine -> emissionMetrics -> carbonMonoxide
-        as "Carbon Monoxide"
 
 //Utility Rules - Euro standards
 reporting rule Engine from ReportableVehicle: <"A utility to extract the engine data from vehicle ownership data">
     vehicle switch
         Car then engine,
         default empty
-            as "Engine"
 
 reporting rule EuroEmissionStandard from ReportableVehicle:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 article "1"
@@ -106,7 +100,6 @@ reporting rule EuroEmissionStandard from ReportableVehicle:
         Euro6Standard
     ])
     then last
-        as "Emission Standards"
 
 reporting rule Euro6Standard from ReportableVehicle:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 annex "1" table "2"

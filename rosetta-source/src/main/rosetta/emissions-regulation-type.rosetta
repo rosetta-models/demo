@@ -11,15 +11,21 @@ type ReportableVehicle:
 
 type EuropeanParliamentReport:
     vehicleRegistrationID string (1..1)
+        [label as "Vehicle Registration ID"]
         [ruleReference VehicleRegistrationID]
     firstRegistrationDate date (1..1)
+        [label as "First Registration Date"]
         [ruleReference FirstRegistrationDate]
     vehicleClassificationType VehicleClassificationEnum (1..1)
+        [label as "Vehicle Classification Type"]
         [ruleReference VehicleClassificationType]
     engineType EngineTypeEnum (1..1)
+        [label as "Engine Type"]
         [ruleReference EngineType]
     euroEmissionStandard EuroEmissionStandardEnum (1..1)
+        [label as "Emission Standards"]
         [ruleReference EuroEmissionStandard]
     carbonMonoxide number (1..1)
+        [label as "Carbon Monoxide"]
         [ruleReference CarbonMonoxide]
 
