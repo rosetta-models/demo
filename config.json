@@ -6,7 +6,7 @@
   "permissions": [],
   "versionLimits": [
     {
-      "lowestVersion": "0.49.0",
+      "lowestVersion": "0.50.0",
       "upmostVersion": "0.50.999"
     }
   ],
