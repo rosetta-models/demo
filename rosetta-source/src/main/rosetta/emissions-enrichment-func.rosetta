@@ -6,6 +6,8 @@ import demo.emissions.regulation.*
 
 annotation enrichment: <"Annotation that describes an enrichment function.">
 
+//test
+
 func Enrich_VehicleOwnershipToReportableVehicle:
     [enrichment]
     inputs:
