@@ -10,6 +10,8 @@ import demo.emissions.regulation.*
 
 // another one
 
+/// noano
+
 annotation enrichment: <"Annotation that describes an enrichment function.">
 
 func Enrich_VehicleOwnershipToReportableVehicle:
