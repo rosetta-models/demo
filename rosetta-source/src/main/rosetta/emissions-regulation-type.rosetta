@@ -8,7 +8,7 @@ type ReportableVehicle:
     country string (1..1)
         [metadata scheme]
     licenceNumber AlphaNumericText (1..1)
-
+//test
 type EuropeanParliamentReport:
     vehicleRegistrationID string (1..1)
         [label as "Vehicle Registration ID"]
