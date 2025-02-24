@@ -1,0 +1,14 @@
+{
+  "id" : "test-pack-projection-european-parliament-report-to-iso-emissions-report-new-test-pack",
+  "pipelineId" : "pipeline-projection-european-parliament-report-to-iso-emissions-report",
+  "name" : "new test pack",
+  "samples" : [ {
+    "id" : "sample-on-server-2",
+    "name" : "sample on server 2",
+    "inputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/new-test-pack/sample-on-server-2.json",
+    "outputPath" : "projection/output/europeanparliament-emissionperformancestandardseu/new-test-pack/sample-on-server-2.xml",
+    "assertions" : {
+      "runtimeError" : false
+    }
+  } ]
+}

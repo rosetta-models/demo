@@ -1,0 +1,14 @@
+{
+  "id" : "test-pack-report-europeanparliament-emissionperformancestandardseu-new-test-pack",
+  "pipelineId" : "pipeline-report-europeanparliament-emissionperformancestandardseu",
+  "name" : "new test pack",
+  "samples" : [ {
+    "id" : "sample-on-server-2",
+    "name" : "sample on server 2",
+    "inputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/new-test-pack/sample-on-server-2.json",
+    "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/new-test-pack/sample-on-server-2.json",
+    "assertions" : {
+      "runtimeError" : false
+    }
+  } ]
+}

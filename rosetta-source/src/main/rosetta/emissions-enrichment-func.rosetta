@@ -1,6 +1,6 @@
 namespace demo.emissions.enrichment
 version "${project.version}"
-
+//
 import demo.emissions.model.*
 import demo.emissions.regulation.*
 
