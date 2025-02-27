@@ -5,6 +5,7 @@ import demo.emissions.model.*
 import demo.emissions.regulation.*
 
 // Test contribute
+// Test update contribution
 annotation enrichment: <"Annotation that describes an enrichment function.">
 
 func Enrich_VehicleOwnershipToReportableVehicle:
