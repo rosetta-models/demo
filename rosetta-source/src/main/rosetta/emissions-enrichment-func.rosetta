@@ -8,6 +8,8 @@ annotation enrichment: <"Annotation that describes an enrichment function.">
 //hi
 
 // another
+
+//
 func Enrich_VehicleOwnershipToReportableVehicle:
     [enrichment]
     inputs:
