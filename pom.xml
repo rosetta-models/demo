@@ -15,7 +15,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>21</java.version>
+        <java.version>11</java.version>
+        <maven.compiler.release>11</maven.compiler.release>
 
         <rosetta.dsl.version>9.32.2</rosetta.dsl.version>
         <rosetta.bundle.version>11.38.1</rosetta.bundle.version>
