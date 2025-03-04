@@ -35,7 +35,7 @@ steps:
   Build:
     title: Maven build
     fail_fast: false
-    image: openjdk:21-jdk
+    image: maven:3.9.8-eclipse-temurin-21
     working_directory: ./
     commands:
       - echo "${{ARTIFACT_REGISTRY_SA_KEY}}"|base64 -d>"${{CF_VOLUME_PATH}}"/sa
