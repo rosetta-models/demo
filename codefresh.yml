@@ -40,8 +40,8 @@ steps:
     commands:
       - echo "${{ARTIFACT_REGISTRY_SA_KEY}}"|base64 -d>"${{CF_VOLUME_PATH}}"/sa
       - export GOOGLE_APPLICATION_CREDENTIALS="${{CF_VOLUME_PATH}}"/sa
-      - mvn -s settings.xml versions:set -DnewVersion=${{RELEASE_NAME}}
-      - mvn -s settings.xml -U clean deploy
+      - mvn versions:set -DnewVersion=${{RELEASE_NAME}}
+      - mvn -U clean deploy
 
   NotifySlackOnFail:
     title: Trigger Slack dev channel notification if master build failed
