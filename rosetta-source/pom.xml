@@ -35,6 +35,12 @@
             <artifactId>rosetta-testing</artifactId>
             <version>${rosetta.bundle.version}</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>ch.qos.reload4j</groupId>
+                    <artifactId>reload4j</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
