@@ -4,7 +4,7 @@ version "${project.version}"
 import demo.emissions.model.*
 import demo.emissions.regulation.*
 
-annotation enrichment: <"Annotation that describes an enrichment function1.">
+annotation enrichment: <"Annotation that describes an enrichment function12.">
 
 func Enrich_VehicleOwnershipToReportableVehicle:
     [enrichment]
