@@ -1,5 +1,6 @@
 namespace demo.emissions.model
 version "${project.version}"
+//test branch name fix after changes applied 
 
 func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
     inputs:
