@@ -18,7 +18,7 @@ func Enrich_VehicleOwnershipToReportableVehicle:
 
     set reportableVehicle:
         ReportableVehicle {
-            vehicle: vehicleOwnership -> vehicle,
+            vehicle: empty,
             country: drivingLicence -> countryOfIssuance,
             licenceNumber: drivingLicence -> licenceNumber
         }
