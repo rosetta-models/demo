@@ -1,5 +1,0 @@
-namespace demo.akash.rocks
-version "${project.version}"
-
-
-// please delete me
