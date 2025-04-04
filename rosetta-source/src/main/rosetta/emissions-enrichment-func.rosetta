@@ -8,6 +8,7 @@ annotation enrichment: <"Annotation that describes an enrichment function.">
 
 // test
 
+// new commit
 func Enrich_VehicleOwnershipToReportableVehicle:
     [enrichment]
     inputs:
