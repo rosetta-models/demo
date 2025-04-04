@@ -1,6 +1,8 @@
 namespace demo.emissions.regulation
 version "${project.version}"
 
+// test
+
 enum EuroEmissionStandardEnum: <"Euro Emission Standards">
     Euro1 
     Euro2

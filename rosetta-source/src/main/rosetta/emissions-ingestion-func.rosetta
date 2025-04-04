@@ -3,7 +3,7 @@ version "${project.version}"
 
 import demo.emissions.model.*
 
-annotation ingest: <"Annotation that describes an ingestion function.">
+annotation ingest: <"Annotation that describes an ingestion function. Test.">
 
 func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership:
     [ingest]
