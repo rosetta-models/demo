@@ -15,10 +15,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>11</java.version>
+        <maven.compiler.release>11</maven.compiler.release>
 
-        <rosetta.dsl.version>9.32.2</rosetta.dsl.version>
-        <rosetta.bundle.version>11.38.1</rosetta.bundle.version>
+        <rosetta.dsl.version>9.45.2</rosetta.dsl.version>
+        <rosetta.bundle.version>11.56.3</rosetta.bundle.version>
 
         <xtext.version>2.27.0</xtext.version>
         <guava.version>32.0.1-jre</guava.version>
@@ -98,10 +98,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
