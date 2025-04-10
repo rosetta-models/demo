@@ -34,9 +34,8 @@ class EmissionsProjectionTest {
     @MethodSource("inputFiles")
     void runTest(String testName,
                  String testPackId,
-                 TestPackModel.SampleModel sampleModel,
-                 Project_EuropeanParliamentReportToIsoEmissionsReport func) {
-        testExtension.runTransformAndAssert(testPackId, sampleModel, func::evaluate);
+                 TestPackModel.SampleModel sampleModel) {
+        testExtension.runTransformAndAssert(testPackId, sampleModel);
     }
 
     @SuppressWarnings("unused")//used by the junit parameterized test
