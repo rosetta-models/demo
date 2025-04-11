@@ -1,6 +1,8 @@
 namespace demo.emissions.ingestion
 version "${project.version}"
 
+// test
+
 import demo.emissions.model.*
 
 annotation ingest: <"Annotation that describes an ingestion function.">
