@@ -9,6 +9,7 @@ annotation enrichment: <"Annotation that describes an enrichment function.">
 // test
 // contribute
 // commit 3
+// change before upgrade
 
 func Enrich_VehicleOwnershipToReportableVehicle:
     [enrichment]
