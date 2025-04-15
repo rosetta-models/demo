@@ -6,6 +6,10 @@ import demo.emissions.regulation.*
 
 annotation enrichment: <"Annotation that describes an enrichment function.">
 
+// test
+// contribute
+// commit 3
+
 func Enrich_VehicleOwnershipToReportableVehicle:
     [enrichment]
     inputs:
