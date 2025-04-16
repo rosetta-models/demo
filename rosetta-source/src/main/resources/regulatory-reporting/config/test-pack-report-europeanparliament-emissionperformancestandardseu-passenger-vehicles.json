@@ -20,14 +20,5 @@
       "modelValidationFailures" : 0,
       "runtimeError" : false
     }
-  }, {
-    "id" : "new-sample-test",
-    "name" : "New sample test",
-    "inputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/new-sample-test.json",
-    "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/new-sample-test.json",
-    "assertions" : {
-      "schemaValidationFailure" : false,
-      "runtimeError" : false
-    }
   } ]
 }

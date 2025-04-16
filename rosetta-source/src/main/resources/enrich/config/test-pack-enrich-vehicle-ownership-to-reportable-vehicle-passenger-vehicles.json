@@ -20,14 +20,5 @@
       "modelValidationFailures" : 3,
       "runtimeError" : false
     }
-  }, {
-    "id" : "new-sample-test",
-    "name" : "New sample test",
-    "inputPath" : "enrich/input/passenger-vehicles/new-sample-test.json",
-    "outputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/new-sample-test.json",
-    "assertions" : {
-      "schemaValidationFailure" : false,
-      "runtimeError" : false
-    }
   } ]
 }
