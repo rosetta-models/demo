@@ -1,0 +1,39 @@
+{
+  "vehicle" : {
+    "CombustibleVehicle" : {
+      "Car" : {
+        "specification" : {
+          "make" : "Volkswagen",
+          "model" : "Golf",
+          "zeroTo60" : 4.5,
+          "yearOfManufacture" : 2020,
+          "chassisNumber" : 0,
+          "dateOfFirstRegistration" : "2020-06-01"
+        },
+        "registrationID" : "X1",
+        "vehicleTaxBand" : "ABand",
+        "vehicleClassification" : "M2_Passengers",
+        "fuelCapacity" : 150,
+        "engine" : {
+          "engineType" : "Petrol",
+          "power" : 1,
+          "mpg" : 1,
+          "emissionMetrics" : {
+            "carbonMonoxide" : 2.66,
+            "totalHydrocarbon" : 0,
+            "volatileOrganicCompound" : 0,
+            "nitrogenOxide" : 0,
+            "combineHCNOX" : 0,
+            "particulateMatter" : 0,
+            "particleNumber" : 0
+          }
+        },
+        "carType" : "Hatchback"
+      }
+    }
+  },
+  "country" : {
+    "value" : "GB"
+  },
+  "licenceNumber" : "FG34HJK"
+}
