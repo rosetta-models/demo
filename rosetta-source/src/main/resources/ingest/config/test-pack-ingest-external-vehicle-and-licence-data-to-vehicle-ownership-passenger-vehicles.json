@@ -20,5 +20,14 @@
       "modelValidationFailures" : 3,
       "runtimeError" : false
     }
+  }, {
+    "id" : "new-sample-test",
+    "name" : "New sample test",
+    "inputPath" : "ingest/input/passenger-vehicles/new-sample-test.xml",
+    "outputPath" : "ingest/output/external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/new-sample-test.json",
+    "assertions" : {
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
   } ]
 }

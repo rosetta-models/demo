@@ -1,0 +1,14 @@
+<IsoEmissionsReport>
+  <emissionClassification>Euro5</emissionClassification>
+  <registrationData>
+    <id>X2</id>
+    <date>2020-01-01</date>
+  </registrationData>
+  <vehicleData>
+    <classificationType>M1_Passengers</classificationType>
+    <engineType>Petrol</engineType>
+  </vehicleData>
+  <emissionsData>
+    <co>2.70</co>
+  </emissionsData>
+</IsoEmissionsReport>
