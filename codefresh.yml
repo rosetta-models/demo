@@ -21,6 +21,11 @@ steps:
       - >-
         cf_export GITHUB_API_CURL="curl -L  -X POST -H \"Accept: application/vnd.github+json\" -H \"Authorization: Bearer ${{REGNOSYS_OPS_TOKEN}}\""
 
+  MvnSettings:
+    title: Setup Maven settings
+    image: alpine/git
+    commands:
+      - cf_export MVN_CLI_OPT="-Dmaven.repo.local=\"${{CF_VOLUME_PATH}}/${{CF_REPO_NAME}}_m2/repository\""
 
   BranchReleaseName:
     title: Setup RELEASE_NAME variable with branch name
@@ -40,8 +45,8 @@ steps:
     commands:
       - echo "${{ARTIFACT_REGISTRY_SA_KEY}}"|base64 -d>"${{CF_VOLUME_PATH}}"/sa
       - export GOOGLE_APPLICATION_CREDENTIALS="${{CF_VOLUME_PATH}}"/sa
-      - mvn versions:set -DnewVersion=${{RELEASE_NAME}}
-      - mvn -U clean deploy
+      - mvn ${{MVN_CLI_OPT}} versions:set -DnewVersion=${{RELEASE_NAME}}
+      - mvn ${{MVN_CLI_OPT}} clean deploy
 
   NotifySlackOnFail:
     title: Trigger Slack dev channel notification if master build failed
