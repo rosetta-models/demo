@@ -2,12 +2,13 @@
   "name": "DEMO",
   "description": "Demonstration Model",
   "modelPath": "rosetta-source/src/main",
+  "homepage": "README.md",
   "pullRequestTemplatePath": ".github/PULL_REQUEST_TEMPLATE/rosetta_demo.md",
   "permissions": [],
   "versionLimits": [
     {
-      "lowestVersion": "0.51.0",
-      "upmostVersion": "0.51.999"
+      "lowestVersion": "0.53.0",
+      "upmostVersion": "0.53.999"
     }
   ],
   "parentReadOnly": false,
