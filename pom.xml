@@ -18,8 +18,8 @@
         <maven.compiler.release>11</maven.compiler.release>
         <java.enforced.version>[21,22)</java.enforced.version>
 
-        <rosetta.dsl.version>9.50.0</rosetta.dsl.version>
-        <rosetta.bundle.version>11.60.0</rosetta.bundle.version>
+        <rosetta.dsl.version>9.56.0</rosetta.dsl.version>
+        <rosetta.bundle.version>11.67.0</rosetta.bundle.version>
 
         <xtext.version>2.38.0</xtext.version>
         <guava.version>33.3.1-jre</guava.version>
