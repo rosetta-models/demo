@@ -18,8 +18,8 @@
         <maven.compiler.release>11</maven.compiler.release>
         <java.enforced.version>[21,22)</java.enforced.version>
 
-        <rosetta.dsl.version>9.56.0</rosetta.dsl.version>
-        <rosetta.bundle.version>11.67.0</rosetta.bundle.version>
+        <rosetta.dsl.version>9.58.1</rosetta.dsl.version>
+        <rosetta.bundle.version>11.72.6</rosetta.bundle.version>
 
         <xtext.version>2.38.0</xtext.version>
         <guava.version>33.3.1-jre</guava.version>
@@ -55,6 +55,12 @@
                 <groupId>com.regnosys.rosetta</groupId>
                 <artifactId>com.regnosys.rosetta</artifactId>
                 <version>${rosetta.dsl.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.regnosys.rosetta</groupId>
+                        <artifactId>com.regnosys.rosetta.xcore</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.regnosys.rosetta</groupId>
