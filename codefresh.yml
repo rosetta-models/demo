@@ -125,4 +125,4 @@ steps:
           variableDefined: "${{TAG_REPO}} == false"
           skipNextBuild: "${{SKIP_NEXT_BUILD}} == false"
     commands:
-      - codefresh run REGnosys/rosetta-ingest/rosetta-ingest --branch master --detach
+      - codefresh run REGnosys/rosetta-ingest/rosetta-ingest --branch main --detach
