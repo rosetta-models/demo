@@ -55,6 +55,12 @@
                 <groupId>com.regnosys.rosetta</groupId>
                 <artifactId>com.regnosys.rosetta</artifactId>
                 <version>${rosetta.dsl.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.regnosys.rosetta</groupId>
+                        <artifactId>com.regnosys.rosetta.xcore</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.regnosys.rosetta</groupId>
