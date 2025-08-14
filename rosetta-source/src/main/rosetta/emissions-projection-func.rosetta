@@ -3,10 +3,8 @@ version "${project.version}"
 
 import demo.emissions.regulation.*
 
-annotation projection: <"Annotation that describes a projection function.">
-
 func Project_EuropeanParliamentReportToIsoEmissionsReport:
-    [projection]
+    [projection JSON]
     inputs:
         europeanParliamentReport EuropeanParliamentReport (1..1)
     output:

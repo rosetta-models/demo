@@ -1,7 +1,7 @@
 {
-  "id" : "test-pack-ingest-external-vehicle-and-licence-data-to-vehicle-ownership-passenger-vehicles",
-  "pipelineId" : "pipeline-ingest-external-vehicle-and-licence-data-to-vehicle-ownership",
-  "name" : "Passenger Vehicles",
+  "id" : "test-pack-translate-external-vehicle-and-licence-data-to-vehicle-ownership-passenger-vehicles",
+  "pipelineId" : "pipeline-translate-demo-external-vehicle-and-licence-data-to-vehicle-ownership",
+  "name" : "Passenger vehicles",
   "samples" : [ {
     "id" : "demo-1",
     "name" : "demo 1",
