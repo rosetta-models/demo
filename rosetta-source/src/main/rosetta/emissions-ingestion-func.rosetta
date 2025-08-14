@@ -3,10 +3,8 @@ version "${project.version}"
 
 import demo.emissions.model.*
 
-annotation ingest: <"Annotation that describes an ingestion function.">
-
 func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership:
-    [ingest]
+    [ingest XML]
     inputs:
         vehicleAndLicenceData ExternalVehicleAndLicenceData (1..1)
     output:
