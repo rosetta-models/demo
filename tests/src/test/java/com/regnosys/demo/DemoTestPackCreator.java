@@ -30,7 +30,6 @@ public class DemoTestPackCreator {
 
   public static void main(String[] args) {
     try {
-      RosettaStandaloneSetup.doSetup();
       Injector injector = Guice.createInjector(new DemoTestRuntimeModule());
       DemoTestPackCreator creator = injector.getInstance(DemoTestPackCreator.class);
       creator.run(MODEL_ID);
