@@ -1,0 +1,18 @@
+namespace demo.csv.ingestion
+version "${project.version}"
+
+type User:
+    username string (1..1)
+    identifier string (1..1)
+    firstName string (1..1)
+    lastName string (1..1)
+
+type IngestedUser:
+    username string (1..1)
+    identifier string (1..1)
+    ingestedName IngestedName (1..1)
+
+
+type IngestedName:
+    firstName string (1..1)
+    lastName string (1..1)

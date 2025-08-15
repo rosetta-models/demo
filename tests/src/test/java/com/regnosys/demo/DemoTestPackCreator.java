@@ -1,22 +1,23 @@
 package com.regnosys.demo;
 
-import static com.regnosys.testing.pipeline.PipelineFilter.startsWith;
-
 import com.google.common.collect.ImmutableMap;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.regnosys.rosetta.RosettaStandaloneSetup;
 import com.regnosys.rosetta.common.transform.TransformType;
 import com.regnosys.testing.pipeline.PipelineConfigWriter;
 import com.regnosys.testing.pipeline.PipelineTreeConfig;
 import com.rosetta.model.lib.functions.RosettaFunction;
+import demo.csv.ingestion.functions.Ingest_User;
 import demo.emissions.DemoTestRuntimeModule;
 import demo.emissions.ingestion.ExternalVehicleAndLicenceData;
 import demo.emissions.ingestion.functions.Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership;
 import jakarta.inject.Inject;
-import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+
+import static com.regnosys.testing.pipeline.PipelineFilter.startsWith;
 
 public class DemoTestPackCreator {
 
@@ -47,6 +48,10 @@ public class DemoTestPackCreator {
     pipelineConfigWriter.writePipelinesAndTestPacks(
         configure(prefix, "passenger-vehicles",
             Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership.class));
+
+    pipelineConfigWriter.writePipelinesAndTestPacks(
+            configure(prefix, "users", Ingest_User.class)
+    );
   }
 
   private PipelineTreeConfig configure(String modelPrefix, String testPackFilter,

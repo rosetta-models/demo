@@ -1,0 +1,18 @@
+namespace demo.csv.ingestion
+version "${project.version}"
+
+func Ingest_User:
+    [ingest CSV]
+    inputs:
+        user User (1..1)
+    output:
+        ingestedUser IngestedUser (1..1)
+
+    set ingestedUser: IngestedUser {
+        username: user -> username,
+        identifier: user -> identifier,
+        ingestedName: IngestedName {
+            firstName: user -> firstName,
+            lastName: user -> lastName
+        }
+    }

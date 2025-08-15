@@ -1,0 +1,17 @@
+{
+  "id" : "test-pack-translate-user-users",
+  "pipelineId" : "pipeline-translate-demo-user",
+  "name" : "Users",
+  "samples" : [ {
+    "id" : "user-list",
+    "name" : "user list",
+    "inputPath" : "ingest/input/users/user-list.csv",
+    "outputPath" : "ingest/output/user/users/user-list.json",
+    "assertions" : {
+      "inputPathCount" : 4,
+      "outputPathCount" : 3,
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  } ]
+}
