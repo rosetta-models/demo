@@ -5,11 +5,11 @@
   "samples" : [ {
     "id" : "user-list",
     "name" : "user list",
-    "inputPath" : "ingest/input/users/user-list.csv",
-    "outputPath" : "ingest/output/user/users/user-list.json",
+    "inputPath" : "ingest/input/users/user1.csv",
+    "outputPath" : "ingest/output/user/users/user1.json",
     "assertions" : {
       "inputPathCount" : 4,
-      "outputPathCount" : 3,
+      "outputPathCount" : 4,
       "modelValidationFailures" : 0,
       "runtimeError" : false
     }
