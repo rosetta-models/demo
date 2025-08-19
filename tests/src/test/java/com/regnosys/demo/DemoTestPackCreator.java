@@ -1,6 +1,7 @@
 package com.regnosys.demo;
 
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.regnosys.rosetta.common.transform.PipelineModel;
@@ -18,6 +19,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.nio.file.Path;
 
 import static com.regnosys.testing.pipeline.PipelineFilter.startsWith;
 
@@ -33,6 +35,10 @@ public class DemoTestPackCreator {
 
     private static final ImmutableMap<Class<?>, PipelineModel.Serialisation.Format> inputSerialisationFormat = ImmutableMap.<Class<?>, PipelineModel.Serialisation.Format>builder()
             .put(User.class, PipelineModel.Serialisation.Format.CSV)
+            .build();
+
+    private static final ImmutableSet<Path> csvTestPackSourceFiles = ImmutableSet.<Path>builder()
+            .add(Path.of("ingest/input/users/users.csv"))
             .build();
 
     public static void main(String[] args) {
@@ -67,6 +73,7 @@ public class DemoTestPackCreator {
                 .withTestPackIdFilter(startsWith(testPackFilter))
                 .withXmlConfigMap(typeToXmlConfigMap)
                 .withInputSerialisationFormatMap(inputSerialisationFormat)
+                .withCsvTestPackSourceFiles(csvTestPackSourceFiles)
                 .starting(TransformType.TRANSLATE, translateFunction);
     }
 }
