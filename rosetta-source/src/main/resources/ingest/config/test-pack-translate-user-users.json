@@ -3,8 +3,8 @@
   "pipelineId" : "pipeline-translate-demo-user",
   "name" : "Users",
   "samples" : [ {
-    "id" : "user-list",
-    "name" : "user list",
+    "id" : "user1",
+    "name" : "user1",
     "inputPath" : "ingest/input/users/user1.csv",
     "outputPath" : "ingest/output/user/users/user1.json",
     "assertions" : {
