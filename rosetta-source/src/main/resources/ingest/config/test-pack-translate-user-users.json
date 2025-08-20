@@ -1,0 +1,61 @@
+{
+  "id" : "test-pack-translate-user-users",
+  "pipelineId" : "pipeline-translate-demo-user",
+  "name" : "Users",
+  "samples" : [ {
+    "id" : "users_1",
+    "name" : "users_1",
+    "inputPath" : "ingest/input/users/users_1.csv",
+    "outputPath" : "ingest/output/user/users/users_1.json",
+    "assertions" : {
+      "inputPathCount" : 4,
+      "outputPathCount" : 4,
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "users_2",
+    "name" : "users_2",
+    "inputPath" : "ingest/input/users/users_2.csv",
+    "outputPath" : "ingest/output/user/users/users_2.json",
+    "assertions" : {
+      "inputPathCount" : 4,
+      "outputPathCount" : 4,
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "users_3",
+    "name" : "users_3",
+    "inputPath" : "ingest/input/users/users_3.csv",
+    "outputPath" : "ingest/output/user/users/users_3.json",
+    "assertions" : {
+      "inputPathCount" : 4,
+      "outputPathCount" : 4,
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "users_4",
+    "name" : "users_4",
+    "inputPath" : "ingest/input/users/users_4.csv",
+    "outputPath" : "ingest/output/user/users/users_4.json",
+    "assertions" : {
+      "inputPathCount" : 4,
+      "outputPathCount" : 4,
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "users_5",
+    "name" : "users_5",
+    "inputPath" : "ingest/input/users/users_5.csv",
+    "outputPath" : "ingest/output/user/users/users_5.json",
+    "assertions" : {
+      "inputPathCount" : 4,
+      "outputPathCount" : 4,
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  } ]
+}
