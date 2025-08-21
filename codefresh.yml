@@ -40,7 +40,7 @@ steps:
   Build:
     title: Maven build
     fail_fast: false
-    image: maven:3.9.9-eclipse-temurin-21-alpine
+    image: maven:3.9.11-eclipse-temurin-21-alpine
     working_directory: ./
     commands:
       - echo "${{ARTIFACT_REGISTRY_SA_KEY}}"|base64 -d>"${{CF_VOLUME_PATH}}"/sa
