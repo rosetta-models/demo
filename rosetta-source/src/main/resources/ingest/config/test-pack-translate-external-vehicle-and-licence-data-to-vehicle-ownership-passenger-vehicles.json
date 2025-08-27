@@ -1,28 +1,28 @@
 {
   "id" : "test-pack-translate-external-vehicle-and-licence-data-to-vehicle-ownership-passenger-vehicles",
-  "pipelineId" : "pipeline-translate-demo-external-vehicle-and-licence-data-to-vehicle-ownership",
   "name" : "Passenger vehicles",
+  "pipelineId" : "pipeline-translate-demo-external-vehicle-and-licence-data-to-vehicle-ownership",
   "samples" : [ {
+    "assertions" : {
+      "inputPathCount" : 35,
+      "modelValidationFailures" : 3,
+      "outputPathCount" : 34,
+      "runtimeError" : false
+    },
     "id" : "demo-1",
-    "name" : "demo 1",
     "inputPath" : "ingest/input/passenger-vehicles/demo-1.xml",
-    "outputPath" : "ingest/output/external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/demo-1.json",
-    "assertions" : {
-      "inputPathCount" : 35,
-      "outputPathCount" : 34,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
-    }
+    "name" : "demo 1",
+    "outputPath" : "ingest/output/external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/demo-1.json"
   }, {
-    "id" : "demo-2",
-    "name" : "demo 2",
-    "inputPath" : "ingest/input/passenger-vehicles/demo-2.xml",
-    "outputPath" : "ingest/output/external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/demo-2.json",
     "assertions" : {
       "inputPathCount" : 35,
-      "outputPathCount" : 34,
       "modelValidationFailures" : 3,
+      "outputPathCount" : 34,
       "runtimeError" : false
-    }
+    },
+    "id" : "demo-2",
+    "inputPath" : "ingest/input/passenger-vehicles/demo-2.xml",
+    "name" : "demo 2",
+    "outputPath" : "ingest/output/external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/demo-2.json"
   } ]
 }

@@ -57,5 +57,23 @@
       "modelValidationFailures" : 0,
       "runtimeError" : false
     }
+  }, {
+    "id" : "users_1-(copy)",
+    "name" : "users_1 (Copy)",
+    "inputPath" : "ingest/input/users/users_1-(copy).csv",
+    "outputPath" : "ingest/output/demo-user/users/users_1-(copy).json",
+    "assertions" : {
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "uploaded.csv",
+    "name" : "uploaded.csv",
+    "inputPath" : "ingest/input/users/uploaded.csv.csv",
+    "outputPath" : "ingest/output/demo-user/users/uploaded.csv.json",
+    "assertions" : {
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
   } ]
 }
