@@ -11,14 +11,5 @@
       "modelValidationFailures" : 3,
       "runtimeError" : false
     }
-  }, {
-    "id" : "demo-2",
-    "name" : "demo 2",
-    "inputPath" : "ingest/output/external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/demo-2.json",
-    "outputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/demo-2.json",
-    "assertions" : {
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
-    }
   } ]
 }

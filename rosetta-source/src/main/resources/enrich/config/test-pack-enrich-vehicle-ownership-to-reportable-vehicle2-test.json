@@ -1,0 +1,6 @@
+{
+  "id" : "test-pack-enrich-vehicle-ownership-to-reportable-vehicle2-test",
+  "pipelineId" : "pipeline-enrich-vehicle-ownership-to-reportable-vehicle2",
+  "name" : "test",
+  "samples" : [ ]
+}

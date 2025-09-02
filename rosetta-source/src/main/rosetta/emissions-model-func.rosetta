@@ -34,7 +34,7 @@ func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving li
         isExpired boolean (1..1)
 
     set isExpired:
-        drivingLicence -> dateOfRenewal < todayDate
+        drivingLicence -> dateOfRenewal -> year < todayDate -> year
 
 func Check_DieselEngine: <"Function to check whether the engine of the vehicle is of diesel type">
     inputs:

@@ -1,0 +1,10 @@
+{
+  "id" : "pipeline-enrich-new-enrich-func",
+  "name" : "New Enrich Func",
+  "transform" : {
+    "type" : "ENRICH",
+    "function" : "demo.emissions.enrichment.functions.NewEnrichFunc",
+    "inputType" : "demo.emissions.model.VehicleOwnership",
+    "outputType" : "demo.emissions.regulation.ReportableVehicle"
+  }
+}

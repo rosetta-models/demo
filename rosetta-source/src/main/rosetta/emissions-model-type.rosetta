@@ -7,6 +7,10 @@ typeAlias PositiveInteger: <"Positive integer">
 typeAlias AlphaNumericText: <"Text containing letters and numbers only (i.e. no special characters), and with a minimum length of 1.">
     string(minLength: 1, pattern: "[a-zA-Z0-9]{1,4}")
 
+type MyType extends VehicleBase:
+    override colour ColourEnum (1..1)
+    att1 string (1..1)
+
 type VehicleOwnership: <"Representative record of vehicle ownership">
     [rootType]
     drivingLicence DrivingLicence (0..*)

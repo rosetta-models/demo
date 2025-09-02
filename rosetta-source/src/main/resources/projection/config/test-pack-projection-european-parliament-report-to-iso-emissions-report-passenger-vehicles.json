@@ -3,21 +3,39 @@
   "pipelineId" : "pipeline-projection-european-parliament-report-to-iso-emissions-report",
   "name" : "Passenger Vehicles",
   "samples" : [ {
-    "id" : "demo-1",
-    "name" : "demo 1",
-    "inputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-1.json",
-    "outputPath" : "projection/output/european-parliament-report-to-iso-emissions-report/passenger-vehicles/demo-1.xml",
+    "id" : "demo-1-input",
+    "name" : "demo-1-input",
+    "inputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-1-input.json",
+    "outputPath" : "projection/output/european-parliament-report-to-iso-emissions-report/passenger-vehicles/demo-1-input.xml",
     "assertions" : {
-      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
       "runtimeError" : false
     }
   }, {
-    "id" : "demo-2",
-    "name" : "demo 2",
-    "inputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-2.json",
-    "outputPath" : "projection/output/european-parliament-report-to-iso-emissions-report/passenger-vehicles/demo-2.xml",
+    "id" : "new-sample-(1)",
+    "name" : "New Sample (1)",
+    "inputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/new-sample-(1).json",
+    "outputPath" : "projection/output/european-parliament-report-to-iso-emissions-report/passenger-vehicles/new-sample-(1).xml",
     "assertions" : {
-      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "new-sample-(2)",
+    "name" : "New Sample (2)",
+    "inputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/new-sample-(2).json",
+    "outputPath" : "projection/output/european-parliament-report-to-iso-emissions-report/passenger-vehicles/new-sample-(2).xml",
+    "assertions" : {
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "new-sample",
+    "name" : "New Sample",
+    "inputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/new-sample.json",
+    "outputPath" : "projection/output/european-parliament-report-to-iso-emissions-report/passenger-vehicles/new-sample.xml",
+    "assertions" : {
+      "schemaValidationFailure" : false,
       "runtimeError" : false
     }
   } ]

@@ -1,0 +1,6 @@
+{
+  "id" : "test-pack-enrich-new-enrich-func-new-test-pack-in-new-enrich-func",
+  "pipelineId" : "pipeline-enrich-new-enrich-func",
+  "name" : "new test pack in new enrich func",
+  "samples" : [ ]
+}

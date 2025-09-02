@@ -3,21 +3,39 @@
   "pipelineId" : "pipeline-report-europeanparliament-emissionperformancestandardseu",
   "name" : "Passenger Vehicles",
   "samples" : [ {
-    "id" : "demo-1",
-    "name" : "demo 1",
-    "inputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/demo-1.json",
-    "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-1.json",
+    "id" : "demo-1-input",
+    "name" : "demo-1-input",
+    "inputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/demo-1-input.json",
+    "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-1-input.json",
     "assertions" : {
-      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
       "runtimeError" : false
     }
   }, {
-    "id" : "demo-2",
-    "name" : "demo 2",
-    "inputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/demo-2.json",
-    "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-2.json",
+    "id" : "new-sample-1",
+    "name" : "New Sample (1)",
+    "inputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/new-sample-1.json",
+    "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/new-sample-1.json",
     "assertions" : {
-      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "new-sample-2",
+    "name" : "New Sample (2)",
+    "inputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/new-sample-2.json",
+    "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/new-sample-2.json",
+    "assertions" : {
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "new-sample",
+    "name" : "New Sample",
+    "inputPath" : "enrich/output/vehicle-ownership-to-reportable-vehicle/passenger-vehicles/new-sample.json",
+    "outputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/new-sample.json",
+    "assertions" : {
+      "schemaValidationFailure" : false,
       "runtimeError" : false
     }
   } ]

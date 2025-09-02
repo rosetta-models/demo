@@ -22,3 +22,20 @@ func Enrich_VehicleOwnershipToReportableVehicle:
             country: drivingLicence -> countryOfIssuance,
             licenceNumber: drivingLicence -> licenceNumber
         }
+
+func NewEnrichFunc:
+    [enrichment]
+    inputs:
+        vehicleOwnership VehicleOwnership (1..1)
+    output:
+        reportableVehicle ReportableVehicle (1..1)
+
+    alias drivingLicence:
+        vehicleOwnership -> drivingLicence first
+
+    set reportableVehicle:
+        ReportableVehicle {
+            vehicle: vehicleOwnership -> vehicle,
+            country: drivingLicence -> countryOfIssuance,
+            licenceNumber: drivingLicence -> licenceNumber
+        }
