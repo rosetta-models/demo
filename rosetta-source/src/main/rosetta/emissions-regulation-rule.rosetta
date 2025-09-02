@@ -198,7 +198,7 @@ reporting rule IsRegisteredAfterEuro2StandardDate from Vehicle:
 
 reporting rule Euro1Standard from ReportableVehicle:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro1 annex "1" section "8"
-        provision "Amendments to the Annexes to Directive 70/220/EEC Item 5.3.1.4: The table is replaced by the following-contr1:"]
+        provision "Amendments to the Annexes to Directive 70/220/EEC Item 5.3.1.4: The table is replaced by the following:"]
     extract vehicle
         then filter
             (item ->> vehicleClassification = M1_Passengers

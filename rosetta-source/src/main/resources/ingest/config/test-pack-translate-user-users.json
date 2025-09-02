@@ -57,5 +57,14 @@
       "modelValidationFailures" : 0,
       "runtimeError" : false
     }
+  }, {
+    "id" : "my_user",
+    "name" : "my_user",
+    "inputPath" : "ingest/input/users/my_user.csv",
+    "outputPath" : "ingest/output/demo-user/users/my_user.json",
+    "assertions" : {
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
   } ]
 }
