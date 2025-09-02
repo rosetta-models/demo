@@ -24,5 +24,14 @@
       "modelValidationFailures" : 3,
       "runtimeError" : false
     }
+  }, {
+    "id" : "demo-1-(copy)",
+    "name" : "demo 1 (Copy)",
+    "inputPath" : "ingest/input/passenger-vehicles/demo-1-(copy).xml",
+    "outputPath" : "ingest/output/external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/demo-1-(copy).json",
+    "assertions" : {
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
   } ]
 }

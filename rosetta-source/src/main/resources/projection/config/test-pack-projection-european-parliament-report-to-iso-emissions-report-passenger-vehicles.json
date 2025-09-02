@@ -20,5 +20,14 @@
       "modelValidationFailures" : 0,
       "runtimeError" : false
     }
+  }, {
+    "id" : "demo-1-(copy)",
+    "name" : "demo 1 (Copy)",
+    "inputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-1-(copy).json",
+    "outputPath" : "projection/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-1-(copy).xml",
+    "assertions" : {
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
   } ]
 }
