@@ -1,0 +1,18 @@
+{
+  "id" : "test-pack-translate-external-vehicle-and-licence-data-to-vehicle-ownership2-new-ingest-test-pack",
+  "pipelineId" : "pipeline-translate-external-vehicle-and-licence-data-to-vehicle-ownership2",
+  "name" : "new ingest test pack",
+  "samples" : [ {
+    "id" : "new-ingest-sample",
+    "name" : "New ingest Sample",
+    "inputPath" : "ingest/input/new-ingest-test-pack/new-ingest-sample.xml",
+    "outputPath" : "ingest/output/ingest_externalvehicleandlicencedatatovehicleownership2/new-ingest-test-pack/new-ingest-sample.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
+  } ]
+}

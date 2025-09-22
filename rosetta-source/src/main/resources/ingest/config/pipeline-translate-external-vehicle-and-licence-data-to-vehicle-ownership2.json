@@ -1,0 +1,16 @@
+{
+  "id" : "pipeline-translate-external-vehicle-and-licence-data-to-vehicle-ownership2",
+  "name" : "Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership2",
+  "transform" : {
+    "type" : "TRANSLATE",
+    "function" : "demo.emissions.ingestion.functions.Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership2",
+    "inputType" : "demo.emissions.ingestion.ExternalVehicleAndLicenceData",
+    "outputType" : "demo.emissions.model.VehicleOwnership"
+  },
+  "inputSerialisation" : {
+    "format" : "XML"
+  },
+  "outputSerialisation" : {
+    "format" : "JSON"
+  }
+}

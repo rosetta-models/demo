@@ -21,6 +21,23 @@ func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership:
             vehicleOwnershipRegistrationID: vehicleAndLicenceData -> vehicleData -> vehicleOwnershipRegistrationID,
         }
 
+func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership2:
+    [ingest]
+    inputs:
+        vehicleAndLicenceData ExternalVehicleAndLicenceData (1..1)
+    output:
+        vehicleOwnership VehicleOwnership (1..1)
+
+    set vehicleOwnership:
+        VehicleOwnership {
+            drivingLicence: Create_DrivingLicences(vehicleAndLicenceData -> drivingLicenceData),
+            vehicle: Create_Vehicle(vehicleAndLicenceData -> vehicleData),
+            dateOfPurchase: vehicleAndLicenceData -> vehicleData -> dateOfPurchase,
+            isFirstHand: vehicleAndLicenceData -> vehicleData -> isFirstHand,
+            vehicleOwnershipRegistrationID: vehicleAndLicenceData -> vehicleData -> vehicleOwnershipRegistrationID,
+        }
+
+
 func Create_DrivingLicences:
     inputs:
         drivingLicenceData DrivingLicenceData (0..*)

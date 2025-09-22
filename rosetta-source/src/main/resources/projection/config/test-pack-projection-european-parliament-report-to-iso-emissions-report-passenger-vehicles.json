@@ -20,5 +20,17 @@
       "modelValidationFailures" : 0,
       "runtimeError" : false
     }
+  }, {
+    "id" : "new-ingest-sample",
+    "name" : "new ingest sample",
+    "inputPath" : "regulatory-reporting/output/europeanparliament-emissionperformancestandardseu/passenger-vehicles/new-ingest-sample.json",
+    "outputPath" : "projection/output/european-parliament-report-to-iso-emissions-report/passenger-vehicles/new-ingest-sample.xml",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
   } ]
 }
