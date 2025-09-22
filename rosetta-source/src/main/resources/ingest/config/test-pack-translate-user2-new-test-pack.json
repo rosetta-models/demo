@@ -1,0 +1,18 @@
+{
+  "id" : "test-pack-translate-user2-new-test-pack",
+  "pipelineId" : "pipeline-translate-user2",
+  "name" : "new test pack",
+  "samples" : [ {
+    "id" : "new-sample",
+    "name" : "New Sample",
+    "inputPath" : "ingest/input/new-test-pack/new-sample.csv",
+    "outputPath" : "ingest/output/user2/new-test-pack/new-sample.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
+  } ]
+}
