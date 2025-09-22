@@ -4,7 +4,7 @@ version "${project.version}"
 import demo.emissions.regulation.*
 
 func Project_EuropeanParliamentReportToIsoEmissionsReport:
-    [projection JSON]
+    [projection XML]
     inputs:
         europeanParliamentReport EuropeanParliamentReport (1..1)
     output:
