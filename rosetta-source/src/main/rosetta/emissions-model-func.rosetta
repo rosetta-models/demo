@@ -33,8 +33,7 @@ func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving li
     output:
         isExpired boolean (1..1)
 
-    set isExpired:
-        drivingLicence -> dateOfRenewal < todayDate
+    set isExpired: drivingLicence -> dateOfRenewal < todayDate
 
 func Check_DieselEngine: <"Function to check whether the engine of the vehicle is of diesel type">
     inputs:
@@ -42,8 +41,7 @@ func Check_DieselEngine: <"Function to check whether the engine of the vehicle i
     output:
         isEngineTypeDiesel boolean (1..1)
 
-    set isEngineTypeDiesel:
-        engine -> engineType = EngineTypeEnum -> Diesel
+    set isEngineTypeDiesel: engine -> engineType = EngineTypeEnum -> Diesel
 
 func Check_YearOfManufacture: <"Function to check whether the year of manufacture of the vehicle is older than a year cut">
     inputs:
@@ -52,8 +50,7 @@ func Check_YearOfManufacture: <"Function to check whether the year of manufactur
     output:
         isOlderThanYearCut boolean (1..1)
 
-    set isOlderThanYearCut:
-        specification -> yearOfManufacture < yearCut
+    set isOlderThanYearCut: specification -> yearOfManufacture < yearCut
 
 func FindVehiclesByEngineType: <"Find all vehicles with given engine type.">
     inputs:
@@ -73,8 +70,7 @@ func FindDriversWithMaximumZeroTo60: <"Find all vehicles with given maximum 0 - 
         vehiclesWithMaximumZeroTo60 Vehicle (0..*)
 
     add vehiclesWithMaximumZeroTo60: <"Each list 'item' can have a name specified.">
-        vehicles
-            filter vehicle [ vehicle ->> specification -> zeroTo60 < zeroTo60 ]
+        vehicles filter vehicle [ vehicle ->> specification -> zeroTo60 < zeroTo60 ]
 
 func FindCarsWithinEmissionLimits: <"Find all vehicles within given emissions metrics.">
     inputs:
@@ -137,9 +133,9 @@ func GetAllDrivingLicencesFromInternationalOwners: <"Get list of driving licence
         owners
             // map each owner item into a list of driving licences
             extract drivingLicence // each item is now a list of driving licences
-            // filter to include only items which contain more than one driving licence
+                    // filter to include only items which contain more than one driving licence
             then filter count > 1 // each item is still a list of driving licences
-            // flatten list so output is a "flat" list of driving licences (rather that a list where each item is a list of driving licences)
+                    // flatten list so output is a "flat" list of driving licences (rather that a list where each item is a list of driving licences)
             then flatten
 
 func GetDrivingLicence: <"Find driving licence for the given licence number.">
@@ -166,7 +162,7 @@ func AddDrivingLicenceToVehicleOwnership: <"Add new driving licence to vehicle o
     add updatedVehicleOwnership -> drivingLicence: <"Add newDrivingLicence to existing list of driving licences">
         newDrivingLicence
 
-func RenewAllDrivingLicences: <"Renew all vehicle owner's driving licences.">
+func RenewAllDrivingLicencesForOwner: <"Renew all vehicle owner's driving licences.">
     inputs:
         vehicleOwnership VehicleOwnership (1..1)
         newDateOfRenewal date (1..1)
@@ -177,7 +173,20 @@ func RenewAllDrivingLicences: <"Renew all vehicle owner's driving licences.">
 
     set updatedVehicleOwnership -> drivingLicence: <"Overwrite existing driving licences with renewed driving licences.">
         vehicleOwnership -> drivingLicence
-            extract RenewDrivingLicence(item, newDateOfRenewal)
+            //then without extract means that item is a list of driving licenses
+            then RenewAllDrivingLicences(item, newDateOfRenewal)
+
+func RenewAllDrivingLicences: <"Create new driving licences with new date of renewal.">
+    inputs:
+        drivingLicences DrivingLicence (1..*)
+        newDateOfRenewal date (1..1)
+    output:
+        renewedDrivingLicences DrivingLicence (1..*)
+
+    add renewedDrivingLicences:
+        drivingLicences 
+            //then with extract will pass driving licenses one by one to item
+            then extract RenewDrivingLicence(item, newDateOfRenewal)
 
 func RenewDrivingLicence: <"Create new driving licence with new date of renewal.">
     inputs:
@@ -263,4 +272,4 @@ func ComputeMileage: <"Estimates the mileage in kilometres of a given vehicle.">
             ElectricCar        then 5 * batteryCapacity, // assume 5 kilometres per kWh of battery
             Car                then 15 * fuelCapacity,   // assume 15 kilometres per litre of fuel
             CombustibleVehicle then 80,                  // for any other combustible vehicle, assume a mileage of 80 kilometres
-            Bicycle            then 30                   // assume a mileage of 30 kilometres for a bicycle
+            Bicycle            then 30 // assume a mileage of 30 kilometres for a bicycle
