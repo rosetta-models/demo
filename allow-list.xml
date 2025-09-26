@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+    <!--
+    This is an empty suppression file for the dependency-check/Dependency-Check_Action@main GitHub Action.
+
+    To suppress specific CVE findings, add suppression entries like:
+
+    <suppress>
+        <notes><![CDATA[
+        Reason for suppression goes here
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/group\.id/artifact\-id@.*$</packageUrl>
+        <cve>CVE-YYYY-NNNN</cve>
+    </suppress>
+
+    Or suppress by CWE:
+
+    <suppress>
+        <notes><![CDATA[
+        Reason for suppression goes here
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/group\.id/artifact\-id@.*$</packageUrl>
+        <cwe>79</cwe>
+    </suppress>
+
+    For more information on suppression file format, see:
+    https://jeremylong.github.io/DependencyCheck/general/suppression.html
+    -->
+</suppressions>
