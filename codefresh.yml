@@ -111,18 +111,3 @@ steps:
           "tag_name": "${{RELEASE_NAME}}",
           "generate_release_notes": true
         }'
-
-  StartNextBuild:
-    title: Build rosetta-ingest if on master
-    image: codefresh/cli
-    when:
-      branch:
-        only:
-          - master
-      condition:
-        all:
-          buildPassed: steps.Build.result == 'success'
-          variableDefined: "${{TAG_REPO}} == false"
-          skipNextBuild: "${{SKIP_NEXT_BUILD}} == false"
-    commands:
-      - codefresh run REGnosys/rosetta-ingest/rosetta-ingest --branch main --detach
