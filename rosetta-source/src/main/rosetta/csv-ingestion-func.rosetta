@@ -17,6 +17,7 @@ func Ingest_User:
         }
     }
 
+
 func Ingest_User2:
     [ingest CSV]
     inputs:
@@ -32,3 +33,5 @@ func Ingest_User2:
             lastName: user -> lastName
         }
     }
+
+
