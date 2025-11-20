@@ -7,7 +7,7 @@ func Ingest_User:
         user User (1..1)
     output:
         ingestedUser IngestedUser (1..1)
-
+//test
     set ingestedUser: IngestedUser {
         username: user -> username,
         identifier: user -> identifier,
