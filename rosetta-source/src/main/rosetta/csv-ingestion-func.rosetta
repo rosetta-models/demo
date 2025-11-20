@@ -16,3 +16,20 @@ func Ingest_User:
             lastName: user -> lastName
         }
     }
+    //test asdsd adwadad
+
+    func Ingest_User2:
+    [ingest CSV]
+    inputs:
+        user User (1..1)
+    output:
+        ingestedUser IngestedUser2 (1..1)
+
+    set ingestedUser: IngestedUser2 {
+        username: user -> username,
+        identifier: user -> identifier,
+        ingestedName: IngestedName {
+            firstName: user -> firstName,
+            lastName: user -> lastName
+        }
+    }

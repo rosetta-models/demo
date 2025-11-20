@@ -24,5 +24,17 @@
       "modelValidationFailures" : 3,
       "runtimeError" : false
     }
+  }, {
+    "id" : "demo-2-(copy)",
+    "name" : "demo 2 (Copy)",
+    "inputPath" : "ingest/input/passenger-vehicles/demo-2-(copy).xml",
+    "outputPath" : "ingest/output/demo-external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/demo-2-(copy).json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
   } ]
 }

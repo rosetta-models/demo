@@ -1,0 +1,16 @@
+{
+  "id" : "pipeline-translate-user2",
+  "name" : "User2",
+  "transform" : {
+    "type" : "TRANSLATE",
+    "function" : "demo.csv.ingestion.functions.Ingest_User2",
+    "inputType" : "demo.csv.ingestion.User",
+    "outputType" : "demo.csv.ingestion.IngestedUser2"
+  },
+  "inputSerialisation" : {
+    "format" : "CSV"
+  },
+  "outputSerialisation" : {
+    "format" : "JSON"
+  }
+}
