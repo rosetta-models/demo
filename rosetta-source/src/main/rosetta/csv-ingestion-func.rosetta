@@ -7,7 +7,7 @@ func Ingest_User:
         user User (1..1)
     output:
         ingestedUser IngestedUser (1..1)
-//test jhj kljkj adsasdsd
+//test jhj kljkj adsasdsd asdasdsd
     set ingestedUser: IngestedUser {
         username: user -> username,
         identifier: user -> identifier,
