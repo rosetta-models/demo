@@ -1,6 +1,7 @@
 namespace demo.csv.ingestion
 version "${project.version}"
 
+//test2
 type User:
     username string (1..1)
     identifier string (1..1)
