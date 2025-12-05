@@ -1,0 +1,8 @@
+{
+  "identifier" : "order_id_2",
+  "itemName" : "Keyboard",
+  "currency" : "EUR",
+  "quantity" : 1,
+  "amount" : 68.99,
+  "amountWithVat" : 79.3385
+}

@@ -19,7 +19,7 @@
     <java.enforced.version>[21,22)</java.enforced.version>
     
     <rosetta.dsl.version>9.70.0</rosetta.dsl.version>
-    <rosetta.bundle.version>11.93.0</rosetta.bundle.version>
+    <rosetta.bundle.version>11.94.1</rosetta.bundle.version>
 
     <xtext.version>2.38.0</xtext.version>
     <guava.version>33.3.1-jre</guava.version>
