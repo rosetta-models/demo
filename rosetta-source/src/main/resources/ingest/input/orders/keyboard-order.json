@@ -1,0 +1,15 @@
+{
+  "identifier" : {
+    "@data" : "order_id_2"
+  },
+  "orderItem" : {
+    "@key:external" : "keyboardKey",
+    "name" : "Keyboard",
+    "quantity" : 1,
+    "price" : 68.99,
+    "currency" : "EUR"
+  },
+  "itemRef" : {
+    "@ref:scoped" : "keyboardKey"
+  }
+}

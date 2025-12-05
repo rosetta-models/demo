@@ -1,0 +1,15 @@
+{
+  "identifier" : {
+    "@data" : "order_id_4"
+  },
+  "orderItem" : {
+    "@key:external" : "notebookKey",
+    "name" : "A4 Notebook",
+    "quantity" : 11,
+    "price" : 2.99,
+    "currency" : "GBP"
+  },
+  "itemRef" : {
+    "@ref:scoped" : "notebookKey"
+  }
+}

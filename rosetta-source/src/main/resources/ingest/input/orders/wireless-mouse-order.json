@@ -1,0 +1,15 @@
+{
+  "identifier" : {
+    "@data" : "order_id_3"
+  },
+  "orderItem" : {
+    "@key:external" : "mouseKey",
+    "name" : "Wireless Mouse",
+    "quantity" : 2,
+    "price" : 59.89,
+    "currency" : "GBP"
+  },
+  "itemRef" : {
+    "@ref:scoped" : "mouseKey"
+  }
+}

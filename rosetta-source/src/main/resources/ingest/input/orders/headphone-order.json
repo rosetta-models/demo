@@ -1,0 +1,15 @@
+{
+  "identifier" : {
+    "@data" : "order_id_5"
+  },
+  "orderItem" : {
+    "@key:external" : "headphoneKey",
+    "name" : "Wireless Headphone",
+    "quantity" : 7,
+    "price" : 119.79,
+    "currency" : "GBP"
+  },
+  "itemRef" : {
+    "@ref:scoped" : "headphoneKey"
+  }
+}
