@@ -1,0 +1,16 @@
+{
+  "id" : "pipeline-translate-order",
+  "name" : "Order",
+  "transform" : {
+    "type" : "TRANSLATE",
+    "function" : "demo.rune.json.ingestion.functions.Ingest_Order",
+    "inputType" : "demo.rune.json.ingestion.Order",
+    "outputType" : "demo.rune.json.ingestion.IngestedOrder"
+  },
+  "inputSerialisation" : {
+    "format" : "RUNE_JSON"
+  },
+  "outputSerialisation" : {
+    "format" : "JSON"
+  }
+}

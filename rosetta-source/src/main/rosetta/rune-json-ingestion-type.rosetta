@@ -1,0 +1,24 @@
+namespace demo.rune.json.ingestion
+version "${project.version}"
+
+type Order:
+    identifier string (1..1)
+        [metadata id]
+    orderItem OrderItem (1..1)
+	itemRef OrderItem (1..1)
+		[metadata reference]
+
+type OrderItem:
+	    [metadata key]
+    name string (1..1)
+    quantity number (1..1)
+	price number (1..1)
+    currency Currency (1..1)
+
+type IngestedOrder:
+    identifier string (0..1)
+    itemName string (0..1)
+    currency string (0..1)
+    quantity number (0..1)
+    amount number (0..1)
+    amountWithVat number (0..1)

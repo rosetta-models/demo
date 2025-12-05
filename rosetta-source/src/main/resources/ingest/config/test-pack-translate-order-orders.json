@@ -1,0 +1,18 @@
+{
+  "id" : "test-pack-translate-order-orders",
+  "pipelineId" : "pipeline-translate-order",
+  "name" : "Orders",
+  "samples" : [ {
+    "id" : "pencil-order",
+    "name" : "Pencil Order",
+    "inputPath" : "ingest/input/orders/pencil-order.json",
+    "outputPath" : "ingest/output/order/orders/pencil-order.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
+  } ]
+}
