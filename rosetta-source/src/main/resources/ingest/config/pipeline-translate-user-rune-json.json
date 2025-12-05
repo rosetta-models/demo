@@ -1,0 +1,16 @@
+{
+  "id" : "pipeline-translate-user-rune-json",
+  "name" : "User Rune Json",
+  "transform" : {
+    "type" : "TRANSLATE",
+    "function" : "demo.rune.json.ingestion.functions.Ingest_User_Rune_Json",
+    "inputType" : "demo.csv.ingestion.User",
+    "outputType" : "demo.csv.ingestion.IngestedUser"
+  },
+  "inputSerialisation" : {
+    "format" : "RUNE_JSON"
+  },
+  "outputSerialisation" : {
+    "format" : "JSON"
+  }
+}

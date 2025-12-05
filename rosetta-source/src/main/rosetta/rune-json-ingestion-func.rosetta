@@ -1,0 +1,20 @@
+namespace demo.rune.json.ingestion
+version "${project.version}"
+
+import demo.csv.ingestion.*
+
+func Ingest_User_Rune_Json:
+    [ingest RUNE_JSON]
+    inputs:
+        user User (1..1)
+    output:
+        ingestedUser IngestedUser (1..1)
+
+    set ingestedUser: IngestedUser {
+        username: user -> username,
+        identifier: user -> identifier,
+        ingestedName: IngestedName {
+            firstName: user -> firstName,
+            lastName: user -> lastName
+        }
+    }

@@ -1,0 +1,18 @@
+{
+  "id" : "test-pack-translate-user-rune-json-users",
+  "pipelineId" : "pipeline-translate-user-rune-json",
+  "name" : "Users",
+  "samples" : [ {
+    "id" : "user-1",
+    "name" : "User 1",
+    "inputPath" : "ingest/input/users/user-1.json",
+    "outputPath" : "ingest/output/user-rune-json/users/user-1.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
+  } ]
+}
