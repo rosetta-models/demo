@@ -14,5 +14,17 @@
       "schemaValidationFailure" : false,
       "runtimeError" : false
     }
+  }, {
+    "id" : "user-2",
+    "name" : "User 2",
+    "inputPath" : "ingest/input/users/user-2.json",
+    "outputPath" : "ingest/output/user-rune-json/users/user-2.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
   } ]
 }

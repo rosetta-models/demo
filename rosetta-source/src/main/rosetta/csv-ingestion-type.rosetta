@@ -12,6 +12,7 @@ type IngestedUser:
     identifier string (1..1)
     ingestedName IngestedName (1..1)
 
+
 type IngestedName:
     firstName string (1..1)
     lastName string (1..1)

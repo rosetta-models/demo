@@ -1,0 +1,16 @@
+ {   
+    "identifier": {
+        "@id": "identifier_id_1",
+        "@data": "order_id_1"
+    },
+    "orderItem": {
+        "@key:external" : "pencilOrderKey",
+        "name": "Pencil",
+        "quantity": 5,
+        "price": "0.50",
+        "currency": "GBP"
+    },
+    "itemRef": {
+        "@ref:scoped": "pencilOrderKey"
+    }
+}   

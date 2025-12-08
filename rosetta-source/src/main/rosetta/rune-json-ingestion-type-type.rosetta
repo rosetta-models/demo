@@ -1,0 +1,2 @@
+namespace demo.rune.json.ingestion.type
+version "${project.version}"

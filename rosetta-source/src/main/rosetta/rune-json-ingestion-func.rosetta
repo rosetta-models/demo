@@ -1,20 +1,43 @@
 namespace demo.rune.json.ingestion
 version "${project.version}"
 
-import demo.csv.ingestion.*
-
-func Ingest_User_Rune_Json:
+func Ingest_Order:
     [ingest RUNE_JSON]
     inputs:
-        user User (1..1)
+        order Order (1..1)
     output:
-        ingestedUser IngestedUser (1..1)
+        ingestedOrder IngestedOrder (1..1)
 
-    set ingestedUser: IngestedUser {
-        username: user -> username,
-        identifier: user -> identifier,
-        ingestedName: IngestedName {
-            firstName: user -> firstName,
-            lastName: user -> lastName
-        }
+    set ingestedOrder: IngestedOrder {
+        identifier: order -> identifier,
+        itemName: order -> orderItem -> name,
+        currency: order -> orderItem -> currency to-string,
+        quantity: order -> orderItem -> quantity,
+        amountWithVat: order -> orderItem -> price * (order -> orderItem -> quantity) * 1.15
     }
+
+type Order:
+    identifier string (1..1)
+        [metadata id]
+    orderItem OrderItem (1..1)
+	itemRef OrderItem (1..1)
+		[metadata reference]
+
+type OrderItem:
+	    [metadata key]
+    name string (1..1)
+    quantity number (1..1)
+	price number (1..1)
+    currency Currency (1..1)
+
+type IngestedOrder:
+    identifier string (0..1)
+    itemName string (0..1)
+    currency string (0..1)
+    quantity number (0..1)
+    amountWithVat number (0..1)
+
+enum Currency:
+	GBP
+	USD
+    EUR

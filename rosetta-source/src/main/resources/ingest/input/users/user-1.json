@@ -1,6 +1,9 @@
 {
-    "username" : "booker12",
-    "identifier" : "9012",
-    "firstName" : "Rachel",
-    "lastName" : "Booker"
+  "@model" : "demo",
+  "@type" : "demo.csv.ingestion.User",
+  "@version" : "0.65.0",
+  "username" : "booker12",
+  "identifier" : "9012",
+  "firstName" : "Rachel",
+  "lastName" : "Booker"
 }
