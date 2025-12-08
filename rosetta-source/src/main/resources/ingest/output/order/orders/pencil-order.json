@@ -1,8 +1,9 @@
 {
-  "identifier" : "order_id_1",
+  "identifier" : "user_id_1_order_id_1",
   "itemName" : "Pencil",
   "currency" : "GBP",
   "quantity" : 5,
   "amount" : 2.50,
-  "amountWithVat" : 2.8750
+  "amountWithVat" : 2.8750,
+  "addressLabel" : "John Doe, 123 Jane Street"
 }

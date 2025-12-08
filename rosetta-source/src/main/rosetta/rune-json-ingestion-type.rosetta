@@ -7,6 +7,9 @@ type Order:
     orderItem OrderItem (1..1)
 	itemRef OrderItem (1..1)
 		[metadata reference]
+    customer Customer (1..1)
+    toAddress string (1..1)
+        [metadata address "pointsTo"=Customer->address]
 
 type OrderItem:
 	    [metadata key]
@@ -15,6 +18,13 @@ type OrderItem:
 	price number (1..1)
     currency Currency (1..1)
 
+type Customer:
+    userId string (1..1)
+        [metadata scheme]
+    fullName string (1..1)
+    address string (1..1)
+        [metadata location]
+    
 type IngestedOrder:
     identifier string (0..1)
     itemName string (0..1)
@@ -22,3 +32,4 @@ type IngestedOrder:
     quantity number (0..1)
     amount number (0..1)
     amountWithVat number (0..1)
+    addressLabel string (0..1)

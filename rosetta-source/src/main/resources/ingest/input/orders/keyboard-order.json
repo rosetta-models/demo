@@ -1,4 +1,7 @@
 {
+  "@model" : "demo",
+  "@type" : "demo.rune.json.ingestion.Order",
+  "@version" : "${project.version}",
   "identifier" : {
     "@data" : "order_id_2"
   },
@@ -11,5 +14,19 @@
   },
   "itemRef" : {
     "@ref:scoped" : "keyboardKey"
+  },
+    "customer" : {
+    "userId" : {
+      "@scheme" : "https://www.example.com/scheme1",
+      "@data" : "user_id_1"
+    },
+    "fullName" : "John Doe",
+    "address" : {
+      "@key:scoped" : "user1_location",
+      "@data" : "123 Jane Street"
+    }
+  },
+  "toAddress" : {
+    "@ref:scoped" : "user1_location"
   }
 }
