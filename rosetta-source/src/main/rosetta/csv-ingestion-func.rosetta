@@ -16,3 +16,19 @@ func Ingest_User:
             lastName: user -> lastName
         }
     }
+
+func Ingest_User2:
+    [ingest CSV]
+    inputs:
+        user User (1..1)
+    output:
+        ingestedUser IngestedUser (1..1)
+
+    set ingestedUser: IngestedUser {
+        username: user -> username,
+        identifier: user -> identifier,
+        ingestedName: IngestedName {
+            firstName: user -> firstName,
+            lastName: user -> lastName
+        }
+    }
