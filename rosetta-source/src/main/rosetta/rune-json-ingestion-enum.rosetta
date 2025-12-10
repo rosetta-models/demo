@@ -1,0 +1,8 @@
+namespace demo.rune.json.ingestion
+version "${project.version}"
+
+enum Currency:
+	GBP
+	USD
+    EUR
+    
