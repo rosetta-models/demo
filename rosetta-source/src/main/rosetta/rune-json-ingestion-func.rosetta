@@ -1,0 +1,19 @@
+namespace demo.rune.json.ingestion
+version "${project.version}"
+
+func Ingest_Order:
+    [ingest RUNE_JSON]
+    inputs:
+        order Order (1..1)
+    output:
+        ingestedOrder IngestedOrder (1..1)
+
+    set ingestedOrder: IngestedOrder {
+        identifier: (order -> customer -> userId) + "_" + (order -> identifier),
+        itemName: order -> orderItem -> name,
+        currency: order -> orderItem -> currency to-string,
+        quantity: order -> orderItem -> quantity,
+        amount: order -> orderItem -> price * (order -> orderItem -> quantity),
+        amountWithVat: order -> orderItem -> price * (order -> orderItem -> quantity) * 1.15,
+        addressLabel: (order -> customer -> fullName) + ", " + (order -> toAddress)
+    }
