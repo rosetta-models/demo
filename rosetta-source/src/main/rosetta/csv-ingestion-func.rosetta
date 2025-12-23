@@ -18,7 +18,7 @@ func Ingest_User:
     }
 
 
-func Ingest_User2:
+func Ingest_User3:
     [ingest CSV]
     inputs:
         user User (1..1)
