@@ -4,7 +4,7 @@ version "${project.version}"
 import demo.emissions.model.*
 import demo.emissions.regulation.*
 
-func Enrich_VehicleOwnershipToReportableVehicle:
+func Enrich_VehicleOwnershipToReportableVehicle: <"Test kljhklkhj">
     [enrich]
     inputs:
         vehicleOwnership VehicleOwnership (1..1)
