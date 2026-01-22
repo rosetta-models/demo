@@ -15,4 +15,55 @@ func Ingest_User:
             firstName: user -> firstName,
             lastName: user -> lastName
         }
-    }
+    } //fasgafg
+
+
+    func Ingest_User2:
+    [ingest CSV]
+    inputs:
+        user User (1..1)
+    output:
+        ingestedUser IngestedUser (1..1)
+
+    set ingestedUser: IngestedUser {
+        username: user -> username,
+        identifier: user -> identifier,
+        ingestedName: IngestedName {
+            firstName: user -> firstName,
+            lastName: user -> lastName
+        }
+    } //fasgafg
+
+
+    func Ingest_User3:
+    [ingest CSV]
+    inputs:
+        user User (1..1)
+    output:
+        ingestedUser IngestedUser (1..1)
+
+    set ingestedUser: IngestedUser {
+        username: user -> username,
+        identifier: user -> identifier,
+        ingestedName: IngestedName {
+            firstName: user -> firstName,
+            lastName: user -> lastName
+        }
+    } //fasgafg
+
+
+    func Ingest_User4:
+    [ingest CSV]
+    inputs:
+        user User (1..1)
+    output:
+        ingestedUser IngestedUser (1..1)
+
+    set ingestedUser: IngestedUser {
+        username: user -> username,
+        identifier: user -> identifier,
+        ingestedName: IngestedName {
+            firstName: user -> firstName,
+            lastName: user -> lastName
+        }
+    } //fasgafg
