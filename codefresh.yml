@@ -1,43 +1,60 @@
 version: "1.0"
+
+stages:
+  - setup
+  - build
+  - distribute
+
 steps:
   main_clone:
+    stage: 'setup'
     title: Cloning main repository...
     type: git-clone
     git: rosetta-models
     repo: "${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}"
     revision: "${{CF_REVISION}}"
 
+  CheckRelease:
+    stage: 'setup'
+    image: alpine
+    commands:
+      - if [[ '${{CF_RELEASE_TAG}}' == *'CF_RELEASE_TAG'* ]]; then cf_export IS_RELEASE=false; else cf_export IS_RELEASE=true; fi
+  
   TagReleaseName:
+    stage: 'setup'
     title: Setup RELEASE_NAME variable with tag
     image: alpine/git
     when:
       condition:
         all:
-          releaseNameNotDefined: "${{TAG_REPO}} == true"
+          releaseNameNotDefined: "${{IS_RELEASE}} == true"
     commands:
-      - cf_export RELEASE_NAME=${{TAG_NAME}}
+      - cf_export RELEASE_NAME=${{CF_RELEASE_TAG}}
       - cf_export GH_TOKEN=${{REGNOSYS_OPS_TOKEN}}
       - cf_export GITHUB_RELEASE_API="https://api.github.com/repos/${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}/releases"
       - >-
         cf_export GITHUB_API_CURL="curl -L  -X POST -H \"Accept: application/vnd.github+json\" -H \"Authorization: Bearer ${{REGNOSYS_OPS_TOKEN}}\""
 
   MvnSettings:
+    stage: 'setup'
     title: Setup Maven settings
     image: alpine/git
     commands:
       - cf_export MVN_CLI_OPT="-Dmaven.repo.local=\"${{CF_VOLUME_PATH}}/${{CF_REPO_NAME}}_m2/repository\""
 
   BranchReleaseName:
+    stage: 'setup'
     title: Setup RELEASE_NAME variable with branch name
     image: alpine/git
     when:
       condition:
         all:
-          releaseNameNotDefined: "${{TAG_REPO}} == false"
+          releaseNameNotDefined: "${{IS_RELEASE}} == false"
     commands:
       - cf_export RELEASE_NAME=${{GLOBAL_RELEASE_VERSION}}.${{CF_BRANCH_TAG_NORMALIZED}}-SNAPSHOT
 
   Build:
+    stage: 'build'
     title: Maven build
     fail_fast: false
     image: maven:3.9.11-eclipse-temurin-21-alpine
@@ -81,33 +98,15 @@ steps:
     commands:
       - exit 1
 
-  TagRepo:
-    title: Tag git repo with release name
-    image: alpine/git
+  ReleaseCompleteNotification:
+    stage: 'distribute'
+    image: europe-west1-docker.pkg.dev/production-208613/regnosys-docker/sec/emailer:1.0.0
+    environment:
+      - SMTP_EMAIL_CONFIG=${{SMTP_EMAIL_CONFIG}}
+      - TO_EMAIL=${{NOTIFICATION_EMAIL}}
+      - SUBJECT=Release ${{CF_REPO_NAME}}/${{CF_RELEASE_TAG}} complete
+      - HTML_BODY=<p>The ${{CF_REPO_NAME}} release ${{CF_RELEASE_TAG}} complete. Maven and Docker artifacts are available now. The model will be visible in Rosetta within an hour.</p><br>Regards<br>Rosetta
     when:
       condition:
         all:
-          buildPassed: steps.Build.result == 'success'
-          isRelease: "${{TAG_REPO}}"
-    commands:
-      - echo This is a release build, tag repos with release name [${{TAG_NAME}}]
-      - git fetch --prune https://${{ROSETTA_MODELS_USER}}:${{ROSETTA_MODELS_PWD}}@github.com/rosetta-models/demo.git "+refs/tags/*:refs/tags/*"
-      - git tag ${{TAG_NAME}}
-      - git push https://${{ROSETTA_MODELS_USER}}:${{ROSETTA_MODELS_PWD}}@github.com/rosetta-models/demo.git ${{TAG_NAME}}
-
-  CreateRelease:
-    title: Create Release
-    image: curlimages/curl
-    when:
-      condition:
-        all:
-          isRelease: "${{TAG_REPO}}"
-          buildPassed: steps.TagRepo.result == 'success'
-    commands:
-      - echo CreateRelease
-      - >-
-        ${{GITHUB_API_CURL}} ${{GITHUB_RELEASE_API}}
-        -d '{
-          "tag_name": "${{RELEASE_NAME}}",
-          "generate_release_notes": true
-        }'
+          isRelease: "${{IS_RELEASE}}"
