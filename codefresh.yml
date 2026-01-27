@@ -1,45 +1,41 @@
 version: "1.0"
+
 steps:
   main_clone:
-    title: Cloning main repository...
     type: git-clone
     git: rosetta-models
     repo: "${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}"
     revision: "${{CF_REVISION}}"
 
-  TagReleaseName:
-    title: Setup RELEASE_NAME variable with tag
+  IsTriggeredByGitHubRelease:
+    image: alpine
+    commands:
+      - if [[ '${{CF_RELEASE_TAG}}' == *'CF_RELEASE_TAG'* ]]; then cf_export IS_RELEASE=false; else cf_export IS_RELEASE=true; fi
+  
+  ReleaseNameForTag:
     image: alpine/git
     when:
       condition:
         all:
-          releaseNameNotDefined: "${{TAG_REPO}} == true"
+          releaseNameNotDefined: "${{IS_RELEASE}} == true"
     commands:
-      - cf_export RELEASE_NAME=${{TAG_NAME}}
-      - cf_export GH_TOKEN=${{REGNOSYS_OPS_TOKEN}}
-      - cf_export GITHUB_RELEASE_API="https://api.github.com/repos/${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}/releases"
-      - >-
-        cf_export GITHUB_API_CURL="curl -L  -X POST -H \"Accept: application/vnd.github+json\" -H \"Authorization: Bearer ${{REGNOSYS_OPS_TOKEN}}\""
+      - cf_export RELEASE_NAME=${{CF_RELEASE_TAG}}
 
   MvnSettings:
-    title: Setup Maven settings
     image: alpine/git
     commands:
       - cf_export MVN_CLI_OPT="-Dmaven.repo.local=\"${{CF_VOLUME_PATH}}/${{CF_REPO_NAME}}_m2/repository\""
 
-  BranchReleaseName:
-    title: Setup RELEASE_NAME variable with branch name
+  ReleaseNameForBranch:
     image: alpine/git
     when:
       condition:
         all:
-          releaseNameNotDefined: "${{TAG_REPO}} == false"
+          releaseNameNotDefined: "${{IS_RELEASE}} == false"
     commands:
       - cf_export RELEASE_NAME=${{GLOBAL_RELEASE_VERSION}}.${{CF_BRANCH_TAG_NORMALIZED}}-SNAPSHOT
 
   Build:
-    title: Maven build
-    fail_fast: false
     image: maven:3.9.11-eclipse-temurin-21-alpine
     working_directory: ./
     commands:
@@ -47,67 +43,3 @@ steps:
       - export GOOGLE_APPLICATION_CREDENTIALS="${{CF_VOLUME_PATH}}"/sa
       - mvn ${{MVN_CLI_OPT}} versions:set -DnewVersion=${{RELEASE_NAME}}
       - mvn ${{MVN_CLI_OPT}} clean deploy
-
-  NotifySlackOnFail:
-    title: Trigger Slack dev channel notification if master build failed
-    image: codefresh/cli
-    when:
-      branch:
-        only:
-          - master
-      steps:
-        - name: Build
-          on:
-            - failure
-    commands:
-      - export SAFE_COMMIT_AUTHOR='${{CF_COMMIT_AUTHOR}}'
-      - export COMMIT_AUTHOR=${SAFE_COMMIT_AUTHOR:-MissingAuthor}
-      - export SAFE_REPO_NAME='${{CF_REPO_NAME}}'
-      - export REPO_NAME=${SAFE_REPO_NAME:-NoRepo}
-      - export SAFE_COMMIT_MESSAGE='${{CF_COMMIT_MESSAGE}}'
-      - export COMMIT_MESSAGE=${SAFE_COMMIT_MESSAGE:-NoCommitMsg}
-      - echo Author is $SAFE_COMMIT_AUTHOR and commit msg is $SAFE_COMMIT_MESSAGE and repo is $SAFE_REPO_NAME
-      - echo After substitution author is $COMMIT_AUTHOR and commit msg is $COMMIT_MESSAGE and repo is $REPO_NAME
-      - codefresh run slack-notifier -v REPO_NAME="${REPO_NAME}" -v COMMIT_AUTHOR="${COMMIT_AUTHOR}" -v COMMIT_MESSAGE="${COMMIT_MESSAGE}"  --detach
-
-  FailPipeline:
-    title: Fail pipeline if the Maven build failed
-    image: codefresh/cli
-    when:
-      steps:
-        - name: Build
-          on:
-            - failure
-    commands:
-      - exit 1
-
-  TagRepo:
-    title: Tag git repo with release name
-    image: alpine/git
-    when:
-      condition:
-        all:
-          buildPassed: steps.Build.result == 'success'
-          isRelease: "${{TAG_REPO}}"
-    commands:
-      - echo This is a release build, tag repos with release name [${{TAG_NAME}}]
-      - git fetch --prune https://${{ROSETTA_MODELS_USER}}:${{ROSETTA_MODELS_PWD}}@github.com/rosetta-models/demo.git "+refs/tags/*:refs/tags/*"
-      - git tag ${{TAG_NAME}}
-      - git push https://${{ROSETTA_MODELS_USER}}:${{ROSETTA_MODELS_PWD}}@github.com/rosetta-models/demo.git ${{TAG_NAME}}
-
-  CreateRelease:
-    title: Create Release
-    image: curlimages/curl
-    when:
-      condition:
-        all:
-          isRelease: "${{TAG_REPO}}"
-          buildPassed: steps.TagRepo.result == 'success'
-    commands:
-      - echo CreateRelease
-      - >-
-        ${{GITHUB_API_CURL}} ${{GITHUB_RELEASE_API}}
-        -d '{
-          "tag_name": "${{RELEASE_NAME}}",
-          "generate_release_notes": true
-        }'
