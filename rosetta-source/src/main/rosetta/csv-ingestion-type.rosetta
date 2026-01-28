@@ -10,7 +10,7 @@ type User:
 type IngestedUser:
     username string (1..1)
     identifier string (1..1)
-    ingestedName IngestedName (1..1)
+     ingestedName IngestedName (1..1)
 
 
 type IngestedName:
