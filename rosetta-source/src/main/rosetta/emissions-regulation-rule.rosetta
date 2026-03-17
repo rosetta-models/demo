@@ -92,12 +92,12 @@ reporting rule EuroEmissionStandard from ReportableVehicle:
     [regulatoryReference EuropeanCommission StandardEmissionsEuro6 article "1"
         provision "Regulation (EC) No 715/2007 is amended as follows:"]
     extract ([
-        Euro1Standard,
-        Euro2Standard,
-        Euro3Standard,
-        Euro4Standard,
-        Euro5Standard,
-        Euro6Standard
+        // Euro1Standard,
+        // Euro2Standard,
+        // Euro3Standard,
+        // Euro4Standard,
+        // Euro5Standard,
+        // Euro6Standard
     ])
     then last
 
@@ -143,12 +143,13 @@ reporting rule Euro4Standard from ReportableVehicle:
     extract vehicle
         then filter
             (item ->> vehicleClassification = M1_Passengers
-                or item ->> vehicleClassification = M2_Passengers
-                or item ->> vehicleClassification = M3_Passengers
-                or item ->> vehicleClassification = N1I_Commercial
-                or item ->> vehicleClassification = N1II_Commercial
-                or item ->> vehicleClassification = N1III_Commercial
-                or item ->> vehicleClassification = N2_Commercial)
+                // or item ->> vehicleClassification = M2_Passengers
+                // or item ->> vehicleClassification = M3_Passengers
+                // or item ->> vehicleClassification = N1I_Commercial
+                // or item ->> vehicleClassification = N1II_Commercial
+                // or item ->> vehicleClassification = N1III_Commercial
+                // or item ->> vehicleClassification = N2_Commercial)
+            )
         then filter IsRegisteredAfterEuro4StandardDate
         then extract EuroEmissionStandardEnum -> Euro4
 
