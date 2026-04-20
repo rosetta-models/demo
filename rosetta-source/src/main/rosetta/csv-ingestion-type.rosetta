@@ -16,3 +16,5 @@ type IngestedUser:
 type IngestedName:
     firstName string (1..1)
     lastName string (1..1)
+
+    //TTEST C01
