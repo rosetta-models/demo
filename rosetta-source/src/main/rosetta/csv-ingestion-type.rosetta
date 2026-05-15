@@ -6,7 +6,9 @@ type User:
     identifier string (1..1)
     firstName string (1..1)
     lastName string (1..1)
-
+//dsfsdf
+//sdfdsf
+//sfsfd
 type IngestedUser:
     username string (1..1)
     identifier string (1..1)
