@@ -13,7 +13,7 @@ func Enrich_VehicleOwnershipToReportableVehicle:
 
     alias drivingLicence:
         vehicleOwnership -> drivingLicence first
-
+//sdfdsf
     set reportableVehicle:
         ReportableVehicle {
             vehicle: vehicleOwnership -> vehicle,
