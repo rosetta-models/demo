@@ -13,220 +13,220 @@ public class DemoTestPackCreator {
     private static final Logger LOGGER = LoggerFactory.getLogger(DemoTestPackCreator.class);
 
     @Inject
-    private static ConditionalDefaultExample1IngestionTest conditionalDefaultExample1Ingestion;
+    private ConditionalDefaultExample1IngestionTest conditionalDefaultExample1Ingestion;
     @Inject
-    private static ConditionalSetExample1IngestionTest conditionalSetExample1Ingestion;
+    private ConditionalSetExample1IngestionTest conditionalSetExample1Ingestion;
     @Inject
-    private static ConditionalSetExample2IngestionTest conditionalSetExample2Ingestion;
+    private ConditionalSetExample2IngestionTest conditionalSetExample2Ingestion;
     @Inject
-    private static ConditionalSetExample3IngestionTest conditionalSetExample3Ingestion;
+    private ConditionalSetExample3IngestionTest conditionalSetExample3Ingestion;
     @Inject
-    private static ConditionalSetExample4IngestionTest conditionalSetExample4Ingestion;
+    private ConditionalSetExample4IngestionTest conditionalSetExample4Ingestion;
     @Inject
-    private static ConditionalSetExample5IngestionTest conditionalSetExample5Ingestion;
+    private ConditionalSetExample5IngestionTest conditionalSetExample5Ingestion;
     @Inject
-    private static ConditionalSetExample6IngestionTest conditionalSetExample6Ingestion;
+    private ConditionalSetExample6IngestionTest conditionalSetExample6Ingestion;
     @Inject
-    private static ConditionalSetExample7IngestionTest conditionalSetExample7Ingestion;
+    private ConditionalSetExample7IngestionTest conditionalSetExample7Ingestion;
     @Inject
-    private static ConditionalSetExample8IngestionTest conditionalSetExample8Ingestion;
+    private ConditionalSetExample8IngestionTest conditionalSetExample8Ingestion;
     @Inject
-    private static ConditionalSetExample9IngestionTest conditionalSetExample9Ingestion;
+    private ConditionalSetExample9IngestionTest conditionalSetExample9Ingestion;
     @Inject
-    private static ConditionalSetExample10IngestionTest conditionalSetExample10Ingestion;
+    private ConditionalSetExample10IngestionTest conditionalSetExample10Ingestion;
     @Inject
-    private static ConditionalSetExample11IngestionTest conditionalSetExample11Ingestion;
+    private ConditionalSetExample11IngestionTest conditionalSetExample11Ingestion;
     @Inject
-    private static ConditionalSetExample12IngestionTest conditionalSetExample12Ingestion;
+    private ConditionalSetExample12IngestionTest conditionalSetExample12Ingestion;
     @Inject
-    private static ConditionalSetExample13IngestionTest conditionalSetExample13Ingestion;
+    private ConditionalSetExample13IngestionTest conditionalSetExample13Ingestion;
     @Inject
-    private static ConditionalSetExample14IngestionTest conditionalSetExample14Ingestion;
+    private ConditionalSetExample14IngestionTest conditionalSetExample14Ingestion;
     @Inject
-    private static ConditionalSetExample15IngestionTest conditionalSetExample15Ingestion;
+    private ConditionalSetExample15IngestionTest conditionalSetExample15Ingestion;
     @Inject
-    private static ConditionalSetExample16IngestionTest conditionalSetExample16Ingestion;
+    private ConditionalSetExample16IngestionTest conditionalSetExample16Ingestion;
     @Inject
-    private static ConditionalSetExample17IngestionTest conditionalSetExample17Ingestion;
+    private ConditionalSetExample17IngestionTest conditionalSetExample17Ingestion;
     @Inject
-    private static ConditionalSetExample18IngestionTest conditionalSetExample18Ingestion;
+    private ConditionalSetExample18IngestionTest conditionalSetExample18Ingestion;
     @Inject
-    private static ConditionalSetExample19IngestionTest conditionalSetExample19Ingestion;
+    private ConditionalSetExample19IngestionTest conditionalSetExample19Ingestion;
     @Inject
-    private static ConditionalSetExample20IngestionTest conditionalSetExample20Ingestion;
+    private ConditionalSetExample20IngestionTest conditionalSetExample20Ingestion;
     @Inject
-    private static ConditionalSetExample21IngestionTest conditionalSetExample21Ingestion;
+    private ConditionalSetExample21IngestionTest conditionalSetExample21Ingestion;
     @Inject
-    private static ConditionalSetExample22IngestionTest conditionalSetExample22Ingestion;
+    private ConditionalSetExample22IngestionTest conditionalSetExample22Ingestion;
     @Inject
-    private static ConditionalSetExample23IngestionTest conditionalSetExample23Ingestion;
+    private ConditionalSetExample23IngestionTest conditionalSetExample23Ingestion;
     @Inject
-    private static ConditionalSetExample24IngestionTest conditionalSetExample24Ingestion;
+    private ConditionalSetExample24IngestionTest conditionalSetExample24Ingestion;
     @Inject
-    private static ConditionalSetExample25IngestionTest conditionalSetExample25Ingestion;
+    private ConditionalSetExample25IngestionTest conditionalSetExample25Ingestion;
     @Inject
-    private static ConditionalSetExample26IngestionTest conditionalSetExample26Ingestion;
+    private ConditionalSetExample26IngestionTest conditionalSetExample26Ingestion;
     @Inject
-    private static ConditionalSetToExample1IngestionTest conditionalSetToExample1Ingestion;
+    private ConditionalSetToExample1IngestionTest conditionalSetToExample1Ingestion;
     @Inject
-    private static ConditionalSetToExample2IngestionTest conditionalSetToExample2Ingestion;
+    private ConditionalSetToExample2IngestionTest conditionalSetToExample2Ingestion;
     @Inject
-    private static ConditionalSetToExample3IngestionTest conditionalSetToExample3Ingestion;
+    private ConditionalSetToExample3IngestionTest conditionalSetToExample3Ingestion;
     @Inject
-    private static ConditionalSetToExample4IngestionTest conditionalSetToExample4Ingestion;
+    private ConditionalSetToExample4IngestionTest conditionalSetToExample4Ingestion;
     @Inject
-    private static ConditionalSetToExample5IngestionTest conditionalSetToExample5Ingestion;
+    private ConditionalSetToExample5IngestionTest conditionalSetToExample5Ingestion;
     @Inject
-    private static ConditionalSetToExample6IngestionTest conditionalSetToExample6Ingestion;
+    private ConditionalSetToExample6IngestionTest conditionalSetToExample6Ingestion;
     @Inject
-    private static ConditionalSetToExample7IngestionTest conditionalSetToExample7Ingestion;
+    private ConditionalSetToExample7IngestionTest conditionalSetToExample7Ingestion;
     @Inject
-    private static ConditionalSetToExample8IngestionTest conditionalSetToExample8Ingestion;
+    private ConditionalSetToExample8IngestionTest conditionalSetToExample8Ingestion;
     @Inject
-    private static ConditionalSetToExample9IngestionTest conditionalSetToExample9Ingestion;
+    private ConditionalSetToExample9IngestionTest conditionalSetToExample9Ingestion;
     @Inject
-    private static ConditionalSetToExample10IngestionTest conditionalSetToExample10Ingestion;
+    private ConditionalSetToExample10IngestionTest conditionalSetToExample10Ingestion;
     @Inject
-    private static ConditionalSetToExample11IngestionTest conditionalSetToExample11Ingestion;
+    private ConditionalSetToExample11IngestionTest conditionalSetToExample11Ingestion;
     @Inject
-    private static ConditionalSetToExample12IngestionTest conditionalSetToExample12Ingestion;
+    private ConditionalSetToExample12IngestionTest conditionalSetToExample12Ingestion;
     @Inject
-    private static ConditionalSetToExample13IngestionTest conditionalSetToExample13Ingestion;
+    private ConditionalSetToExample13IngestionTest conditionalSetToExample13Ingestion;
     @Inject
-    private static ExternalSynonymExample1IngestionTest externalSynonymExample1Ingestion;
+    private ExternalSynonymExample1IngestionTest externalSynonymExample1Ingestion;
     @Inject
-    private static ExternalSynonymExample2IngestionTest externalSynonymExample2Ingestion;
+    private ExternalSynonymExample2IngestionTest externalSynonymExample2Ingestion;
     @Inject
-    private static ExternalSynonymExample3IngestionTest externalSynonymExample3Ingestion;
+    private ExternalSynonymExample3IngestionTest externalSynonymExample3Ingestion;
     @Inject
-    private static ExternalSynonymExample4IngestionTest externalSynonymExample4Ingestion;
+    private ExternalSynonymExample4IngestionTest externalSynonymExample4Ingestion;
     @Inject
-    private static ExternalSynonymExample5IngestionTest externalSynonymExample5Ingestion;
+    private ExternalSynonymExample5IngestionTest externalSynonymExample5Ingestion;
     @Inject
-    private static ExternalSynonymExample6IngestionTest externalSynonymExample6Ingestion;
+    private ExternalSynonymExample6IngestionTest externalSynonymExample6Ingestion;
     @Inject
-    private static ExternalSynonymExample7IngestionTest externalSynonymExample7Ingestion;
+    private ExternalSynonymExample7IngestionTest externalSynonymExample7Ingestion;
     @Inject
-    private static ExternalSynonymExample8IngestionTest externalSynonymExample8Ingestion;
+    private ExternalSynonymExample8IngestionTest externalSynonymExample8Ingestion;
     @Inject
-    private static FormatExample1IngestionTest formatExample1Ingestion;
+    private FormatExample1IngestionTest formatExample1Ingestion;
     @Inject
-    private static FormatExample2IngestionTest formatExample2Ingestion;
+    private FormatExample2IngestionTest formatExample2Ingestion;
     @Inject
-    private static MappersExample1IngestionTest mappersExample1Ingestion;
+    private MappersExample1IngestionTest mappersExample1Ingestion;
     @Inject
-    private static MappersExample2IngestionTest mappersExample2Ingestion;
+    private MappersExample2IngestionTest mappersExample2Ingestion;
     @Inject
-    private static MappersExample3IngestionTest mappersExample3Ingestion;
+    private MappersExample3IngestionTest mappersExample3Ingestion;
     @Inject
-    private static MappersExample4IngestionTest mappersExample4Ingestion;
+    private MappersExample4IngestionTest mappersExample4Ingestion;
     @Inject
-    private static MappersExample5IngestionTest mappersExample5Ingestion;
+    private MappersExample5IngestionTest mappersExample5Ingestion;
     @Inject
-    private static MappersExample6IngestionTest mappersExample6Ingestion;
+    private MappersExample6IngestionTest mappersExample6Ingestion;
     @Inject
-    private static MappersExample7IngestionTest mappersExample7Ingestion;
+    private MappersExample7IngestionTest mappersExample7Ingestion;
     @Inject
-    private static MappersExample8IngestionTest mappersExample8Ingestion;
+    private MappersExample8IngestionTest mappersExample8Ingestion;
     @Inject
-    private static MappersExample9IngestionTest mappersExample9Ingestion;
+    private MappersExample9IngestionTest mappersExample9Ingestion;
     @Inject
-    private static MappersExample10IngestionTest mappersExample10Ingestion;
+    private MappersExample10IngestionTest mappersExample10Ingestion;
     @Inject
-    private static MappersExample11IngestionTest mappersExample11Ingestion;
+    private MappersExample11IngestionTest mappersExample11Ingestion;
     @Inject
-    private static MappersExample12IngestionTest mappersExample12Ingestion;
+    private MappersExample12IngestionTest mappersExample12Ingestion;
     @Inject
-    private static MetaExternalReferenceExample1IngestionTest metaExternalReferenceExample1Ingestion;
+    private MetaExternalReferenceExample1IngestionTest metaExternalReferenceExample1Ingestion;
     @Inject
-    private static MetaExternalReferenceExample2IngestionTest metaExternalReferenceExample2Ingestion;
+    private MetaExternalReferenceExample2IngestionTest metaExternalReferenceExample2Ingestion;
     @Inject
-    private static MetaExternalReferenceExample3IngestionTest metaExternalReferenceExample3Ingestion;
+    private MetaExternalReferenceExample3IngestionTest metaExternalReferenceExample3Ingestion;
     @Inject
-    private static MetaExternalReferenceExample4IngestionTest metaExternalReferenceExample4Ingestion;
+    private MetaExternalReferenceExample4IngestionTest metaExternalReferenceExample4Ingestion;
     @Inject
-    private static MetaExternalReferenceExample5IngestionTest metaExternalReferenceExample5Ingestion;
+    private MetaExternalReferenceExample5IngestionTest metaExternalReferenceExample5Ingestion;
     @Inject
-    private static MetaExternalReferenceExample6IngestionTest metaExternalReferenceExample6Ingestion;
+    private MetaExternalReferenceExample6IngestionTest metaExternalReferenceExample6Ingestion;
     @Inject
-    private static MetaSchemeExample1IngestionTest metaSchemeExample1Ingestion;
+    private MetaSchemeExample1IngestionTest metaSchemeExample1Ingestion;
     @Inject
-    private static MetaScopedReferenceExample1IngestionTest metaScopedReferenceExample1Ingestion;
+    private MetaScopedReferenceExample1IngestionTest metaScopedReferenceExample1Ingestion;
     @Inject
-    private static MetaScopedReferenceExample2IngestionTest metaScopedReferenceExample2Ingestion;
+    private MetaScopedReferenceExample2IngestionTest metaScopedReferenceExample2Ingestion;
     @Inject
-    private static MultiCardinalityExample1IngestionTest multiCardinalityExample1Ingestion;
+    private MultiCardinalityExample1IngestionTest multiCardinalityExample1Ingestion;
     @Inject
-    private static MultiCardinalityExample2IngestionTest multiCardinalityExample2Ingestion;
+    private MultiCardinalityExample2IngestionTest multiCardinalityExample2Ingestion;
     @Inject
-    private static MultiCardinalityExample3IngestionTest multiCardinalityExample3Ingestion;
+    private MultiCardinalityExample3IngestionTest multiCardinalityExample3Ingestion;
     @Inject
-    private static MultiCardinalityExample4IngestionTest multiCardinalityExample4Ingestion;
+    private MultiCardinalityExample4IngestionTest multiCardinalityExample4Ingestion;
     @Inject
-    private static MultiCardinalityExample5IngestionTest multiCardinalityExample5Ingestion;
+    private MultiCardinalityExample5IngestionTest multiCardinalityExample5Ingestion;
     @Inject
-    private static MultiCardinalityExample6IngestionTest multiCardinalityExample6Ingestion;
+    private MultiCardinalityExample6IngestionTest multiCardinalityExample6Ingestion;
     @Inject
-    private static MultiCardinalityExample7IngestionTest multiCardinalityExample7Ingestion;
+    private MultiCardinalityExample7IngestionTest multiCardinalityExample7Ingestion;
     @Inject
-    private static MultiCardinalityExample8IngestionTest multiCardinalityExample8Ingestion;
+    private MultiCardinalityExample8IngestionTest multiCardinalityExample8Ingestion;
     @Inject
-    private static MultiCardinalityExample9IngestionTest multiCardinalityExample9Ingestion;
+    private MultiCardinalityExample9IngestionTest multiCardinalityExample9Ingestion;
     @Inject
-    private static MultiCardinalityExample10IngestionTest multiCardinalityExample10Ingestion;
+    private MultiCardinalityExample10IngestionTest multiCardinalityExample10Ingestion;
     @Inject
-    private static MultiCardinalityExample11IngestionTest multiCardinalityExample11Ingestion;
+    private MultiCardinalityExample11IngestionTest multiCardinalityExample11Ingestion;
     @Inject
-    private static MultiCardinalityExample12IngestionTest multiCardinalityExample12Ingestion;
+    private MultiCardinalityExample12IngestionTest multiCardinalityExample12Ingestion;
     @Inject
-    private static MultiCardinalityExample13IngestionTest multiCardinalityExample13Ingestion;
+    private MultiCardinalityExample13IngestionTest multiCardinalityExample13Ingestion;
     @Inject
-    private static MultiCardinalityExample14IngestionTest multiCardinalityExample14Ingestion;
+    private MultiCardinalityExample14IngestionTest multiCardinalityExample14Ingestion;
     @Inject
-    private static MultiCardinalityExample15IngestionTest multiCardinalityExample15Ingestion;
+    private MultiCardinalityExample15IngestionTest multiCardinalityExample15Ingestion;
     @Inject
-    private static MultiCardinalityExample16IngestionTest multiCardinalityExample16Ingestion;
+    private MultiCardinalityExample16IngestionTest multiCardinalityExample16Ingestion;
     @Inject
-    private static MultiCardinalityExample17IngestionTest multiCardinalityExample17Ingestion;
+    private MultiCardinalityExample17IngestionTest multiCardinalityExample17Ingestion;
     @Inject
-    private static MultiCardinalityExample18IngestionTest multiCardinalityExample18Ingestion;
+    private MultiCardinalityExample18IngestionTest multiCardinalityExample18Ingestion;
     @Inject
-    private static MultiCardinalityExample19IngestionTest multiCardinalityExample19Ingestion;
+    private MultiCardinalityExample19IngestionTest multiCardinalityExample19Ingestion;
     @Inject
-    private static MultiCardinalityExample20IngestionTest multiCardinalityExample20Ingestion;
+    private MultiCardinalityExample20IngestionTest multiCardinalityExample20Ingestion;
     @Inject
-    private static MultiCardinalityExample21IngestionTest multiCardinalityExample21Ingestion;
+    private MultiCardinalityExample21IngestionTest multiCardinalityExample21Ingestion;
     @Inject
-    private static MultiCardinalityExample22IngestionTest multiCardinalityExample22Ingestion;
+    private MultiCardinalityExample22IngestionTest multiCardinalityExample22Ingestion;
     @Inject
-    private static MultiCardinalityExample23IngestionTest multiCardinalityExample23Ingestion;
+    private MultiCardinalityExample23IngestionTest multiCardinalityExample23Ingestion;
     @Inject
-    private static MultiCardinalityExample24IngestionTest multiCardinalityExample24Ingestion;
+    private MultiCardinalityExample24IngestionTest multiCardinalityExample24Ingestion;
     @Inject
-    private static MultiCardinalityExample25IngestionTest multiCardinalityExample25Ingestion;
+    private MultiCardinalityExample25IngestionTest multiCardinalityExample25Ingestion;
     @Inject
-    private static MultiCardinalityExample26IngestionTest multiCardinalityExample26Ingestion;
+    private MultiCardinalityExample26IngestionTest multiCardinalityExample26Ingestion;
     @Inject
-    private static MultiCardinalityExample27IngestionTest multiCardinalityExample27Ingestion;
+    private MultiCardinalityExample27IngestionTest multiCardinalityExample27Ingestion;
     @Inject
-    private static MultiCardinalityExample28IngestionTest multiCardinalityExample28Ingestion;
+    private MultiCardinalityExample28IngestionTest multiCardinalityExample28Ingestion;
     @Inject
-    private static SingleCardinalityExample1IngestionTest singleCardinalityExample1Ingestion;
+    private SingleCardinalityExample1IngestionTest singleCardinalityExample1Ingestion;
     @Inject
-    private static SingleCardinalityExample2IngestionTest singleCardinalityExample2Ingestion;
+    private SingleCardinalityExample2IngestionTest singleCardinalityExample2Ingestion;
     @Inject
-    private static SingleCardinalityExample3IngestionTest singleCardinalityExample3Ingestion;
+    private SingleCardinalityExample3IngestionTest singleCardinalityExample3Ingestion;
     @Inject
-    private static SingleCardinalityExample4IngestionTest singleCardinalityExample4Ingestion;
+    private SingleCardinalityExample4IngestionTest singleCardinalityExample4Ingestion;
     @Inject
-    private static SingleCardinalityExample5IngestionTest singleCardinalityExample5Ingestion;
+    private SingleCardinalityExample5IngestionTest singleCardinalityExample5Ingestion;
     @Inject
-    private static SingleCardinalityExample6IngestionTest singleCardinalityExample6Ingestion;
+    private SingleCardinalityExample6IngestionTest singleCardinalityExample6Ingestion;
     @Inject
-    private static TypeInheritanceExample1IngestionTest typeInheritanceExample1Ingestion;
+    private TypeInheritanceExample1IngestionTest typeInheritanceExample1Ingestion;
     @Inject
-    private static TypeInheritanceExample2IngestionTest typeInheritanceExample2Ingestion;
-    
+    private TypeInheritanceExample2IngestionTest typeInheritanceExample2Ingestion;
+
     public static void main(String[] args) {
         try {
             DemoTestPackCreator demoTestPackCreator = new DemoTestPackCreator();
