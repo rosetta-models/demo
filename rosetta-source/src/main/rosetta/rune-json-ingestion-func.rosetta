@@ -8,12 +8,13 @@ func Ingest_Order:
     output:
         ingestedOrder IngestedOrder (1..1)
 
-    set ingestedOrder: IngestedOrder {
-        identifier: (order -> customer -> userId) + "_" + (order -> identifier),
-        itemName: order -> orderItem -> name,
-        currency: order -> orderItem -> currency to-string,
-        quantity: order -> orderItem -> quantity,
-        amount: order -> orderItem -> price * (order -> orderItem -> quantity),
-        amountWithVat: order -> orderItem -> price * (order -> orderItem -> quantity) * 1.15,
-        addressLabel: (order -> customer -> fullName) + ", " + (order -> toAddress)
-    }
+    set ingestedOrder:
+        IngestedOrder {
+            identifier: (order -> customer -> userId) + "_" + (order -> identifier),
+            itemName: order -> orderItem -> name,
+            currency: order -> orderItem -> currency to-string,
+            quantity: order -> orderItem -> quantity,
+            amount: order -> orderItem -> price * (order -> orderItem -> quantity),
+            amountWithVat: order -> orderItem -> price * (order -> orderItem -> quantity) * 1.15,
+            addressLabel: (order -> customer -> fullName) + ", " + (order -> toAddress)
+        }

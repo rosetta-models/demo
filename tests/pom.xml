@@ -65,6 +65,42 @@
     </dependency>
   </dependencies>
 
+  <profiles>
+    <profile>
+      <id>update-expectations</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <phase>process-test-classes</phase>
+                <goals>
+                  <goal>exec</goal>
+                </goals>
+                <configuration>
+                  <executable>java</executable>
+                  <classpathScope>test</classpathScope>
+                  <arguments>
+                    <argument>-classpath</argument>
+                    <classpath/>
+                    <argument>demo.testpack.DemoTestPackCreator</argument>
+                  </arguments>
+                  <environmentVariables>
+                    <WRITE_EXPECTATIONS>true</WRITE_EXPECTATIONS>
+                    <CREATE_EXPECTATION_FILES>true</CREATE_EXPECTATION_FILES>
+                    <UPDATE_OR_CREATE_MODEL_DIFFS>true</UPDATE_OR_CREATE_MODEL_DIFFS>
+                    <TEST_WRITE_BASE_PATH>${maven.multiModuleProjectDirectory}/rosetta-source/src/main/resources</TEST_WRITE_BASE_PATH>
+                  </environmentVariables>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
   <build>
     <plugins>
       <plugin>
@@ -97,4 +133,5 @@
       </plugin>
     </plugins>
   </build>
+
 </project>

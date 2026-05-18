@@ -12,7 +12,9 @@ func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership:
 
     set vehicleOwnership:
         VehicleOwnership {
-            drivingLicence: Create_DrivingLicences(vehicleAndLicenceData -> drivingLicenceData),
+            drivingLicence: Create_DrivingLicences(
+                        vehicleAndLicenceData -> drivingLicenceData
+                    ),
             vehicle: Create_Vehicle(vehicleAndLicenceData -> vehicleData),
             dateOfPurchase: vehicleAndLicenceData -> vehicleData -> dateOfPurchase,
             isFirstHand: vehicleAndLicenceData -> vehicleData -> isFirstHand,
@@ -27,20 +29,23 @@ func Create_DrivingLicences:
 
     add drivingLicences:
         drivingLicenceData
-            extract DrivingLicence {
-                person: Person {
-                    firstName: item -> firstName,
-                    surname: item -> surname,
-                    dateOfBirth: item -> dateOfBirth,
-                    ...
-                },
-                countryOfIssuance: item -> countryOfIssuance,
-                licenceNumber: item -> licenceNumber,
-                dateOfIssuance: item -> dateOfIssuance,
-                dateOfRenewal: item -> dateOfRenewal,
-                vehicleEntitlement: item -> vehicleEntitlement extract to-enum VehicleClassificationEnum,
-                penaltyPoints: item -> penaltyPoints
-            }
+            extract
+                DrivingLicence {
+                    person:
+                        Person {
+                            firstName: item -> firstName,
+                            surname: item -> surname,
+                            dateOfBirth: item -> dateOfBirth,
+                            ...
+                        },
+                    countryOfIssuance: item -> countryOfIssuance,
+                    licenceNumber: item -> licenceNumber,
+                    dateOfIssuance: item -> dateOfIssuance,
+                    dateOfRenewal: item -> dateOfRenewal,
+                    vehicleEntitlement: item -> vehicleEntitlement
+                            extract to-enum VehicleClassificationEnum,
+                    penaltyPoints: item -> penaltyPoints
+                }
 
 func Create_Vehicle:
     inputs:
@@ -49,33 +54,31 @@ func Create_Vehicle:
         vehicle Vehicle (0..1)
 
     set vehicle:
-        if vehicleData -> vehicleType = "CAR" 
-        then 
-            Vehicle {
-                CombustibleVehicle: CombustibleVehicle {
-                    Car: Create_Car(vehicleData),
-                    ...
-                },
+        if vehicleData -> vehicleType = "CAR"
+        then Vehicle {
+                CombustibleVehicle:
+                    CombustibleVehicle {
+                        Car: Create_Car(vehicleData),
+                        ...
+                    },
                 ...
             }
-        else if vehicleData -> vehicleType = "ELECTRIC_CAR" 
-        then
-            Vehicle {
+        else if vehicleData -> vehicleType = "ELECTRIC_CAR"
+        then Vehicle {
                 ElectricCar: Create_ElectricCar(vehicleData),
                 ...
             }
-        else if vehicleData -> vehicleType = "MOTORCYCLE" 
-        then
-            Vehicle {
-                CombustibleVehicle: CombustibleVehicle {
-                    Motorcycle: Create_Motorcycle(vehicleData),
-                    ...
-                },
+        else if vehicleData -> vehicleType = "MOTORCYCLE"
+        then Vehicle {
+                CombustibleVehicle:
+                    CombustibleVehicle {
+                        Motorcycle: Create_Motorcycle(vehicleData),
+                        ...
+                    },
                 ...
             }
-        else if vehicleData -> vehicleType = "BICYCLE" 
-        then
-            Vehicle {
+        else if vehicleData -> vehicleType = "BICYCLE"
+        then Vehicle {
                 Bicycle: Create_Bicycle(vehicleData),
                 ...
             }
@@ -94,7 +97,7 @@ func Create_ElectricCar:
             vehicleTaxBand: vehicleData -> vehicleTaxBand to-enum VehicleTaxBandEnum,
             vehicleClassification: vehicleData -> vehicleClassification to-enum VehicleClassificationEnum,
             registrationID: vehicleData -> registrationID,
-            batteryCapacity: vehicleData -> batteryCapacity, 
+            batteryCapacity: vehicleData -> batteryCapacity,
         }
 
 func Create_Car:
@@ -102,7 +105,7 @@ func Create_Car:
         vehicleData VehicleData (0..1)
     output:
         car Car (0..1)
-    
+
     set car:
         Car {
             colour: vehicleData -> colour to-enum ColourEnum,
@@ -121,7 +124,7 @@ func Create_Motorcycle:
         vehicleData VehicleData (0..1)
     output:
         motorcycle Motorcycle (0..1)
-        
+
     set motorcycle:
         Motorcycle {
             colour: vehicleData -> colour to-enum ColourEnum,
@@ -133,12 +136,12 @@ func Create_Motorcycle:
             fuelCapacity: vehicleData -> fuelCapacity
         }
 
- func Create_Bicycle:
+func Create_Bicycle:
     inputs:
         vehicleData VehicleData (0..1)
     output:
         bicycle Bicycle (0..1)
-              
+
     set bicycle:
         Bicycle {
             colour: vehicleData -> colour to-enum ColourEnum,
