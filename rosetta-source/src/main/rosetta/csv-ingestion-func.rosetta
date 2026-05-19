@@ -8,11 +8,12 @@ func Ingest_User:
     output:
         ingestedUser IngestedUser (1..1)
 
-    set ingestedUser: IngestedUser {
-        username: user -> username,
-        identifier: user -> identifier,
-        ingestedName: IngestedName {
-            firstName: user -> firstName,
-            lastName: user -> lastName
-        }
-    }
+    set ingestedUser:
+        IngestedUser {
+            username: user -> username,
+            identifier: user -> identifier,
+            ingestedName:
+                IngestedName {
+                    firstName: user -> firstName,
+                    lastName: user -> lastName
+        }}

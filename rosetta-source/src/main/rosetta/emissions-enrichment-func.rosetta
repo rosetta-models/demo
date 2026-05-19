@@ -11,8 +11,7 @@ func Enrich_VehicleOwnershipToReportableVehicle:
     output:
         reportableVehicle ReportableVehicle (1..1)
 
-    alias drivingLicence:
-        vehicleOwnership -> drivingLicence first
+    alias drivingLicence: vehicleOwnership -> drivingLicence first
 
     set reportableVehicle:
         ReportableVehicle {

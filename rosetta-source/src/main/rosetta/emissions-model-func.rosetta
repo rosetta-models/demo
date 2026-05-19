@@ -173,7 +173,7 @@ func RenewAllDrivingLicencesForOwner: <"Renew all vehicle owner's driving licenc
 
     set updatedVehicleOwnership -> drivingLicence: <"Overwrite existing driving licences with renewed driving licences.">
         vehicleOwnership -> drivingLicence
-            //then without extract means that item is a list of driving licenses
+            // then without extract means that item is a list of driving licenses
             then RenewAllDrivingLicences(item, newDateOfRenewal)
 
 func RenewAllDrivingLicences: <"Create new driving licences with new date of renewal.">
@@ -184,8 +184,8 @@ func RenewAllDrivingLicences: <"Create new driving licences with new date of ren
         renewedDrivingLicences DrivingLicence (1..*)
 
     add renewedDrivingLicences:
-        drivingLicences 
-            //then with extract will pass driving licenses one by one to item
+        drivingLicences
+            // then with extract will pass driving licenses one by one to item
             then extract RenewDrivingLicence(item, newDateOfRenewal)
 
 func RenewDrivingLicence: <"Create new driving licence with new date of renewal.">
@@ -269,7 +269,7 @@ func ComputeMileage: <"Estimates the mileage in kilometres of a given vehicle.">
 
     set mileage:
         vehicle switch
-            ElectricCar        then 5 * batteryCapacity, // assume 5 kilometres per kWh of battery
-            Car                then 15 * fuelCapacity,   // assume 15 kilometres per litre of fuel
-            CombustibleVehicle then 80,                  // for any other combustible vehicle, assume a mileage of 80 kilometres
-            Bicycle            then 30 // assume a mileage of 30 kilometres for a bicycle
+            ElectricCar then 5 * batteryCapacity, // assume 5 kilometres per kWh of battery
+            Car then 15 * fuelCapacity, // assume 15 kilometres per litre of fuel
+            CombustibleVehicle then 80, // for any other combustible vehicle, assume a mileage of 80 kilometres
+            Bicycle then 30 // assume a mileage of 30 kilometres for a bicycle

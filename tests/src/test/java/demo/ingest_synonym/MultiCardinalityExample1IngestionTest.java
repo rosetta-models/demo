@@ -1,16 +1,19 @@
 package demo.ingest_synonym;
 
-import com.regnosys.ingest.test.framework.ingestor.ExpectationUtil;
+import com.regnosys.demo.DemoRuntimeModule;
 import com.regnosys.ingest.test.framework.ingestor.IngestionTest;
 import com.regnosys.ingest.test.framework.ingestor.IngestionTestUtil;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionFactory;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionService;
-import com.regnosys.demo.DemoRuntimeModule;
+import com.regnosys.ingest.test.framework.ingestor.testing.Expectation;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.provider.Arguments;
 
 import java.net.URL;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Objects;
 import java.util.stream.Stream;
 
 //@org.junit.jupiter.api.Disabled
@@ -23,8 +26,6 @@ public class MultiCardinalityExample1IngestionTest extends IngestionTest<demo.in
 
     @BeforeAll
     static void setup() {
-        writeActualExpectations = ExpectationUtil.WRITE_EXPECTATIONS;
-
         ClassLoader cl = MultiCardinalityExample1IngestionTest.class.getClassLoader();
         Collection<URL> ingestURLs = List.of(
                 Objects.requireNonNull(cl.getResource("ingestions/multi-cardinality-example-1-ingestions.json")));
@@ -45,7 +46,25 @@ public class MultiCardinalityExample1IngestionTest extends IngestionTest<demo.in
     }
 
     @SuppressWarnings("unused")//used by the junit parameterized test
-    private static Stream<Arguments> fpMLFiles() {
+private static Stream<Arguments> fpMLFiles() {
         return readExpectationsFromPath(SAMPLE_FILES_DIR);
+    }
+
+
+    public void updateExpectations() {
+
+        // Ensure environment is set up
+        setup();
+        fpMLFiles().forEach(e -> {
+            Object[] argsArray = e.get();
+            String expectationFilePath = (String) argsArray[0];
+            Expectation expectation = (Expectation) argsArray[1];
+            try {
+                writeIngestionExpectation(expectationFilePath, expectation);
+            } catch (Throwable ex) {
+                throw new RuntimeException(ex);
+            }
+
+        });
     }
 }
