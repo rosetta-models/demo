@@ -19,49 +19,23 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.regnosys</groupId>
-      <artifactId>rosetta-common</artifactId>
+      <groupId>org.finos.rune-common</groupId>
+      <artifactId>rune-common</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>com.regnosys</groupId>
+      <groupId>org.finos.rune-common</groupId>
       <artifactId>serialization</artifactId>
-      <version>${rosetta.bundle.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>com.regnosys</groupId>
-      <artifactId>rosetta-testing</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>com.regnosys.rosetta</groupId>
-          <artifactId>com.regnosys.rosetta.xcore</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.osgi</groupId>
-          <artifactId>org.osgi.service.prefs</artifactId>
-        </exclusion>
-      </exclusions>
+      <groupId>org.finos.rune-testing</groupId>
+      <artifactId>rune-testing</artifactId>
     </dependency>
     <dependency>
       <groupId>com.regnosys</groupId>
       <artifactId>ingest-test-framework</artifactId>
-      <version>${rosetta.bundle.version}</version>
       <!--            <scope>test</scope>-->
-      <exclusions>
-        <exclusion>
-          <groupId>com.regnosys.rosetta</groupId>
-          <artifactId>com.regnosys.rosetta.xcore</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.osgi</groupId>
-          <artifactId>org.osgi.service.prefs</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.eclipse.xtext</groupId>
-          <artifactId>org.eclipse.xtext.ecore</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
   </dependencies>
 
@@ -85,7 +59,7 @@
                   <arguments>
                     <argument>-classpath</argument>
                     <classpath/>
-                    <argument>demo.testpack.DemoTestPackCreator</argument>
+                    <argument>com.regnosys.demo.DemoTestPackCreator</argument>
                   </arguments>
                   <environmentVariables>
                     <WRITE_EXPECTATIONS>true</WRITE_EXPECTATIONS>

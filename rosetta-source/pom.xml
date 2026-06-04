@@ -15,17 +15,16 @@
   
   <dependencies>
     <dependency>
-      <groupId>com.regnosys.rosetta</groupId>
-      <artifactId>com.regnosys.rosetta</artifactId>
+      <groupId>org.finos.rune</groupId>
+      <artifactId>rune-lang</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.regnosys</groupId>
-      <artifactId>rosetta-common</artifactId>
+      <groupId>org.finos.rune-common</groupId>
+      <artifactId>rune-common</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.regnosys</groupId>
-      <artifactId>rosetta-testing</artifactId>
-      <version>${rosetta.bundle.version}</version>
+      <groupId>org.finos.rune-testing</groupId>
+      <artifactId>rune-testing</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -36,8 +35,8 @@
       <build>
         <plugins>
           <plugin>
-            <groupId>com.regnosys.rosetta</groupId>
-            <artifactId>rosetta-maven-plugin</artifactId>
+            <groupId>org.finos.rune</groupId>
+            <artifactId>rune-maven-plugin</artifactId>
             <executions>
               <execution>
                 <id>format-rosetta</id>
@@ -151,8 +150,8 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>com.regnosys.rosetta</groupId>
-        <artifactId>rosetta-maven-plugin</artifactId>
+        <groupId>org.finos.rune</groupId>
+        <artifactId>rune-maven-plugin</artifactId>
         <executions>
           <execution>
             <id>default-cli</id>
@@ -187,24 +186,18 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <groupId>com.regnosys.rosetta</groupId>
-          <artifactId>rosetta-maven-plugin</artifactId>
+          <groupId>org.finos.rune</groupId>
+          <artifactId>rune-maven-plugin</artifactId>
           <version>${rosetta.dsl.version}</version>
           <dependencies>
             <dependency>
-              <groupId>com.regnosys.rosetta</groupId>
-              <artifactId>com.regnosys.rosetta</artifactId>
+              <groupId>org.finos.rune</groupId>
+              <artifactId>rune-lang</artifactId>
               <version>${rosetta.dsl.version}</version>
-              <exclusions>
-                <exclusion>
-                  <groupId>com.regnosys.rosetta</groupId>
-                  <artifactId>com.regnosys.rosetta.xcore</artifactId>
-                </exclusion>
-              </exclusions>
             </dependency>
             <dependency>
-              <groupId>com.regnosys.rosetta</groupId>
-              <artifactId>com.regnosys.rosetta.lib</artifactId>
+              <groupId>org.finos.rune</groupId>
+              <artifactId>rune-runtime</artifactId>
               <version>${rosetta.dsl.version}</version>
             </dependency>
           </dependencies>
