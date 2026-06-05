@@ -59,8 +59,8 @@ func FindVehiclesByEngineType: <"Find all vehicles with given engine type.">
     output:
         vehiclesWithEngineType Vehicle (0..*)
 
-    add vehiclesWithEngineType: <"Filter each list 'item' with the given test.">
-        vehicles filter CombustibleVehicle -> Car -> engine -> engineType = engineType
+    add vehiclesWithEngineType: <"Filter each vehicle choice using as operation.">
+        vehicles filter vehicle [ vehicle as Car -> engine -> engineType = engineType ]
 
 func FindDriversWithMaximumZeroTo60: <"Find all vehicles with given maximum 0 - 60 mph.">
     inputs:

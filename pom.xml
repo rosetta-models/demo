@@ -18,8 +18,8 @@
     <maven.compiler.release>11</maven.compiler.release>
     <java.enforced.version>[21,22)</java.enforced.version>
 
-    <rosetta.dsl.version>9.83.0</rosetta.dsl.version>
-    <rosetta.bundle.version>11.120.2</rosetta.bundle.version>
+    <rosetta.dsl.version>10.0.0-dev.14</rosetta.dsl.version>
+    <rosetta.bundle.version>12.0.0-dev.19</rosetta.bundle.version>
 
     <xtext.version>2.38.0</xtext.version>
     <guava.version>33.3.1-jre</guava.version>
@@ -69,39 +69,49 @@
         <version>${drr.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.regnosys.rosetta</groupId>
-        <artifactId>com.regnosys.rosetta</artifactId>
-        <version>${rosetta.dsl.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>com.regnosys.rosetta</groupId>
-            <artifactId>com.regnosys.rosetta.xcore</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>com.regnosys.rosetta</groupId>
-        <artifactId>com.regnosys.rosetta.lib</artifactId>
+        <groupId>org.finos.rune</groupId>
+        <artifactId>rune-lang</artifactId>
         <version>${rosetta.dsl.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.regnosys</groupId>
-        <artifactId>rosetta-common</artifactId>
+        <groupId>org.finos.rune</groupId>
+        <artifactId>rune-runtime</artifactId>
+        <version>${rosetta.dsl.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.finos.rune-common</groupId>
+        <artifactId>rune-common</artifactId>
         <version>${rosetta.bundle.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.regnosys</groupId>
-        <artifactId>rosetta-testing</artifactId>
+        <groupId>org.finos.rune-common</groupId>
+        <artifactId>serialization</artifactId>
+        <version>${rosetta.bundle.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.finos.rune-testing</groupId>
+        <artifactId>rune-testing</artifactId>
         <version>${rosetta.bundle.version}</version>
         <scope>test</scope>
         <exclusions>
           <exclusion>
-            <groupId>com.regnosys.rosetta</groupId>
-            <artifactId>com.regnosys.rosetta.xcore</artifactId>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.service.prefs</artifactId>
           </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>com.regnosys</groupId>
+        <artifactId>ingest-test-framework</artifactId>
+        <version>${rosetta.bundle.version}</version>
+        <exclusions>
           <exclusion>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.service.prefs</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.eclipse.xtext</groupId>
+            <artifactId>org.eclipse.xtext.ecore</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
