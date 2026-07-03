@@ -11,5 +11,5 @@ jobs:
   readonly-namespaces:
     uses: finos/rune-dsl/.github/workflows/verify-readonly-namespaces.yml@main
     with:
-      config-path: rune-config.yml
+      config-path: rosetta-config.yml
       root: .
