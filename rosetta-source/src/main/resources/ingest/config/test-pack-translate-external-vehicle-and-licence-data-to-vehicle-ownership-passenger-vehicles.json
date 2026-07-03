@@ -24,5 +24,29 @@
       "modelValidationFailures" : 3,
       "runtimeError" : false
     }
+  }, {
+    "id" : "ws-sample",
+    "name" : "ws-sample",
+    "inputPath" : "ingest/input/passenger-vehicles/ws-sample.xml",
+    "outputPath" : "ingest/output/demo-external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/ws-sample.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "client-sample",
+    "name" : "client-sample",
+    "inputPath" : "ingest/input/passenger-vehicles/client-sample.xml",
+    "outputPath" : "ingest/output/demo-external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/client-sample.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
   } ]
 }
