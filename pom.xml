@@ -18,7 +18,7 @@
     <maven.compiler.release>11</maven.compiler.release>
     <java.enforced.version>[21,22)</java.enforced.version>
 
-    <rune.dsl.version>10.1.0</rune.dsl.version>
+    <rosetta.dsl.version>10.1.0</rosetta.dsl.version>
     <rosetta.bundle.version>12.1.0</rosetta.bundle.version>
 
     <xtext.version>2.38.0</xtext.version>
@@ -97,21 +97,6 @@
           <exclusion>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.service.prefs</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>com.regnosys</groupId>
-        <artifactId>ingest-test-framework</artifactId>
-        <version>${rosetta.bundle.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.service.prefs</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.eclipse.xtext</groupId>
-            <artifactId>org.eclipse.xtext.ecore</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
