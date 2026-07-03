@@ -1,0 +1,15 @@
+name: Verify read-only namespaces
+
+on:
+  pull_request:
+    paths:
+      - "**/*.rosetta"
+      - "rune-config.yml"
+      - ".github/workflows/verify-readonly-namespaces.yml"
+
+jobs:
+  readonly-namespaces:
+    uses: finos/rune-dsl/.github/workflows/verify-readonly-namespaces.yml@main
+    with:
+      config-path: rosetta-config.yml
+      root: .
