@@ -160,7 +160,7 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <rosettaConfig>${project.basedir}/src/main/resources/rosetta-config.yml</rosettaConfig>
+              <runeConfig>${project.basedir}/src/main/resources/rune-config.yml</runeConfig>
               <sourceRoots>
                 <sourceRoot>${project.build.directory}/classes/demo/rosetta</sourceRoot>
               </sourceRoots>
