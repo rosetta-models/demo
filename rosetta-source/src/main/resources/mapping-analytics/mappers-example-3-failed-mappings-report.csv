@@ -1,2 +1,0 @@
-File Name,Result,Input Path,Indexless Input Path,Unmappable CDM Path Count,Unmappable CDM Paths,Reason For Failure
-cdm-sample-files/mappers/example-3/example-3-1.xml,Fail_MappedNone,engineType.engineDetail.metric.emissions,engineType.engineDetail.metric.emissions,0,,Element with value Low-Emission could not be mapped to a rosettaField

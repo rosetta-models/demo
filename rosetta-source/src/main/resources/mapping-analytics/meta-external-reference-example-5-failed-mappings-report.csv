@@ -1,3 +1,0 @@
-File Name,Result,Input Path,Indexless Input Path,Unmappable CDM Path Count,Unmappable CDM Paths,Reason For Failure
-cdm-sample-files/meta-external-reference/example-5/example-5-1.xml,Fail_MappedNone,engineType.fuelDetail[id=g4789].id,engineType.fuelDetail[id=g4789].id,0,,Element with value g4789 could not be mapped to a rosettaField
-cdm-sample-files/meta-external-reference/example-5/example-5-1.xml,Fail_MappedNone,engineType.fuelDetail[id=g4789],engineType.fuelDetail[id=g4789],0,,Element with value Gasoline could not be mapped to a rosettaField

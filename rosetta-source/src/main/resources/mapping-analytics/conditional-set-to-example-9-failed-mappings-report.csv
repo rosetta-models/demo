@@ -1,4 +1,0 @@
-File Name,Result,Input Path,Indexless Input Path,Unmappable CDM Path Count,Unmappable CDM Paths,Reason For Failure
-cdm-sample-files/conditional-set-to/example-9/example-9-1.xml,Fail_MappedNone,engineType.engineDetail[id=123].fuelDetail[id=456].id,engineType.engineDetail[id=123].fuelDetail[id=456].id,0,,Element with value 456 could not be mapped to a rosettaField
-cdm-sample-files/conditional-set-to/example-9/example-9-1.xml,Success,engineType.engineDetail[id=123].alternativeFuel.combustible,engineType.engineDetail[id=123].alternativeFuel.combustible,1,Root.engine.engineSpecification.fuel=[Gasoline],Element mapped to already populated field
-cdm-sample-files/conditional-set-to/example-9/example-9-1.xml,Fail_MappedNone,engineType.engineDetail[id=123].id,engineType.engineDetail[id=123].id,0,,Element with value 123 could not be mapped to a rosettaField

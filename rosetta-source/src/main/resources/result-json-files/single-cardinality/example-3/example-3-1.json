@@ -1,8 +1,0 @@
-{
-  "engineSpecification" : {
-    "fuel" : {
-      "fuelType" : "Petrol"
-    },
-    "volumeUnit" : "UK Gallon"
-  }
-}

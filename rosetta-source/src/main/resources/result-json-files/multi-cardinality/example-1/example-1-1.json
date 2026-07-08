@@ -1,9 +1,0 @@
-{
-  "engineSpecification" : [ {
-    "fuel" : "Gas",
-    "volume" : "Gallon"
-  }, {
-    "fuel" : "Petrol",
-    "volume" : "Gallon"
-  } ]
-}

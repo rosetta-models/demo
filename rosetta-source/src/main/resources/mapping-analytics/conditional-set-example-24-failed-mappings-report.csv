@@ -1,2 +1,0 @@
-File Name,Result,Input Path,Indexless Input Path,Unmappable CDM Path Count,Unmappable CDM Paths,Reason For Failure
-cdm-sample-files/conditional-set/example-24/example-24-1.xml,Success,engineType.combustible[scheme=fuel],engineType.combustible[scheme=fuel],2,Root.engineSpecification.fuel=null Root.engineSpecification.alternativeFuel=null,Element Gasoline could not be parsed as a AlternativeFuelEnum : Element Gasoline could not be parsed as a FuelEnum

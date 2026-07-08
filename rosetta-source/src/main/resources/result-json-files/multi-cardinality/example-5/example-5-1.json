@@ -1,9 +1,0 @@
-{
-  "engine" : {
-    "engineSpecification" : {
-      "engineMetric" : {
-        "fuel" : [ "Gas", "Petrol" ]
-      }
-    }
-  }
-}
