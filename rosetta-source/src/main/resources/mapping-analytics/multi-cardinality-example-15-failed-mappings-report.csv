@@ -1,3 +1,0 @@
-File Name,Result,Input Path,Indexless Input Path,Unmappable CDM Path Count,Unmappable CDM Paths,Reason For Failure
-cdm-sample-files/multi-cardinality/example-15/example-15-1.xml,Success,engineType.fuelDetail(1).combustible,engineType.fuelDetail.combustible,1,Root.engine.engine(0).engineMetric(0).fuel=[Petrol],Element mapped to already populated field
-cdm-sample-files/multi-cardinality/example-15/example-15-1.xml,Success,engineType.capacityDetail(1).capacity,engineType.capacityDetail.capacity,1,Root.engine.engine(0).engineMetric(0).capacity=[Gallon],Element mapped to already populated field

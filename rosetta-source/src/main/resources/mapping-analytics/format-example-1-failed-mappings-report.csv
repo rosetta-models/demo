@@ -1,2 +1,0 @@
-File Name,Result,Input Path,Indexless Input Path,Unmappable CDM Path Count,Unmappable CDM Paths,Reason For Failure
-cdm-sample-files/format/example-1/example-1-1.xml,Fail_MappedNone,engineType.nomenclatureMotor,engineType.nomenclatureMotor,0,,Element with value 6M could not be mapped to a rosettaField

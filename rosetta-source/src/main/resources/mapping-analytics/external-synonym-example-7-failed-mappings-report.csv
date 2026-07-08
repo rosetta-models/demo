@@ -1,3 +1,0 @@
-File Name,Result,Input Path,Indexless Input Path,Unmappable CDM Path Count,Unmappable CDM Paths,Reason For Failure
-cdm-sample-files/external-synonym/example-7/example-7-1.xml,Fail_MappedNone,engineType.specifications[id=xyz].manufacturer,engineType.specifications[id=xyz].manufacturer,0,,Element with value ford could not be mapped to a rosettaField
-cdm-sample-files/external-synonym/example-7/example-7-1.xml,Fail_MappedNone,engineType.specifications[id=xyz].cylinders,engineType.specifications[id=xyz].cylinders,0,,Element with value 3 could not be mapped to a rosettaField
