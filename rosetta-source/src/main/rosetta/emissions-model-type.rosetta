@@ -84,6 +84,28 @@ type DrivingLicence: <"Driving licence authorisation granted by a jurisdiction">
         [metadata scheme]
     licenceNumber AlphaNumericText (1..1)
     dateOfIssuance date (1..1)
-    dateOfRenewal date (0..1)
+        [metadata id]
+    dateOfRenewal RelativeDate (0..1)
     vehicleEntitlement VehicleClassificationEnum (0..*)
     penaltyPoints PositiveInteger (1..1)
+
+type RelativeDate: <"A class defining a date as a relative offset from another date.">
+    dateRelativeTo date (0..1)
+        [metadata reference]
+    periodMultiplier int (1..1) <"A time period multiplier, e.g. 1, 2 or 3 etc. A negative value can be used when specifying an offset relative to another date, e.g. -2 days.">
+    period PeriodEnum (1..1) <"A time period, e.g. a day, week, month or year of the stream. If the periodMultiplier value is 0 (zero) then period must contain the value D (day).">
+    adjustedDate date (0..1) <"The date once the adjustment has been performed. (Note that this date may change if the business center holidays change).">
+
+type NewVehicleOwnershipTransaction:
+    identifier string (0..1)
+    itemName string (0..1)
+    currency string (0..1)
+    quantity number (0..1)
+    amount number (0..1)
+    amountWithVat number (0..1)
+    confirmation NewVehicleOwnershipConfirmation (1..1)
+
+type NewVehicleOwnershipConfirmation:
+    orderId string (1..1)
+    orderQuantity number (1..1)
+    customerFullName string (1..1)

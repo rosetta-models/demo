@@ -1,0 +1,8 @@
+namespace demo.emissions.ingestion.csv
+version "${project.version}"
+
+type UserData:
+    title string (1..1)
+    firstName string (1..1)
+    lastName string (1..1)
+    dob date (1..1)

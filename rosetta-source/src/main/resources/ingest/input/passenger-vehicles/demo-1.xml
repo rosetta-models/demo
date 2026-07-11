@@ -32,7 +32,7 @@
         <countryOfIssuance>GB</countryOfIssuance>
         <licenceNumber>AB12CDE</licenceNumber>
         <dateOfIssuance>2019-07-01</dateOfIssuance>
-        <dateOfRenewal>2029-07-01</dateOfRenewal>
+        <validityPeriodYears>10</validityPeriodYears>
         <vehicleEntitlement>M1_Passengers</vehicleEntitlement>
         <vehicleEntitlement>M2_Passengers</vehicleEntitlement>
         <vehicleEntitlement>M3_Passengers</vehicleEntitlement>

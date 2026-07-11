@@ -3,13 +3,16 @@
   "name" : "demo External Vehicle And Licence Data To Vehicle Ownership",
   "transform" : {
     "type" : "TRANSLATE",
-    "function" : "demo.emissions.ingestion.functions.Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership",
-    "inputType" : "demo.emissions.ingestion.ExternalVehicleAndLicenceData",
+    "function" : "demo.emissions.ingestion.xml.functions.Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership",
+    "inputType" : "demo.emissions.ingestion.xml.ExternalVehicleAndLicenceData",
     "outputType" : "demo.emissions.model.VehicleOwnership"
   },
   "inputSerialisation" : {
     "format" : "XML",
     "configPath" : "schemas/external-vehicle-and-licence-data/xml-config/external-vehicle-and-licence-data-rosetta-xml-config.json"
+  },
+  "outputSerialisation" : {
+    "format" : "RUNE_JSON"
   },
   "modelId" : "demo"
 }

@@ -12,7 +12,9 @@ func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
         vehicleOwnership VehicleOwnership (1..1)
 
     condition DrivingLicenceExpiry: <"Driving licence must not be expired">
-        drivingLicence -> dateOfRenewal all > dateOfPurchase
+        drivingLicence -> dateOfRenewal
+            extract ResolveRelativeDate -> adjustedDate
+            then all > dateOfPurchase
 
     condition DrivingLicenceVehicleClassification: <"Vehicle classification allowed by the driving licence needs to encompass the vehicle classification of the considered vehicle">
         drivingLicence -> vehicleEntitlement contains vehicle ->> vehicleClassification
@@ -33,7 +35,8 @@ func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving li
     output:
         isExpired boolean (1..1)
 
-    set isExpired: drivingLicence -> dateOfRenewal < todayDate
+    set isExpired:
+        ResolveRelativeDate(drivingLicence -> dateOfRenewal) -> adjustedDate < todayDate
 
 func Check_DieselEngine: <"Function to check whether the engine of the vehicle is of diesel type">
     inputs:
@@ -191,13 +194,26 @@ func RenewAllDrivingLicences: <"Create new driving licences with new date of ren
 func RenewDrivingLicence: <"Create new driving licence with new date of renewal.">
     inputs:
         drivingLicence DrivingLicence (1..1)
-        newDateOfRenewal date (1..1)
+        newDateOfIssuance date (1..1)
     output:
         renewedDrivingLicence DrivingLicence (1..1)
 
     set renewedDrivingLicence: drivingLicence
 
-    set renewedDrivingLicence -> dateOfRenewal: newDateOfRenewal
+    set renewedDrivingLicence -> dateOfIssuance:
+        newDateOfIssuance with-meta {
+            id: "issuanceDate"
+        }
+
+    set renewedDrivingLicence -> dateOfRenewal:
+        RelativeDate {
+            dateRelativeTo: empty with-meta {
+                    reference: "issuanceDate"
+                },
+            periodMultiplier: 10,
+            period: Y,
+            ...
+        }
 
 func SumNumbers: <"Returns the sum of the given list of numbers.">
     inputs:
@@ -273,3 +289,10 @@ func ComputeMileage: <"Estimates the mileage in kilometres of a given vehicle.">
             Car then 15 * fuelCapacity, // assume 15 kilometres per litre of fuel
             CombustibleVehicle then 80, // for any other combustible vehicle, assume a mileage of 80 kilometres
             Bicycle then 30 // assume a mileage of 30 kilometres for a bicycle
+
+func ResolveRelativeDate: <"Resolves the adjusted date based on the relative date and offset.">
+    [codeImplementation]
+    inputs:
+        relativeDate RelativeDate (1..1)
+    output:
+        resolvedRelativeDate RelativeDate (1..1)

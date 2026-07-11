@@ -1,0 +1,26 @@
+namespace demo.emissions.ingestion.json
+version "${project.version}"
+
+import demo.emissions.model.*
+
+func Ingest_VehicleOrderToNewVehicleOwnershipTransaction:
+    [ingest RUNE_JSON]
+    inputs:
+        order VehicleOrder (1..1)
+    output:
+        newVehicleOwnershipTransaction NewVehicleOwnershipTransaction (1..1)
+
+    set newVehicleOwnershipTransaction:
+        NewVehicleOwnershipTransaction {
+            identifier: (order -> customer -> userId) + "_" + (order -> orderId),
+            itemName: order -> orderItem -> name,
+            currency: order -> orderItem -> currency to-string,
+            quantity: order -> orderItem -> quantity,
+            amount: order -> orderItem -> price * (order -> orderItem -> quantity),
+            amountWithVat: order -> orderItem -> price * (order -> orderItem -> quantity) * 1.15,
+            confirmation:
+                NewVehicleOwnershipConfirmation {
+                    orderId: order -> orderConfirmation -> orderIdReference,
+                    orderQuantity: order -> orderConfirmation -> orderItemReference -> quantity,
+                    customerFullName: order -> orderConfirmation -> customerReference -> fullName
+        }}

@@ -1,0 +1,35 @@
+{
+  "@model" : "external-model",
+  "@type" : "demo.emissions.ingestion.json.VehicleOrder",
+  "@version" : "1.2.3",
+  "orderId" : {
+    "@key" : "order-id-key",
+    "@data" : "order_id_3"
+  },
+  "orderItem" : {
+    "@key" : "order-item-key",
+    "name" : "OQOWUEROQIWU001",
+    "quantity" : 10,
+    "price" : 115.65,
+    "currency" : "EUR"
+  },
+  "customer" : {
+    "@key:scoped" : "customer-key",
+    "userId" : {
+      "@scheme": "https://www.example.com/scheme1",
+      "@data": "user_id_3"
+    },
+    "fullName" : "Laura Gray"
+  },
+  "orderConfirmation" : {
+    "orderIdReference" : {
+      "@ref" : "order-id-key"
+    },
+    "orderItemReference" : {
+      "@ref" : "order-item-key"
+    },
+    "customerReference" : {
+      "@ref:scoped" : "customer-key"
+    }
+  }
+}

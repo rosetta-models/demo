@@ -1,6 +1,6 @@
-username, identifier,firstName,lastName
-booker12,9012,Rachel,Booker
-grey07,2070,Laura,Grey
-johnson81,4081,Craig,Johnson
-jenkins46,9346,Mary,Jenkins
-smith79,5079,Jamie,Smith
+title,firstName,lastName,dob
+Ms,Rachel,Booker,1977-08-23
+Dr,Laura,Grey,1986-06-17
+Mr,Craig,Johnson,2004-05-13
+Mrs,Mary,Jenkins,2008-07-11
+Mr,Jamie,Smith,1999-03-21

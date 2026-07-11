@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<dataDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="example-20.xsd example-20.xsd">
-    <engineType>
-        <combustible>Gasoline</combustible>
-        <complementaryEnergy>Electricity</complementaryEnergy>
-        <volumeCapacityUnit>Gallon</volumeCapacityUnit>
-    </engineType>
-</dataDocument>

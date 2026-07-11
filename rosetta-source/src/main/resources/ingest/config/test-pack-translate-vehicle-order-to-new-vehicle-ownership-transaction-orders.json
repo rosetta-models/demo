@@ -1,0 +1,39 @@
+{
+  "id" : "test-pack-translate-vehicle-order-to-new-vehicle-ownership-transaction-orders",
+  "pipelineId" : "pipeline-translate-demo-vehicle-order-to-new-vehicle-ownership-transaction",
+  "name" : "Orders",
+  "samples" : [ {
+    "id" : "order-1",
+    "name" : "order 1",
+    "inputPath" : "ingest/input/orders/order-1.json",
+    "outputPath" : "ingest/output/vehicle-order-to-new-vehicle-ownership-transaction/orders/order-1.json",
+    "assertions" : {
+      "inputPathCount" : 10,
+      "outputPathCount" : 9,
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "order-2",
+    "name" : "order 2",
+    "inputPath" : "ingest/input/orders/order-2.json",
+    "outputPath" : "ingest/output/vehicle-order-to-new-vehicle-ownership-transaction/orders/order-2.json",
+    "assertions" : {
+      "inputPathCount" : 10,
+      "outputPathCount" : 9,
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "order-3",
+    "name" : "order 3",
+    "inputPath" : "ingest/input/orders/order-3.json",
+    "outputPath" : "ingest/output/vehicle-order-to-new-vehicle-ownership-transaction/orders/order-3.json",
+    "assertions" : {
+      "inputPathCount" : 10,
+      "outputPathCount" : 9,
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  } ]
+}

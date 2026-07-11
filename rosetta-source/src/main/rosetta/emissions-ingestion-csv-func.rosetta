@@ -1,0 +1,20 @@
+namespace demo.emissions.ingestion.csv
+version "${project.version}"
+
+import demo.emissions.model.*
+
+func Ingest_UserDataToPerson:
+    [ingest CSV]
+    inputs:
+        user UserData (1..1)
+    output:
+        person Person (1..1)
+
+    set person:
+        Person {
+            honorific: user -> title,
+            firstName: user -> firstName,
+            surname: user -> lastName,
+            dateOfBirth: user -> dob,
+            ...
+        }

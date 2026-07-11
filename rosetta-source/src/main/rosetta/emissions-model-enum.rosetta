@@ -62,3 +62,9 @@ enum VehicleTaxBandEnum: <"Vehicle tax band as per UK regulations for vehicles r
     KBand
     LBand
     MBand
+
+enum PeriodEnum: <"The enumerated values to specify the period, e.g. day, week.">
+    D <"Day">
+    W <"Week">
+    M <"Month">
+    Y <"Year">

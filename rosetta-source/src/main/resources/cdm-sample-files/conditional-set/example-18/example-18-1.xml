@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<dataDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="example-18.xsd example-18.xsd">
-    <engineType>
-        <volumeCapacityUnit scheme="usScheme">US Gallon</volumeCapacityUnit>
-        <volumeCapacityUnit scheme="ukScheme">UK Gallon</volumeCapacityUnit>
-        <volumeCapacityUnit scheme="euScheme">Litres</volumeCapacityUnit>
-    </engineType>
-</dataDocument>

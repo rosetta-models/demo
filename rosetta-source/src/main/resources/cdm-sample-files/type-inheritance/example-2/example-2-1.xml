@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<dataDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="example-2.xsd example-2.xsd">
-    <vehicleOwner>
-        <firstname>John</firstname>
-        <lastname>Smith</lastname>
-        <vehicleOwned>Car</vehicleOwned>
-    </vehicleOwner>
-</dataDocument>

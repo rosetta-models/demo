@@ -1,0 +1,30 @@
+namespace demo.emissions.ingestion.json
+version "${project.version}"
+
+type VehicleOrder:
+    orderId string (1..1)
+        [metadata id]
+    orderItem VehicleOrderItem (1..1)
+    customer Customer (1..1)
+        [metadata location] // metadata location is a scoped key
+    orderConfirmation OrderConfirmation (1..1)
+
+type VehicleOrderItem:
+    [metadata key]
+    name string (1..1)
+    quantity number (1..1)
+    price number (1..1)
+    currency CurrencyEnum (1..1)
+
+type Customer:
+    userId string (1..1)
+        [metadata scheme]
+    fullName string (1..1)
+
+type OrderConfirmation:
+    orderIdReference string (1..1) <"Reference to metadata id">
+        [metadata reference]
+    orderItemReference VehicleOrderItem (1..1) <"Reference to metadata key">
+        [metadata reference]
+    customerReference Customer (1..1) <"Reference to metadata location">
+        [metadata address "pointsTo"=VehicleOrder->customer] // metadata address is a scoped reference
