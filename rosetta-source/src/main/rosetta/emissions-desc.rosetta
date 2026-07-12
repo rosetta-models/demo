@@ -1,0 +1,9 @@
+namespace demo.emissions
+version "${project.version}"
+
+metaType id string
+metaType key string
+metaType reference string
+metaType scheme string
+metaType address string
+metaType location string

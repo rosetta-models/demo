@@ -1,0 +1,17 @@
+{
+  "id" : "pipeline-translate-demo-vehicle-order-to-new-vehicle-ownership-transaction",
+  "name" : "demo Vehicle Order To New Vehicle Ownership Transaction",
+  "transform" : {
+    "type" : "TRANSLATE",
+    "function" : "demo.emissions.ingestion.json.functions.Ingest_VehicleOrderToNewVehicleOwnershipTransaction",
+    "inputType" : "demo.emissions.ingestion.json.VehicleOrder",
+    "outputType" : "demo.emissions.model.NewVehicleOwnershipTransaction"
+  },
+  "inputSerialisation" : {
+    "format" : "RUNE_JSON"
+  },
+  "outputSerialisation" : {
+    "format" : "RUNE_JSON"
+  },
+  "modelId" : "demo"
+}

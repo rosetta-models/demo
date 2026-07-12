@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<dataDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="example-1.xsd example-1.xsd">
-    <engineType>
-        <fabricationDate>01/31/2020</fabricationDate>
-        <nomenclatureMotor>6M</nomenclatureMotor>
-        <combustible>Gasoline</combustible>
-        <alternativeCombustible>Gasoline and Electricity</alternativeCombustible>
-    </engineType>
-</dataDocument>

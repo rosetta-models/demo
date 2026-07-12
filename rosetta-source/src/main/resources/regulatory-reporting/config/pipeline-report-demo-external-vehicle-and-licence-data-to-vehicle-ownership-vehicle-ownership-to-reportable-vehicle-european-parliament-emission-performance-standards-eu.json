@@ -1,0 +1,18 @@
+{
+  "id" : "pipeline-report-demo-external-vehicle-and-licence-data-to-vehicle-ownership-vehicle-ownership-to-reportable-vehicle-european-parliament-emission-performance-standards-eu",
+  "name" : "demo EuropeanParliament / EmissionPerformanceStandardsEU",
+  "transform" : {
+    "type" : "REPORT",
+    "function" : "demo.emissions.regulation.reports.EuropeanParliamentEmissionPerformanceStandardsEUReportFunction",
+    "inputType" : "demo.emissions.regulation.ReportableVehicle",
+    "outputType" : "demo.emissions.regulation.EuropeanParliamentReport"
+  },
+  "upstreamPipelineId" : "pipeline-enrich-demo-external-vehicle-and-licence-data-to-vehicle-ownership-vehicle-ownership-to-reportable-vehicle",
+  "inputSerialisation" : {
+    "format" : "RUNE_JSON"
+  },
+  "outputSerialisation" : {
+    "format" : "RUNE_JSON"
+  },
+  "modelId" : "demo"
+}

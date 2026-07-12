@@ -1,0 +1,24 @@
+{
+  "id" : "test-pack-projection-external-vehicle-and-licence-data-to-vehicle-ownership-vehicle-ownership-to-reportable-vehicle-european-parliament-emission-performance-standards-eu-european-parliament-report-to-iso-emissions-report-passenger-vehicles",
+  "pipelineId" : "pipeline-projection-demo-external-vehicle-and-licence-data-to-vehicle-ownership-vehicle-ownership-to-reportable-vehicle-european-parliament-emission-performance-standards-eu-european-parliament-report-to-iso-emissions-report",
+  "name" : "Passenger vehicles",
+  "samples" : [ {
+    "id" : "demo-1",
+    "name" : "demo 1",
+    "inputPath" : "regulatory-reporting/output/external-vehicle-and-licence-data-to-vehicle-ownership/vehicle-ownership-to-reportable-vehicle/european-parliament-emission-performance-standards-eu/passenger-vehicles/demo-1.json",
+    "outputPath" : "projection/output/external-vehicle-and-licence-data-to-vehicle-ownership/vehicle-ownership-to-reportable-vehicle/european-parliament-emission-performance-standards-eu/european-parliament-report-to-iso-emissions-report/passenger-vehicles/demo-1.xml",
+    "assertions" : {
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  }, {
+    "id" : "demo-2",
+    "name" : "demo 2",
+    "inputPath" : "regulatory-reporting/output/external-vehicle-and-licence-data-to-vehicle-ownership/vehicle-ownership-to-reportable-vehicle/european-parliament-emission-performance-standards-eu/passenger-vehicles/demo-2.json",
+    "outputPath" : "projection/output/external-vehicle-and-licence-data-to-vehicle-ownership/vehicle-ownership-to-reportable-vehicle/european-parliament-emission-performance-standards-eu/european-parliament-report-to-iso-emissions-report/passenger-vehicles/demo-2.xml",
+    "assertions" : {
+      "modelValidationFailures" : 0,
+      "runtimeError" : false
+    }
+  } ]
+}

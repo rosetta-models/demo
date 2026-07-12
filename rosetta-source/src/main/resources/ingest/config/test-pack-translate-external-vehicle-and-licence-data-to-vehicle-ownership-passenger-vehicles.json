@@ -9,7 +9,7 @@
     "outputPath" : "ingest/output/external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/demo-1.json",
     "assertions" : {
       "inputPathCount" : 35,
-      "outputPathCount" : 34,
+      "outputPathCount" : 38,
       "modelValidationFailures" : 3,
       "runtimeError" : false
     }
@@ -19,9 +19,9 @@
     "inputPath" : "ingest/input/passenger-vehicles/demo-2.xml",
     "outputPath" : "ingest/output/external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/demo-2.json",
     "assertions" : {
-      "inputPathCount" : 35,
-      "outputPathCount" : 34,
-      "modelValidationFailures" : 3,
+      "inputPathCount" : 34,
+      "outputPathCount" : 37,
+      "modelValidationFailures" : 4,
       "runtimeError" : false
     }
   } ]

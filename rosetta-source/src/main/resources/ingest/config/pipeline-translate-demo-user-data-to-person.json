@@ -1,0 +1,17 @@
+{
+  "id" : "pipeline-translate-demo-user-data-to-person",
+  "name" : "demo User Data To Person",
+  "transform" : {
+    "type" : "TRANSLATE",
+    "function" : "demo.emissions.ingestion.csv.functions.Ingest_UserDataToPerson",
+    "inputType" : "demo.emissions.ingestion.csv.UserData",
+    "outputType" : "demo.emissions.model.Person"
+  },
+  "inputSerialisation" : {
+    "format" : "CSV"
+  },
+  "outputSerialisation" : {
+    "format" : "RUNE_JSON"
+  },
+  "modelId" : "demo"
+}

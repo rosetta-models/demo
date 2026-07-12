@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<dataDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="example-17.xsd example-17.xsd">
-    <engineType>
-        <combustible scheme="petrolScheme">Gasoline</combustible>
-        <combustible scheme="dieselScheme">Diesel</combustible>
-        <combustible scheme="gasScheme">Propane</combustible>
-    </engineType>
-</dataDocument>

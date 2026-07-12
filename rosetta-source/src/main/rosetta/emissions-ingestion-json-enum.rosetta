@@ -1,0 +1,7 @@
+namespace demo.emissions.ingestion.json
+version "${project.version}"
+
+enum CurrencyEnum:
+    GBP
+    USD
+    EUR

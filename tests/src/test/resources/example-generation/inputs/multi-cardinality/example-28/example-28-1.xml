@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<dataDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="example-28.xsd example-28.xsd">
-    <engineType>
-        <volume>Liters</volume>
-        <capacityUnit>Gallon</capacityUnit>
-    </engineType>
-</dataDocument>

@@ -1,3 +1,0 @@
-[
-{"fileName":"cdm-sample-files/single-cardinality/example-1/example-1-1.xml","excludedPaths":0,"externalPaths":1,"outstandingMappings":0,"validationFailures":0,"qualificationExpectation":{"success":true,"qualifyResults":[],"qualifiableObjectCount":0}},
-{"fileName":"cdm-sample-files/single-cardinality/example-1/example-1-2.xml","excludedPaths":0,"externalPaths":1,"outstandingMappings":0,"validationFailures":0,"qualificationExpectation":{"success":true,"qualifyResults":[],"qualifiableObjectCount":0}}]

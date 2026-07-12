@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<dataDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="example-5.xsd example-5.xsd">
-    <engineType>
-        <engineDetail>
-            <capacityUnit>UK Gallon</capacityUnit>
-            <combustible>Petrol</combustible>
-        </engineDetail>
-    </engineType>
-</dataDocument>

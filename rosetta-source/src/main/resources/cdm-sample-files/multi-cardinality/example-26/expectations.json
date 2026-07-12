@@ -1,4 +1,0 @@
-[
-{"fileName":"cdm-sample-files/multi-cardinality/example-26/example-26-1.xml","excludedPaths":0,"externalPaths":2,"outstandingMappings":0,"validationFailures":0,"qualificationExpectation":{"success":true,"qualifyResults":[],"qualifiableObjectCount":0}},
-{"fileName":"cdm-sample-files/multi-cardinality/example-26/example-26-2.xml","excludedPaths":0,"externalPaths":2,"outstandingMappings":0,"validationFailures":2,"qualificationExpectation":{"success":true,"qualifyResults":[],"qualifiableObjectCount":0}},
-{"fileName":"cdm-sample-files/multi-cardinality/example-26/example-26-3.xml","excludedPaths":0,"externalPaths":3,"outstandingMappings":0,"validationFailures":1,"qualificationExpectation":{"success":true,"qualifyResults":[],"qualifiableObjectCount":0}}]

@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<dataDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="example-2.xsd example-2.xsd">
-    <engineType>
-        <engineDetail>
-            <combustible scheme="scheme1">Gasoline</combustible>
-            <combustible scheme="scheme2">Diesel</combustible>
-        </engineDetail>
-    </engineType>
-</dataDocument>

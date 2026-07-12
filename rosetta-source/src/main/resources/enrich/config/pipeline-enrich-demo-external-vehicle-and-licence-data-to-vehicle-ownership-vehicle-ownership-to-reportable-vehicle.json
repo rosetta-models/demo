@@ -1,0 +1,18 @@
+{
+  "id" : "pipeline-enrich-demo-external-vehicle-and-licence-data-to-vehicle-ownership-vehicle-ownership-to-reportable-vehicle",
+  "name" : "demo Vehicle Ownership To Reportable Vehicle",
+  "transform" : {
+    "type" : "ENRICH",
+    "function" : "demo.emissions.enrichment.functions.Enrich_VehicleOwnershipToReportableVehicle",
+    "inputType" : "demo.emissions.model.VehicleOwnership",
+    "outputType" : "demo.emissions.regulation.ReportableVehicle"
+  },
+  "upstreamPipelineId" : "pipeline-translate-demo-external-vehicle-and-licence-data-to-vehicle-ownership",
+  "inputSerialisation" : {
+    "format" : "RUNE_JSON"
+  },
+  "outputSerialisation" : {
+    "format" : "RUNE_JSON"
+  },
+  "modelId" : "demo"
+}
