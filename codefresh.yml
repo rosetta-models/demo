@@ -42,4 +42,4 @@ steps:
       - echo "${{ARTIFACT_REGISTRY_SA_KEY}}"|base64 -d>"${{CF_VOLUME_PATH}}"/sa
       - export GOOGLE_APPLICATION_CREDENTIALS="${{CF_VOLUME_PATH}}"/sa
       - mvn ${{MVN_CLI_OPT}} versions:set -DnewVersion=${{RELEASE_NAME}}
-      - mvn ${{MVN_CLI_OPT}} clean deploy
+      - NORMALISE_SAMPLE_VERSION=true mvn ${{MVN_CLI_OPT}} clean deploy
