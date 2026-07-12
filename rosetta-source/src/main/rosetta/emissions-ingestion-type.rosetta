@@ -1,3 +1,0 @@
-namespace demo.emissions.ingestion
-version "${project.version}"
-// delete me
