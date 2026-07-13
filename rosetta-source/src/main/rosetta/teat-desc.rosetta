@@ -1,0 +1,5 @@
+namespace demo.teat : < "test" >
+version "${project.version}"
+
+schema demoTeat XML
+    [externalConfig]

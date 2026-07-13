@@ -1,7 +1,13 @@
 model:
   name: DEMO
-dependencies:
 generators:
   namespaces:
-  - demo.*
-  - com.rosetta.model
+    - demo.*
+    - com.rosetta.model
+namespaceConfig:
+  - id: demoTeat
+    namespace: demo.teat.*
+    readOnly: true
+    schemaConfig:
+      schema: demoTeat
+      configPath: xml-config/demo.teat-xml-config.json
