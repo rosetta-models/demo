@@ -1,16 +1,13 @@
 {
-  "@model" : "demo",
-  "@type" : "demo.emissions.model.NewVehicleOwnershipTransaction",
-  "@version" : "0.0.0.master-SNAPSHOT",
-  "identifier" : "user_id_2_order_id_2",
-  "itemName" : "HRHRGHFGGWDF001",
-  "currency" : "USD",
-  "quantity" : 20,
   "amount" : 2650.00,
   "amountWithVat" : 3047.5000,
   "confirmation" : {
+    "customerFullName" : "Barbara Smith",
     "orderId" : "order_id_2",
-    "orderQuantity" : 20,
-    "customerFullName" : "Barbara Smith"
-  }
+    "orderQuantity" : 20
+  },
+  "currency" : "USD",
+  "identifier" : "user_id_2_order_id_2",
+  "itemName" : "HRHRGHFGGWDF001",
+  "quantity" : 20
 }

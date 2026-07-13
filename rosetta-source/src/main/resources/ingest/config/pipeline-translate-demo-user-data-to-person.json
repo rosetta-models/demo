@@ -10,8 +10,5 @@
   "inputSerialisation" : {
     "format" : "CSV"
   },
-  "outputSerialisation" : {
-    "format" : "RUNE_JSON"
-  },
   "modelId" : "demo"
 }

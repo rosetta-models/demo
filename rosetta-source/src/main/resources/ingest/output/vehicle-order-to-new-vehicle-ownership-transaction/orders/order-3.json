@@ -1,16 +1,13 @@
 {
-  "@model" : "demo",
-  "@type" : "demo.emissions.model.NewVehicleOwnershipTransaction",
-  "@version" : "0.0.0.master-SNAPSHOT",
-  "identifier" : "user_id_3_order_id_3",
-  "itemName" : "OQOWUEROQIWU001",
-  "currency" : "EUR",
-  "quantity" : 10,
   "amount" : 1156.50,
   "amountWithVat" : 1329.9750,
   "confirmation" : {
+    "customerFullName" : "Laura Gray",
     "orderId" : "order_id_3",
-    "orderQuantity" : 10,
-    "customerFullName" : "Laura Gray"
-  }
+    "orderQuantity" : 10
+  },
+  "currency" : "EUR",
+  "identifier" : "user_id_3_order_id_3",
+  "itemName" : "OQOWUEROQIWU001",
+  "quantity" : 10
 }

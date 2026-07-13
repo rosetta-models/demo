@@ -1,16 +1,13 @@
 {
-  "@model" : "demo",
-  "@type" : "demo.emissions.model.NewVehicleOwnershipTransaction",
-  "@version" : "0.0.0.master-SNAPSHOT",
-  "identifier" : "user_id_1_order_id_1",
-  "itemName" : "XSDFKJSDLFGJ001",
-  "currency" : "GBP",
-  "quantity" : 7,
   "amount" : 838.53,
   "amountWithVat" : 964.3095,
   "confirmation" : {
+    "customerFullName" : "John Doe",
     "orderId" : "order_id_1",
-    "orderQuantity" : 7,
-    "customerFullName" : "John Doe"
-  }
+    "orderQuantity" : 7
+  },
+  "currency" : "GBP",
+  "identifier" : "user_id_1_order_id_1",
+  "itemName" : "XSDFKJSDLFGJ001",
+  "quantity" : 7
 }

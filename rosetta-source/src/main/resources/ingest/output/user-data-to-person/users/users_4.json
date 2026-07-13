@@ -1,9 +1,6 @@
 {
-  "@model" : "demo",
-  "@type" : "demo.emissions.model.Person",
-  "@version" : "0.0.0.master-SNAPSHOT",
-  "honorific" : "Mrs",
+  "dateOfBirth" : "2008-07-11",
   "firstName" : "Mary",
-  "surname" : "Jenkins",
-  "dateOfBirth" : "2008-07-11"
+  "honorific" : "Mrs",
+  "surname" : "Jenkins"
 }

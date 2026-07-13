@@ -11,8 +11,5 @@
     "format" : "XML",
     "configPath" : "schemas/external-vehicle-and-licence-data/xml-config/external-vehicle-and-licence-data-rosetta-xml-config.json"
   },
-  "outputSerialisation" : {
-    "format" : "RUNE_JSON"
-  },
   "modelId" : "demo"
 }

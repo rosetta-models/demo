@@ -1,11 +1,8 @@
 {
-  "@model" : "demo",
-  "@type" : "demo.emissions.regulation.EuropeanParliamentReport",
-  "@version" : "0.0.0.master-SNAPSHOT",
-  "vehicleRegistrationID" : "X1",
-  "firstRegistrationDate" : "2020-06-01",
-  "vehicleClassificationType" : "M2_Passengers",
+  "carbonMonoxide" : 2.66,
   "engineType" : "Petrol",
   "euroEmissionStandard" : "Euro6",
-  "carbonMonoxide" : 2.66
+  "firstRegistrationDate" : "2020-06-01",
+  "vehicleClassificationType" : "M2_Passengers",
+  "vehicleRegistrationID" : "X1"
 }
