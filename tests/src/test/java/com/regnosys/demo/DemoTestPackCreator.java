@@ -52,22 +52,22 @@ public class DemoTestPackCreator {
             .put(VehicleOrder.class, PipelineModel.Serialisation.Format.RUNE_JSON)
             .put(ExternalVehicleAndLicenceData.class, PipelineModel.Serialisation.Format.XML)
             // enrich
-            .put(VehicleOwnership.class, PipelineModel.Serialisation.Format.RUNE_JSON)
+//            .put(VehicleOwnership.class, PipelineModel.Serialisation.Format.RUNE_JSON)
             // report
-            .put(ReportableVehicle.class, PipelineModel.Serialisation.Format.RUNE_JSON)
+//            .put(ReportableVehicle.class, PipelineModel.Serialisation.Format.RUNE_JSON)
             // projection
-            .put(EuropeanParliamentReport.class, PipelineModel.Serialisation.Format.RUNE_JSON)
+//            .put(EuropeanParliamentReport.class, PipelineModel.Serialisation.Format.RUNE_JSON)
             .build();
 
     private static final ImmutableMap<Class<?>, PipelineModel.Serialisation.Format> OUTPUT_SERIALISATION_FORMAT = ImmutableMap.<Class<?>, PipelineModel.Serialisation.Format>builder()
             // ingest
-            .put(Person.class, PipelineModel.Serialisation.Format.RUNE_JSON)
-            .put(NewVehicleOwnershipTransaction.class, PipelineModel.Serialisation.Format.RUNE_JSON)
-            .put(VehicleOwnership.class, PipelineModel.Serialisation.Format.RUNE_JSON)
+//            .put(Person.class, PipelineModel.Serialisation.Format.RUNE_JSON)
+//            .put(NewVehicleOwnershipTransaction.class, PipelineModel.Serialisation.Format.RUNE_JSON)
+//            .put(VehicleOwnership.class, PipelineModel.Serialisation.Format.RUNE_JSON)
             // enrich
-            .put(ReportableVehicle.class, PipelineModel.Serialisation.Format.RUNE_JSON)
+//            .put(ReportableVehicle.class, PipelineModel.Serialisation.Format.RUNE_JSON)
             // report
-            .put(EuropeanParliamentReport.class, PipelineModel.Serialisation.Format.RUNE_JSON)
+//            .put(EuropeanParliamentReport.class, PipelineModel.Serialisation.Format.RUNE_JSON)
             // projection
             .put(IsoEmissionsReport.class, PipelineModel.Serialisation.Format.XML)
             .build();
