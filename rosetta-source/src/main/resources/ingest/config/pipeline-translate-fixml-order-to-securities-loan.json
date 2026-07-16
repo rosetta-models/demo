@@ -1,0 +1,16 @@
+{
+  "id" : "pipeline-translate-fixml-order-to-securities-loan",
+  "name" : "Fixml Order To Securities Loan",
+  "transform" : {
+    "type" : "TRANSLATE",
+    "function" : "demo.mapping.fixml.functions.Ingest_FixmlOrderToSecuritiesLoan",
+    "inputType" : "demo.fixml.components.base.FIXML",
+    "outputType" : "demo.mapping.fixml.SecuritiesLoan"
+  },
+  "inputSerialisation" : {
+    "format" : "XML"
+  },
+  "outputSerialisation" : {
+    "format" : "JSON"
+  }
+}

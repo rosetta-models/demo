@@ -1,0 +1,18 @@
+{
+  "id" : "test-pack-translate-fixml-order-to-securities-loan-demo",
+  "pipelineId" : "pipeline-translate-fixml-order-to-securities-loan",
+  "name" : "demo",
+  "samples" : [ {
+    "id" : "sl_001_us_equity_lend_cash_usd_open",
+    "name" : "SL_001_US_Equity_Lend_Cash_USD_Open",
+    "inputPath" : "ingest/input/demo/sl_001_us_equity_lend_cash_usd_open.xml",
+    "outputPath" : "ingest/output/fixml-order-to-securities-loan/demo/sl_001_us_equity_lend_cash_usd_open.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
+  } ]
+}
