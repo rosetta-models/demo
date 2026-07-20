@@ -4,7 +4,7 @@ version "${project.version}"
 import demo.emissions.model.*
 
 func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership:
-    [ingest JSON]
+    [ingest XML]
     inputs:
         vehicleAndLicenceData Foo (0..1)
     output:

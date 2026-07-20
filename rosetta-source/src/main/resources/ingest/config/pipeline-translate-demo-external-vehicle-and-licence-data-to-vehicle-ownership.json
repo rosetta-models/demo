@@ -8,8 +8,10 @@
     "outputType" : "demo.emissions.model.VehicleOwnership"
   },
   "inputSerialisation" : {
-    "format" : "XML",
-    "configPath" : "schemas/external-vehicle-and-licence-data/xml-config/external-vehicle-and-licence-data-rosetta-xml-config.json"
+    "format" : "XML"
+  },
+  "outputSerialisation" : {
+    "format" : "JSON"
   },
   "modelId" : "demo"
 }
