@@ -4,11 +4,11 @@ version "${project.version}"
 import demo.emissions.model.*
 
 func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership:
-    [ingest XML]
+    [ingest JSON]
     inputs:
         vehicleAndLicenceData ExternalVehicleAndLicenceData (1..1)
     output:
-        vehicleOwnership VehicleOwnership (0..1)
+        vehicleOwnership VehicleOwnership (1..1)
 
     set vehicleOwnership:
         VehicleOwnership {
