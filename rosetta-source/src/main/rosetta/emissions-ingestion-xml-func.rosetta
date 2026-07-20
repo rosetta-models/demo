@@ -6,7 +6,7 @@ import demo.emissions.model.*
 func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership:
     [ingest JSON]
     inputs:
-        vehicleAndLicenceData ExternalVehicleAndLicenceData (1..1)
+        vehicleAndLicenceData Foo (1..1)
     output:
         vehicleOwnership VehicleOwnership (1..1)
 

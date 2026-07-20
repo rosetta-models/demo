@@ -1,6 +1,8 @@
 namespace demo.emissions.ingestion.xml
 version "${project.version}"
 
+typeAlias Foo: ExternalVehicleAndLicenceData
+
 type ExternalVehicleAndLicenceData: <"Record of vehicle and licence data in external data format">
     [rootType]
     vehicleData VehicleData (1..1)
