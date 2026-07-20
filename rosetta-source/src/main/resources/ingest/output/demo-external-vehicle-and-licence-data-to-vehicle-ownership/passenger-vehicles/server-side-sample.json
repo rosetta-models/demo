@@ -1,0 +1,32 @@
+{
+  "drivingLicence" : [ {
+    "person" : {
+      "firstName" : "Joe",
+      "surname" : "Bloggs"
+    },
+    "countryOfIssuance" : {
+      "value" : "GB"
+    },
+    "licenceNumber" : "AB12CDE",
+    "dateOfIssuance" : {
+      "value" : "2019-07-01",
+      "meta" : {
+        "globalKey" : "3f19c1",
+        "externalKey" : "issuanceDate"
+      }
+    },
+    "dateOfRenewal" : {
+      "dateRelativeTo" : {
+        "globalReference" : "3f19c1",
+        "externalReference" : "issuanceDate"
+      },
+      "periodMultiplier" : 10,
+      "period" : "Y"
+    },
+    "vehicleEntitlement" : [ "M1_Passengers", "M2_Passengers", "M3_Passengers" ],
+    "penaltyPoints" : 3
+  } ],
+  "dateOfPurchase" : "2020-01-02",
+  "isFirstHand" : true,
+  "vehicleOwnershipRegistrationID" : 1
+}

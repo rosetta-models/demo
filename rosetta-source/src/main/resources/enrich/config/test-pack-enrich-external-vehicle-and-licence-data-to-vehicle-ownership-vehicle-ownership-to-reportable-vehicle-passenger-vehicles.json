@@ -20,5 +20,17 @@
       "modelValidationFailures" : 3,
       "runtimeError" : false
     }
+  }, {
+    "id" : "server-side-sample",
+    "name" : "server-side-sample",
+    "inputPath" : "ingest/output/demo-external-vehicle-and-licence-data-to-vehicle-ownership/passenger-vehicles/server-side-sample.json",
+    "outputPath" : "enrich/output/demo-vehicle-ownership-to-reportable-vehicle/passenger-vehicles/server-side-sample.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
   } ]
 }

@@ -20,5 +20,17 @@
       "modelValidationFailures" : 0,
       "runtimeError" : false
     }
+  }, {
+    "id" : "server-side-sample",
+    "name" : "server-side-sample",
+    "inputPath" : "enrich/output/demo-vehicle-ownership-to-reportable-vehicle/passenger-vehicles/server-side-sample.json",
+    "outputPath" : "regulatory-reporting/output/demo-europeanparliament-emissionperformancestandardseu/passenger-vehicles/server-side-sample.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
   } ]
 }
