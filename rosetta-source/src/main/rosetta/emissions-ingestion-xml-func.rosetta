@@ -8,7 +8,7 @@ func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership:
     inputs:
         vehicleAndLicenceData ExternalVehicleAndLicenceData (1..1)
     output:
-        vehicleOwnership VehicleOwnership (1..1)
+        vehicleOwnership VehicleOwnership (0..1)
 
     set vehicleOwnership:
         VehicleOwnership {
