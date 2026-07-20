@@ -15,7 +15,7 @@ func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership:
             drivingLicence: Create_DrivingLicences(
                         vehicleAndLicenceData -> drivingLicenceData
                     ),
-            vehicle: Create_Vehicle(vehicleAndLicenceData -> vehicleData),
+            vehicle: empty,
             dateOfPurchase: vehicleAndLicenceData -> vehicleData -> dateOfPurchase,
             isFirstHand: vehicleAndLicenceData -> vehicleData -> isFirstHand,
             vehicleOwnershipRegistrationID: vehicleAndLicenceData -> vehicleData -> vehicleOwnershipRegistrationID,
