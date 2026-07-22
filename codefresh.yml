@@ -36,7 +36,7 @@ steps:
       - cf_export RELEASE_NAME=${{GLOBAL_RELEASE_VERSION}}.${{CF_BRANCH_TAG_NORMALIZED}}-SNAPSHOT
 
   Build:
-    image: maven:3.9.11-eclipse-temurin-21-alpine
+    image: maven:3.9.16-eclipse-temurin-21-alpine
     working_directory: ./
     commands:
       - echo "${{ARTIFACT_REGISTRY_SA_KEY}}"|base64 -d>"${{CF_VOLUME_PATH}}"/sa
