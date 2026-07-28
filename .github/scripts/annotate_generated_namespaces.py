@@ -13,9 +13,21 @@ Unlike read-only namespaces, generated namespaces are meant to be refined by
 hand -- completing enumerations, narrowing type aliases, adding documentation.
 So this check never fails. It reports, so that the edit is visible in review.
 
-Edits that touch the column binding -- a ``[label]``, an attribute name, or an
-attribute type -- are raised to warning level, because those are the changes
-that can break ingestion. Everything else is a notice.
+Classification is deliberately **fail-safe** and carries almost no knowledge of
+Rune syntax, so that it stays correct as the language evolves. Rather than
+recognising a list of risky constructs -- which would silently under-report any
+construct it had not been taught -- it recognises only what is demonstrably
+harmless and treats everything else as worth a reviewer's attention:
+
+* a change that disappears once documentation and comments are stripped is a
+  **notice**;
+* a change that only adds declarations is a **notice**, since data that parsed
+  before still parses;
+* anything that modifies or removes a declaration is a **warning**, because a
+  renamed label, a narrowed alias or a changed type can break ingestion.
+
+An unrecognised construct therefore lands in the warning bucket rather than
+being missed. One annotation is emitted per file.
 """
 
 import argparse
@@ -25,8 +37,8 @@ import subprocess
 import sys
 
 NAMESPACE_RE = re.compile(r'^\s*(?:override\s+)?namespace\s+"?([A-Za-z0-9_.]+)"?', re.MULTILINE)
-ATTRIBUTE_RE = re.compile(r'^[a-z][A-Za-z0-9_]*\s+[A-Za-z][A-Za-z0-9_]*\s*\(\s*\d')
-HUNK_RE = re.compile(r'^@@ -\d+(?:,\d+)? \+(\d+)')
+DOC_STRING_RE = re.compile(r'<"(?:[^"\\]|\\.)*">')
+LINE_COMMENT_RE = re.compile(r'//.*$')
 
 # GitHub renders at most ~10 annotations per level per step.
 MAX_INLINE_ANNOTATIONS = 10
@@ -82,42 +94,37 @@ def changed_rosetta_files(base):
     return [line for line in output.splitlines() if line.strip()]
 
 
-def declaration_of(body):
-    """The part of an attribute line that defines the binding, ignoring documentation."""
-    return body.split('<"')[0].strip()
+def without_documentation(body):
+    """A line reduced to its declaration, with documentation and comments removed."""
+    body = DOC_STRING_RE.sub("", body)
+    body = LINE_COMMENT_RE.sub("", body)
+    return " ".join(body.split())
 
 
 def classify(base, path):
-    """Return (level, reason, line) for the change made to `path`."""
+    """Return (level, description) for the change made to `path`.
+
+    Errs towards `warning`: only changes that are provably documentation-only or
+    purely additive are downgraded to a notice.
+    """
     diff = git("diff", "-U0", f"{base}...HEAD", "--", path)
-    line_number = 1
-    first_changed_line = None
-    labels_changed = False
-    added_declarations = set()
-    removed_declarations = set()
+    added, removed = [], []
     for line in diff.splitlines():
-        hunk = HUNK_RE.match(line)
-        if hunk:
-            line_number = int(hunk.group(1))
+        if line.startswith(("+++", "---", "@@")):
             continue
-        if line.startswith(("+++", "---")):
-            continue
-        if line.startswith(("+", "-")):
-            body = line[1:].strip()
-            if first_changed_line is None:
-                first_changed_line = line_number
-            if body.startswith("[label"):
-                labels_changed = True
-            elif ATTRIBUTE_RE.match(body):
-                target = added_declarations if line.startswith("+") else removed_declarations
-                target.add(declaration_of(body))
-            if line.startswith("+"):
-                line_number += 1
-    if labels_changed:
-        return "warning", "a column label", first_changed_line or 1
-    if added_declarations != removed_declarations:
-        return "warning", "an attribute name or type", first_changed_line or 1
-    return "notice", None, first_changed_line or 1
+        if line.startswith("+"):
+            added.append(line[1:].strip())
+        elif line.startswith("-"):
+            removed.append(line[1:].strip())
+
+    declarations_added = sorted(filter(None, (without_documentation(b) for b in added)))
+    declarations_removed = sorted(filter(None, (without_documentation(b) for b in removed)))
+
+    if declarations_added == declarations_removed:
+        return "notice", "changed documentation or comments only"
+    if not declarations_removed:
+        return "notice", "added declarations, without changing or removing any"
+    return "warning", "changed or removed existing declarations"
 
 
 def main():
@@ -146,30 +153,34 @@ def main():
             continue
         for pattern, tool, value in generated:
             if matches(namespace, pattern):
-                level, reason, line = classify(args.base, path)
-                findings.append((level, path, line, namespace, tool, value, reason))
+                level, description = classify(args.base, path)
+                findings.append((level, path, namespace, tool, value, description))
                 break
 
     if not findings:
         return 0
 
-    findings.sort(key=lambda f: (f[0] != "warning", f[1]))
+    findings.sort(key=lambda finding: (finding[0] != "warning", finding[1]))
 
-    for level, path, line, namespace, tool, value, reason in findings[:MAX_INLINE_ANNOTATIONS]:
-        if reason:
-            message = (
-                f"Namespace '{namespace}' is maintained by {tool} ({value}). "
-                f"This change edits {reason}, which the CSV column binding depends on - "
-                f"confirm that ingestion still resolves."
+    for level, path, namespace, tool, value, description in findings[:MAX_INLINE_ANNOTATIONS]:
+        if level == "warning":
+            title = "Generated namespace: declarations changed"
+            advice = (
+                "If this touches a label, an attribute name or an attribute type, the CSV "
+                "column binding changes with it - confirm that ingestion still resolves."
             )
-            title = "Generated namespace: binding changed"
         else:
-            message = (
-                f"Namespace '{namespace}' is maintained by {tool} ({value}). "
-                f"Hand edits are expected here; this note exists so the change is visible in review."
-            )
             title = "Generated namespace modified"
-        print(f"::{level} file={path},line={line},title={title}::{message}")
+            advice = (
+                "Hand edits are expected here; this note exists so the change is visible in review."
+            )
+        # One annotation per file, anchored at the top of the file rather than at a
+        # particular construct, so that nothing depends on recognising Rune syntax.
+        print(
+            f"::{level} file={path},line=1,title={title}::"
+            f"Namespace '{namespace}' is maintained by {tool} ({value}). "
+            f"This pull request has {description}. {advice}"
+        )
 
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary_path:
@@ -177,11 +188,10 @@ def main():
             handle.write("### Generated namespaces modified by this pull request\n\n")
             handle.write("| | File | Namespace | Origin | Change |\n")
             handle.write("|---|---|---|---|---|\n")
-            for level, path, _line, namespace, tool, value, reason in findings:
+            for level, path, namespace, tool, value, description in findings:
                 icon = "warning" if level == "warning" else "note"
                 handle.write(
-                    f"| {icon} | `{path}` | `{namespace}` | {tool} ({value}) | "
-                    f"{reason or 'documentation or model detail'} |\n"
+                    f"| {icon} | `{path}` | `{namespace}` | {tool} ({value}) | {description} |\n"
                 )
             handle.write(
                 "\nThese namespaces were produced by an importer. Editing them is expected - "
