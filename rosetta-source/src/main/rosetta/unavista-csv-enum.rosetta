@@ -3,5 +3,5 @@ version "${project.version}"
 
 enum TradingCapacityEnum: <"Capacity in which the firm executed the transaction.">
     DEAL <"Dealing on own account.">
-    MTCH <"Matched principal.">
+    MTCH <"Matched principal, as defined in Article 4(1)(38) of MiFID II.">
     AOTC <"Any other capacity.">

@@ -12,8 +12,8 @@ type UnavistaTransaction: <"A single Unavista transaction report row.">
         [label "Quantity"]
     price number (1..1)
         [label "Price"]
-    tradingDateTime zonedDateTime (1..1)
-        [label "Trading Date Time"]
+    tradingDateTime zonedDateTime (1..1) <"Date and time at which the transaction was executed.">
+        [label "Execution Timestamp"]
 
 typeAlias Max52Text: string(maxLength: 52)
 
