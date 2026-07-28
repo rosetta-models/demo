@@ -43,6 +43,10 @@ LINE_COMMENT_RE = re.compile(r'//.*$')
 # GitHub renders at most ~10 annotations per level per step.
 MAX_INLINE_ANNOTATIONS = 10
 
+# Every annotation ends with this, so a reviewer who has not seen one before can
+# find out what generated namespaces are and why the note is there.
+DEFAULT_DOCS_URL = "https://rune-docs.netlify.app/developers/generated-namespaces"
+
 
 def git(*args):
     result = subprocess.run(["git", *args], capture_output=True, text=True, check=False)
@@ -132,6 +136,11 @@ def main():
     parser.add_argument("--base", required=True, help="Git ref to diff HEAD against.")
     parser.add_argument("--config", required=True, help="Path to rune-config.yml.")
     parser.add_argument("--root", default=".", help="Directory under which .rosetta files live.")
+    parser.add_argument(
+        "--docs-url",
+        default=DEFAULT_DOCS_URL,
+        help="Documentation link appended to every annotation.",
+    )
     args = parser.parse_args()
 
     try:
@@ -179,7 +188,8 @@ def main():
         print(
             f"::{level} file={path},line=1,title={title}::"
             f"Namespace '{namespace}' is maintained by {tool} ({value}). "
-            f"This pull request has {description}. {advice}"
+            f"This pull request has {description}. {advice} "
+            f"What is this? {args.docs_url}"
         )
 
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
@@ -196,6 +206,7 @@ def main():
             handle.write(
                 "\nThese namespaces were produced by an importer. Editing them is expected - "
                 "this check reports rather than blocks, so that the change is visible in review.\n"
+                f"\n[What are generated namespaces?]({args.docs_url})\n"
             )
 
     return 0
