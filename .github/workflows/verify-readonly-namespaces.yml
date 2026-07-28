@@ -13,7 +13,7 @@ name: Verify namespaces
 # changing anything. It is a separate job here only because this repository
 # cannot modify the upstream reusable workflow.
 #
-# For more info, see https://rune-docs.netlify.app/developers/read-only-namespaces
+# For more info, see https://rune.finos.org/docs/developers/read-only-namespaces
 
 on:
   pull_request:

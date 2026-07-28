@@ -45,7 +45,7 @@ MAX_INLINE_ANNOTATIONS = 10
 
 # Every annotation ends with this, so a reviewer who has not seen one before can
 # find out what generated namespaces are and why the note is there.
-DEFAULT_DOCS_URL = "https://rune-docs.netlify.app/developers/generated-namespaces"
+DEFAULT_DOCS_URL = "https://rune.finos.org/docs/developers/generated-namespaces"
 
 
 def git(*args):
