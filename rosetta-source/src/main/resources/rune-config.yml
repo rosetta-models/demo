@@ -5,3 +5,7 @@ generators:
   namespaces:
   - demo.*
   - com.rosetta.model
+namespaceConfig:
+- namespace: demo.unavista.csv
+  origin:
+    modelImport: csv

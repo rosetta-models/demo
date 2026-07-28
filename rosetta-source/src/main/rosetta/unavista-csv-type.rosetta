@@ -1,0 +1,20 @@
+namespace demo.unavista.csv
+version "${project.version}"
+
+type UnavistaTransaction: <"A single Unavista transaction report row.">
+    transactionReference Max52Text (1..1) <"Firm-assigned reference for the transaction.">
+        [label "Transaction Reference"]
+    lei LEIIdentifier (1..1) <"Legal Entity Identifier of the executing firm.">
+        [label "LEI"]
+    tradingCapacity TradingCapacityEnum (1..1)
+        [label "Trading Capacity"]
+    quantity int (1..1)
+        [label "Quantity"]
+    price number (1..1)
+        [label "Price"]
+    tradingDateTime zonedDateTime (1..1)
+        [label "Trading Date Time"]
+
+typeAlias Max52Text: string(maxLength: 52)
+
+typeAlias LEIIdentifier: string(minLength: 20, maxLength: 20, pattern: "[A-Z0-9]{18}[0-9]{2}")

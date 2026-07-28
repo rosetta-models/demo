@@ -1,0 +1,7 @@
+namespace demo.unavista.csv
+version "${project.version}"
+
+enum TradingCapacityEnum: <"Capacity in which the firm executed the transaction.">
+    DEAL <"Dealing on own account.">
+    MTCH <"Matched principal.">
+    AOTC <"Any other capacity.">
