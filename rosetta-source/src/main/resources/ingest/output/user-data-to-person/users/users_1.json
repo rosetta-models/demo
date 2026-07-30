@@ -1,6 +1,9 @@
 {
-  "dateOfBirth" : "1977-08-23",
-  "firstName" : "Rachel",
+  "@model" : "demo",
+  "@type" : "demo.emissions.model.Person",
+  "@version" : "0.0.0.master-SNAPSHOT",
   "honorific" : "Ms",
-  "surname" : "Booker"
+  "firstName" : "Rachel",
+  "surname" : "Booker",
+  "dateOfBirth" : "1977-08-23"
 }

@@ -1,6 +1,9 @@
 {
-  "dateOfBirth" : "1986-06-17",
-  "firstName" : "Laura",
+  "@model" : "demo",
+  "@type" : "demo.emissions.model.Person",
+  "@version" : "0.0.0.master-SNAPSHOT",
   "honorific" : "Dr",
-  "surname" : "Grey"
+  "firstName" : "Laura",
+  "surname" : "Grey",
+  "dateOfBirth" : "1986-06-17"
 }
