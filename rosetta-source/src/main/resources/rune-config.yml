@@ -1,5 +1,6 @@
 model:
   name: DEMO
+  defaultSerialisationFormat: RUNE_JSON
 dependencies:
 generators:
   namespaces:
