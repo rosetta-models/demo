@@ -1,0 +1,5 @@
+namespace demo.ede.w : < "descr" >
+version "${project.version}"
+
+schema demoEdeW XML
+    [externalConfig]

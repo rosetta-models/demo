@@ -1,0 +1,35 @@
+namespace demo.de.fb.xschema : < "efee" >
+version "${project.version}"
+
+type TradeMain extends TradeType: <"Root element for a single trade record. Use this file as the root file when the config does not auto-select by filename (no \"main\" is present in \"schema-1.xsd\").">
+    [rootType]
+
+type TradeType:
+
+    schemaVersion string (1..1) <"Required attribute - used to verify attribute casing default (camelCase) and required/optional handling.">
+    internal_ref string (0..1)
+    trade_id string (1..1) <"Snake_case element name - used to verify attribute/type casing conversion (e.g. camelCase / PascalCase output).">
+    tradeDate date (1..1) <"Used to verify date-handling config option (DATE vs DATE_TIME vs STRING).">
+    executionDateTime zonedDateTime (0..1)
+    status TradeStatusEnum (1..1) <"Enum with mixed-case literal values - used to verify enum-casing config option (ORIGINAL / UPPER / PASCAL etc.).">
+    counterparty PartyType (1..1) <"Reference to a type defined in schema-2.xsd (different namespace) - used to verify cross-file/namespace import resolution and namespace grouping regex behaviour.">
+    quantity number (1..1)
+    price number (1..1)
+    currency string (1..1)
+    notes string (0..*)
+
+type PartyType:
+
+    isActive boolean (0..1)
+    party_id string (1..1) <"Snake_case element - used to verify attribute casing conversion consistently across files.">
+    legalName string (1..1)
+    partyRole PartyRoleEnum (1..1)
+    address AddressType (0..1)
+    registeredOn date (0..1) <"Second date field in a different file - used to verify date-handling config is applied consistently across the whole import.">
+
+type AddressType: <"Good candidate for the \"name overrides\" config option, e.g. rename to \"PostalAddress\" during import.">
+
+    line1 string (1..1)
+    line2 string (0..1)
+    city string (1..1)
+    country_Code string (1..1)

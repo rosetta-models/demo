@@ -1,0 +1,77 @@
+{
+  "demo.ede.w.xschema.AddressType" : {
+    "attributes" : {
+      "line1" : {
+        "xmlName" : "Line1"
+      },
+      "line2" : {
+        "xmlName" : "Line2"
+      },
+      "city" : {
+        "xmlName" : "City"
+      },
+      "country_Code" : {
+        "xmlName" : "Country_Code"
+      }
+    }
+  },
+  "demo.ede.w.xschema.PartyType" : {
+    "attributes" : {
+      "isActive" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "legalName" : {
+        "xmlName" : "LegalName"
+      },
+      "partyRole" : {
+        "xmlName" : "PartyRole"
+      },
+      "address" : {
+        "xmlName" : "Address"
+      },
+      "registeredOn" : {
+        "xmlName" : "RegisteredOn"
+      }
+    }
+  },
+  "demo.ede.w.xschema.TradeMain" : {
+    "xmlElementName" : "TradeMain",
+    "xmlElementFullyQualifiedName" : "http://example.com/schemas/trade-main/TradeMain",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://example.com/schemas/trade-main",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.ede.w.xschema.TradeType" : {
+    "attributes" : {
+      "schemaVersion" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "internal_ref" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "tradeDate" : {
+        "xmlName" : "TradeDate"
+      },
+      "executionDateTime" : {
+        "xmlName" : "ExecutionDateTime"
+      },
+      "status" : {
+        "xmlName" : "Status"
+      },
+      "quantity" : {
+        "xmlName" : "Quantity"
+      },
+      "price" : {
+        "xmlName" : "Price"
+      },
+      "currency" : {
+        "xmlName" : "Currency"
+      },
+      "notes" : {
+        "xmlName" : "Notes"
+      }
+    }
+  }
+}

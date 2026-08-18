@@ -1,0 +1,15 @@
+namespace demo.de.fb.xschema : < "efee" >
+version "${project.version}"
+
+enum TradeStatusEnum:
+
+    NEW
+    Pending_Confirmation
+    executed
+    Cancelled
+
+enum PartyRoleEnum:
+
+    buyer
+    Seller
+    BROKER

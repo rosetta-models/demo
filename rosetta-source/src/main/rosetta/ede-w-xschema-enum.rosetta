@@ -1,0 +1,15 @@
+namespace demo.ede.w.xschema : < "descr" >
+version "${project.version}"
+
+enum TradeStatusEnum:
+
+    NEW
+    Pending_Confirmation
+    executed
+    Cancelled
+
+enum PartyRoleEnum:
+
+    buyer
+    Seller
+    BROKER

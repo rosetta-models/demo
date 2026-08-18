@@ -1,0 +1,5 @@
+namespace demo.de.fb : < "efee" >
+version "${project.version}"
+
+schema demoDeFb XML
+    [externalConfig]
