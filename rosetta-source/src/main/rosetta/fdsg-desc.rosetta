@@ -1,0 +1,5 @@
+namespace demo.fdsg : < "dsh" >
+version "${project.version}"
+
+schema demoFdsg XML
+    [externalConfig]
