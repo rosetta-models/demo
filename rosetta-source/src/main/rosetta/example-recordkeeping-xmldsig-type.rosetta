@@ -1,0 +1,272 @@
+namespace demo.example.recordkeeping.xmldsig : < "example.recordkeeping" >
+version "${project.version}"
+
+typeAlias CryptoBinary: string
+
+typeAlias DigestValueType: string
+
+typeAlias HMACOutputLengthType: int
+
+type Signature extends SignatureType:
+    [rootType]
+
+type SignatureValue extends SignatureValueType:
+    [rootType]
+
+type SignedInfo extends SignedInfoType:
+    [rootType]
+
+type CanonicalizationMethod extends CanonicalizationMethodType:
+    [rootType]
+
+type SignatureMethod extends SignatureMethodType:
+    [rootType]
+
+type Reference extends ReferenceType:
+    [rootType]
+
+type Transforms extends TransformsType:
+    [rootType]
+
+type Transform extends TransformType:
+    [rootType]
+
+type DigestMethod extends DigestMethodType:
+    [rootType]
+
+type DigestValue:
+    [rootType]
+
+    value DigestValueType (1..1)
+
+type KeyInfo extends KeyInfoType:
+    [rootType]
+
+type KeyName:
+    [rootType]
+
+    value string (1..1)
+
+type MgmtData:
+    [rootType]
+
+    value string (1..1)
+
+type KeyValue extends KeyValueType:
+    [rootType]
+
+type RetrievalMethod extends RetrievalMethodType:
+    [rootType]
+
+type X509Data extends X509DataType:
+    [rootType]
+
+type PGPData extends PGPDataType:
+    [rootType]
+
+type SPKIData extends SPKIDataType:
+    [rootType]
+
+type _Object extends ObjectType:
+    [rootType]
+
+type Manifest extends ManifestType:
+    [rootType]
+
+type SignatureProperties extends SignaturePropertiesType:
+    [rootType]
+
+type SignatureProperty extends SignaturePropertyType:
+    [rootType]
+
+type DSAKeyValue extends DSAKeyValueType:
+    [rootType]
+
+type RSAKeyValue extends RSAKeyValueType:
+    [rootType]
+
+type SignatureType:
+
+    id string (0..1)
+    signedInfo SignedInfoType (1..1)
+    signatureValue SignatureValueType (1..1)
+    keyInfo KeyInfoType (0..1)
+    object ObjectType (0..*)
+
+type SignatureValueType:
+
+    value string (1..1)
+    id string (0..1)
+
+type SignedInfoType:
+
+    id string (0..1)
+    canonicalizationMethod CanonicalizationMethodType (1..1)
+    signatureMethod SignatureMethodType (1..1)
+    reference ReferenceType (1..*)
+
+type CanonicalizationMethodType:
+
+    algorithm string(pattern: "\\w+:(\\/?\\/?)[^\\s]+") (1..1)
+    anyContents string (0..*) <"Placeholder for xsd:any: Min Occurs: 0; Max Occurs: unbounded; Namespace: ##any; Process Contents: strict.">
+
+type SignatureMethodType:
+
+    algorithm string(pattern: "\\w+:(\\/?\\/?)[^\\s]+") (1..1)
+    hmacOutputLength HMACOutputLengthType (0..1)
+    anyContents string (0..*) <"Placeholder for xsd:any: Min Occurs: 0; Max Occurs: unbounded; Namespace: ##other; Process Contents: strict.">
+
+type ReferenceType:
+
+    id string (0..1)
+    uri string(pattern: "\\w+:(\\/?\\/?)[^\\s]+") (0..1)
+    ^type string(pattern: "\\w+:(\\/?\\/?)[^\\s]+") (0..1)
+    transforms TransformsType (0..1)
+    digestMethod DigestMethodType (1..1)
+    digestValue DigestValueType (1..1)
+
+type TransformsType:
+
+    transform TransformType (1..*)
+
+type TransformType:
+
+    algorithm string(pattern: "\\w+:(\\/?\\/?)[^\\s]+") (1..1)
+    transformTypeChoice TransformTypeChoice (0..*)
+
+type TransformTypeChoice:
+
+    anyContents string (0..1) <"Placeholder for xsd:any: Min Occurs: 1; Max Occurs: 1; Namespace: ##other; Process Contents: lax.">
+    xPath string (0..1)
+
+    condition Choice:
+        optional choice anyContents, xPath
+
+type DigestMethodType:
+
+    algorithm string(pattern: "\\w+:(\\/?\\/?)[^\\s]+") (1..1)
+    anyContents string (0..*) <"Placeholder for xsd:any: Min Occurs: 0; Max Occurs: unbounded; Namespace: ##other; Process Contents: lax.">
+
+type KeyInfoType:
+
+    id string (0..1)
+    keyInfoTypeChoice KeyInfoTypeChoice (1..*)
+
+type KeyInfoTypeChoice:
+
+    keyName string (0..1)
+    keyValue KeyValueType (0..1)
+    retrievalMethod RetrievalMethodType (0..1)
+    x509Data X509DataType (0..1)
+    pgpData PGPDataType (0..1)
+    spkiData SPKIDataType (0..1)
+    mgmtData string (0..1)
+    anyContents string (0..1) <"Placeholder for xsd:any: Min Occurs: 1; Max Occurs: 1; Namespace: ##other; Process Contents: lax.">
+
+    condition Choice:
+        one-of
+
+type KeyValueType:
+
+    dsaKeyValue DSAKeyValueType (0..1)
+    rsaKeyValue RSAKeyValueType (0..1)
+    anyContents string (0..1) <"Placeholder for xsd:any: Min Occurs: 1; Max Occurs: 1; Namespace: ##other; Process Contents: lax.">
+
+    condition Choice:
+        one-of
+
+type RetrievalMethodType:
+
+    uri string(pattern: "\\w+:(\\/?\\/?)[^\\s]+") (0..1)
+    ^type string(pattern: "\\w+:(\\/?\\/?)[^\\s]+") (0..1)
+    transforms TransformsType (0..1)
+
+type X509DataType:
+
+    x509DataTypeSequence X509DataTypeSequence (1..*)
+
+type X509DataTypeSequence:
+
+    x509IssuerSerial X509IssuerSerialType (0..1)
+    x509SKI string (0..1)
+    x509SubjectName string (0..1)
+    x509Certificate string (0..1)
+    x509CRL string (0..1)
+    anyContents string (0..1) <"Placeholder for xsd:any: Min Occurs: 1; Max Occurs: 1; Namespace: ##other; Process Contents: lax.">
+
+    condition Choice:
+        one-of
+
+type X509IssuerSerialType:
+
+    x509IssuerName string (1..1)
+    x509SerialNumber int (1..1)
+
+type PGPDataType:
+
+    pgpKeyID string (0..1)
+    pgpKeyPacket string (0..1)
+    anyContents0 string (0..*) <"Placeholder for xsd:any: Min Occurs: 0; Max Occurs: unbounded; Namespace: ##other; Process Contents: lax.">
+    anyContents1 string (0..*) <"Placeholder for xsd:any: Min Occurs: 0; Max Occurs: unbounded; Namespace: ##other; Process Contents: lax.">
+
+    condition Choice:
+        if pgpKeyID exists
+        then anyContents1 is absent
+        else if pgpKeyPacket exists
+        then anyContents0 is absent
+        else False
+
+type SPKIDataType:
+
+    spkiDataTypeSequence SPKIDataTypeSequence (1..*)
+
+type SPKIDataTypeSequence:
+
+    spkiSexp string (1..1)
+    anyContents string (0..1) <"Placeholder for xsd:any: Min Occurs: 0; Max Occurs: 1; Namespace: ##other; Process Contents: lax.">
+
+type ObjectType:
+
+    id string (0..1)
+    mimeType string (0..1)
+    encoding string(pattern: "\\w+:(\\/?\\/?)[^\\s]+") (0..1)
+    objectTypeSequence ObjectTypeSequence (0..*)
+
+type ObjectTypeSequence:
+
+    anyContents string (1..1) <"Placeholder for xsd:any: Min Occurs: 1; Max Occurs: 1; Namespace: ##any; Process Contents: lax.">
+
+type ManifestType:
+
+    id string (0..1)
+    reference ReferenceType (1..*)
+
+type SignaturePropertiesType:
+
+    id string (0..1)
+    signatureProperty SignaturePropertyType (1..*)
+
+type SignaturePropertyType:
+
+    target string(pattern: "\\w+:(\\/?\\/?)[^\\s]+") (1..1)
+    id string (0..1)
+    signaturePropertyTypeChoice SignaturePropertyTypeChoice (1..*)
+
+type SignaturePropertyTypeChoice:
+
+    anyContents string (1..1) <"Placeholder for xsd:any: Min Occurs: 1; Max Occurs: 1; Namespace: ##other; Process Contents: lax.">
+
+type DSAKeyValueType:
+
+    p CryptoBinary (0..1)
+    q CryptoBinary (0..1)
+    g CryptoBinary (0..1)
+    y CryptoBinary (1..1)
+    j CryptoBinary (0..1)
+    seed CryptoBinary (0..1)
+    pgenCounter CryptoBinary (0..1)
+
+type RSAKeyValueType:
+
+    modulus CryptoBinary (1..1)
+    exponent CryptoBinary (1..1)

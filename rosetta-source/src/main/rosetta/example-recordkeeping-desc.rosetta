@@ -1,0 +1,5 @@
+namespace demo.example.recordkeeping : < "example.recordkeeping" >
+version "${project.version}"
+
+schema demoExampleRecordkeeping XML
+    [externalConfig]

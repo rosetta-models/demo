@@ -1,0 +1,1042 @@
+namespace demo.example.recordkeeping.fpml : < "example.recordkeeping" >
+version "${project.version}"
+
+enum CashOrPhysicalSettlementEnum:
+
+    Cash
+    Physical
+
+enum AveragingInOutEnum:
+
+    In
+    Out
+    Both
+
+enum AveragingMethodEnum: <"The method of calculation to be used when averaging rates. Per ISDA 2000 Definitions, Section 6.2. Certain Definitions Relating to Floating Amounts.">
+
+    Unweighted
+    Weighted
+
+enum BullionTypeEnum: <"Defines which type of bullion is applicable for a Bullion Transaction.">
+
+    Gold <"Gold. Quality as per the Good Delivery Rules issued by the London Bullion Market Association.">
+    Palladium <"Palladium. Quality as per the Good Delivery Rules issued by the London Platinum and Palladium Market.">
+    Platinum <"Palladium. Quality as per the Good Delivery Rules issued by the London Platinum and Palladium Market.">
+    Silver <"Silver. Quality as per the Good Delivery Rules issued by the London Bullion Market Association.">
+    Rhodium <"Quality as per the Good Delivery Rules for Rhodium.">
+    RhodiumSponge
+    Iridium <"Quality as per the Good Delivery Rules for Iridium.">
+    Ruthenium <"Quality as per the Good Delivery Rules for Ruthenium.">
+    Osmium <"Quality as per the Good Delivery Rules for Osmium.">
+
+enum BusinessDayConventionEnum:
+
+    FOLLOWING
+    FRN
+    MODFOLLOWING
+    PRECEDING
+    MODPRECEDING
+    NEAREST
+    NONE
+    NotApplicable
+
+enum CalculationAgentPartyEnum:
+
+    ExercisingParty
+    NonExercisingParty
+    AsSpecifiedInMasterAgreement
+    AsSpecifiedInStandardTermsSupplement
+    Both
+
+enum CalculationMethodEnum:
+
+    Averaging
+    Compounding
+    CompoundedIndex
+
+enum CalendarSourceEnum:
+
+    ListedOption
+    Future
+
+enum CallingPartyEnum:
+
+    InitialBuyer
+    InitialSeller
+    Either
+    AsDefinedInMasterAgreement
+
+enum CommissionDenominationEnum:
+
+    BPS
+    Percentage
+    CentsPerShare
+    FixedAmount
+
+enum CommodityBullionSettlementDisruptionEnum:
+
+    Negotiation
+    Cancellation_and_Payment displayName "Cancellation and Payment"
+
+enum CommodityDayTypeEnum:
+
+    Business
+    Calendar
+    CommodityBusiness
+    CurrencyBusiness
+    ExchangeBusiness
+    ScheduledTradingDay
+    GasFlow
+    NearbyContractDay
+
+enum CommodityKnockEnum:
+
+    In
+    Out
+
+enum CommodityPayRelativeToEnum:
+
+    CalculationPeriodStartDate
+    CalculationPeriodEndDate
+    LastPricingDate
+    ResetDate
+    ValuationDate
+    CalculationDate
+    CalculationPeriodMonthEnd
+    CalculationPeriodMonthStart
+    EffectiveDate
+    PricingPeriodMonthEnd
+    TerminationOrExpirationDate
+    TradeDate
+    PricingPeriodEndOfWeek
+    FirstPricingDate
+
+enum CommodityReturnCalculationFormulaEnum:
+
+    SimpleFormula
+    CompoundFormula
+
+enum CompoundingMethodEnum:
+
+    Flat
+    None
+    Straight
+    SpreadExclusive
+
+enum ConditionEnum:
+
+    AtOrAbove
+    AtOrBelow
+    Above
+    Below
+
+enum CsaTypeEnum: <"The type of CSA (credit support agreement/annex), e.g. for cash settlement purposes.">
+
+    NoCSA
+    ExistingCSA
+    ReferenceVMCSA
+
+enum DayOfWeekEnum: <"A day of the seven-day week.">
+
+    MON
+    TUE
+    WED
+    THU
+    FRI
+    SAT
+    SUN
+
+enum DayOfWeekExtEnum: <"A day of the seven-day week, plus codes for weekends and weekdays.">
+
+    MON
+    TUE
+    WED
+    THU
+    FRI
+    SAT
+    SUN
+    WD
+    WN
+
+enum DayTypeEnum:
+
+    Business
+    Calendar
+    CommodityBusiness
+    CurrencyBusiness
+    ExchangeBusiness
+    ScheduledTradingDay
+
+enum DealtCurrencyEnum:
+
+    ExchangedCurrency1
+    ExchangedCurrency2
+
+enum DeliveryDatesEnum:
+
+    CalculationPeriod
+    FirstNearby
+    SecondNearby
+    ThirdNearby
+    FourthNearby
+    FifthNearby
+    SixthNearby
+    SeventhNearby
+    EighthNearby
+    NinthNearby
+    TenthNearby
+    EleventhNearby
+    TwelfthNearby
+    ThirteenthNearby
+    FourteenthNearby
+    FifteenthNearby
+    SixteenthNearby
+    SeventeenthNearby
+    EighteenthNearby
+    NineteenthNearby
+    TwentiethNearby
+    TwentyFirstNearby
+    TwentySecondNearby
+    TwentyThirdNearby
+    TwentyFourthNearby
+    TwentyFifthNearby
+    TwentySixthNearby
+    TwentySeventhNearby
+    TwentyEighthNearby
+    TwentyNinthNearby
+    ThirtiethNearby
+    ThirtyFirstNearby
+    ThirtySecondNearby
+    ThirtyThirdNearby
+    ThirtyFourthNearby
+    ThirtyFifthNearby
+    ThirtySixthNearby
+    ThirtySeventhNearby
+    ThirtyEighthNearby
+    ThirtyNinthNearby
+    FortiethNearby
+    FortyFirstNearby
+    FortySecondNearby
+    FortyThirdNearby
+    FortyFourthNearby
+    FortyFifthNearby
+    FortySixthNearby
+    FortySeventhNearby
+    FortyEighthNearby
+    FortyNinthNearby
+    FiftiethNearby
+    FiftyFirstNearby
+    FiftySecondNearby
+    FiftyThirdNearby
+    FiftyFourthNearby
+    FiftyFifthNearby
+    FiftySixthNearby
+    FiftySeventhNearby
+    FiftyEighthNearby
+    FiftyNinthNearby
+    Spot
+    FirstNearbyWeek
+    SecondNearbyWeek
+    ThirdNearbyWeek
+    FourthNearbyWeek
+    FifthNearbyWeek
+    SixthNearbyWeek
+    SeventhNearbyWeek
+    EighthNearbyWeek
+    NinthNearbyWeek
+    TenthNearbyWeek
+    EleventhNearbyWeek
+    TwelfthNearbyWeek
+    ThirteenthNearbyWeek
+    FourteenthNearbyWeek
+    FifteenthNearbyWeek
+    SixteenthNearbyWeek
+    SeventeenthNearbyWeek
+    EighteenthNearbyWeek
+    NineteenthNearbyWeek
+    TwentiethNearbyWeek
+    TwentyFirstNearbyWeek
+    TwentySecondNearbyWeek
+    TwentyThirdNearbyWeek
+    TwentyFourthearbyWeek
+    TwentyFifthNearbyWeek
+    TwentySixthNearbyWeek
+    TwentySeventhNearbyWeek
+    TwentyEighthNearbyWeek
+    TwentyNinthNearbyWeek
+    ThirtiethNearbyWeek
+    ThirtyFirstNearbyWeek
+    ThirtySecondNearbyWeek
+    ThirtyThirdNearbyWeek
+    ThirtyFourthNearbyWeek
+    ThirtyFifthNearbyWeek
+    ThirtySixthNearbyWeek
+    ThirtySeventhNearbyWeek
+    ThirtyEighthNearbyWeek
+    ThirtyNinthNearbyWeek
+    FortiethNearbyWeek
+    FortyFirstNearbyWeek
+    FortySecondNearbyWeek
+    FortyThirdNearbyWeek
+    FortyFourthNearbyWeek
+    FortyFifthNearbyWeek
+    FortySixthNearbyWeek
+    FortySeventhNearbyWeek
+    FortyEighthNearbyWeek
+    FortyNinthNearbyWeek
+    FiftiethNearbyWeek
+    FiftyFirstNearbyWeek
+    FiftySecondNearbyWeek
+
+enum DeliveryNearbyTypeEnum:
+
+    CalculationPeriod
+    NearbyMonth
+    NearbyWeek
+
+enum DeliveryTypeEnum:
+
+    Firm
+    Interruptible
+
+enum DiscountingTypeEnum: <"The method of calculating discounted payment amounts.">
+
+    Standard
+    FRA
+    FRAYield
+
+enum DisruptionFallbacksEnum: <"The specification of how disruption fallbacks will be represented.">
+
+    AsSpecifiedInMasterAgreement <"The Disruption Fallback(s) are determined by reference to the relevant Master Agreement.">
+    AsSpecifiedInConfirmation <"The Disruption Fallback(s) are determined by reference to the relevant Confirmation.">
+
+enum DividendAmountTypeEnum:
+
+    RecordAmount
+    ExAmount
+    PaidAmount
+    AsSpecifiedInMasterConfirmation
+
+enum DividendCompositionEnum:
+
+    EquityAmountReceiverElection
+    CalculationAgentElection
+
+enum DividendDateReferenceEnum:
+
+    ExDate
+    DividendPaymentDate
+    DividendValuationDate
+    RecordDate
+    TerminationDate
+    EquityPaymentDate
+    FollowingPaymentDate
+    AdHocDate
+    CumulativeEquityPaid
+    CumulativeLiborPaid
+    CumulativeEquityExDiv
+    CumulativeLiborExDiv
+    SharePayment
+    CashSettlementPaymentDate
+    FloatingAmountPaymentDate
+    CashSettlePaymentDateExDiv
+    CashSettlePaymentDateIssuerPayment
+    ExDividendPaymentDate
+
+enum DividendEntitlementEnum:
+
+    ExDate
+    RecordDate
+
+enum DividendPeriodEnum:
+
+    FirstPeriod
+    SecondPeriod
+
+enum DualCurrencyStrikeQuoteBasisEnum: <"A type which permits the Dual Currency strike quote basis to be expressed in terms of the deposit and alternate currencies.">
+
+    DepositCurrencyPerAlternateCurrency
+    AlternateCurrencyPerDepositCurrency
+
+enum EarlyTerminationDateEnum: <"Symbolic specification of early termination date.">
+
+    AnyDay
+    ValuationDate
+    ResetDate
+    AfterFirstResetDate
+    AsSpecifiedInMCA
+
+enum ElectricityProductTypeEnum: <"The type of electricity product.">
+
+    Electricity
+
+enum EnvironmentalAbandonmentOfSchemeEnum: <"Upon the occurrence of an Abandonment of Scheme, as defined in clause (h)(iv) of the Emissions Annex, one of the following elections, the specific terms of which are set forth in clause (b)(iii) of the Emissions Annex, will govern the parties’ rights and obligations with respect to this Emissions Transaction. If none of the above options is selected, Option A(1) will apply.">
+
+    OptionA_1 displayName "OptionA(1)" <"Abandonment of Scheme constitutes an Additional Termination Event.">
+    OptionA_2 displayName "OptionA(2)" <"Abandonment of Scheme entails no further obligations.">
+    OptionB <"The applicability of Abandonment of Scheme to Emissions Transactions is set forth in the applicable Confirmation.">
+    OptionC <"The applicability of Abandonment of Scheme does not apply.">
+
+enum EnvironmentalProductTypeEnum: <"Environmental Product (e.g. allowance, certificate or unit).">
+
+    EUAllowance <"For EU Emissions Allowance Transactions: An EU Emissions Allowance.">
+    EUCredit <"For EU Emissions Allowance Transactions: An EU Emissions Credit.">
+    AlternativeAllowance <"For EU Emissions Allowance Transactions: An EU Alternative Allowance.">
+    NOXEmissionsProduct <"For US Emissions Allowance Transactions: A limited authorization issued by the state permitting authority or the US Environmental Protection Agency (EPA) to emit certain amounts of nitrogen oxides (Nox).">
+    RegionalEmissionsProduct <"For US Emissions Allowance Transactions: A emissions allowance or emissions reduction credit issued under a mult-state or provincial or other cap-and-trade Scheme.">
+    RGGIEmissionsProduct <"For US Emissions Allowance Transactions: A limited authorization issued by the RGGI scheme permitting the emission of certain amounts of carbon dioxide.">
+    SO2EmissionsProduct <"For US Emissions Allowance Transactions: A limited authorization issued by the U.S. Environmental Protection Agency (EPA) to emit a certain amount of sulfur dioxide.">
+    StateEmissionProduct <"For US Emissions Allowance Transactions: Any emissions allowance or emission reduction credit created and promulgated under a U.S. state Scheme.">
+    VoluntaryEmissionProduct <"For US Emissions Allowance Transactions: Any emissions allowance, emission credit, emissions offset or emissions reduction credit created or issued under a voluntary Scheme.">
+    RenewableEnergyCertificate <"For US Renewable Energy Certificate Transactions: A Renewable Energy Certificate (“REC”) represents the environmental, social and other non-power qualities of generation of 1 megawatt-hour (MWh) of electricity from an eligible renewable energy resource.">
+    AUSCarbonCreditUnit <"Australia Green Energy: Australian Carbon Credit Unit.">
+    AUSCarbonUnit <"Australia Green Energy: Australian Carbon Unit.">
+    AUSEnergySavingCertificate <"Australia Green Energy: Energy Savings Certificate.">
+    AUSLargeScaleGenerationCertificate <"Australia Green Energy: Large-scale Generation Certificate.">
+    AUSSmallScaleTechnologyCertificate <"Australia Green Energy: Small-scale Technology Certificate.">
+    AUSVictorianEnergyEfficiencyCertificate <"Australia Green Energy: Victorian Energy Efficiency Certificate.">
+    MXCCFECRTINTLODS <"Mexico CCFE CRT INTLODS Physical Certificates.">
+    NZEmissionsUnits <"New Zealand Emissions Units.">
+    UKRenewableObligationCertificate <"United Kingdom Ofgem Renewable Obligation Certificate.">
+
+enum EquityOptionTypeEnum:
+
+    Put
+    Call
+    Forward
+
+enum ESMABenchmarkIndexCode: <"ESMA Benchmark Index Code">
+
+    BBSW
+    BUBO
+    CDOR
+    CIBO
+    EONA
+    EONS
+    EURI
+    EUUS
+    EUCH
+    FUSW
+    GCFR
+    ISDA
+    JIBA
+    LIBI
+    LIBO
+    MAAA
+    MOSP
+    NIBO
+    PFAN
+    PRBO
+    STBO
+    SWAP
+    TLBO
+    TREA
+    TIBO
+    WIBO
+
+enum ExerciseActionEnum:
+
+    FullExercise
+    PartialExercise
+    Abandon
+
+enum ExerciseSideEnum:
+
+    Put
+    Call
+    Payer
+    Receiver
+
+enum ExerciseStyleEnum:
+
+    American
+    Bermuda
+    European
+
+enum ExerciseTimingEnum:
+
+    Immediate
+    OnExpiration
+
+enum ExtensionStyleEnum: <"Specifies a Repo or Security Lending arangement: Everdeen or Extendible.">
+
+    Evergreen <"Evergreen is a Repo or Security Lending arangement to close the Evergreen. This takes place by negotiation.">
+    Extendable <"Extendable ia a Repo or Security Lending arangement to extend the Extendable. This takes place by negotiation.">
+
+enum FeeElectionEnum: <"Defines the fee type.">
+
+    FlatFee
+    AmortizedFee
+    FundingFee
+    FlatFeeAndFundingFee
+    AmortizedFeeAndFundingFee
+
+enum FlatRateEnum: <"The method by which the Flat Rate is calculated for a commodity freight transaction.">
+
+    Fixed
+    Floating
+
+enum FPVFinalPriceElectionFallbackEnum:
+
+    FPVClose
+    FPVHedgeExecution
+
+enum FraDiscountingEnum:
+
+    ISDA
+    AFMA
+    NONE
+    ISDAYield
+
+enum FxAccrualKnockoutBarrierRetentionEnum: <"The type of a knockout barrier used in an accrual product (e.g. American or European)">
+
+    Keep <"If the barrier is triggered, the accrual process for that period stops. The parties retain the underlying settlement rights for that period with the currently accrued notional.">
+    Lose <"If the barrier is triggered, the accrual process for that period stops. No settlement occurs for that period.">
+
+enum FxAveragingMethodEnum: <"Average calculation method e.g. Arithmetic, Harmonic)">
+
+    Arithmetic <"Arithmetic method of average calculation.">
+    Harmonic <"Harmonic method of average calculation.">
+
+enum FxBarrierDirectionEnum:
+
+    Down
+    Up
+
+enum FxBarrierScopeEnum:
+
+    Global
+    PerExpiry
+
+enum FxBarrierStyleEnum: <"Defines the barrier observation style i.e. continuous (American) or discrete (European).">
+
+    American <"The barrier is observed continuously through the observation period.">
+    European <"The barrier is observed on a discrete expiry date, or (in the case of a multi-phase product) series of expiry dates.">
+
+enum FxBarrierTypeEnum:
+
+    Knockin
+    Knockout
+    ReverseKnockin
+    ReverseKnockout
+
+enum FxBarrierTypeSimpleEnum:
+
+    Knockin
+    Knockout
+
+enum FxOffsetConventionEnum: <"Standard FX Spot and Forward offset conventions.">
+
+    FxSpot
+    FxForward
+
+enum FxRegionLowerBoundDirectionEnum: <"The Lower Bound Direction. It only contains the AtOrAbove and Above values.">
+
+    AtOrAbove
+    Above
+
+enum FxRegionUpperBoundDirectionEnum: <"The Upper Bound Direction. It only contains the AtOrBelow and Below values.">
+
+    AtOrBelow
+    Below
+
+enum FxSettlementAdjustmentMethodEnum:
+
+    VariedStrike
+    VariedNotional
+
+enum FxStraddleTypeEnum:
+
+    AtTheMoneyForward
+    DeltaNeutral
+
+enum FxTargetStyleEnum: <"Defines the method for calculating the gain in the period where the Target Knock-Out event occurs (Exact, Exclusive, Inclusive).">
+
+    Exact <"The gain for the knockout period is adjusted to yield a final accumulated value equal to the target level.">
+    Exclusive <"The gain for the knockout period is adjusted to zero i.e. the target yields zero value in the final period.">
+    Inclusive <"The gain for the knockout period is equal to the whole benefit of the final fixing over spot i.e. the final accumulated value may exceed the target level.">
+
+enum FxTenorPeriodEnum:
+
+    Broken
+    Today
+    Tomorrow
+    TomorrowNext
+    Spot
+    SpotNext
+
+enum GasProductTypeEnum: <"The type of gas product.">
+
+    Butane
+    CarbonDioxide
+    EPMix
+    Ethane
+    Gasoline
+    Helium
+    HydrogenSulfide
+    Isobutane
+    Methane
+    Naphtha
+    NaturalGas
+    Nitrogen
+    Pentane
+    Propane
+    Propylene
+    Water
+
+enum IndexEventConsequenceEnum:
+
+    CalculationAgentAdjustment
+    NegotiatedCloseOut
+    CancellationAndPayment
+    RelatedExchange
+
+enum InflationCalculationMethodEnum: <"Code values for different ways of using inflation indexes in formulas">
+
+    Ratio <"(Inflation Index Final / Inflation Index Base). Inflation Index Final is inflation index for Reference Month that is the Lag number of months prior to Payment Date (subject to interpolation). Inflation Index Base subject to the Calculation Style. Used in inflation asset swaps to calculate the inflation coupons and principal exchange.">
+    Return <"(Inflation Index Final / Inflation Index Base -1). Inflation Index Final is the inflation index for Reference Month that is the Lag number of months prior to Payment Date (subject to interp). Inflation Index Base subject to the Calculation Style. Used in market standard ZC Inflation swaps.">
+    Spread <"Inflation Index Final - Inflation Index Base). Inflation Index Final is Index for Ref month the Lag months prior to Payment Date (subject to interp). Inflation Index Base subject to the Calculation Style. Typically used for fixing locks.">
+
+enum InflationCalculationStyleEnum: <"Code values for different styles of ways of calculation methods.">
+
+    YearOnYear <"YearOnYear means Inflation Index Base is the inflation index for Reference Month that is 12 months prior to Inflation Index Final (subject to interpolation). Inflation Index Base is cashflow dependent.">
+    ZeroCoupon <"ZeroCoupon means Inflation Index Base used in the CalculationMethod is the inflation index for the Reference Month that is the lag number of months prior to Effective Date in the case of a swap, or Bond Interest Accrual Date in the case of an Asset Swap (subject to interpolation). Inflation Index Base has the same value for each inflation cashflow and Principal Exchange calculation within the trade.">
+
+enum InterestShortfallCapEnum: <"The specification of the interest shortfall cap, applicable to mortgage derivatives.">
+
+    Fixed
+    Variable
+
+enum InterpolationPeriodEnum: <"Defines applicable periods for interpolation.">
+
+    Initial <"Interpolation is applicable to the initial period only.">
+    InitialAndFinal <"Interpolation is applicable to the initial and final periods only.">
+    Final <"Interpolation is applicable to the final period only.">
+    AnyPeriod <"Interpolation is applicable to any non-standard period.">
+
+enum LengthUnitEnum:
+
+    Pages
+    TimeUnit
+
+enum LoadTypeEnum:
+
+    Base <"Base">
+    Peak <"Peak">
+    OffPeak <"Off-Peak">
+    BlockHours <"Block Hours">
+    Custom <"Anything that does not fall under the predefined standard categories">
+
+enum MarginTypeEnum: <"This indicator defines which type of assets (cash or securities) is specified to apply as margin to the repo transaction.">
+
+    Cash <"When the margin type is Cash, the margin factor is applied to the cash value of the transaction.">
+    Instrument <"When the margin type is Instrument, the margin factor is applied to the instrument value for the transaction. In the “instrument” case, the haircut would be applied to the securities.">
+
+enum MarketDisruptionEventsEnum: <"The specification of how market disruption events will be represented.">
+
+    Applicable <"Market Disruption Events are applicable.">
+    NotApplicable <"Market Disruption Events are not applicable.">
+    AsSpecifiedInMasterAgreement <"The Market Disruption Event(s) are determined by reference to the relevant Master Agreement.">
+    AsSpecifiedInConfirmation <"The Market Disruption Event(s) are determined by reference to the relevant Confirmation.">
+
+enum MetalTitleEnum: <"Describes how and when title to the commodity transfers.">
+
+    TransfersWithRiskOfLoss <"Transfers with Risk of Loss.">
+    DoesNotTransferWithRiskOfLoss <"Does Not Transfer with Risk of Loss.">
+
+enum MethodOfAdjustmentEnum:
+
+    CalculationAgent
+    OptionsExchange
+
+enum NationalisationOrInsolvencyOrDelistingEventEnum:
+
+    NegotiatedCloseout
+    CancellationAndPayment
+
+enum NegativeInterestRateTreatmentEnum: <"The method of calculating payment obligations when a floating rate is negative (either due to a quoted negative floating rate or by operation of a spread that is subtracted from the floating rate).">
+
+    NegativeInterestRateMethod
+    ZeroInterestRateMethod
+    ZeroInterestRateMethodExcludingSpread
+
+enum NonCashDividendTreatmentEnum:
+
+    PotentialAdjustmentEvent
+    CashEquivalent
+
+enum NotionalAdjustmentEnum:
+
+    Execution
+    PortfolioRebalancing
+    Standard
+
+enum NotionalChangeEnum: <"Indicator as to the type of transaction in accordance with Articles 20(3)(a) and 21(5)(a) of Regulation (EU) 600/2014.">
+
+    Increase <"Transaction results in a Increase of Notional value">
+    Decrease <"Transaction results in a Decrease of Notional value">
+
+enum ObligationCategoryEnum:
+
+    Payment
+    BorrowedMoney
+    ReferenceObligationsOnly
+    Bond
+    Loan
+    BondOrLoan
+
+enum ObservationPeriodDatesEnum: <"The specification of whether calculated rates are set relative to the beginning or end of a calculation period, or another date.">
+
+    SetInAdvance
+    Standard
+    FixingDate
+
+enum OptionTypeEnum:
+
+    Put
+    Call
+    Payer
+    Receiver
+    Straddle
+
+enum PartyDeterminationEnum:
+
+    NonExercisingParty
+    Both
+
+enum PayerReceiverEnum:
+
+    Payer
+    Receiver
+
+enum PayoutEnum:
+
+    Deferred
+    Immediate
+
+enum PayRelativeToEnum: <"The specification of whether payments occur relative to the calculation period start or end date, or the reset date.">
+
+    CalculationPeriodStartDate
+    CalculationPeriodEndDate
+    LastPricingDate
+    ResetDate
+    ValuationDate
+
+enum PeriodEnum:
+
+    D
+    W
+    M
+    Y
+
+enum PeriodExtendedEnum:
+
+    D
+    W
+    M
+    Y
+    T
+
+enum PremiumQuoteBasisEnum:
+
+    PercentageOfCallCurrencyAmount
+    PercentageOfPutCurrencyAmount
+    CallCurrencyPerPutCurrency
+    PutCurrencyPerCallCurrency
+    Explicit
+
+enum PremiumTypeEnum:
+
+    PrePaid
+    PostPaid
+    Variable
+    Fixed
+
+enum PriceExpressionEnum:
+
+    AbsoluteTerms
+    PercentageOfNotional
+
+enum PutCallEnum:
+
+    Put
+    Call
+
+enum QuotationRateTypeEnum:
+
+    Bid
+    Ask
+    Mid
+    ExercisingPartyPays
+
+enum QuotationSideEnum:
+
+    Bid
+    Ask
+    Mid
+
+enum QuotationStyleEnum:
+
+    PointsUpFront
+    TradedSpread
+    Price
+
+enum QuoteBasisEnum:
+
+    Currency1PerCurrency2
+    Currency2PerCurrency1
+
+enum RateTreatmentEnum:
+
+    BondEquivalentYield
+    MoneyMarketYield
+
+enum RealisedVarianceMethodEnum:
+
+    Previous
+    Last
+    Both
+
+enum RepoDurationEnum: <"A duration code for a Repo or Securities Lending transaction. There are many business and market rules that are derived from the duration of the transaction.">
+
+    Open
+    Term
+    Overnight <"Indicates that a contract is classified as overnight, meaning that there is one business day difference between the start and end date of the contract. Business rule: When the repo is overnight, the number of business days between the spot and forward value dates must be one. Forward leg must be specified.">
+
+enum ResetRelativeToEnum: <"The specification of whether resets occur relative to the first or last day of a calculation period.">
+
+    CalculationPeriodStartDate
+    CalculationPeriodEndDate
+
+enum ReturnTypeEnum:
+
+    Dividend
+    Price
+    Total
+
+enum RollConventionEnum:
+
+    EOM
+    FRN
+    IMM
+    IMMCAD
+    IMMAUD
+    IMMNZD
+    SFE
+    NONE
+    TBILL
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    MON
+    TUE
+    WED
+    THU
+    FRI
+    SAT
+    SUN
+
+enum RoundingDirectionEnum: <"The method of rounding a fractional number.">
+
+    Up
+    Down
+    Nearest
+
+enum SecLendCallingPartyEnum: <"Party in a security lending arrangement who can demand closure (temrination) of the agreement">
+
+    Borrower
+    Lender
+    Either
+    AsDefinedInMasterAgreement
+
+enum SecurityLendingDurationEnum: <"The duration of Security Lending transaction can be only Term or Open. There are many business and market rules that are derived from the duration of the transaction.">
+
+    Open <"Indicates that the contract is an open arrangement, which remains in effect unless or until terminated at the option of one or both parties. Repo business rule: When the repo is \'Open\', the forward leg MUST NOT be specified. SBL business rule: When a security lending arrangement is \'Open\', the termination block (\'termination/settlementDate\') MUST NOT be specified.">
+    Term <"Indicates that a contract is a regular term contract, with a start date and an end date. Repo business rule: When the repo is \'Term\', both spot and forward legs MUST be specified. SBL business rule: When a security lending arrangement is \'Term\', both the initiation block (\'initiation/settlementDate\') and the termination block (\'termination/settlementDate\') MUST be specified.">
+
+enum SettlementPeriodDurationEnum: <"Defines the Settlement Period Duration for an Electricity Transaction.">
+
+    _2Hours displayName "2Hours" <"Two-hourly duration applies.">
+    _1Hour displayName "1Hour" <"Hourly duration applies.">
+    _30Minutes displayName "30Minutes" <"Half-hourly duration applies.">
+    _15Minutes displayName "15Minutes" <"Quarter-hourly duration applies.">
+
+enum SettlementTypeEnum:
+
+    Cash
+    Physical
+    Election
+    CashOrPhysical
+
+enum ShareExtraordinaryEventEnum:
+
+    AlternativeObligation
+    CancellationAndPayment
+    OptionsExchange
+    CalculationAgent
+    ModifiedCalculationAgent
+    PartialCancellationAndPayment
+    Component
+
+enum SpecifiedPriceEnum:
+
+    Afternoon <"The Specified Price shall be the Afternoon fixing reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    Ask <"The Specified Price shall be the Ask price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    Bid <"The Specified Price shall be the Bid price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    Closing <"The Specified Price shall be the Closing price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    High <"The Specified Price shall be the High price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    Index <"The Specified Price shall be the Index price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    MeanOfBidAndAsk <"The Specified Price shall be the Average of the Bid and Ask prices reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    LocationalMarginal <"The Specified Price shall be the Locational Marginal price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    Low <"The Specified Price shall be the Low price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    MarginalHourly <"The Specified Price shall be the Marginal Hourly price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    MarketClearing <"The Specified Price shall be the Market Clearing price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    MeanOfHighAndLow <"The Specified Price shall be the Average of the High and Low prices reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    Morning <"The Specified Price shall be the Morning fixing reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    Official <"The Specified Price shall be the Official price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    Opening <"The Specified Price shall be the Opening price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    OSP <"The Specified Price shall be the Official Settlement Price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    Settlement <"The Specified Price shall be the Settlement price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    Spot <"The Specified Price shall be the Spot price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    Midpoint <"The Specified Price shall be the Average of the Midpoint of prices reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    NationalSingle <"The Specified Price shall be the National Single price reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    WeightedAverage <"The Specified Price shall be the Volume Weighted Average of prices effective on the Pricing Date reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+    UnWeightedAverage <"The Specified Price shall be the Non-volume Weighted Average of prices effective on the Pricing Date reported in or by the relevant Price Source as specified in the relevant Confirmation.">
+
+enum SpreadCalculationMethodEnum: <"Specifies the method by which asset swap spread is calculated, par-par or proceeds.">
+
+    ParPar
+    Proceeds
+
+enum StandardSettlementStyleEnum:
+
+    Standard
+    Net
+    StandardAndNet
+
+enum StepRelativeToEnum: <"The specification of whether a percentage rate change, used to calculate a change in notional outstanding, is expressed as a percentage of the initial notional amount or the previously outstanding notional amount.">
+
+    Initial
+    Previous
+
+enum StubPeriodTypeEnum: <"Element to define how to deal with a none standard calculation period within a swap stream.">
+
+    ShortInitial
+    ShortFinal
+    LongInitial
+    LongFinal
+
+enum StrikeQuoteBasisEnum:
+
+    PutCurrencyPerCallCurrency
+    CallCurrencyPerPutCurrency
+
+enum EMIRSupervisoryBodyEnum: <"The list of regulators or other supervisory bodies for EMIR reporting.">
+
+    ESMA
+    UKFCA
+
+enum SwaptionTypeEnum:
+
+    Payer
+    Receiver
+    Straddle
+    NonStandard
+
+enum TelephoneTypeEnum:
+
+    Work
+    Mobile
+    Fax
+    Personal
+
+enum TimeTypeEnum:
+
+    Close
+    Open
+    OSP
+    SpecificTime
+    XETRA
+    DerivativesClose
+    AsSpecifiedInMasterConfirmation
+
+enum TriggerConditionEnum:
+
+    AtOrAbove
+    AtOrBelow
+    Above
+    Below
+
+enum TriggerTimeTypeEnum:
+
+    Closing
+    Anytime
+
+enum TriggerTypeEnum: <"The specification of whether an option will trigger or expire depending upon whether the spot rate is above or below the barrier rate.">
+
+    EqualOrLess
+    EqualOrGreater
+    Equal
+    Less
+    Greater
+
+enum TouchConditionEnum:
+
+    Touch
+    Notouch
+
+enum ValuationMethodEnum:
+
+    Market
+    Highest
+    AverageMarket
+    AverageHighest
+    BlendedMarket
+    BlendedHighest
+    AverageBlendedMarket
+    AverageBlendedHighest
+
+enum WeatherSettlementLevelEnum:
+
+    Cumulative <"The cumulative number of Weather Index Units for each day in the Calculation Period.">
+    Average <"The cumulative number of Weather Index Units for each day in the Calculation Period divided by the number of days in the Calculation Period.">
+    Mximum <"The maximum number of Weather Index Units for any day in the Calculation Period.">
+    Minimum <"The minimum number of Weather Index Units for any day in the Calculation Period.">
+
+enum WeeklyRollConventionEnum: <"The specification of a weekly roll day.">
+
+    MON
+    TUE
+    WED
+    THU
+    FRI
+    SAT
+    SUN
+    TBILL

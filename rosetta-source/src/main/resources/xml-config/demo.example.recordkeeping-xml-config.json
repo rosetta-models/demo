@@ -1,0 +1,6082 @@
+{
+  "demo.example.recordkeeping.fpml.Account" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AccountId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "accountIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AccountName" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "accountNameScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AccountReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AccountType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "accountTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ActionType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "actionTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ActualPrice" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AdditionalTerm" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "additionalTermScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AdjustableDate" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AdjustableDate2" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AdjustableDateOrRelativeDateSequence" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AdjustableDates" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AdjustableOrAdjustedDate" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AdjustableOrRelativeDate" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AdjustableOrRelativeDates" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AdjustableRelativeOrPeriodicDates" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AdjustableRelativeOrPeriodicDates2" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AffectedTransactions" : {
+    "attributes" : {
+      "affectedTransactionsChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AlgorithmRole" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "algorithmRoleScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AllocationReportingStatus" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "allocationReportingStatusScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AmericanExercise" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/exercise",
+    "xmlElementName" : "americanExercise",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/americanExercise",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.AmountReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AnyAssetReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ApprovalId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "approvalIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ApprovalType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "approvalTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Asset" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AssetClass" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "assetClassScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AssetMeasureType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "assetMeasureScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AssetOrTermPointOrPricingStructureReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AssetReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.AveragePriceLeg" : {
+    "attributes" : {
+      "commodity" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/commodity"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Bankruptcy" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/creditEvent",
+    "xmlElementName" : "bankruptcy",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/bankruptcy",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.BasicQuotation" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Basket" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "basket",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/basket",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.BasketChange" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/changeEvent",
+    "xmlElementName" : "basketChange",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/basketChange",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.BasketConstituent" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "underlyingAsset" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BasketId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "basketIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BasketName" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "basketNameScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BenchmarkRate" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "benchmarkRateScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BermudaExercise" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/exercise",
+    "xmlElementName" : "bermudaExercise",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/bermudaExercise",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.Bond" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "bond",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/bond",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.BondOption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "bondOption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/bondOption",
+    "abstract" : false,
+    "attributes" : {
+      "bond" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/bond"
+      },
+      "convertibleBond" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/convertibleBond"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BondReference" : {
+    "attributes" : {
+      "bond" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/bond"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BrokerConfirmationType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "brokerConfirmationTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BrokerEquityOption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "brokerEquityOption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/brokerEquityOption",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.BulletPayment" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "bulletPayment",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/bulletPayment",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.BullionDeliveryLocation" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "bullionDeliveryLocationScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BullionPhysicalLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/physicalCommodityForwardLeg",
+    "xmlElementName" : "bullionPhysicalLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/bullionPhysicalLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.BusinessCenter" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "businessCenterScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BusinessCenters" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BusinessCentersReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BusinessDayAdjustments" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BusinessDayAdjustmentsReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BusinessEventIdentifier" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BusinessProcess" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "businessProcessScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BusinessUnit" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BusinessUnitReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.BusinessUnitRole" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "unitRoleScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Calculation" : {
+    "attributes" : {
+      "rateCalculation" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/rateCalculation"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CalculationAgentDetermination" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/fxDisruptionFallback",
+    "xmlElementName" : "calculationAgentDetermination",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/calculationAgentDetermination",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CalculationPeriod" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CalculationPeriodDates" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CalculationPeriodDatesReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CalculationPeriodsDatesReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CalculationPeriodsReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CalculationPeriodsScheduleReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CancelableProvision" : {
+    "attributes" : {
+      "exercise" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/exercise"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CancellationEvent" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CapFloor" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "capFloor",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/capFloor",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.Cash" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "cash",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/cash",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CashSettlement" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CashSettlementPaymentDate" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CashSettlementReferenceBanks" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CashflowFixing" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CashflowNotional" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CashflowObservationReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CashflowType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "cashflowTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ChangeEvent" : {
+    "xmlElementName" : "changeEvent",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/changeEvent",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.ClearanceSystem" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "clearanceSystemScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ClearingExceptionReason" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "clearingExceptionReasonScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ClearingStatusValue" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "clearingStatusScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CoalDeliveryPoint" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "deliveryPointScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CoalPhysicalLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/physicalLeg",
+    "xmlElementName" : "coalPhysicalLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/coalPhysicalLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CoalProductSource" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityCoalProductSourceScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CoalProductType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityCoalProductTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CoalQualityAdjustments" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityCoalQualityAdjustmentsScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CoalStandardQuality" : {
+    "attributes" : {
+      "sO2" : {
+        "xmlName" : "SO2"
+      },
+      "btUperLB" : {
+        "xmlName" : "BTUperLB"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CoalStandardQualitySchedule" : {
+    "attributes" : {
+      "standardQualityStep" : {
+        "xmlName" : "StandardQualityStep"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CoalTransportationEquipment" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityCoalTransportationEquipmentScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CollateralArrangement" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "collateralArrangementScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CollateralPortfolio" : {
+    "attributes" : {
+      "collateralPortfolioChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CollateralPortfolioId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "collateralPortfolioIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CollateralProfile" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "collateralProfileScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CollateralType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "collateralTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CollateralizationType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "collateralTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CollateralizedExposureGrouping" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "collateralizedExposureGroupingScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Commodity" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "commodity",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/commodity",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CommodityBase" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityBaseScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityBasketBase" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityBasketOption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "commodityBasketOption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/commodityBasketOption",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CommodityBasketUnderlyingBase" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityBullionSettlementDisruptionEnum" : {
+    "enumValues" : {
+      "Cancellation_and_Payment" : "Cancellation and Payment"
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityBusinessCalendar" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityBusinessCalendarScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityClassificationLayer" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityClassificationScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityDeliveryPeriods" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityDeliveryPoint" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "deliveryPointScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityDeliveryRisk" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "deliveryRiskScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityDetails" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityDetailsScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityDigitalOption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "commodityDigitalOption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/commodityDigitalOption",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CommodityExpireRelativeToEvent" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityExpireRelativeToEventScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityFixedPrice" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityForward" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "commodityForward",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/commodityForward",
+    "abstract" : false,
+    "attributes" : {
+      "physicalCommodityForwardLeg" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/physicalCommodityForwardLeg"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityFrequencyType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityFrequencyTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityFxType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityFxTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityHubCode" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "hubCodeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityInformationProvider" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "informationProviderScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityInterestLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/commodityPerformanceSwapLeg",
+    "xmlElementName" : "commodityInterestLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/commodityInterestLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CommodityMetalBrandManager" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityMetalBrandManagerScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityMetalBrandName" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityMetalBrandNameScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityMetalGrade" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityMetalGradeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityMetalProducer" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityMetalProducerScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityMetalShape" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityMetalShapeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityNotionalAmountReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityNotionalQuantity" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityNotionalQuantitySchedule" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityOption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "commodityOption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/commodityOption",
+    "abstract" : false,
+    "attributes" : {
+      "commoditySwap" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/commoditySwap"
+      },
+      "commodityForward" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/commodityForward"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityPayRelativeToEvent" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityPayRelativeToEventScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityPerformanceSwap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "commodityPerformanceSwap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/commodityPerformanceSwap",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CommodityPerformanceSwapBase" : {
+    "attributes" : {
+      "commodityPerformanceSwapLeg" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/commodityPerformanceSwapLeg"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityPhysicalQuantityBase" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityPhysicalQuantitySchedule" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityPipeline" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "pipelineScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityPipelineCycle" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "pipelineCycleScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityPricingDates" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityProductGrade" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "productGradeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityQuantityFrequency" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "quantityFrequencyScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityRelativeExpirationDates" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityRelativePaymentDates" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityReturnLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/commodityPerformanceSwapLeg",
+    "xmlElementName" : "commodityReturnLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/commodityReturnLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CommoditySwap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "commoditySwap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/commoditySwap",
+    "abstract" : false,
+    "attributes" : {
+      "commoditySwapLeg" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/commoditySwapLeg"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommoditySwaption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "commoditySwaption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/commoditySwaption",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CommoditySwaptionUnderlying" : {
+    "attributes" : {
+      "commoditySwapLeg" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/commoditySwapLeg"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityValuationDates" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CommodityVarianceLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/commodityPerformanceSwapLeg",
+    "xmlElementName" : "commodityVarianceLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/commodityVarianceLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CompoundingFrequency" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "compoundingFrequencyScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ConfirmationMethod" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "confirmationMethodScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ContractualDefinitions" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "contractualDefinitionsScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ContractualSupplement" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "contractualSupplementScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ConvertibleBond" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "convertibleBond",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/convertibleBond",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CorporateAction" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/changeEvent",
+    "xmlElementName" : "corporateAction",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/corporateAction",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.CorporateActionType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "corporateActionScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CorrelationId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "correlationIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CorrelationSwap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "correlationSwap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/correlationSwap",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CountryCode" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "countryScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CouponType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "couponTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditChangeEvent" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/changeEvent",
+    "xmlElementName" : "creditChangeEvent",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/creditChangeEvent",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditCurve" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/pricingStructure",
+    "xmlElementName" : "creditCurve",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/creditCurve",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CreditCurveValuation" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/pricingStructureValuation",
+    "xmlElementName" : "creditCurveValuation",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/creditCurveValuation",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CreditDefaultSwap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "creditDefaultSwap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/creditDefaultSwap",
+    "abstract" : false,
+    "attributes" : {
+      "creditDefaultSwapChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditDefaultSwapOption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "creditDefaultSwapOption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/creditDefaultSwapOption",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.CreditDocument" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "creditDocumentScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditEventAcknowledgement" : {
+    "xmlElementName" : "creditEventAcknowledgement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/creditEventAcknowledgement",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditEventException" : {
+    "xmlElementName" : "creditEventException",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/creditEventException",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditEventIndexReferenceInformation" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditEventNotice" : {
+    "xmlElementName" : "creditEventNotice",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/creditEventNotice",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditEventNoticeDocument" : {
+    "attributes" : {
+      "creditEvent" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/creditEvent"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditEventNotification" : {
+    "xmlElementName" : "creditEventNotification",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/creditEventNotification",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditEventNotificationRetracted" : {
+    "xmlElementName" : "creditEventNotificationRetracted",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/creditEventNotificationRetracted",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditEventType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "creditEventTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditEvents" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditEventsReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditQuality" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "creditQualityScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditRating" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "creditRatingScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditSeniority" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "creditSeniorityScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditSupportAgreementIdentifier" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "creditSupportAgreementIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CreditSupportAgreementType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "creditSupportAgreementTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Currency" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "currencyScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CurrencyPairClassification" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "currencyPairClassificationScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.CutName" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "cutNameScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.DataDocument" : {
+    "xmlElementName" : "dataDocument",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/dataDocument",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.DataProvider" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "weatherDataProviderScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.DateReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.DayCountFraction" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "dayCountFractionScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.DeliveryMethod" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "deliveryMethodScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.DeliveryNearby" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Deposit" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/curveInstrument",
+    "xmlElementName" : "deposit",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/deposit",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.DerivativeCalculationMethod" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "derivativeCalculationMethodScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.DeterminationMethod" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "determinationMethodScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.DeterminationMethodReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.DisruptionFallback" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityMarketDisruptionFallbackScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.DisseminationId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "disseminationIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.DividendPeriod" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.DividendSwapOptionTransactionSupplement" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "dividendSwapOptionTransactionSupplement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/dividendSwapOptionTransactionSupplement",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.DividendSwapTransactionSupplement" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "dividendSwapTransactionSupplement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/dividendSwapTransactionSupplement",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.Document" : {
+    "attributes" : {
+      "fpmlVersion" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "expectedBuild" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "actualBuild" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.DualExchangeRate" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/fxDisruptionEvent",
+    "xmlElementName" : "dualExchangeRate",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/dualExchangeRate",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.ESMAContractType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "contractTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ESMACreditSeniority" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "creditSeniorityScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ESMADeliveryType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "deliveryTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EarlyTerminationEvent" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EarlyTerminationProvision" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ElectricityDeliveryPoint" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "deliveryPointScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ElectricityPhysicalLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/physicalLeg",
+    "xmlElementName" : "electricityPhysicalLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/electricityPhysicalLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.ElectricityTransmissionContingencyType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "electricityTransmissionContingencyScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EmbeddedOptionType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "embeddedOptionTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EntityClassification" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "entityClassificationScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EntityId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "entityIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EntityName" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "entityNameScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EntityType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "entityTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EnvironmentalAbandonmentOfSchemeEnum" : {
+    "enumValues" : {
+      "OptionA_1" : "OptionA(1)",
+      "OptionA_2" : "OptionA(2)"
+    }
+  },
+  "demo.example.recordkeeping.fpml.EnvironmentalPhysicalLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/physicalLeg",
+    "xmlElementName" : "environmentalPhysicalLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/environmentalPhysicalLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.EnvironmentalProductApplicableLaw" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "environmentalProductApplicableLawScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EnvironmentalTrackingSystem" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityEnvironmentalTrackingSystemScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Equity" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "equity",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/equity",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.EquityForward" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "equityForward",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/equityForward",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.EquityOption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "equityOption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/equityOption",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.EquityOptionTransactionSupplement" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "equityOptionTransactionSupplement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/equityOptionTransactionSupplement",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.EquitySwapTransactionSupplement" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "equitySwapTransactionSupplement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/equitySwapTransactionSupplement",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.EquityValuation" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EuropeanExercise" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/exercise",
+    "xmlElementName" : "europeanExercise",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/europeanExercise",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.EventId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "eventIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EventStatus" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "eventStatusScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EventStatusException" : {
+    "xmlElementName" : "eventStatusException",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/eventStatusException",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.EventStatusResponse" : {
+    "xmlElementName" : "eventStatusResponse",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/eventStatusResponse",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.EventTaxonomy" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "eventTaxonomyScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.EventType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "eventTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ExceptionMessageHeader" : {
+    "attributes" : {
+      "signature" : {
+        "xmlName" : "Signature",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/Signature"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ExchangeId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "exchangeIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ExchangeRestrictions" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/fxDisruptionEvent",
+    "xmlElementName" : "exchangeRestrictions",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/exchangeRestrictions",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.ExchangeTradedContractUnderlyer" : {
+    "attributes" : {
+      "underlyingAsset" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ExchangeTradedFund" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "exchangeTradedFund",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/exchangeTradedFund",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.ExecutionDateTime" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "executionDateTimeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ExecutionType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "executionTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ExecutionVenueType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "executionVenueTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Exercise" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ExerciseEvent" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ExercisePeriod" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ExtendibleProvision" : {
+    "attributes" : {
+      "exercise" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/exercise"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ExtensionEvent" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FacilityType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "facilityTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FailureToPay" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/creditEvent",
+    "xmlElementName" : "failureToPay",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/failureToPay",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FallbackRate" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FallbackReferencePriceElement" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/fxDisruptionFallback",
+    "xmlElementName" : "fallbackReferencePrice",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fallbackReferencePrice",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FirstPeriodStartDate" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FixedLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/commoditySwapLeg",
+    "xmlElementName" : "fixedLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fixedLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FixedRate" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FixedRateReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FloatingAmountProvisions" : {
+    "attributes" : {
+      "wacCapInterestProvision" : {
+        "xmlName" : "WACCapInterestProvision"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FloatingLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/commoditySwapLeg",
+    "xmlElementName" : "floatingLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/floatingLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FloatingRateCalculation" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/rateCalculation",
+    "xmlElementName" : "floatingRateCalculation",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/floatingRateCalculation",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FloatingRateCalculationReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FloatingRateIndex" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "floatingRateIndexScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FloatingStrikePrice" : {
+    "attributes" : {
+      "commodity" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/commodity"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FormulaComponent" : {
+    "attributes" : {
+      "name" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Fra" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fra",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fra",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.Frequency" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Future" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "future",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/future",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FutureId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "futureIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Fx" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/curveInstrument",
+    "xmlElementName" : "fx",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fx",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxAccrual" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxAccrualAverageStrikeReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxAccrualDigitalOption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxAccrualDigitalOption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxAccrualDigitalOption",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxAccrualForward" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxAccrualForward",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxAccrualForward",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxAccrualLeverage" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxAccrualOption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxAccrualOption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxAccrualOption",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxAccrualPayoffRegion" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxAccrualPayoffRegionReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxAccrualStrikeReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxAccrualTrigger" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxAccrualTriggerReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxComplexBarrierBase" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxComplexBarrierBaseReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxCurve" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/pricingStructure",
+    "xmlElementName" : "fxCurve",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxCurve",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxCurveValuation" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/pricingStructureValuation",
+    "xmlElementName" : "fxCurveValuation",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxCurveValuation",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxDigitalOption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxDigitalOption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxDigitalOption",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxDisruptionEvents" : {
+    "attributes" : {
+      "fxDisruptionEvent" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/fxDisruptionEvent"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxDisruptionFallbacks" : {
+    "attributes" : {
+      "fxDisruptionFallback" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/fxDisruptionFallback"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxFlexibleForward" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxFlexibleForward",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxFlexibleForward",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxFlexibleForwardExecutionPeriod" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxForwardVolatilityAgreement" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxForwardVolatilityAgreement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxForwardVolatilityAgreement",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxLevelReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxOption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxOption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxOption",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxPivotReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxRangeAccrual" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxRangeAccrual",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxRangeAccrual",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxRateObservable" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxRateObservableReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxSchedule" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxScheduleReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxSingleLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxSingleLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxSingleLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxStrikeReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxSwap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxSwap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxSwap",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxTarget" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxTargetKnockoutForward" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxTargetKnockoutForward",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxTargetKnockoutForward",
+    "abstract" : false,
+    "attributes" : {
+      "fxTargetKnockoutForwardChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    },
+    "contentModel" : {
+      "nodeType" : "SEQUENCE",
+      "minOccurs" : 1,
+      "maxOccurs" : 1,
+      "children" : [ {
+        "nodeType" : "ELEMENT",
+        "xmlName" : "quotedCurrencyPair",
+        "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+        "path" : [ "quotedCurrencyPair" ],
+        "minOccurs" : 1,
+        "maxOccurs" : 1
+      }, {
+        "nodeType" : "ELEMENT",
+        "xmlName" : "notionalAmount",
+        "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+        "path" : [ "notionalAmount" ],
+        "minOccurs" : 1,
+        "maxOccurs" : 1
+      }, {
+        "nodeType" : "ELEMENT",
+        "xmlName" : "target",
+        "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+        "path" : [ "target" ],
+        "minOccurs" : 1,
+        "maxOccurs" : 2
+      }, {
+        "nodeType" : "ELEMENT",
+        "xmlName" : "expirySchedule",
+        "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+        "path" : [ "expirySchedule" ],
+        "minOccurs" : 1,
+        "maxOccurs" : 1
+      }, {
+        "nodeType" : "ELEMENT",
+        "xmlName" : "settlementSchedule",
+        "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+        "path" : [ "settlementSchedule" ],
+        "minOccurs" : 0,
+        "maxOccurs" : 1
+      }, {
+        "nodeType" : "ELEMENT",
+        "xmlName" : "fixingInformationSource",
+        "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+        "path" : [ "fixingInformationSource" ],
+        "minOccurs" : 0,
+        "maxOccurs" : 1
+      }, {
+        "nodeType" : "ELEMENT",
+        "xmlName" : "spotRate",
+        "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+        "path" : [ "spotRate" ],
+        "minOccurs" : 0,
+        "maxOccurs" : 1
+      }, {
+        "nodeType" : "SEQUENCE",
+        "minOccurs" : 1,
+        "maxOccurs" : 1,
+        "children" : [ {
+          "nodeType" : "SEQUENCE",
+          "minOccurs" : 0,
+          "maxOccurs" : 1,
+          "children" : [ {
+            "nodeType" : "ELEMENT",
+            "xmlName" : "pivot",
+            "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+            "path" : [ "pivot" ],
+            "minOccurs" : 1,
+            "maxOccurs" : 1
+          }, {
+            "nodeType" : "ELEMENT",
+            "xmlName" : "constantPayoffRegion",
+            "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+            "path" : [ "constantPayoffRegion" ],
+            "minOccurs" : 0,
+            "maxOccurs" : "unbounded"
+          }, {
+            "nodeType" : "ELEMENT",
+            "xmlName" : "linearPayoffRegion",
+            "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+            "path" : [ "linearPayoffRegion" ],
+            "minOccurs" : 1,
+            "maxOccurs" : 1
+          } ]
+        }, {
+          "nodeType" : "SEQUENCE",
+          "minOccurs" : 1,
+          "maxOccurs" : 1,
+          "children" : [ {
+            "nodeType" : "ELEMENT",
+            "xmlName" : "constantPayoffRegion",
+            "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+            "path" : [ "constantPayoffRegion" ],
+            "minOccurs" : 0,
+            "maxOccurs" : "unbounded"
+          }, {
+            "nodeType" : "ELEMENT",
+            "xmlName" : "linearPayoffRegion",
+            "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+            "path" : [ "linearPayoffRegion" ],
+            "minOccurs" : 1,
+            "maxOccurs" : 1
+          } ]
+        }, {
+          "nodeType" : "CHOICE",
+          "minOccurs" : 0,
+          "maxOccurs" : "unbounded",
+          "children" : [ {
+            "nodeType" : "ELEMENT",
+            "xmlName" : "constantPayoffRegion",
+            "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+            "path" : [ "fxTargetKnockoutForwardChoice", "constantPayoffRegion" ],
+            "minOccurs" : 1,
+            "maxOccurs" : 1
+          }, {
+            "nodeType" : "ELEMENT",
+            "xmlName" : "linearPayoffRegion",
+            "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+            "path" : [ "fxTargetKnockoutForwardChoice", "linearPayoffRegion" ],
+            "minOccurs" : 1,
+            "maxOccurs" : 1
+          } ]
+        } ]
+      }, {
+        "nodeType" : "ELEMENT",
+        "xmlName" : "barrier",
+        "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+        "path" : [ "barrier" ],
+        "minOccurs" : 0,
+        "maxOccurs" : "unbounded"
+      }, {
+        "nodeType" : "ELEMENT",
+        "xmlName" : "additionalPayment",
+        "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+        "path" : [ "additionalPayment" ],
+        "minOccurs" : 0,
+        "maxOccurs" : "unbounded"
+      }, {
+        "nodeType" : "ELEMENT",
+        "xmlName" : "cashSettlement",
+        "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+        "path" : [ "cashSettlement" ],
+        "minOccurs" : 0,
+        "maxOccurs" : 1
+      }, {
+        "nodeType" : "ELEMENT",
+        "xmlName" : "settlementPeriodSchedule",
+        "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+        "path" : [ "settlementPeriodSchedule" ],
+        "minOccurs" : 0,
+        "maxOccurs" : 1
+      } ]
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxTargetLeverage" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxTargetPayoffRegion" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxTargetPayoffRegionReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxTargetReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxTemplateTerms" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "fxTemplateTermsScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.FxVarianceSwap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxVarianceSwap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxVarianceSwap",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.FxVolatilitySwap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "fxVolatilitySwap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/fxVolatilitySwap",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.GasDeliveryPoint" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "deliveryPointScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.GasPhysicalLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/physicalLeg",
+    "xmlElementName" : "gasPhysicalLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/gasPhysicalLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.GasQuality" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "gasQualityScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.GenericCommodityGrade" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityGradeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.GenericDimension" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "name" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.GenericExerciseStyle" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "exerciseStyleScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.GenericProduct" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "genericProduct",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/genericProduct",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.GenericProductFeature" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "featureScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.GoverningLaw" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "governingLawScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.IdentifiedCurrency" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.IdentifiedCurrencyReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.IdentifiedDate" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.IdentifiedPayerReceiver" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.IdentifiedRate" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ImplementationSpecificationVersion" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "implementationSpecificationVersionScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Index" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "index",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/index",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.IndexAnnexSource" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "indexAnnexSourceScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.IndexChange" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/changeEvent",
+    "xmlElementName" : "indexChange",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/indexChange",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.IndexId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "indexIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.IndexName" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "indexNameScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.IndexReferenceInformation" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.IndustryClassification" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "industryClassificationScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.InflationRateCalculation" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/rateCalculation",
+    "xmlElementName" : "inflationRateCalculation",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/inflationRateCalculation",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.InformationProvider" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "informationProviderScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.InstrumentId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "instrumentIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.InstrumentSet" : {
+    "attributes" : {
+      "instrumentSetSequence" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.InstrumentSetSequence" : {
+    "attributes" : {
+      "underlyingAsset" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset"
+      },
+      "curveInstrument" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/curveInstrument"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.InstrumentTradeDetails" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "instrumentTradeDetails",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/instrumentTradeDetails",
+    "abstract" : false,
+    "attributes" : {
+      "underlyingAsset" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.InstrumentType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "instrumentTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.InterconnectionPoint" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "interconnectionPointScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.InterestCalculation" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.InterestLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/returnSwapLeg",
+    "xmlElementName" : "interestLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/interestLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.InterestLegCalculationPeriodDates" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.InterestLegCalculationPeriodDatesReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.InterestRateStreamReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.InterpolationMethod" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "interpolationMethodScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.IssuerId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "issuerIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Lag" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Language" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "languageScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Leg" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.LegId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "legIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.LegalEntity" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.LegalEntityReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Lien" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "lienScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.LinkId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "linkIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.LinkType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "linkTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Loan" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "loan",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/loan",
+    "abstract" : false,
+    "attributes" : {
+      "loanChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MainPublication" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "mainPublicationScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MandatoryEarlyTermination" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Market" : {
+    "xmlElementName" : "market",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/market",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "pricingStructure" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/pricingStructure"
+      },
+      "pricingStructureValuation" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/pricingStructureValuation"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MarketDisruption" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "marketDisruptionScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MarketDisruptionEvent" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityMarketDisruptionScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MarketReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MasterAgreementId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "masterAgreementIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MasterAgreementType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "masterAgreementTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MasterAgreementVersion" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "masterAgreementVersionScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MasterConfirmationAnnexType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "masterConfirmationAnnexTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MasterConfirmationType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "masterConfirmationTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Material" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityMetalProductTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MatrixSource" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "settledEntityMatrixSourceScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MatrixTerm" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "matrixTermScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MatrixType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "matrixTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MessageAddress" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "messageAddressScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MessageId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "messageIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MessageRejected" : {
+    "xmlElementName" : "messageRejected",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/messageRejected",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.MetalPhysicalLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/physicalCommodityForwardLeg",
+    "xmlElementName" : "metalPhysicalLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/metalPhysicalLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.MimeType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "mimeTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MoneyBase" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Mortgage" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "mortgage",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/mortgage",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.MortgageSector" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "mortgageSectorScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.MutualFund" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "mutualFund",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/mutualFund",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.NoFaultTermination" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/fxDisruptionFallback",
+    "xmlElementName" : "noFaultTermination",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/noFaultTermination",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.NonDeliverableSubstitute" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/fxDisruptionFallback",
+    "xmlElementName" : "nonDeliverableSubstitute",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/nonDeliverableSubstitute",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.NonNegativeSchedule" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.NonpublicExecutionReport" : {
+    "xmlElementName" : "nonpublicExecutionReport",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/nonpublicExecutionReport",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "attributes" : {
+      "additionalEvent" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/additionalEvent"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.NonpublicExecutionReportAcknowledgement" : {
+    "xmlElementName" : "nonpublicExecutionReportAcknowledgement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/nonpublicExecutionReportAcknowledgement",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.NonpublicExecutionReportException" : {
+    "xmlElementName" : "nonpublicExecutionReportException",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/nonpublicExecutionReportException",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.NonpublicExecutionReportRetracted" : {
+    "xmlElementName" : "nonpublicExecutionReportRetracted",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/nonpublicExecutionReportRetracted",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "attributes" : {
+      "additionalEvent" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/additionalEvent"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.NotificationMessageHeader" : {
+    "attributes" : {
+      "signature" : {
+        "xmlName" : "Signature",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/Signature"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Notional" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.NotionalAmountReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.NotionalReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.NotionalReportingType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "notionalTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.NumberOfOptionsReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.NumberOfUnitsReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ObligationAcceleration" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/creditEvent",
+    "xmlElementName" : "obligationAcceleration",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/obligationAcceleration",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.ObligationDefault" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/creditEvent",
+    "xmlElementName" : "obligationDefault",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/obligationDefault",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.OilPhysicalLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/physicalLeg",
+    "xmlElementName" : "oilPhysicalLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/oilPhysicalLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.OilProductType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "commodityOilProductTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Option" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "option",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/option",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.OptionBaseExtended" : {
+    "attributes" : {
+      "exercise" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/exercise"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.OptionType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "optionTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.OptionalEarlyTermination" : {
+    "attributes" : {
+      "exercise" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/exercise"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.OrderId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "orderIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.OrganizationCharacteristic" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "organizationCharacteristicScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.OrganizationIdentifier" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "idScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.OrganizationType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "organizationTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.OriginatingEvent" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "originatingEventScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.OtcClassification" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "otcClassificationScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.OtherAgreementId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "agreementIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.OtherAgreementType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "agreementTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.OtherAgreementVersion" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "agreementVersionScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PackageType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "packageTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Party" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PartyGroupType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "partyGroupTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PartyId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "partyIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PartyName" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "partyNameScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PartyPortfolioName" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PartyReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PartyRelationshipType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "partyRelationshipTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PartyRole" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "partyRoleScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PartyRoleType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "partyRoleTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PartyTradeIdentifierReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Payment" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PaymentBase" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PaymentCalculationPeriod" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PaymentDates" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PaymentDatesReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PaymentType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "paymentTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Period" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Person" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PersonId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "personIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PersonReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PersonRole" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "personRoleScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PerturbationType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "perturbationTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PhysicalLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/commoditySwapLeg",
+    "xmlElementName" : "physicalLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/physicalLeg",
+    "abstract" : true
+  },
+  "demo.example.recordkeeping.fpml.PhysicalSettlement" : {
+    "attributes" : {
+      "product" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/product"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Portfolio" : {
+    "xmlElementName" : "portfolio",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/portfolio",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PortfolioName" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "portfolioNameScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PortfolioValuationItem" : {
+    "attributes" : {
+      "portfolio" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/portfolio"
+      },
+      "valuationSet" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/valuationSet"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PriceMateriality" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/fxDisruptionEvent",
+    "xmlElementName" : "priceMateriality",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/priceMateriality",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.PriceQuoteUnits" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "priceQuoteUnitsScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PriceSourceDisruptionElement" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/fxDisruptionEvent",
+    "xmlElementName" : "priceSourceDisruption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/priceSourceDisruption",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.PricingContext" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "pricingContextScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PricingDataPointCoordinate" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "pricingDataPointCoordinateChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PricingDataPointCoordinateReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PricingInputType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "pricingInputTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PricingModel" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "pricingModelScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PricingParameterDerivative" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PricingParameterDerivativeReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PricingParameterShift" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PricingStructure" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PricingStructurePoint" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "pricingStructurePointChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      },
+      "underlyingAsset" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PricingStructureReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PrincipalExchange" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.PrincipalExchanges" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ProblemLocation" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "locationType" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Product" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ProductId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "productIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ProductReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ProductType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "productTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ProtectionTerms" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ProtectionTermsReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.QuantityReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.QuantityUnit" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "quantityUnitScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.QueryParameterId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "queryParameterIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.QueryParameterOperator" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "queryParameterOperatorScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.QueryPortfolio" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/portfolio",
+    "xmlElementName" : "queryPortfolio",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/queryPortfolio",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.QuoteTiming" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "quoteTimingScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Rate" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RateIndex" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/curveInstrument",
+    "xmlElementName" : "rateIndex",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/rateIndex",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.RateObservation" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RateReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RateSourcePage" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "rateSourcePageScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReasonCode" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "reasonCodeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReferenceAmount" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "referenceAmountScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReferenceBankId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "referenceBankIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReferenceLevelUnit" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "weatherIndexReferenceLevelScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReferenceObligation" : {
+    "attributes" : {
+      "bond" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/bond"
+      },
+      "convertibleBond" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/convertibleBond"
+      },
+      "mortgage" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/mortgage"
+      },
+      "loan" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/loan"
+      },
+      "referenceObligationChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Region" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "regionScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RegulationName" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "regulationNameScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RegulatorId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "regulatorIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RegulatorReportingStatusCode" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "reportingStatusScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RegulatoryDisclosure" : {
+    "xmlElementName" : "regulatoryDisclosure",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/regulatoryDisclosure",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.RegulatoryProductInfo" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "regulatoryProductInfo",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/regulatoryProductInfo",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.RegulatoryReportingAcknowledgement" : {
+    "xmlElementName" : "regulatoryReportingAcknowledgement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/regulatoryReportingAcknowledgement",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.RegulatoryReportingException" : {
+    "xmlElementName" : "regulatoryReportingException",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/regulatoryReportingException",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.RegulatoryReportingStatus" : {
+    "xmlElementName" : "regulatoryReportingStatus",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/regulatoryReportingStatus",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.RegulatoryWithdrawal" : {
+    "xmlElementName" : "regulatoryWithdrawal",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/regulatoryWithdrawal",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.RelativePrice" : {
+    "attributes" : {
+      "relativePriceChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RelativePriceChoice" : {
+    "attributes" : {
+      "bond" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/bond"
+      },
+      "convertibleBond" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/convertibleBond"
+      },
+      "equity" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/equity"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RelevantUnderlyingDateReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Repo" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "repo",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/repo",
+    "abstract" : false,
+    "attributes" : {
+      "repoChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      },
+      "security" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/security"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RepoChoice" : {
+    "attributes" : {
+      "bond" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/bond"
+      },
+      "convertibleBond" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/convertibleBond"
+      },
+      "equity" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/equity"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReportId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "reportIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReportingBoolean" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "reportingBooleanScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReportingCurrencyType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "reportingCurrencyTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReportingLevel" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "reportingLevelScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReportingPurpose" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "reportingPurposeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReportingRegimeName" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "reportingRegimeNameScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReportingRole" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "reportingRoleScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RepudiationMoratorium" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/creditEvent",
+    "xmlElementName" : "repudiationMoratorium",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/repudiationMoratorium",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.RequestEventStatus" : {
+    "xmlElementName" : "requestEventStatus",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/requestEventStatus",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.RequestMessageHeader" : {
+    "attributes" : {
+      "signature" : {
+        "xmlName" : "Signature",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/Signature"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RequestRegulatoryReportingStatus" : {
+    "xmlElementName" : "requestRegulatoryReportingStatus",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/requestRegulatoryReportingStatus",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.RequestRetransmission" : {
+    "xmlElementName" : "requestRetransmission",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/requestRetransmission",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.RequestValuationReport" : {
+    "xmlElementName" : "requestValuationReport",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/requestValuationReport",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "attributes" : {
+      "market" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/market"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RequestedClearingAction" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "requestedClearingActionScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RequestedWithdrawalAction" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "requestedWithdrawalActionScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RequiredIdentifierDate" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ResetDates" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ResetDatesReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ResourceId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "resourceIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ResourceType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "resourceTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ResponseMessageHeader" : {
+    "attributes" : {
+      "signature" : {
+        "xmlName" : "Signature",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/Signature"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Restructuring" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/creditEvent",
+    "xmlElementName" : "restructuring",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/restructuring",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.RestructuringType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "restructuringScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReturnCalculation" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/rateCalculation",
+    "xmlElementName" : "returnCalculation",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/returnCalculation",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.ReturnLeg" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/returnSwapLeg",
+    "xmlElementName" : "returnLeg",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/returnLeg",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.ReturnSwap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "returnSwap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/returnSwap",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.ReturnSwapBase" : {
+    "attributes" : {
+      "returnSwapLeg" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/returnSwapLeg"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReturnSwapNotional" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReturnSwapNotionalAmountReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ReturnSwapPaymentDates" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.RollConventionEnum" : {
+    "enumValues" : {
+      "_1" : "1",
+      "_2" : "2",
+      "_3" : "3",
+      "_4" : "4",
+      "_5" : "5",
+      "_6" : "6",
+      "_7" : "7",
+      "_8" : "8",
+      "_9" : "9",
+      "_10" : "10",
+      "_11" : "11",
+      "_12" : "12",
+      "_13" : "13",
+      "_14" : "14",
+      "_15" : "15",
+      "_16" : "16",
+      "_17" : "17",
+      "_18" : "18",
+      "_19" : "19",
+      "_20" : "20",
+      "_21" : "21",
+      "_22" : "22",
+      "_23" : "23",
+      "_24" : "24",
+      "_25" : "25",
+      "_26" : "26",
+      "_27" : "27",
+      "_28" : "28",
+      "_29" : "29",
+      "_30" : "30"
+    }
+  },
+  "demo.example.recordkeeping.fpml.RoutingId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "routingIdCodeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Schedule" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ScheduleReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ScheduledDateType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "scheduledDateTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Security" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "security",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/security",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.SecurityLending" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "securityLending",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/securityLending",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.SecurityValuation" : {
+    "attributes" : {
+      "security" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/security"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Sensitivity" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "name" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "definitionRef" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SensitivityDefinition" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "sensitivityDefinitionChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SensitivitySet" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SensitivitySetDefinition" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SensitivitySetDefinitionReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ServiceAdvisoryCategory" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "serviceAdvisoryCategoryScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ServiceNotification" : {
+    "xmlElementName" : "serviceNotification",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/serviceNotification",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.ServiceNotificationException" : {
+    "xmlElementName" : "serviceNotificationException",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/serviceNotificationException",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.ServiceProcessingCycle" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "serviceProcessingCycleScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ServiceProcessingEvent" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "serviceProcessingEventScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ServiceProcessingStep" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "serviceProcessingStep" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ServiceStatus" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "serviceStatusScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SettlementMethod" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "settlementMethodScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SettlementPeriodDurationEnum" : {
+    "enumValues" : {
+      "_2Hours" : "2Hours",
+      "_1Hour" : "1Hour",
+      "_30Minutes" : "30Minutes",
+      "_15Minutes" : "15Minutes"
+    }
+  },
+  "demo.example.recordkeeping.fpml.SettlementPeriods" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SettlementPeriodsReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SettlementPostponement" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/fxDisruptionFallback",
+    "xmlElementName" : "settlementPostponement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/settlementPostponement",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.SettlementPriceDefaultElection" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "settlementPriceDefaultElectionScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SettlementPriceSource" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "settlementPriceSourceScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SettlementRateOption" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "settlementRateOptionScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SettlementTerms" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SettlementTermsReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ShortSale" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "shortSaleScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SimpleCreditDefaultSwap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/curveInstrument",
+    "xmlElementName" : "simpleCreditDefaultSwap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/simpleCreditDefaultSwap",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.SimpleFra" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/curveInstrument",
+    "xmlElementName" : "simpleFra",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/simpleFra",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.SimpleIRSwap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/curveInstrument",
+    "xmlElementName" : "simpleIrSwap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/simpleIrSwap",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.SingleUnderlyer" : {
+    "attributes" : {
+      "underlyingAsset" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SpreadScheduleReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SpreadScheduleType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "spreadScheduleTypeScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.StandardProduct" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "standardProduct",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/standardProduct",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.StepBase" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Strategy" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "strategy",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/strategy",
+    "abstract" : false,
+    "attributes" : {
+      "product" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/product"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Strike" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.StrikePriceBasketReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.StrikePriceUnderlyingReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.SupervisoryBody" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "supervisoryBodyScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Swap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "swap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/swap",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.SwapStreamReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Swaption" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "swaption",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/swaption",
+    "abstract" : false,
+    "attributes" : {
+      "exercise" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/exercise"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.TermDeposit" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "termDeposit",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/termDeposit",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.TermPoint" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.TermPointReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.TerminatingEvent" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "terminatingEventScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.TimestampTypeScheme" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "timestampScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.TimezoneLocation" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "timezoneLocationScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Trade" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "product" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/product"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.TradeCategory" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "categoryScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.TradeChangeContent" : {
+    "attributes" : {
+      "changeEvent" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/changeEvent"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.TradeId" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "tradeIdScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.TradeIdentifier" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "tradeIdentifierChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    },
+    "contentModel" : {
+      "nodeType" : "SEQUENCE",
+      "minOccurs" : 1,
+      "maxOccurs" : 1,
+      "children" : [ {
+        "nodeType" : "CHOICE",
+        "minOccurs" : 0,
+        "maxOccurs" : 1,
+        "children" : [ {
+          "nodeType" : "SEQUENCE",
+          "minOccurs" : 1,
+          "maxOccurs" : 1,
+          "children" : [ {
+            "nodeType" : "ELEMENT",
+            "xmlName" : "issuer",
+            "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+            "path" : [ "issuer" ],
+            "minOccurs" : 1,
+            "maxOccurs" : 1
+          }, {
+            "nodeType" : "ELEMENT",
+            "xmlName" : "tradeId",
+            "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+            "path" : [ "tradeId" ],
+            "minOccurs" : 1,
+            "maxOccurs" : 1
+          } ]
+        }, {
+          "nodeType" : "SEQUENCE",
+          "minOccurs" : 1,
+          "maxOccurs" : 1,
+          "children" : [ {
+            "nodeType" : "SEQUENCE",
+            "minOccurs" : 1,
+            "maxOccurs" : 1,
+            "children" : [ {
+              "nodeType" : "ELEMENT",
+              "xmlName" : "partyReference",
+              "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+              "path" : [ "partyReference" ],
+              "minOccurs" : 1,
+              "maxOccurs" : 1
+            }, {
+              "nodeType" : "ELEMENT",
+              "xmlName" : "accountReference",
+              "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+              "path" : [ "accountReference" ],
+              "minOccurs" : 0,
+              "maxOccurs" : 1
+            } ]
+          }, {
+            "nodeType" : "CHOICE",
+            "minOccurs" : 0,
+            "maxOccurs" : "unbounded",
+            "children" : [ {
+              "nodeType" : "ELEMENT",
+              "xmlName" : "tradeId",
+              "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+              "path" : [ "tradeIdentifierChoice", "tradeId" ],
+              "minOccurs" : 1,
+              "maxOccurs" : 1
+            }, {
+              "nodeType" : "ELEMENT",
+              "xmlName" : "versionedTradeId",
+              "namespace" : "http://www.fpml.org/FpML-5/recordkeeping",
+              "path" : [ "tradeIdentifierChoice", "versionedTradeId" ],
+              "minOccurs" : 1,
+              "maxOccurs" : 1
+            } ]
+          } ]
+        } ]
+      } ]
+    }
+  },
+  "demo.example.recordkeeping.fpml.TradeUnderlyer2" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "underlyingAsset" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.TradeValuationItem" : {
+    "attributes" : {
+      "valuationSet" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/valuationSet"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.TradingWaiver" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "tradingWaiverScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.TransactionCharacteristic" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "transactionCharacteristicScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.UnderlyerReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.UnderlyingAssetTranche" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "loanTrancheScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Unit" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "unitScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.UnitQuantity" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Validation" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "validationScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.Valuation" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "definitionRef" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ValuationDatesReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ValuationDocument" : {
+    "xmlElementName" : "valuationDocument",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/valuationDocument",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "attributes" : {
+      "market" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/market"
+      },
+      "valuationSet" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/valuationSet"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ValuationPostponementElement" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/fxDisruptionFallback",
+    "xmlElementName" : "valuationPostponement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/valuationPostponement",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.ValuationReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ValuationReport" : {
+    "xmlElementName" : "valuationReport",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/valuationReport",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "attributes" : {
+      "market" : {
+        "elementRef" : "http://www.fpml.org/FpML-5/recordkeeping/market"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ValuationReportAcknowledgement" : {
+    "xmlElementName" : "valuationReportAcknowledgement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/valuationReportAcknowledgement",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.ValuationReportException" : {
+    "xmlElementName" : "valuationReportException",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/valuationReportException",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.ValuationReportRetracted" : {
+    "xmlElementName" : "valuationReportRetracted",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/valuationReportRetracted",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.ValuationScenario" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ValuationScenarioReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ValuationSet" : {
+    "xmlElementName" : "valuationSet",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/valuationSet",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.ValuationSetDetail" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "valuationSetDetailScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.VarianceOptionTransactionSupplement" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "varianceOptionTransactionSupplement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/varianceOptionTransactionSupplement",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.VarianceSwap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "varianceSwap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/varianceSwap",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.VarianceSwapTransactionSupplement" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "varianceSwapTransactionSupplement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/varianceSwapTransactionSupplement",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.VerificationMethod" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "verificationMethodScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.VerificationStatus" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "verificationStatusScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.VerificationStatusAcknowledgement" : {
+    "xmlElementName" : "verificationStatusAcknowledgement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/verificationStatusAcknowledgement",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.VerificationStatusException" : {
+    "xmlElementName" : "verificationStatusException",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/verificationStatusException",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.VerificationStatusNotification" : {
+    "xmlElementName" : "verificationStatusNotification",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/verificationStatusNotification",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.fpml.org/FpML-5/recordkeeping",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.fpml.VolatilityMatrixValuation" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/pricingStructureValuation",
+    "xmlElementName" : "volatilityMatrixValuation",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/volatilityMatrixValuation",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.VolatilityRepresentation" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/pricingStructure",
+    "xmlElementName" : "volatilityRepresentation",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/volatilityRepresentation",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.VolatilitySwap" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "volatilitySwap",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/volatilitySwap",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.VolatilitySwapTransactionSupplement" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/product",
+    "xmlElementName" : "volatilitySwapTransactionSupplement",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/volatilitySwapTransactionSupplement",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.Warrant" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/underlyingAsset",
+    "xmlElementName" : "warrant",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/warrant",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.WeatherCalculationPeriods" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.WeatherIndex" : {
+    "attributes" : {
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.WeatherStationAirport" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "weatherStationAirportScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.WeatherStationWBAN" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "weatherStationWBANScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.WeatherStationWMO" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "weatherStationWMOScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.WithdrawalReason" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "withdrawalReasonScheme" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.YieldCurve" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/pricingStructure",
+    "xmlElementName" : "yieldCurve",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/yieldCurve",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.fpml.YieldCurveReference" : {
+    "attributes" : {
+      "href" : {
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.fpml.YieldCurveValuation" : {
+    "substitutionGroup" : "http://www.fpml.org/FpML-5/recordkeeping/pricingStructureValuation",
+    "xmlElementName" : "yieldCurveValuation",
+    "xmlElementFullyQualifiedName" : "http://www.fpml.org/FpML-5/recordkeeping/yieldCurveValuation",
+    "abstract" : false
+  },
+  "demo.example.recordkeeping.xmldsig.CanonicalizationMethod" : {
+    "xmlElementName" : "CanonicalizationMethod",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/CanonicalizationMethod",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.CanonicalizationMethodType" : {
+    "attributes" : {
+      "algorithm" : {
+        "xmlName" : "Algorithm",
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.DSAKeyValue" : {
+    "xmlElementName" : "DSAKeyValue",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/DSAKeyValue",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.DSAKeyValueType" : {
+    "attributes" : {
+      "p" : {
+        "xmlName" : "P"
+      },
+      "q" : {
+        "xmlName" : "Q"
+      },
+      "g" : {
+        "xmlName" : "G"
+      },
+      "y" : {
+        "xmlName" : "Y"
+      },
+      "j" : {
+        "xmlName" : "J"
+      },
+      "seed" : {
+        "xmlName" : "Seed"
+      },
+      "pgenCounter" : {
+        "xmlName" : "PgenCounter"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.DigestMethod" : {
+    "xmlElementName" : "DigestMethod",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/DigestMethod",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.DigestMethodType" : {
+    "attributes" : {
+      "algorithm" : {
+        "xmlName" : "Algorithm",
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.DigestValue" : {
+    "xmlElementName" : "DigestValue",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/DigestValue",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.KeyInfo" : {
+    "xmlElementName" : "KeyInfo",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/KeyInfo",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.KeyInfoType" : {
+    "attributes" : {
+      "id" : {
+        "xmlName" : "Id",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "keyInfoTypeChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.KeyInfoTypeChoice" : {
+    "attributes" : {
+      "keyName" : {
+        "xmlName" : "KeyName",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/KeyName"
+      },
+      "keyValue" : {
+        "xmlName" : "KeyValue",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/KeyValue"
+      },
+      "retrievalMethod" : {
+        "xmlName" : "RetrievalMethod",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/RetrievalMethod"
+      },
+      "x509Data" : {
+        "xmlName" : "X509Data",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/X509Data"
+      },
+      "pgpData" : {
+        "xmlName" : "PGPData",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/PGPData"
+      },
+      "spkiData" : {
+        "xmlName" : "SPKIData",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/SPKIData"
+      },
+      "mgmtData" : {
+        "xmlName" : "MgmtData",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/MgmtData"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.KeyName" : {
+    "xmlElementName" : "KeyName",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/KeyName",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.KeyValue" : {
+    "xmlElementName" : "KeyValue",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/KeyValue",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.KeyValueType" : {
+    "attributes" : {
+      "dsaKeyValue" : {
+        "xmlName" : "DSAKeyValue",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/DSAKeyValue"
+      },
+      "rsaKeyValue" : {
+        "xmlName" : "RSAKeyValue",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/RSAKeyValue"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.Manifest" : {
+    "xmlElementName" : "Manifest",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/Manifest",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.ManifestType" : {
+    "attributes" : {
+      "id" : {
+        "xmlName" : "Id",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "reference" : {
+        "xmlName" : "Reference",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/Reference"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.MgmtData" : {
+    "xmlElementName" : "MgmtData",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/MgmtData",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.ObjectType" : {
+    "attributes" : {
+      "id" : {
+        "xmlName" : "Id",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "mimeType" : {
+        "xmlName" : "MimeType",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "encoding" : {
+        "xmlName" : "Encoding",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "objectTypeSequence" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.PGPData" : {
+    "xmlElementName" : "PGPData",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/PGPData",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.PGPDataType" : {
+    "attributes" : {
+      "pgpKeyID" : {
+        "xmlName" : "PGPKeyID"
+      },
+      "pgpKeyPacket" : {
+        "xmlName" : "PGPKeyPacket"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.RSAKeyValue" : {
+    "xmlElementName" : "RSAKeyValue",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/RSAKeyValue",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.RSAKeyValueType" : {
+    "attributes" : {
+      "modulus" : {
+        "xmlName" : "Modulus"
+      },
+      "exponent" : {
+        "xmlName" : "Exponent"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.Reference" : {
+    "xmlElementName" : "Reference",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/Reference",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.ReferenceType" : {
+    "attributes" : {
+      "id" : {
+        "xmlName" : "Id",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "uri" : {
+        "xmlName" : "URI",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "type" : {
+        "xmlName" : "Type",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "transforms" : {
+        "xmlName" : "Transforms",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/Transforms"
+      },
+      "digestMethod" : {
+        "xmlName" : "DigestMethod",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/DigestMethod"
+      },
+      "digestValue" : {
+        "xmlName" : "DigestValue",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/DigestValue"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.RetrievalMethod" : {
+    "xmlElementName" : "RetrievalMethod",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/RetrievalMethod",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.RetrievalMethodType" : {
+    "attributes" : {
+      "uri" : {
+        "xmlName" : "URI",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "type" : {
+        "xmlName" : "Type",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "transforms" : {
+        "xmlName" : "Transforms",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/Transforms"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SPKIData" : {
+    "xmlElementName" : "SPKIData",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/SPKIData",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SPKIDataType" : {
+    "attributes" : {
+      "spkiDataTypeSequence" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SPKIDataTypeSequence" : {
+    "attributes" : {
+      "spkiSexp" : {
+        "xmlName" : "SPKISexp"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.Signature" : {
+    "xmlElementName" : "Signature",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/Signature",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SignatureMethod" : {
+    "xmlElementName" : "SignatureMethod",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/SignatureMethod",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SignatureMethodType" : {
+    "attributes" : {
+      "algorithm" : {
+        "xmlName" : "Algorithm",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "hmacOutputLength" : {
+        "xmlName" : "HMACOutputLength"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SignatureProperties" : {
+    "xmlElementName" : "SignatureProperties",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/SignatureProperties",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SignaturePropertiesType" : {
+    "attributes" : {
+      "id" : {
+        "xmlName" : "Id",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "signatureProperty" : {
+        "xmlName" : "SignatureProperty",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/SignatureProperty"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SignatureProperty" : {
+    "xmlElementName" : "SignatureProperty",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/SignatureProperty",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SignaturePropertyType" : {
+    "attributes" : {
+      "target" : {
+        "xmlName" : "Target",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "id" : {
+        "xmlName" : "Id",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "signaturePropertyTypeChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SignatureType" : {
+    "attributes" : {
+      "id" : {
+        "xmlName" : "Id",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "signedInfo" : {
+        "xmlName" : "SignedInfo",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/SignedInfo"
+      },
+      "signatureValue" : {
+        "xmlName" : "SignatureValue",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/SignatureValue"
+      },
+      "keyInfo" : {
+        "xmlName" : "KeyInfo",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/KeyInfo"
+      },
+      "object" : {
+        "xmlName" : "Object",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/Object"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SignatureValue" : {
+    "xmlElementName" : "SignatureValue",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/SignatureValue",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SignatureValueType" : {
+    "attributes" : {
+      "value" : {
+        "xmlRepresentation" : "VALUE"
+      },
+      "id" : {
+        "xmlName" : "Id",
+        "xmlRepresentation" : "ATTRIBUTE"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SignedInfo" : {
+    "xmlElementName" : "SignedInfo",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/SignedInfo",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.SignedInfoType" : {
+    "attributes" : {
+      "id" : {
+        "xmlName" : "Id",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "canonicalizationMethod" : {
+        "xmlName" : "CanonicalizationMethod",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/CanonicalizationMethod"
+      },
+      "signatureMethod" : {
+        "xmlName" : "SignatureMethod",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/SignatureMethod"
+      },
+      "reference" : {
+        "xmlName" : "Reference",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/Reference"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.Transform" : {
+    "xmlElementName" : "Transform",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/Transform",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.TransformType" : {
+    "attributes" : {
+      "algorithm" : {
+        "xmlName" : "Algorithm",
+        "xmlRepresentation" : "ATTRIBUTE"
+      },
+      "transformTypeChoice" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.TransformTypeChoice" : {
+    "attributes" : {
+      "xPath" : {
+        "xmlName" : "XPath"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.Transforms" : {
+    "xmlElementName" : "Transforms",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/Transforms",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.TransformsType" : {
+    "attributes" : {
+      "transform" : {
+        "xmlName" : "Transform",
+        "elementRef" : "http://www.w3.org/2000/09/xmldsig#/Transform"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.X509Data" : {
+    "xmlElementName" : "X509Data",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/X509Data",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.X509DataType" : {
+    "attributes" : {
+      "x509DataTypeSequence" : {
+        "xmlRepresentation" : "VIRTUAL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.X509DataTypeSequence" : {
+    "attributes" : {
+      "x509IssuerSerial" : {
+        "xmlName" : "X509IssuerSerial"
+      },
+      "x509SKI" : {
+        "xmlName" : "X509SKI"
+      },
+      "x509SubjectName" : {
+        "xmlName" : "X509SubjectName"
+      },
+      "x509Certificate" : {
+        "xmlName" : "X509Certificate"
+      },
+      "x509CRL" : {
+        "xmlName" : "X509CRL"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig.X509IssuerSerialType" : {
+    "attributes" : {
+      "x509IssuerName" : {
+        "xmlName" : "X509IssuerName"
+      },
+      "x509SerialNumber" : {
+        "xmlName" : "X509SerialNumber"
+      }
+    }
+  },
+  "demo.example.recordkeeping.xmldsig._Object" : {
+    "xmlElementName" : "Object",
+    "xmlElementFullyQualifiedName" : "http://www.w3.org/2000/09/xmldsig#/Object",
+    "abstract" : false,
+    "xmlAttributes" : {
+      "xmlns" : "http://www.w3.org/2000/09/xmldsig#",
+      "xmlns:xsi" : "http://www.w3.org/2001/XMLSchema-instance"
+    }
+  }
+}
