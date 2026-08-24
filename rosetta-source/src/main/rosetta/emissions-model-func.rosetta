@@ -38,6 +38,17 @@ func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving li
     set isExpired:
         ResolveRelativeDate(drivingLicence -> dateOfRenewal) -> adjustedDate < todayDate
 
+func Check_DrivingLicenceRenewalDate2: <"Function to check whether the driving licence is expired or not">
+    inputs:
+        drivingLicence DrivingLicence (1..1)
+        todayDate date (1..1)
+    output:
+        isExpired boolean (1..1)
+
+    set isExpired:
+        ResolveRelativeDate(drivingLicence -> dateOfRenewal) -> adjustedDate < todayDate
+
+
 func Check_DieselEngine: <"Function to check whether the engine of the vehicle is of diesel type">
     inputs:
         engine Engine (1..1)
