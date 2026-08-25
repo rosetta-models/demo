@@ -1,0 +1,40 @@
+{
+  "demo.example.test1.xschema.Bar" : {
+    "attributes" : {
+      "barStrAttr" : {
+        "xmlName" : "BarStrAttr"
+      }
+    }
+  },
+  "demo.example.test1.xschema.Foo" : {
+    "attributes" : {
+      "fooBooleanAttr" : {
+        "xmlName" : "FooBooleanAttr"
+      },
+      "fooStrAttr" : {
+        "xmlName" : "FooStrAttr"
+      },
+      "fooDecimalAttr" : {
+        "xmlName" : "FooDecimalAttr"
+      },
+      "fooDateAttr" : {
+        "xmlName" : "FooDateAttr"
+      },
+      "fooStringWithRestrictionAttr" : {
+        "xmlName" : "FooStringWithRestrictionAttr"
+      },
+      "fooDecimalWithRestrictionAttr" : {
+        "xmlName" : "FooDecimalWithRestrictionAttr"
+      },
+      "fooBarAttr" : {
+        "xmlName" : "FooBarAttr"
+      },
+      "fooStrListAttr" : {
+        "xmlName" : "FooStrListAttr"
+      },
+      "fooBarListAttr" : {
+        "xmlName" : "FooBarListAttr"
+      }
+    }
+  }
+}

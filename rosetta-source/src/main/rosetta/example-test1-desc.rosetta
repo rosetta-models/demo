@@ -1,0 +1,5 @@
+namespace demo.example.test1 : < "" >
+version "${project.version}"
+
+schema demoExampleTest1 XML
+    [externalConfig]
