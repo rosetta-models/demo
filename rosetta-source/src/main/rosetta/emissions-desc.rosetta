@@ -8,3 +8,4 @@ metaType scheme string
 metaType address string
 metaType location string
 metaType smartPtr string
+metaType Ptr string
