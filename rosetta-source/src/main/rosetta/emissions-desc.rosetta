@@ -7,3 +7,4 @@ metaType reference string
 metaType scheme string
 metaType address string
 metaType location string
+metaType smartPtr string
