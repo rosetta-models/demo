@@ -1,0 +1,18 @@
+{
+  "id" : "test-pack-enrich-demo-external-vehicle-and-licence-data-to-vehicle-ownership-vehicle-ownership-to-reportable-vehicle-demo-test-pack",
+  "pipelineId" : "pipeline-enrich-demo-external-vehicle-and-licence-data-to-vehicle-ownership-vehicle-ownership-to-reportable-vehicle",
+  "name" : "Demo Test Pack",
+  "samples" : [ {
+    "id" : "new-sample",
+    "name" : "New Sample",
+    "inputPath" : "ingest/output/demo-external-vehicle-and-licence-data-to-vehicle-ownership/demo-test-pack/new-sample.json",
+    "outputPath" : "enrich/output/demo-vehicle-ownership-to-reportable-vehicle/demo-test-pack/new-sample.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
+  } ]
+}
