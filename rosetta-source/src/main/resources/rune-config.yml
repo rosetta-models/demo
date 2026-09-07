@@ -1,8 +1,22 @@
 model:
   name: DEMO
   defaultSerialisationFormat: RUNE_JSON
-dependencies:
 generators:
   namespaces:
-  - demo.*
-  - com.rosetta.model
+    - demo.*
+    - com.rosetta.model
+namespaceConfig:
+  - id: demoFixml
+    namespace: demo.fixml.*
+    readOnly: true
+    schemaConfig:
+      schema: demoFixml
+      configPath: xml-config/demo.fixml-xml-config.json
+  - id: demoFdsg
+    namespace: demo.fdsg.*
+    readOnly: true
+    origin:
+      modelImport: xsd
+    schemaConfig:
+      schema: demoFdsg
+      configPath: xml-config/demo.fdsg-xml-config.json
