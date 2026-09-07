@@ -24,3 +24,5 @@ func Ingest_VehicleOrderToNewVehicleOwnershipTransaction:
                     orderQuantity: order -> orderConfirmation -> orderItemReference -> quantity,
                     customerFullName: order -> orderConfirmation -> customerReference -> fullName
         }}
+
+        //
