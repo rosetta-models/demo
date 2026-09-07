@@ -1,6 +1,6 @@
 namespace demo.emissions
 version "${project.version}"
-
+// Test
 metaType id string
 metaType key string
 metaType reference string
