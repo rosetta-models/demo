@@ -1,0 +1,5 @@
+namespace demo.fpml510 : < "Test" >
+version "${project.version}"
+
+schema demoFpml510 XML
+    [externalConfig]

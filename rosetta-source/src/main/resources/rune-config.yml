@@ -1,8 +1,14 @@
 model:
   name: DEMO
   defaultSerialisationFormat: RUNE_JSON
-dependencies:
 generators:
   namespaces:
-  - demo.*
-  - com.rosetta.model
+    - demo.*
+    - com.rosetta.model
+namespaceConfig:
+  - id: demoFpml510
+    namespace: demo.fpml510.*
+    readOnly: true
+    schemaConfig:
+      schema: demoFpml510
+      configPath: xml-config/demo.fpml510-xml-config.json
