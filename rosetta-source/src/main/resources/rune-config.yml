@@ -1,8 +1,16 @@
 model:
   name: DEMO
   defaultSerialisationFormat: RUNE_JSON
-dependencies:
 generators:
   namespaces:
-  - demo.*
-  - com.rosetta.model
+    - demo.*
+    - com.rosetta.model
+namespaceConfig:
+  - id: demoExample1Test1
+    namespace: demo.example1.test1.*
+    readOnly: true
+    origin:
+      modelImport: xsd
+    schemaConfig:
+      schema: demoExample1Test1
+      configPath: xml-config/demo.example1.test1-xml-config.json
