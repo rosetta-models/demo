@@ -152,7 +152,7 @@
   <repositories>
     <repository>
       <id>public-maven</id>
-      <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/public-maven</url>
+      <url>https://europe-west1-maven.pkg.dev/production-208613/public-maven</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -258,11 +258,11 @@
   <distributionManagement>
     <repository>
       <id>artifact-registry-demo</id>
-      <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/regnosys-maven</url>
+      <url>https://europe-west1-maven.pkg.dev/production-208613/regnosys-maven</url>
     </repository>
     <snapshotRepository>
       <id>artifact-registry-demo-snapshot</id>
-      <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/regnosys-maven-snapshot</url>
+      <url>https://europe-west1-maven.pkg.dev/production-208613/regnosys-maven-snapshot</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
