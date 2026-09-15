@@ -15,11 +15,6 @@
             <password>${env.GCP_ACCESS_TOKEN}</password>
         </server>
         <server>
-            <id>public-maven</id>
-            <username>oauth2accesstoken</username>
-            <password>${env.GCP_ACCESS_TOKEN}</password>
-        </server>
-        <server>
             <id>artifact-registry-demo</id>
             <username>oauth2accesstoken</username>
             <password>${env.GCP_ACCESS_TOKEN}</password>
