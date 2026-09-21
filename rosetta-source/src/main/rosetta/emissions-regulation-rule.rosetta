@@ -7,7 +7,7 @@ segment annex
 segment article
 segment section
 segment table
-
+/
 body Authority EuropeanCommission <"European Commission (ec.europa.eu).">
 
 body Authority EuropeanParliament <"European Parliament (europarl.europa.eu).">
