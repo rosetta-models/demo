@@ -24,6 +24,7 @@
     <xtext.version>2.38.0</xtext.version>
     <guava.version>33.3.1-jre</guava.version>
     <guice.version>6.0.0</guice.version>
+    <jackson-core.version>2.18.11</jackson-core.version>
 
     <junit.version>5.9.1</junit.version>
     <junit-platform-commons.version>1.9.1</junit-platform-commons.version>
@@ -102,6 +103,12 @@
         </exclusions>
       </dependency>
       <!-- rosetta END -->
+      <!-- Pin transitive jackson-core (pulled in via rune-common) to fix CVE-2026-89407 -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>${jackson-core.version}</version>
+      </dependency>
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
