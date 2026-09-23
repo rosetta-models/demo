@@ -20,7 +20,7 @@ func Ingest_ExternalVehicleAndLicenceDataToVehicleOwnership:
             isFirstHand: vehicleAndLicenceData -> vehicleData -> isFirstHand,
             vehicleOwnershipRegistrationID: vehicleAndLicenceData -> vehicleData -> vehicleOwnershipRegistrationID,
         }
-
+//
 func Create_DrivingLicences:
     inputs:
         drivingLicenceData DrivingLicenceData (0..*)
