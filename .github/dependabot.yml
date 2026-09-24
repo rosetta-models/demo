@@ -1,0 +1,95 @@
+version: 2
+
+# No `registries:` block is needed. Every dependency resolves from Maven
+# Central, including the internal ones (com.regnosys:rosetta-*,
+# com.regnosys.rosetta:*, org.finos.cdm:cdm-java). The Artifact Registry entries
+# in pom.xml are for publishing (distributionManagement) and for SNAPSHOT
+# builds.
+
+updates:
+  # ---------------------------------------------------------------- master --
+  # Maven: the root pom drives the whole reactor, so one entry at "/"
+  # covers every module.
+  - package-ecosystem: maven
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Europe/London
+    open-pull-requests-limit: 3
+    labels:
+      - Dependencies
+      - Java
+    # Rosetta/CDM versions are bumped deliberately as part of release
+    # coordination, not by a bot. ISO 20022 is managed separately too.
+    # jackson-bom, xtext-dev-bom, guava, jaxb-runtime, cxf-xjc-plugin and
+    # plexus-utils are kept off minor/major bumps entirely - only patch
+    # updates are allowed through, and standalone rather than grouped.
+    ignore:
+      - dependency-name: com.regnosys*
+      - dependency-name: org.finos.rune*
+      - dependency-name: org.finos.cdm*
+      - dependency-name: org.iso20022*
+      - dependency-name: com.fasterxml.jackson*
+        update-types:
+          - version-update:semver-major
+          - version-update:semver-minor
+      - dependency-name: org.eclipse.xtext:xtext-dev-bom
+        update-types:
+          - version-update:semver-major
+          - version-update:semver-minor
+      - dependency-name: com.google.guava:guava
+        update-types:
+          - version-update:semver-major
+          - version-update:semver-minor
+      # Guice stays on major version 6 - minor/patch updates are fine.
+      - dependency-name: com.google.inject*
+        update-types:
+          - version-update:semver-major
+      # jaxb-runtime 3.x/4.x renames the API package javax.xml.bind ->
+      # jakarta.xml.bind, which the generated org.iso10383 classes and
+      # API_GetMicDataImpl don't use - a bot bump breaks compilation.
+      - dependency-name: org.glassfish.jaxb*
+        update-types:
+          - version-update:semver-major
+          - version-update:semver-minor
+      # cxf-xjc-plugin 4.x generates jakarta.xml.bind-annotated classes,
+      # not javax.xml.bind - doesn't break the default build (the
+      # generate-mic profile isn't run by default or in CI), but running
+      # that profile to regenerate org.iso10383 then breaks compilation
+      # against jaxb-runtime, which is pinned above. Bump together with
+      # jaxb-runtime, deliberately, not by a bot.
+      - dependency-name: org.apache.cxf:cxf-xjc-plugin
+        update-types:
+          - version-update:semver-major
+          - version-update:semver-minor
+      # plexus-utils.version overrides the transitive version pulled in via
+      # maven-core/maven-model to fix CVE-2025-67030 - a major bump needs
+      # a human to confirm the fix still applies, not a bot.
+      - dependency-name: org.codehaus.plexus:plexus-utils
+        update-types:
+          - version-update:semver-major
+          - version-update:semver-minor
+    # One PR for routine minor/patch drift; majors still come through
+    # individually so they get read properly.
+    groups:
+      maven-minor-and-patch:
+        exclude-patterns:
+          - com.fasterxml.jackson*
+          - org.eclipse.xtext:xtext-dev-bom
+          - com.google.guava:guava
+          - org.glassfish.jaxb*
+          - org.apache.cxf:cxf-xjc-plugin
+          - org.codehaus.plexus:plexus-utils
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+    labels:
+      - Dependencies
