@@ -24,6 +24,7 @@
     <xtext.version>2.38.0</xtext.version>
     <guava.version>33.3.1-jre</guava.version>
     <guice.version>6.0.0</guice.version>
+    <jackson-core.version>2.18.11</jackson-core.version>
 
     <junit.version>5.9.1</junit.version>
     <junit-platform-commons.version>1.9.1</junit-platform-commons.version>
@@ -42,6 +43,7 @@
     <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
     <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
     <maven-core.version>3.2.5</maven-core.version>
+      <artifactregistry-maven-wagon.version>2.2.5</artifactregistry-maven-wagon.version>
   </properties>
 
   <dependencyManagement>
@@ -101,6 +103,12 @@
         </exclusions>
       </dependency>
       <!-- rosetta END -->
+      <!-- Pin transitive jackson-core (pulled in via rune-common) to fix CVE-2026-89407 -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>${jackson-core.version}</version>
+      </dependency>
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
@@ -152,7 +160,7 @@
   <repositories>
     <repository>
       <id>public-maven</id>
-      <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/public-maven</url>
+      <url>https://europe-west1-maven.pkg.dev/production-208613/public-maven</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -250,7 +258,7 @@
       <extension>
         <groupId>com.google.cloud.artifactregistry</groupId>
         <artifactId>artifactregistry-maven-wagon</artifactId>
-        <version>2.2.1</version>
+        <version>${artifactregistry-maven-wagon.version}</version>
       </extension>
     </extensions>
   </build>
@@ -258,11 +266,11 @@
   <distributionManagement>
     <repository>
       <id>artifact-registry-demo</id>
-      <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/regnosys-maven</url>
+      <url>https://europe-west1-maven.pkg.dev/production-208613/regnosys-maven</url>
     </repository>
     <snapshotRepository>
       <id>artifact-registry-demo-snapshot</id>
-      <url>artifactregistry://europe-west1-maven.pkg.dev/production-208613/regnosys-maven-snapshot</url>
+      <url>https://europe-west1-maven.pkg.dev/production-208613/regnosys-maven-snapshot</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
