@@ -17,3 +17,11 @@ type IsoVehicleData:
 
 type IsoEmissionsData:
     co number (1..1)
+
+
+type IsoVehicleData2:
+    classificationType string (1..1)
+    engineType string (1..1)
+
+type IsoEmissionsData2:
+    co number (1..1)
