@@ -1,27 +1,27 @@
 {
   "@model" : "demo",
   "@type" : "demo.emissions.regulation.ReportableVehicle",
-  "@version" : "0.0.0.master-SNAPSHOT",
+  "@version" : "0.90.0",
   "vehicle" : {
     "@type" : "demo.emissions.model.Car",
     "specification" : {
       "make" : "Volkswagen",
-      "model" : "Golf",
+      "model" : "Polo",
       "zeroTo60" : 4.5,
       "yearOfManufacture" : 2020,
       "chassisNumber" : 0,
-      "dateOfFirstRegistration" : "2020-06-01"
+      "dateOfFirstRegistration" : "2020-01-01"
     },
-    "registrationID" : "X1",
-    "vehicleTaxBand" : "ABand",
-    "vehicleClassification" : "M2_Passengers",
-    "fuelCapacity" : 150,
+    "registrationID" : "X2",
+    "vehicleTaxBand" : "BBand",
+    "vehicleClassification" : "M1_Passengers",
+    "fuelCapacity" : 200,
     "engine" : {
       "engineType" : "Petrol",
       "power" : 1,
       "mpg" : 1,
       "emissionMetrics" : {
-        "carbonMonoxide" : 2.66,
+        "carbonMonoxide" : 2.70,
         "totalHydrocarbon" : 0,
         "volatileOrganicCompound" : 0,
         "nitrogenOxide" : 0,
@@ -35,5 +35,5 @@
   "country" : {
     "@data" : "GB"
   },
-  "licenceNumber" : "FG34HJK"
+  "licenceNumber" : "AB12CDE"
 }

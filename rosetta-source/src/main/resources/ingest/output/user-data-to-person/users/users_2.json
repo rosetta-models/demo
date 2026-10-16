@@ -1,9 +1,0 @@
-{
-  "@model" : "demo",
-  "@type" : "demo.emissions.model.Person",
-  "@version" : "0.0.0.master-SNAPSHOT",
-  "honorific" : "Dr",
-  "firstName" : "Laura",
-  "surname" : "Grey",
-  "dateOfBirth" : "1986-06-17"
-}
