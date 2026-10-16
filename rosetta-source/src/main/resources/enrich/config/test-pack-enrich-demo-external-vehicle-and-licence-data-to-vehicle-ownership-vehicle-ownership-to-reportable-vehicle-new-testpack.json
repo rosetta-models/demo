@@ -1,6 +1,0 @@
-{
-  "id" : "test-pack-enrich-demo-external-vehicle-and-licence-data-to-vehicle-ownership-vehicle-ownership-to-reportable-vehicle-new-testpack",
-  "pipelineId" : "pipeline-enrich-demo-external-vehicle-and-licence-data-to-vehicle-ownership-vehicle-ownership-to-reportable-vehicle",
-  "name" : "new-testpack",
-  "samples" : [ ]
-}
