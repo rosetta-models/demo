@@ -14,6 +14,6 @@ type IsoRegistrationData:
 type IsoVehicleData:
     classificationType string (1..1)
     engineType string (1..1)
-
+//add sample
 type IsoEmissionsData:
     co number (1..1)
