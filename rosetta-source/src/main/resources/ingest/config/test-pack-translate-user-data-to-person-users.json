@@ -57,5 +57,17 @@
       "modelValidationFailures" : 0,
       "runtimeError" : false
     }
+  }, {
+    "id" : "users-5-new-sample",
+    "name" : "users_5 new sample",
+    "inputPath" : "ingest/input/users/users-5-new-sample.csv",
+    "outputPath" : "ingest/output/demo-user-data-to-person/users/users-5-new-sample.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 0,
+      "modelValidationFailures" : 0,
+      "schemaValidationFailure" : false,
+      "runtimeError" : false
+    }
   } ]
 }

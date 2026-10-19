@@ -17,7 +17,7 @@ func Project_EuropeanParliamentReportToIsoEmissionsReport:
             vehicleData: Create_IsoVehicleData(europeanParliamentReport),
             emissionsData: Create_IsoEmissionsData(europeanParliamentReport)
         }
-
+//add new sample    
 func Create_IsoRegistrationData:
     inputs:
         europeanParliamentReport EuropeanParliamentReport (1..1)
