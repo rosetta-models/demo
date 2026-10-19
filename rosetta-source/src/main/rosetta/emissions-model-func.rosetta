@@ -27,7 +27,7 @@ func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
             isFirstHand: isFirstHand,
             vehicleOwnershipRegistrationID: vehicleOwnershipRegistrationID
         }
-//test
+//test remove ingest sample
 func Check_DrivingLicenceRenewalDate: <"Function to check whether the driving licence is expired or not">
     inputs:
         drivingLicence DrivingLicence (1..1)
