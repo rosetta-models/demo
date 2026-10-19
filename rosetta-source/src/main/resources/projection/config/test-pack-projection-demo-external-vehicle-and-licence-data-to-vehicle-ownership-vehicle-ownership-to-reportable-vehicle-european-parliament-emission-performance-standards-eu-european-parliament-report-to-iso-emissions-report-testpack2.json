@@ -2,17 +2,5 @@
   "id" : "test-pack-projection-demo-external-vehicle-and-licence-data-to-vehicle-ownership-vehicle-ownership-to-reportable-vehicle-european-parliament-emission-performance-standards-eu-european-parliament-report-to-iso-emissions-report-testpack2",
   "pipelineId" : "pipeline-projection-demo-external-vehicle-and-licence-data-to-vehicle-ownership-vehicle-ownership-to-reportable-vehicle-european-parliament-emission-performance-standards-eu-european-parliament-report-to-iso-emissions-report",
   "name" : "testpack2",
-  "samples" : [ {
-    "id" : "new-sample-2",
-    "name" : "New Sample 2",
-    "inputPath" : "regulatory-reporting/output/demo-europeanparliament-emissionperformancestandardseu/testpack2/new-sample-2.json",
-    "outputPath" : "projection/output/demo-european-parliament-report-to-iso-emissions-report/testpack2/new-sample-2.xml",
-    "assertions" : {
-      "inputPathCount" : 0,
-      "outputPathCount" : 0,
-      "modelValidationFailures" : 0,
-      "schemaValidationFailure" : false,
-      "runtimeError" : false
-    }
-  } ]
+  "samples" : [ ]
 }
