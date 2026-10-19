@@ -21,10 +21,10 @@
       "runtimeError" : false
     }
   }, {
-    "id" : "demo-3-new-sample",
-    "name" : "demo 3 new sample",
-    "inputPath" : "regulatory-reporting/output/demo-europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-3-new-sample.json",
-    "outputPath" : "projection/output/demo-european-parliament-report-to-iso-emissions-report/passenger-vehicles/demo-3-new-sample.xml",
+    "id" : "demo-4",
+    "name" : "demo 4",
+    "inputPath" : "regulatory-reporting/output/demo-europeanparliament-emissionperformancestandardseu/passenger-vehicles/demo-4.json",
+    "outputPath" : "projection/output/demo-european-parliament-report-to-iso-emissions-report/passenger-vehicles/demo-4.xml",
     "assertions" : {
       "inputPathCount" : 0,
       "outputPathCount" : 0,
