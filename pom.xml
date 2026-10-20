@@ -24,7 +24,7 @@
     <xtext.version>2.38.0</xtext.version>
     <guava.version>33.3.1-jre</guava.version>
     <guice.version>6.0.0</guice.version>
-    <jackson-core.version>2.18.11</jackson-core.version>
+    <jackson.version>2.18.12</jackson.version>
 
     <junit.version>6.1.3</junit.version>
     <mockito.version>5.24.0</mockito.version>
@@ -111,11 +111,15 @@
         </exclusions>
       </dependency>
       <!-- rosetta END -->
-      <!-- Pin transitive jackson-core (pulled in via rune-common) to fix CVE-2026-89407 -->
+      <!-- Pin the transitive Jackson artifacts (pulled in via rune-common) through the BOM, so
+           core, databind and annotations stay aligned, to fix CVE-2026-89407 (jackson-core)
+           and CVE-2026-110879 (jackson-databind) -->
       <dependency>
-        <groupId>com.fasterxml.jackson.core</groupId>
-        <artifactId>jackson-core</artifactId>
-        <version>${jackson-core.version}</version>
+        <groupId>com.fasterxml.jackson</groupId>
+        <artifactId>jackson-bom</artifactId>
+        <version>${jackson.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>com.google.guava</groupId>
