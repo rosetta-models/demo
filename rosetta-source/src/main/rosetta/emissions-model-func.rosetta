@@ -1,6 +1,6 @@
 namespace demo.emissions.model
 version "${project.version}"
-
+//test
 func Create_VehicleOwnership: <"Creation of a vehicle ownership record file">
     inputs:
         drivingLicence DrivingLicence (0..*)
