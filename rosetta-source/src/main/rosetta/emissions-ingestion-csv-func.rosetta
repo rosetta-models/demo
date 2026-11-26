@@ -18,3 +18,19 @@ func Ingest_UserDataToPerson:
             dateOfBirth: user -> dob,
             ...
         }
+
+func Ingest_UserDataToPerson_2:
+    [ingest CSV]
+    inputs:
+        user UserData (1..1)
+    output:
+        person Person (1..1)
+
+    set person:
+        Person {
+            honorific: user -> title,
+            firstName: user -> firstName,
+            surname: user -> lastName,
+            dateOfBirth: user -> dob,
+            ...
+        }
