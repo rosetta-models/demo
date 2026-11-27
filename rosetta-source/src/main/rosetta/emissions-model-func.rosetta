@@ -93,7 +93,7 @@ func FindCarsWithinEmissionLimits: <"Find all vehicles within given emissions me
             then filter
                 if noxLimit exists
                 then item -> engine -> emissionMetrics -> nitrogenOxide <= noxLimit
-                else True
+                else False
             then filter
                 if pmLimit exists
                 then item -> engine -> emissionMetrics -> particulateMatter <= pmLimit
